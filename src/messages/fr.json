@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "careers": "Carrières"
+  },
+  "home": {
+    "featured": "Biens en vedette"
+  }
+}

@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* RTL / LTR */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+}
+
+/* Form sanity */
+input,
+textarea {
+  text-align: start;
+}
+
+/* Base tweaks */
+html,
+body {
+  height: 100%;
+}

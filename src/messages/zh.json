@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "careers": "招聘"
+  },
+  "home": {
+    "featured": "精选房产"
+  }
+}
