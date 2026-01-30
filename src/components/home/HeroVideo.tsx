@@ -20,6 +20,12 @@ export default function HeroVideo() {
 
   return (
     <div className={`hero ${loaded ? "loaded" : ""}`}>
+      <img
+        src="/hero-poster.jpg"
+        alt="Luxury real estate background"
+        className="hero-fallback"
+      />
+
       <video
         ref={videoRef}
         className="hero-video"
@@ -29,7 +35,7 @@ export default function HeroVideo() {
         playsInline
         preload="metadata"
       >
-        {/* <source src="/hero.webm" type="video/webm" /> */}
+        <source src="/hero.webm" type="video/webm" />
         <source src="/hero.mp4" type="video/mp4" />
       </video>
     </div>
