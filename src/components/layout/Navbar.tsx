@@ -7,7 +7,7 @@ export default function Navbar() {
   const t = useTranslations();
 
   return (
-    <nav className="flex items-center justify-between px-6 py-4 border-b">
+    <nav className="flex items-center justify-between px-6 py-4 border-b absolute w-full top-0 bg-white/60">
       <div className="text-xl font-bold">ACE</div>
 
       <div className="flex items-center gap-6">

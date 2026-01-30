@@ -5,7 +5,7 @@ export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // Ignore public files
-  if (pathname.match(/\.(png|jpg|jpeg|gif|svg|webp|ico)$/)) {
+  if (pathname.match(/\.(png|jpg|jpeg|gif|svg|webp|ico|webm|mov|mp4)$/)) {
     return NextResponse.next();
   }
 
