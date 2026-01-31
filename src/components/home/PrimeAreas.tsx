@@ -80,7 +80,7 @@ export default function PrimeAreas() {
   const t = useTranslations();
 
   return (
-    <section className="font-didot py-25 bg-linear-to-br from-[#F5F1ED] via-[#FAF8F5] to-[#EFE9E3]">
+    <section className="font-didot py-10 md:py-25 bg-linear-to-br from-[#F5F1ED] via-[#FAF8F5] to-[#EFE9E3]">
       <div className="max-w-7xl mx-auto px-4 md:px-0">
         <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-12 md:grid-rows-6">
           {/* ===== Title block (inside grid) ===== */}
@@ -94,7 +94,7 @@ export default function PrimeAreas() {
           >
             <div className="relative">
               <div className="flex items-center justify-center md:justify-start">
-                <h2 className="text-[#0C2448] text-3xl md:text-5xl lg:text-6xl tracking-tight leading-tight text-center md:text-left p-2">
+                <h2 className="text-[#0C2448] text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight text-center md:text-left p-2">
                   {t("home.primeAreas")}
                 </h2>
               </div>
@@ -122,7 +122,7 @@ export default function PrimeAreas() {
                 key={area._id}
                 className={`
                   group relative
-                  aspect-[4/5] md:aspect-auto
+                  aspect-4/5 md:aspect-auto
                   overflow-hidden rounded-2xl
                   shadow-lg hover:shadow-2xl
                   transition-all duration-700

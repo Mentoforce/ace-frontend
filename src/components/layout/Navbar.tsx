@@ -1,40 +1,69 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Menu } from "lucide-react";
 import LanguageSwitcher from "../common/LanguageSwitcher";
 import { useTranslations } from "@/lib/i18n/client";
 
 export default function Navbar() {
   const t = useTranslations();
+  const [open, setOpen] = useState(false);
 
   return (
     <nav
       className="fixed top-5 left-1/2 -translate-x-1/2 
-                flex items-center justify-between 
-                px-8 w-[60%] z-50 
-                bg-white/35 backdrop-blur-md 
-                rounded-full shadow-lg"
+      w-[90%] md:w-[60%]
+      bg-white/35 backdrop-blur-md
+      md:rounded-full shadow-lg
+      z-50 font-didot font-medium rounded-2xl"
     >
-      <Image
-        src="/logo2d.png"
-        height={80}
-        width={80}
-        alt="ACE LOGO"
-        // className="ml-50"
-        // className="drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]"
-      />
-      <div className="flex items-center gap-6">
-        <a className="text-sm font-medium" href="#">
-          {t("nav.home")}
-        </a>
-        <a className="text-sm font-medium" href="#">
-          {t("nav.about")}
-        </a>
-        <a className="text-sm font-medium" href="#">
-          {t("nav.careers")}
-        </a>
+      {/* Top Bar */}
+      <div className="flex items-center justify-between px-5">
+        <Image src="/logo2d.png" height={80} width={80} alt="ACE LOGO" />
 
-        <LanguageSwitcher />
+        {/* Desktop */}
+        <div className="hidden md:flex items-center gap-6">
+          <Link href="#">{t("nav.home")}</Link>
+          <Link href="#">{t("nav.about")}</Link>
+          <Link href="#">{t("nav.careers")}</Link>
+          <LanguageSwitcher />
+        </div>
+
+        {/* Mobile */}
+        <div className="flex md:hidden items-center gap-3">
+          <LanguageSwitcher />
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="p-2 rounded-full hover:bg-black/5 transition"
+          >
+            <Menu size={22} />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      <div
+        className={`md:hidden overflow-hidden
+        transition-all duration-300 ease-out
+        ${
+          open
+            ? "max-h-64 opacity-100 translate-y-0"
+            : "max-h-0 opacity-0 -translate-y-2"
+        }`}
+      >
+        <div className="px-6 pb-5 pt-2 border-t border-black/10 flex flex-col gap-4 text-sm">
+          <Link onClick={() => setOpen(false)} href="#">
+            {t("nav.home")}
+          </Link>
+          <Link onClick={() => setOpen(false)} href="#">
+            {t("nav.about")}
+          </Link>
+          <Link onClick={() => setOpen(false)} href="#">
+            {t("nav.careers")}
+          </Link>
+        </div>
       </div>
     </nav>
   );
