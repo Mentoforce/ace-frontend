@@ -1,22 +1,27 @@
 "use client";
-import { useParams } from "next/navigation";
 import { useTranslations } from "@/lib/i18n/client";
 import { featuredProperties } from "@/mock/properties";
 import Image from "next/image";
-import { useState } from "react";
-import { IconMapPin } from "@tabler/icons-react";
+import { useParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 export default function FeaturedProperties() {
   const { locale } = useParams();
   const t = useTranslations();
 
   return (
-    <section className="py-16 px-6 bg-linear-to-b from-white to-gray-50">
-      <h2 className="mb-12 text-3xl font-bold text-center tracking-wide uppercase text-[#0C2448]">
+    <section className="font-didot py-16 md:py-25 px-6 bg-linear-to-b from-white to-gray-50">
+      <h2 className="mb-12 text-5xl font-bold text-center tracking-wide text-[#0C2448]">
         {t("home.featured")}
       </h2>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+      {/* Mobile Carousel */}
+      <div className="md:hidden">
+        <MobileCarousel locale={locale} t={t} />
+      </div>
+
+      {/* Desktop Grid */}
+      <div className="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
         {featuredProperties.map((property) => {
           const content =
             property.translations[locale as string] ??
@@ -109,8 +114,11 @@ function PropertyCard({ property, content, t }: any) {
         </p>
 
         {/* Price */}
-        <div className="text-2xl font-bold text-[#D7AB22] mb-2">
-          AED {property.price?.toLocaleString() || "Contact"}
+        <div className="text-xl font-semibold text-[#D7AB22] mb-2">
+          AED{" "}
+          <span className="font-bricolage">
+            {property.price?.toLocaleString()}
+          </span>
         </div>
 
         {/* Details */}
@@ -156,6 +164,104 @@ function PropertyCard({ property, content, t }: any) {
         {/* CTA Button */}
         <button className="w-full py-3 px-6 bg-[#0C2448]/80 text-white font-semibold rounded-lg hover:bg-[#0C2448] transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-[1.01] active:scale-[0.99]">
           {t("property.contact") || "Contact Us"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function MobileCarousel({ locale, t }: any) {
+  const [index, setIndex] = useState(0);
+  const total = featuredProperties.length;
+
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const startX = useRef(0);
+
+  const prev = () => setIndex((i) => (i === 0 ? total - 1 : i - 1));
+
+  const next = () => setIndex((i) => (i === total - 1 ? 0 : i + 1));
+
+  /** -------- Autoplay -------- */
+  const startAutoPlay = () => {
+    stopAutoPlay();
+    intervalRef.current = setInterval(next, 3000);
+  };
+
+  const stopAutoPlay = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+  };
+
+  useEffect(() => {
+    startAutoPlay();
+    return stopAutoPlay;
+  }, []);
+
+  /** -------- Swipe -------- */
+  const handleTouchStart = (e: React.TouchEvent) => {
+    stopAutoPlay();
+    startX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const endX = e.changedTouches[0].clientX;
+
+    if (startX.current - endX > 50) next();
+    if (endX - startX.current > 50) prev();
+
+    startAutoPlay();
+  };
+
+  const property = featuredProperties[index];
+  const content =
+    property.translations[locale as string] ?? property.translations["en-gb"];
+
+  return (
+    <div className="relative max-w-sm mx-auto">
+      {/* Card */}
+      <div
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        className="transition-all duration-500"
+      >
+        <PropertyCard property={property} content={content} t={t} />
+      </div>
+
+      {/* Controls */}
+      <div className="mt-4 flex items-center justify-center gap-4">
+        {/* Left Arrow */}
+        <button
+          onClick={() => {
+            stopAutoPlay();
+            prev();
+            startAutoPlay();
+          }}
+          className="w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center active:scale-95"
+        >
+          ‹
+        </button>
+
+        {/* Dots */}
+        <div className="flex gap-2">
+          {featuredProperties.map((_, i) => (
+            <span
+              key={i}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === index ? "bg-[#0C2448] w-4" : "bg-gray-300 w-2"
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Right Arrow */}
+        <button
+          onClick={() => {
+            stopAutoPlay();
+            next();
+            startAutoPlay();
+          }}
+          className="w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center active:scale-95"
+        >
+          ›
         </button>
       </div>
     </div>

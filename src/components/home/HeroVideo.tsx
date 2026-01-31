@@ -38,7 +38,7 @@ export default function HeroVideo() {
         <source src="/hero2.webm" type="video/webm" />
         <source src="/hero2.mp4" type="video/mp4" />
       </video>
-      <h1 className="z-100 text-5xl/16 text-center uppercase text-white font-extrabold top-50 left-1/2 -translate-x-1/2 [text-shadow:0_0_30px_rgba(0,0,0,0.6)] absolute">
+      <h1 className="font-bricolage z-100 text-5xl/16 text-center uppercase text-white font-semibold top-60 left-1/2 -translate-x-1/2 [text-shadow:0_0_30px_rgba(0,0,0,1)] absolute">
         Experience Unmatched Luxurious Living
       </h1>
     </div>
