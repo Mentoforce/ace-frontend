@@ -10,6 +10,7 @@ export type Property = {
     [locale: string]: {
       title: string;
       description: string;
+      location: string;
     };
   };
 };

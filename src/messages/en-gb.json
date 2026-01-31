@@ -6,5 +6,8 @@
   },
   "home": {
     "featured": "Featured Properties"
+  },
+  "property": {
+    "contact": "Contact Us"
   }
 }
