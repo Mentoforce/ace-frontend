@@ -8,7 +8,7 @@ export const featuredProperties: Property[] = [
     area: 1850,
     bedrooms: 3,
     bathrooms: 3,
-    images: ["/p1.jpg"],
+    images: ["/featuredprop/p1.jpg"],
     translations: {
       "en-gb": {
         title: "Luxury Marina Apartment",
@@ -27,7 +27,7 @@ export const featuredProperties: Property[] = [
     area: 1850,
     bedrooms: 3,
     bathrooms: 3,
-    images: ["/p2.jpg"],
+    images: ["/featuredprop/p2.jpg"],
     translations: {
       "en-gb": {
         title: "Luxury Marina Apartment",
@@ -46,7 +46,7 @@ export const featuredProperties: Property[] = [
     area: 1850,
     bedrooms: 3,
     bathrooms: 3,
-    images: ["/b.jpg"],
+    images: ["/featuredprop/b.jpg"],
     translations: {
       "en-gb": {
         title: "Luxury Marina Apartment",
@@ -65,7 +65,7 @@ export const featuredProperties: Property[] = [
     area: 1850,
     bedrooms: 3,
     bathrooms: 3,
-    images: ["/p3.png"],
+    images: ["/featuredprop/p3.png"],
     translations: {
       "en-gb": {
         title: "Luxury Marina Apartment",
@@ -84,7 +84,7 @@ export const featuredProperties: Property[] = [
     area: 1850,
     bedrooms: 3,
     bathrooms: 3,
-    images: ["/p4.png"],
+    images: ["/featuredprop/p4.png"],
     translations: {
       "en-gb": {
         title: "Luxury Apartment",

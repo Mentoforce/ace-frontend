@@ -4,7 +4,7 @@ export const primeAreas: PrimeArea[] = [
   {
     _id: "1",
     slug: "business-bay",
-    image: "/business-bay.webp",
+    image: "/primeareas/business-bay.webp",
     translations: {
       "en-gb": {
         title: "Business Bay",
@@ -19,7 +19,7 @@ export const primeAreas: PrimeArea[] = [
   {
     _id: "2",
     slug: "dubai-marina",
-    image: "/dubai-marina.jpg",
+    image: "/primeareas/dubai-marina.jpg",
     translations: {
       "en-gb": {
         title: "Dubai Marina",
@@ -34,7 +34,7 @@ export const primeAreas: PrimeArea[] = [
   {
     _id: "3",
     slug: "jlt",
-    image: "/JLT.jpg",
+    image: "/primeareas/JLT.jpg",
     translations: {
       "en-gb": {
         title: "Jumeirah Lake Towers",
@@ -49,7 +49,7 @@ export const primeAreas: PrimeArea[] = [
   {
     _id: "4",
     slug: "palm-jumeirah",
-    image: "/palm-jumeirah.webp",
+    image: "/primeareas/palm-jumeirah.webp",
     translations: {
       "en-gb": {
         title: "Palm Jumeirah",
@@ -64,7 +64,7 @@ export const primeAreas: PrimeArea[] = [
   {
     _id: "5",
     slug: "downtown-dubai",
-    image: "/downtown-dubai.jpg",
+    image: "/primeareas/downtown-dubai.jpg",
     translations: {
       "en-gb": {
         title: "Downtown Dubai",
@@ -79,7 +79,7 @@ export const primeAreas: PrimeArea[] = [
   {
     _id: "6",
     slug: "downtown-jebel-ali",
-    image: "/downtown-jebel-ali.jpeg",
+    image: "/primeareas/downtown-jebel-ali.jpeg",
     translations: {
       "en-gb": {
         title: "Downtown Jebel Ali",

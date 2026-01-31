@@ -11,7 +11,7 @@ export default function PrimeAreas() {
 
   return (
     <section className="px-6 py-10 bg-[#D9D2CC]/50">
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-12 md:grid-rows-7">
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-12 md:grid-rows-6">
         {/* Title block */}
         <div className="col-span-2 flex rounded-2xl pb-5 pt-0 md:col-span-4 md:row-span-1">
           <h2 className="font-[Didot] text-black text-3xl md:text-6xl tracking-wide">
