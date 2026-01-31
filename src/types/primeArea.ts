@@ -5,6 +5,7 @@ export type PrimeArea = {
   translations: {
     [locale: string]: {
       title: string;
+      description: string;
     };
   };
 };
