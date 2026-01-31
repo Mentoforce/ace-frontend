@@ -10,11 +10,11 @@ export default function PrimeAreas() {
   const t = useTranslations();
 
   return (
-    <section className="px-6 py-10 bg-[#F5F5DC]">
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:grid-rows-7">
+    <section className="px-6 py-10 bg-[#D9D2CC]/50">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-12 md:grid-rows-7">
         {/* Title block */}
-        <div className="flex rounded-2xl px-9 pb-5 pt-0 md:col-span-4 md:row-span-1">
-          <h2 className="text-center text-6xl font-semibold tracking-wide">
+        <div className="flex rounded-2xl pb-5 pt-0 md:col-span-4 md:row-span-1">
+          <h2 className=" text-balck text-6xl font-bold tracking-wide">
             {t("home.primeAreas")}
           </h2>
         </div>
