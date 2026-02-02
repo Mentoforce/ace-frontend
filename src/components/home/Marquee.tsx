@@ -27,7 +27,7 @@ export default function Marquee() {
   }, []);
 
   return (
-    <section className="bg-white py-10">
+    <section>
       <div className="relative mx-auto max-w-9xl overflow-hidden bg-[#0C2448] py-6">
         {/* Gold hairlines */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[#D7AB22]/40" />
@@ -35,7 +35,7 @@ export default function Marquee() {
 
         {/* Heading */}
         <div className="mb-8 text-center">
-          <h3 className="font-didot text-base md:text-2xl tracking-wide text-[#F5F4F2]/70">
+          <h3 className="font-didot text-base md:text-2xl tracking-wide text-[#F5F4F2]/90">
             {t("home.trustedDevelopers")}
           </h3>
         </div>
