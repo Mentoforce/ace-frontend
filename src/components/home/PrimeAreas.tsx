@@ -80,8 +80,8 @@ export default function PrimeAreas() {
   const t = useTranslations();
 
   return (
-    <section className="font-didot py-10 md:py-25 bg-linear-to-br from-[#F5F1ED] via-[#FAF8F5] to-[#EFE9E3]">
-      <div className="max-w-7xl mx-auto px-4 md:px-0">
+    <section className="font-didot py-14 md:py-25 bg-linear-to-br from-[#F5F1ED] via-[#FAF8F5] to-[#EFE9E3]">
+      <div className="max-w-7xl mx-auto px-4 md:px-2">
         <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-12 md:grid-rows-6">
           {/* ===== Title block (inside grid) ===== */}
           <div
