@@ -7,7 +7,8 @@
   "home": {
     "featured": "Featured Properties",
     "primeAreas": "Prime Areas",
-    "trustedDevelopers":"Trusted Developers"
+    "trustedDevelopers":"Trusted Developers",
+    "blog": "Blog"
   },
   "property": {
     "contact": "Contact Us"
