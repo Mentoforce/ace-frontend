@@ -6,7 +6,10 @@
   },
   "home": {
     "featured": "Featured Properties",
-    "primeAreas":"Prime Areas",
+    "primeAreas": "Prime Areas",
     "trustedDevelopers":"Trusted Developers"
+  },
+  "property": {
+    "contact": "Contact Us"
   }
 }

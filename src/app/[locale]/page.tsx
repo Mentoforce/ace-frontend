@@ -8,8 +8,8 @@ export default function HomePage() {
     <>
       <HeroVideo />
       <FeaturedProperties />
-      <PrimeAreas />
       <DevelopersMarquee />
+      <PrimeAreas />
     </>
   );
 }

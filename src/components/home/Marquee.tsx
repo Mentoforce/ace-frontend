@@ -1,51 +1,69 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "@/lib/i18n/client";
 import { developers } from "@/mock/developers";
 
 export default function Marquee() {
   const t = useTranslations();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
-  const items = [...developers, ...developers];
+  const [repeatCount, setRepeatCount] = useState(2);
+
+  useEffect(() => {
+    if (!containerRef.current || !contentRef.current) return;
+
+    const containerWidth = containerRef.current.offsetWidth;
+    const contentWidth = contentRef.current.scrollWidth;
+
+    if (contentWidth === 0) return;
+
+    // Ensure content width is at least 2x container width
+    const minWidth = containerWidth * 2;
+    const neededRepeats = Math.ceil(minWidth / contentWidth);
+
+    setRepeatCount(neededRepeats);
+  }, []);
 
   return (
-    <section className="relative w-screen overflow-hidden bg-white py-14">
-      {/* Section heading */}
-      <div className="mb-8 px-6 md:px-12">
-        <h3 className="font-[Didot] text-center font-medium text-xl md:text-3xl tracking-wide text-black">
-          {t("home.trustedDevelopers")}
-        </h3>
-      </div>
-
-      {/* Moving band */}
-      <div className="relative overflow-hidden bg-[#0C2448] py-8">
-        {/* Gold tint overlays */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#D7AB22]/10 via-transparent to-[#D7AB22]/10" />
+    <section className="bg-white py-10">
+      <div className="relative mx-auto max-w-9xl overflow-hidden bg-[#0C2448] py-6">
+        {/* Gold hairlines */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[#D7AB22]/40" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-[#D7AB22]/40" />
 
-        {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#0C2448] to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#0C2448] to-transparent" />
+        {/* Heading */}
+        <div className="mb-8 text-center">
+          <h3 className="font-didot text-base md:text-2xl tracking-wide text-[#F5F4F2]/70">
+            {t("home.trustedDevelopers")}
+          </h3>
+        </div>
 
-        {/* Marquee track */}
-        <div className="relative">
-          <div className="flex w-max animate-marquee gap-24 px-6 md:px-12">
-            {items.map((dev, index) => (
-              <div
-                key={`${dev._id}-${index}`}
-                className="flex h-20 min-w-40 items-center justify-center opacity-80 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0"
-              >
-                <Image
-                  src={dev.logo}
-                  alt={dev.name}
-                  width={180}
-                  height={90}
-                  className="max-h-14 w-auto object-contain md:max-h-16 "
-                />
-              </div>
-            ))}
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-linear-to-r from-[#0C2448] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-linear-to-l from-[#0C2448] to-transparent" />
+
+        {/* Marquee */}
+        <div ref={containerRef} className="relative overflow-hidden">
+          <div className="marquee-track">
+            <div ref={contentRef} className="marquee-content">
+              {Array(repeatCount)
+                .fill(developers)
+                .flat()
+                .map((dev, i) => (
+                  <div
+                    key={`${dev._id}-${i}`}
+                    className="flex h-16 w-40 shrink-0 items-center justify-center"
+                  >
+                    <img
+                      src={dev.logo}
+                      alt={dev.name}
+                      className="max-h-full max-w-full opacity-90 transition-opacity duration-300 hover:opacity-100"
+                    />
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       </div>

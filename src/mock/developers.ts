@@ -5,31 +5,31 @@ export const developers: Developer[] = [
   {
     _id: "1",
     name: "Emaar",
-    logo: "/developers/Emar.jpg",
+    logo: "/developers/001.png",
   },
   {
     _id: "2",
     name: "DAMAC",
-    logo: "/developers/Damac.png",
+    logo: "/developers/003.png",
   },
   {
     _id: "3",
     name: "Sobha",
-    logo: "/developers/sobha.png",
+    logo: "/developers/002.png",
   },
   {
     _id: "4",
     name: "Nakheel",
-    logo: "/developers/Damac.png",
+    logo: "/developers/003.png",
   },
   {
     _id: "5",
     name: "Meraas",
-    logo: "/developers/Emar.jpg",
+    logo: "/developers/001.png",
   },
   {
     _id: "6",
     name: "Omniyat",
-    logo: "/developers/sobha.png",
+    logo: "/developers/002.png",
   },
 ];
