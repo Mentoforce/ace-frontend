@@ -1,3 +1,4 @@
+import BlogSection from "@/components/home/BlogSection";
 import FeaturedProperties from "@/components/home/FeaturedProperties";
 import HeroVideo from "@/components/home/HeroVideo";
 import DevelopersMarquee from "@/components/home/Marquee";
@@ -10,6 +11,7 @@ export default function HomePage() {
       <FeaturedProperties />
       <DevelopersMarquee />
       <PrimeAreas />
+      <BlogSection />
     </>
   );
 }
