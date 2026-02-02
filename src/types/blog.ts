@@ -6,7 +6,7 @@ export type BlogPost = {
   readTime: string;
   translations: {
     [locale: string]: {
-      title: string;
+      title: string,
     };
   };
 };

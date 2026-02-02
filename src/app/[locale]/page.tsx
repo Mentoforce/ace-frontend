@@ -3,6 +3,7 @@ import FeaturedProperties from "@/components/home/FeaturedProperties";
 import HeroVideo from "@/components/home/HeroVideo";
 import DevelopersMarquee from "@/components/home/Marquee";
 import PrimeAreas from "@/components/home/PrimeAreas";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <FeaturedProperties />
       <DevelopersMarquee />
       <PrimeAreas />
+      <WhyChooseUs />
       <BlogSection />
     </>
   );
