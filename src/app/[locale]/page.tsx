@@ -9,9 +9,10 @@ export default function HomePage() {
     <>
       <HeroVideo />
       <FeaturedProperties />
+      <DevelopersMarquee />
+
       <PrimeAreas />
       <WhyChooseUs />
-      <DevelopersMarquee />
     </>
   );
 }
