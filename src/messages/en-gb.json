@@ -2,12 +2,15 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
-    "careers": "Careers"
+    "careers": "Careers",
+    "cta": "Get in Touch"
   },
   "home": {
     "featured": "Featured Properties",
+    "videoText": "Experience Umatched Living Experience",
+    "tagline": "Live Above the Ordinary",
     "primeAreas": "Prime Areas",
-    "trustedDevelopers":"Trusted Developers",
+    "trustedDevelopers": "Trusted Developers",
     "blog": "Blog"
   },
   "property": {

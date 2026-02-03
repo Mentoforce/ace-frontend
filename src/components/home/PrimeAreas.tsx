@@ -93,13 +93,9 @@ export default function PrimeAreas() {
             "
           >
             <div className="relative">
-              <div className="flex items-center justify-center md:justify-start">
-                <h2 className="text-[#0C2448] text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight text-center md:text-left p-2">
-                  {t("home.primeAreas")}
-                </h2>
-              </div>
-
-              {/* <div className="mt-3 h-1 w-40 bg-linear-to-r from-[#D7AB22] to-transparent rounded-full mx-auto" /> */}
+              <h2 className="text-[#0C2448] text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight text-start p-2">
+                {t("home.primeAreas")}
+              </h2>
             </div>
           </div>
 

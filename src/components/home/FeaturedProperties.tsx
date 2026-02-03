@@ -12,7 +12,7 @@ export default function FeaturedProperties() {
   return (
     <section className="font-didot py-16 md:py-25 px-6 bg-linear-to-b from-[#EFE9E3] via-[#FAF8F5] to-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="mb-12 md:text-5xl text-4xl font-bold text-left tracking-wide text-[#0C2448]">
+        <h2 className="mb-12 md:text-5xl text-4xl font-bold text-start tracking-wide text-[#0C2448]">
           {t("home.featured")}
         </h2>
 

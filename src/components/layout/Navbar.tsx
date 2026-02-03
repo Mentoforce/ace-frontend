@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav
       className="fixed top-5 left-1/2 -translate-x-1/2 
       w-[90%] md:w-[60%]
-      bg-white/35 backdrop-blur-md
+      bg-white/40 backdrop-blur-md
       md:rounded-full shadow-lg
       z-50 font-didot font-medium rounded-2xl"
     >
@@ -29,6 +29,9 @@ export default function Navbar() {
           <Link href="#">{t("nav.about")}</Link>
           <Link href="#">{t("nav.careers")}</Link>
           <LanguageSwitcher />
+          <button className="bg-[#0C2448] text-white px-4 py-2 rounded-full">
+            {t("nav.cta")}
+          </button>
         </div>
 
         {/* Mobile */}

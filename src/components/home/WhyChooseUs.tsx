@@ -251,7 +251,7 @@ export default function WhyChooseUs() {
     whyChooseUs.sectionTranslations["en-gb"];
 
   return (
-    <section className="relative py-16 md:py-26 overflow-hidden bg-linear-to-br from-[#0A1929] via-[#0C2448] to-[#1a1a2e]">
+    <section className="font-didot relative py-16 md:py-26 overflow-hidden bg-linear-to-br from-[#0A1929] via-[#0C2448] to-[#1a1a2e]">
       {/* orbs */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-[#D7AB22]/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#0C2448]/30 rounded-full blur-3xl" />

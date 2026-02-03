@@ -2,12 +2,18 @@
   "nav": {
     "home": "الرئيسية",
     "about": "من نحن",
-    "careers": "وظائف"
+    "careers": "الوظائف",
+    "cta": "تواصل معنا"
   },
   "home": {
     "featured": "عقارات مميزة",
-    "primeAreas": "اہم مقام",
-    "trustedDevelopers": "قابل اعتماد ڈویلپرز",
-    "blog": "بلاگ"
+    "videoText": "اختبر أسلوب حياة لا مثيل له",
+    "tagline": "ارتقِ بحياتك إلى مستوى أعلى",
+    "primeAreas": "مناطق مميزة",
+    "trustedDevelopers": "مطوّرون موثوقون",
+    "blog": "المدونة"
+  },
+  "property": {
+    "contact": "اتصل بنا"
   }
 }
