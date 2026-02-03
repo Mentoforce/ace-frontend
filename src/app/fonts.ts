@@ -3,6 +3,7 @@ import {
   GFS_Didot,
   Lora,
   Merriweather,
+  Birthstone,
 } from "next/font/google";
 
 export const bricolage = Bricolage_Grotesque({
@@ -32,5 +33,12 @@ export const merriweather = Merriweather({
   weight: ["300", "400", "700", "900"],
   style: ["normal", "italic"],
   variable: "--font-merriweather",
+  display: "swap",
+});
+
+export const birthstone = Birthstone({
+  subsets: ["latin"],
+  weight: "400", // Birthstone has single weight
+  variable: "--font-birthstone",
   display: "swap",
 });

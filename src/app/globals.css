@@ -87,6 +87,10 @@ body {
   font-family: var(--font-merriweather), serif;
 }
 
+.font-birthstone {
+  font-family: var(--font-birthstone), serif;
+}
+
 @keyframes marquee {
   from {
     transform: translate3d(0, 0, 0);

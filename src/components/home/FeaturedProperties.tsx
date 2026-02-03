@@ -10,32 +10,34 @@ export default function FeaturedProperties() {
   const t = useTranslations();
 
   return (
-    <section className="font-didot py-16 md:py-25 px-6 bg-linear-to-b from-white to-gray-50">
-      <h2 className="mb-12 md:text-5xl text-4xl font-bold text-center tracking-wide text-[#0C2448]">
-        {t("home.featured")}
-      </h2>
+    <section className="font-didot py-16 md:py-25 px-6 bg-linear-to-b from-[#EFE9E3] via-[#FAF8F5] to-white">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="mb-12 md:text-5xl text-4xl font-bold text-left tracking-wide text-[#0C2448]">
+          {t("home.featured")}
+        </h2>
 
-      {/* Mobile Carousel */}
-      <div className="md:hidden">
-        <MobileCarousel locale={locale} t={t} />
-      </div>
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <MobileCarousel locale={locale} t={t} />
+        </div>
 
-      {/* Desktop Grid */}
-      <div className="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
-        {featuredProperties.map((property) => {
-          const content =
-            property.translations[locale as string] ??
-            property.translations["en-gb"];
+        {/* Desktop Grid */}
+        <div className="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+          {featuredProperties.map((property) => {
+            const content =
+              property.translations[locale as string] ??
+              property.translations["en-gb"];
 
-          return (
-            <PropertyCard
-              key={property._id}
-              property={property}
-              content={content}
-              t={t}
-            />
-          );
-        })}
+            return (
+              <PropertyCard
+                key={property._id}
+                property={property}
+                content={content}
+                t={t}
+              />
+            );
+          })}
+        </div>
       </div>
     </section>
   );
