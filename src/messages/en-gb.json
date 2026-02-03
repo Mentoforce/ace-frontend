@@ -15,5 +15,8 @@
   },
   "property": {
     "contact": "Contact Us"
+  },
+  "blog":{
+    "back":"← Back to Insights"
   }
 }

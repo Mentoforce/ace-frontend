@@ -3,12 +3,13 @@ import { latestBlogs } from "@/mock/blogs";
 import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
+import { useTranslations } from "@/lib/i18n/client";
 
 export default function BlogDetailPage() {
   const params = useParams();
   const { locale, slug } = params;
+  const t = useTranslations();
 
-  console.log(slug);
   const post = latestBlogs.find((p) => p.slug === slug);
 
   if (!post) return notFound();
@@ -52,7 +53,7 @@ export default function BlogDetailPage() {
             href={`/${locale}`}
             className="text-[#0C2448] font-semibold flex items-center gap-2 hover:gap-3 transition-all"
           >
-            ← Back to Insights
+            {t("blog.back") || "← Back to Insights"}
           </Link>
         </div>
       </article>
