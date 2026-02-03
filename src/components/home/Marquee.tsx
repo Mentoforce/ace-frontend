@@ -28,13 +28,13 @@ export default function Marquee() {
 
   return (
     <section>
-      <div className="relative mx-auto max-w-9xl overflow-hidden bg-linear-to-br from-[#0A1929] via-[#0C2448] to-[#1a1a2e] py-6">
+      <div className="relative mx-auto w-full overflow-hidden bg-linear-to-br from-[#0A1929] via-[#0C2448] to-[#1a1a2e] py-4">
         {/* Gold hairlines */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[#D7AB22]/40" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-[#D7AB22]/40" />
 
         {/* Heading */}
-        <div className="mb-8 text-center">
+        <div className="mb-3 text-center">
           <h3 className="font-didot text-base md:text-2xl tracking-wide text-[#F5F4F2]/90">
             {t("home.trustedDevelopers")}
           </h3>
