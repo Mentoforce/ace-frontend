@@ -9,5 +9,11 @@
     "primeAreas": "المناطق الرئيسية",
     "trustedDevelopers": "المطورون الموثوقون",
     "blog": "مدونات"
+  },
+    "property": {
+    "contact": "اتصل بنا"
+  },
+  "blog":{
+    "back":"← العودة إلى الرؤى"
   }
 }
