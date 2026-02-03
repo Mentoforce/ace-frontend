@@ -4,7 +4,7 @@ export const latestBlogs: BlogPost[] = [
   {
     _id: "1",
     slug: "dubai-rental-market-landlords",
-    image: "/featuredprop/p1.jpg",
+    image: "/blog/blog1.jpg",
     date: "31/01/2026",
     readTime: "5 minute read",
     translations: {
@@ -23,7 +23,7 @@ export const latestBlogs: BlogPost[] = [
   {
     _id: "2",
     slug: "dubai-rental-market-tenant-lens",
-    image: "/featuredprop/p1.jpg",
+    image: "/blog/blog2.jpg",
     date: "30/01/2026",
     readTime: "5 minute read",
     translations: {
@@ -40,7 +40,7 @@ export const latestBlogs: BlogPost[] = [
   {
     _id: "3",
     slug: "dubai-property-market-sellers",
-    image: "/featuredprop/p1.jpg",
+    image: "/blog/blog4.jpg",
     date: "29/01/2026",
     readTime: "5 minute read",
     translations: {
@@ -57,7 +57,7 @@ export const latestBlogs: BlogPost[] = [
   {
     _id: "4",
     slug: "data-reveals-prices-slowing",
-    image: "/featuredprop/p1.jpg",
+    image: "/blog/blog3.jpg",
     date: "28/01/2026",
     readTime: "5 minute read",
     translations: {
