@@ -13,10 +13,16 @@
     "trustedDevelopers": "Trusted Developers",
     "blog": "Blogs"
   },
+  "footer": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "phone",
+    "copyright": "ACE Ventures. All rights reserved."
+  },
   "property": {
     "contact": "Contact Us"
   },
-  "blog":{
-    "back":"← Back to Insights"
+  "blog": {
+    "back": "← Back to Insights"
   }
 }

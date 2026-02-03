@@ -52,19 +52,20 @@ export default function Footer() {
         <div className="flex flex-col gap-3 w-full max-w-xs">
           <input
             type="text"
-            placeholder="Name"
-            className="border border-[#0C2448]/50 bg-white/60 backdrop-blur px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#D7AB22]"
+            placeholder={t("footer.name")}
+            className="border border-[#0C2448]/50 bg-white/60 backdrop-blur px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#C29A1F]"
           />
           <input
             type="email"
-            placeholder="Email"
-            className="border border-[#0C2448]/50 bg-white/60 backdrop-blur px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#D7AB22]"
+            placeholder={t("footer.email")}
+            className="border border-[#0C2448]/50 bg-white/60 backdrop-blur px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#C29A1F]"
           />
           <input
             type="tel"
-            placeholder="Phone"
-            className="border border-[#0C2448]/50 bg-white/60 backdrop-blur px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#D7AB22]"
+            placeholder="+971-5678957"
+            className="border border-[#0C2448]/50 bg-white/60 backdrop-blur px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#C29A1F]"
           />
+
           <button
             type="submit"
             className="bg-[#0C2448]/90 text-white py-2 rounded-xl cursor-pointer hover:bg-[#0C2448] transition"
@@ -76,7 +77,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="relative mt-12 mx-auto w-fit p-4 text-center text-sm text-[#0C2448] font-didot border-t-2">
-        © {year} ACE Ventures. All rights reserved.
+        © {year} {t("footer.copyright")}
       </div>
     </footer>
   );
