@@ -16,7 +16,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[url('/q5.jpg')] bg-contain bg-bottom rounded-2xl pt-12 overflow-hidden">
+    <footer className="relative bg-[url('/q5.jpg')] bg-contain bg-no-repeat bg-bottom rounded-2xl md:pt-12 overflow-hidden">
       {/* Overlay */}
       <span className="absolute inset-0 bg-white/70 backdrop-grayscale z-0" />
 

@@ -25,8 +25,8 @@ export default function Navbar() {
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-6">
-          <Link href="#">{t("nav.home")}</Link>
-          <Link href="#">{t("nav.about")}</Link>
+          <Link href="/">{t("nav.home")}</Link>
+          <Link href="/about">{t("nav.about")}</Link>
           <Link href="#">{t("nav.careers")}</Link>
           <LanguageSwitcher />
           <button className="bg-[#0C2448] text-white px-4 py-2 rounded-full">
