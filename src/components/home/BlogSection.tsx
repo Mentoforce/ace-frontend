@@ -91,12 +91,12 @@ export default function BlogSection() {
           <h2 className="text-4xl md:text-5xl font-didot font-semibold text-[#0C2448] tracking-tight">
             {t("home.blog")}
           </h2>
-          {/* <Link
+          <Link
             href={`/${locale}/blog`}
             className="text-sm font-medium border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
           >
-            View all
-          </Link> */}
+            {t("blog.view") || "View all"}
+          </Link>
         </div>
 
         {/* Mobile View*/}
@@ -106,7 +106,7 @@ export default function BlogSection() {
 
         {/* Desktop View*/}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {latestBlogs.map((post) => (
+          {latestBlogs.slice(0, 4).map((post) => (
             <BlogCard key={post._id} post={post} locale={locale} />
           ))}
         </div>

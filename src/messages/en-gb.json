@@ -23,6 +23,11 @@
     "contact": "Contact Us"
   },
   "blog": {
-    "back": "← Back to Insights"
+    "back": "← Back to Insights",
+    "view":"View All",
+    "read":"READ ARTICLE",
+    "journal": "Journal",
+    "design":"Design Narratives",
+    "curate":"Curated Stories"
   }
 }
