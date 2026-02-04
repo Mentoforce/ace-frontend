@@ -90,4 +90,71 @@ export const latestBlogs: BlogPost[] = [
       },
     },
   },
+  //This is just the replicated part of the above id, change them for full page(5,6,7)
+    {
+    _id: "5",
+    slug: "dubai-rental-market-landlords",
+    image: "/blog/blog1.jpg",
+    date: "31/01/2026",
+    readTime: "5 minute read",
+    translations: {
+      "en-gb": {
+        title: "Dubai rental market in 2025 and what it means for landlords",
+        subtitle:
+          "A comprehensive guide to maximizing yields in a shifting economy.",
+        content:
+          "What made 2025 such a demanding year for Dubai landlords? The rental market moved fast, pressure increased across the city, and every decision started to carry more weight. Some months filled properties within days, while others forced owners to adjust prices or rethink leasing strategies.\n\nSmall choices around rent levels, payment terms, and property condition began to separate strong performers from slower listings. A closer look at the year reveals the rental trends and tenant patterns that shaped landlord income across Dubai.\n\nKey Takeaways:\nDubai recorded 530,000 rental contracts in 2025, driven by population growth and strong tenant movement.\nLease renewals dominated the market at 62%, showing that tenant retention shaped landlord income.\nTownhouses and villas saw the strongest demand, led by family communities such as Tilal Al Ghaf and Dubai Hills Estate.\nApartment leasing activity increased by 28%, with Dubai Marina, JLT, and Business Bay attracting the highest interest. Flexible cheque options and competitive pricing helped landlords reduce vacancy periods.\n\nWhy Did Rental Demand Stay Strong in 2025?\nDubai recorded 530,000 rental contracts in 2025, the highest level on record, driven by strong population inflows and steady housing activity.\nNew residents entered the Dubai property market through rental properties before moving toward long-term home ownership.\nThe population exceeded 4 million, with growth above 5% for the second year in a row. New arrivals usually enter the housing market through rentals. They rent first, explore different areas, and later decide where they want long-term housing. That pattern supports consistent leasing activity across many communities.\n\nTourism added another push.\nDubai welcomed 17.55 million overnight visitors between January and November 2025, while hotel occupancy reached 80% by November. Tourism supports business activity and employment across multiple sectors. More jobs bring more people into the city, which strengthens demand for rental housing.",
+      },
+      ar: {
+        title: "سوق الإيجارات في دبي عام 2025 وما يعنيه ذلك للمُلّاك",
+        subtitle: "دليل شامل لتعظيم العوائد في ظل اقتصاد متغير.",
+        content:
+          "ما الذي جعل عام 2025 عامًا مليئًا بالتحديات لمالكي العقارات في دبي؟ تحركت سوق الإيجارات بوتيرة سريعة، وازداد الضغط في مختلف أنحاء المدينة، وأصبحت كل القرارات تحمل وزنًا أكبر من السابق.\n\nفي بعض الأشهر، تم تأجير العقارات خلال أيام قليلة، بينما اضطر الملاك في فترات أخرى إلى تعديل الأسعار أو إعادة التفكير في استراتيجيات التأجير. القرارات الصغيرة المتعلقة بمستويات الإيجار، وشروط الدفع، وحالة العقار بدأت تُحدث فرقًا واضحًا بين العقارات ذات الأداء القوي وتلك الأبطأ في التأجير.\n\nيكشف النظر عن قرب إلى عام 2025 عن اتجاهات الإيجارات وأنماط سلوك المستأجرين التي شكّلت دخل الملاك في مختلف أنحاء دبي.\n\nأهم النقاط:\nسجّلت دبي 530 ألف عقد إيجار في عام 2025، مدفوعة بنمو السكان والحركة القوية للمستأجرين.\nهيمنت تجديدات عقود الإيجار على السوق بنسبة 62٪، ما يوضح أن الاحتفاظ بالمستأجرين كان عاملًا أساسيًا في دخل الملاك.\nشهدت منازل التاون هاوس والفلل أقوى مستويات الطلب، بقيادة المجتمعات العائلية مثل تلال الغاف ودبي هيلز استيت.\nارتفع نشاط تأجير الشقق بنسبة 28٪، مع استحواذ دبي مارينا وJLT وبزنس باي على أعلى مستويات الاهتمام.\nأسهمت خيارات الدفع المرنة عبر الشيكات والتسعير التنافسي في تقليل فترات الشغور.\n\nلماذا استمرت قوة الطلب على الإيجارات في عام 2025؟\nسجّلت دبي 530 ألف عقد إيجار في عام 2025، وهو أعلى مستوى على الإطلاق، بدعم من تدفقات سكانية قوية ونشاط مستقر في قطاع الإسكان. ودخل العديد من السكان الجدد سوق العقارات في دبي من خلال الإيجارات قبل التوجه إلى التملك طويل الأجل.\n\nتجاوز عدد السكان 4 ملايين نسمة، مع نمو يزيد على 5٪ للعام الثاني على التوالي. وعادةً ما يدخل القادمون الجدد سوق الإسكان عبر الإيجارات، حيث يستأجرون أولًا ويستكشفون مناطق مختلفة قبل اتخاذ قرار السكن طويل الأجل، ما يدعم نشاط التأجير المستمر في العديد من المجتمعات.\n\nكما أضافت السياحة دفعة قوية للطلب. فقد استقبلت دبي 17.55 مليون زائر قضوا لياليهم في المدينة بين يناير ونوفمبر 2025، بينما بلغت نسبة إشغال الفنادق 80٪ بحلول نوفمبر. وتواصل السياحة دعم الأنشطة التجارية وفرص العمل في مختلف القطاعات، ما يجذب مزيدًا من السكان إلى المدينة ويعزز الطلب على السكن بالإيجار.",
+      },
+    },
+  },
+    {
+    _id: "6",
+    slug: "dubai-rental-market-landlords",
+    image: "/blog/blog1.jpg",
+    date: "31/01/2026",
+    readTime: "5 minute read",
+    translations: {
+      "en-gb": {
+        title: "Dubai rental market in 2025 and what it means for landlords",
+        subtitle:
+          "A comprehensive guide to maximizing yields in a shifting economy.",
+        content:
+          "What made 2025 such a demanding year for Dubai landlords? The rental market moved fast, pressure increased across the city, and every decision started to carry more weight. Some months filled properties within days, while others forced owners to adjust prices or rethink leasing strategies.\n\nSmall choices around rent levels, payment terms, and property condition began to separate strong performers from slower listings. A closer look at the year reveals the rental trends and tenant patterns that shaped landlord income across Dubai.\n\nKey Takeaways:\nDubai recorded 530,000 rental contracts in 2025, driven by population growth and strong tenant movement.\nLease renewals dominated the market at 62%, showing that tenant retention shaped landlord income.\nTownhouses and villas saw the strongest demand, led by family communities such as Tilal Al Ghaf and Dubai Hills Estate.\nApartment leasing activity increased by 28%, with Dubai Marina, JLT, and Business Bay attracting the highest interest. Flexible cheque options and competitive pricing helped landlords reduce vacancy periods.\n\nWhy Did Rental Demand Stay Strong in 2025?\nDubai recorded 530,000 rental contracts in 2025, the highest level on record, driven by strong population inflows and steady housing activity.\nNew residents entered the Dubai property market through rental properties before moving toward long-term home ownership.\nThe population exceeded 4 million, with growth above 5% for the second year in a row. New arrivals usually enter the housing market through rentals. They rent first, explore different areas, and later decide where they want long-term housing. That pattern supports consistent leasing activity across many communities.\n\nTourism added another push.\nDubai welcomed 17.55 million overnight visitors between January and November 2025, while hotel occupancy reached 80% by November. Tourism supports business activity and employment across multiple sectors. More jobs bring more people into the city, which strengthens demand for rental housing.",
+      },
+      ar: {
+        title: "سوق الإيجارات في دبي عام 2025 وما يعنيه ذلك للمُلّاك",
+        subtitle: "دليل شامل لتعظيم العوائد في ظل اقتصاد متغير.",
+        content:
+          "ما الذي جعل عام 2025 عامًا مليئًا بالتحديات لمالكي العقارات في دبي؟ تحركت سوق الإيجارات بوتيرة سريعة، وازداد الضغط في مختلف أنحاء المدينة، وأصبحت كل القرارات تحمل وزنًا أكبر من السابق.\n\nفي بعض الأشهر، تم تأجير العقارات خلال أيام قليلة، بينما اضطر الملاك في فترات أخرى إلى تعديل الأسعار أو إعادة التفكير في استراتيجيات التأجير. القرارات الصغيرة المتعلقة بمستويات الإيجار، وشروط الدفع، وحالة العقار بدأت تُحدث فرقًا واضحًا بين العقارات ذات الأداء القوي وتلك الأبطأ في التأجير.\n\nيكشف النظر عن قرب إلى عام 2025 عن اتجاهات الإيجارات وأنماط سلوك المستأجرين التي شكّلت دخل الملاك في مختلف أنحاء دبي.\n\nأهم النقاط:\nسجّلت دبي 530 ألف عقد إيجار في عام 2025، مدفوعة بنمو السكان والحركة القوية للمستأجرين.\nهيمنت تجديدات عقود الإيجار على السوق بنسبة 62٪، ما يوضح أن الاحتفاظ بالمستأجرين كان عاملًا أساسيًا في دخل الملاك.\nشهدت منازل التاون هاوس والفلل أقوى مستويات الطلب، بقيادة المجتمعات العائلية مثل تلال الغاف ودبي هيلز استيت.\nارتفع نشاط تأجير الشقق بنسبة 28٪، مع استحواذ دبي مارينا وJLT وبزنس باي على أعلى مستويات الاهتمام.\nأسهمت خيارات الدفع المرنة عبر الشيكات والتسعير التنافسي في تقليل فترات الشغور.\n\nلماذا استمرت قوة الطلب على الإيجارات في عام 2025؟\nسجّلت دبي 530 ألف عقد إيجار في عام 2025، وهو أعلى مستوى على الإطلاق، بدعم من تدفقات سكانية قوية ونشاط مستقر في قطاع الإسكان. ودخل العديد من السكان الجدد سوق العقارات في دبي من خلال الإيجارات قبل التوجه إلى التملك طويل الأجل.\n\nتجاوز عدد السكان 4 ملايين نسمة، مع نمو يزيد على 5٪ للعام الثاني على التوالي. وعادةً ما يدخل القادمون الجدد سوق الإسكان عبر الإيجارات، حيث يستأجرون أولًا ويستكشفون مناطق مختلفة قبل اتخاذ قرار السكن طويل الأجل، ما يدعم نشاط التأجير المستمر في العديد من المجتمعات.\n\nكما أضافت السياحة دفعة قوية للطلب. فقد استقبلت دبي 17.55 مليون زائر قضوا لياليهم في المدينة بين يناير ونوفمبر 2025، بينما بلغت نسبة إشغال الفنادق 80٪ بحلول نوفمبر. وتواصل السياحة دعم الأنشطة التجارية وفرص العمل في مختلف القطاعات، ما يجذب مزيدًا من السكان إلى المدينة ويعزز الطلب على السكن بالإيجار.",
+      },
+    },
+  },
+    {
+    _id: "7",
+    slug: "dubai-rental-market-landlords",
+    image: "/blog/blog1.jpg",
+    date: "31/01/2026",
+    readTime: "5 minute read",
+    translations: {
+      "en-gb": {
+        title: "Dubai rental market in 2025 and what it means for landlords",
+        subtitle:
+          "A comprehensive guide to maximizing yields in a shifting economy.",
+        content:
+          "What made 2025 such a demanding year for Dubai landlords? The rental market moved fast, pressure increased across the city, and every decision started to carry more weight. Some months filled properties within days, while others forced owners to adjust prices or rethink leasing strategies.\n\nSmall choices around rent levels, payment terms, and property condition began to separate strong performers from slower listings. A closer look at the year reveals the rental trends and tenant patterns that shaped landlord income across Dubai.\n\nKey Takeaways:\nDubai recorded 530,000 rental contracts in 2025, driven by population growth and strong tenant movement.\nLease renewals dominated the market at 62%, showing that tenant retention shaped landlord income.\nTownhouses and villas saw the strongest demand, led by family communities such as Tilal Al Ghaf and Dubai Hills Estate.\nApartment leasing activity increased by 28%, with Dubai Marina, JLT, and Business Bay attracting the highest interest. Flexible cheque options and competitive pricing helped landlords reduce vacancy periods.\n\nWhy Did Rental Demand Stay Strong in 2025?\nDubai recorded 530,000 rental contracts in 2025, the highest level on record, driven by strong population inflows and steady housing activity.\nNew residents entered the Dubai property market through rental properties before moving toward long-term home ownership.\nThe population exceeded 4 million, with growth above 5% for the second year in a row. New arrivals usually enter the housing market through rentals. They rent first, explore different areas, and later decide where they want long-term housing. That pattern supports consistent leasing activity across many communities.\n\nTourism added another push.\nDubai welcomed 17.55 million overnight visitors between January and November 2025, while hotel occupancy reached 80% by November. Tourism supports business activity and employment across multiple sectors. More jobs bring more people into the city, which strengthens demand for rental housing.",
+      },
+      ar: {
+        title: "سوق الإيجارات في دبي عام 2025 وما يعنيه ذلك للمُلّاك",
+        subtitle: "دليل شامل لتعظيم العوائد في ظل اقتصاد متغير.",
+        content:
+          "ما الذي جعل عام 2025 عامًا مليئًا بالتحديات لمالكي العقارات في دبي؟ تحركت سوق الإيجارات بوتيرة سريعة، وازداد الضغط في مختلف أنحاء المدينة، وأصبحت كل القرارات تحمل وزنًا أكبر من السابق.\n\nفي بعض الأشهر، تم تأجير العقارات خلال أيام قليلة، بينما اضطر الملاك في فترات أخرى إلى تعديل الأسعار أو إعادة التفكير في استراتيجيات التأجير. القرارات الصغيرة المتعلقة بمستويات الإيجار، وشروط الدفع، وحالة العقار بدأت تُحدث فرقًا واضحًا بين العقارات ذات الأداء القوي وتلك الأبطأ في التأجير.\n\nيكشف النظر عن قرب إلى عام 2025 عن اتجاهات الإيجارات وأنماط سلوك المستأجرين التي شكّلت دخل الملاك في مختلف أنحاء دبي.\n\nأهم النقاط:\nسجّلت دبي 530 ألف عقد إيجار في عام 2025، مدفوعة بنمو السكان والحركة القوية للمستأجرين.\nهيمنت تجديدات عقود الإيجار على السوق بنسبة 62٪، ما يوضح أن الاحتفاظ بالمستأجرين كان عاملًا أساسيًا في دخل الملاك.\nشهدت منازل التاون هاوس والفلل أقوى مستويات الطلب، بقيادة المجتمعات العائلية مثل تلال الغاف ودبي هيلز استيت.\nارتفع نشاط تأجير الشقق بنسبة 28٪، مع استحواذ دبي مارينا وJLT وبزنس باي على أعلى مستويات الاهتمام.\nأسهمت خيارات الدفع المرنة عبر الشيكات والتسعير التنافسي في تقليل فترات الشغور.\n\nلماذا استمرت قوة الطلب على الإيجارات في عام 2025؟\nسجّلت دبي 530 ألف عقد إيجار في عام 2025، وهو أعلى مستوى على الإطلاق، بدعم من تدفقات سكانية قوية ونشاط مستقر في قطاع الإسكان. ودخل العديد من السكان الجدد سوق العقارات في دبي من خلال الإيجارات قبل التوجه إلى التملك طويل الأجل.\n\nتجاوز عدد السكان 4 ملايين نسمة، مع نمو يزيد على 5٪ للعام الثاني على التوالي. وعادةً ما يدخل القادمون الجدد سوق الإسكان عبر الإيجارات، حيث يستأجرون أولًا ويستكشفون مناطق مختلفة قبل اتخاذ قرار السكن طويل الأجل، ما يدعم نشاط التأجير المستمر في العديد من المجتمعات.\n\nكما أضافت السياحة دفعة قوية للطلب. فقد استقبلت دبي 17.55 مليون زائر قضوا لياليهم في المدينة بين يناير ونوفمبر 2025، بينما بلغت نسبة إشغال الفنادق 80٪ بحلول نوفمبر. وتواصل السياحة دعم الأنشطة التجارية وفرص العمل في مختلف القطاعات، ما يجذب مزيدًا من السكان إلى المدينة ويعزز الطلب على السكن بالإيجار.",
+      },
+    },
+  },
 ];

@@ -29,11 +29,11 @@ export default function BlogDetailPage() {
           priority
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <div className="max-w-4xl px-6 text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-didot font-bold mb-4">
+          <div className="max-w-4xl px-6 text-white">
+            <h1 className="text-3xl text-left md:text-center md:text-5xl font-didot font-bold mb-4">
               {content.title}
             </h1>
-            <p className="text-lg md:text-xl font-light opacity-90">
+            <p className="text-lg text-left md:text-center md:text-xl font-light opacity-90">
               {content.subtitle}
             </p>
           </div>

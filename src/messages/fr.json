@@ -2,10 +2,33 @@
   "nav": {
     "home": "Accueil",
     "about": "À propos",
-    "careers": "Carrières"
+    "careers": "Carrières",
+    "cta": "Nous contacter"
   },
   "home": {
     "featured": "Biens en vedette",
-    "primeAreas": "Zones prestigieuses"
+    "videoText": "Vivez une expérience de vie incomparable",
+    "tagline": "Vivez au-dessus de l’ordinaire",
+    "primeAreas": "Quartiers d’exception",
+    "trustedDevelopers": "Promoteurs de confiance",
+    "blog": "Blogs"
+  },
+  "footer": {
+    "name": "Nom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "copyright": "ACE Ventures. Tous droits réservés."
+  },
+  "property": {
+    "contact": "Nous contacter"
+  },
+  "blog": {
+    "back": "← Retour aux analyses",
+    "view": "Voir tout",
+    "read": "LIRE L’ARTICLE",
+    "journal": "Journal",
+    "design": "Récits de design",
+    "curate": "Histoires sélectionnées"
   }
 }
+
