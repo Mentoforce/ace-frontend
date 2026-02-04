@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "careers": "Careers",
+    "blogs": "Blogs",
     "cta": "Get in Touch"
   },
   "home": {
@@ -24,10 +25,15 @@
   },
   "blog": {
     "back": "← Back to Insights",
-    "view":"View All",
-    "read":"READ ARTICLE",
+    "view": "View All",
+    "read": "READ ARTICLE",
     "journal": "Journal",
-    "design":"Design Narratives",
-    "curate":"Curated Stories"
+    "design": "Reading Time",
+    "curate": "Curated Stories"
+  },
+  "about": {
+    "about": "About",
+    "mission": "Our Mission",
+    "vision": "Our Vision"
   }
 }

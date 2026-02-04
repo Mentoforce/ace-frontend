@@ -26,8 +26,8 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start gap-4">
           <Image
             src="/logo2d.png"
-            height={180}
-            width={180}
+            height={200}
+            width={200}
             alt="ACE LOGO"
             priority
           />
@@ -43,8 +43,9 @@ export default function Footer() {
 
         {/* Navigation */}
         <div className="flex flex-col gap-3 text-center text-[#0C2448] md:text-start">
-          <Link href="#">{t("nav.home")}</Link>
-          <Link href="#">{t("nav.about")}</Link>
+          <Link href="/">{t("nav.home")}</Link>
+          <Link href="/about">{t("nav.about")}</Link>
+          <Link href="/blog">{t("nav.blogs")}</Link>
           <Link href="#">{t("nav.careers")}</Link>
         </div>
 

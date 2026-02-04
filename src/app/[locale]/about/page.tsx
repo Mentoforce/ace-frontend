@@ -1,7 +1,11 @@
 "use client";
 
+import { useTranslations } from "@/lib/i18n/client";
+import { aboutSection } from "@/mock/about";
 import { IconEye, IconTarget } from "@tabler/icons-react";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import { useTransition } from "react";
 
 function MissionVision() {
   return (
@@ -101,6 +105,11 @@ function MissionVision() {
   );
 }
 function MissionVision4() {
+  const t = useTranslations();
+  const { locale } = useParams();
+  const translation =
+    aboutSection.translations[locale as string] ??
+    aboutSection.translations["en-gb"];
   return (
     <section className="max-w-6xl mx-auto relative overflow-hidden flex flex-col sm:flex-row rounded-none md:rounded-3xl">
       {/* ─── LEFT PANEL — Our Vision (Dark Navy) ─── */}
@@ -116,15 +125,12 @@ function MissionVision4() {
             "linear-gradient(135deg, #061636 0%, #0C2448 55%, #163860 100%)",
         }}
       >
-        <h2 className="text-[#D7AB22] font-serif text-3xl md:text-5xl mb-6 font-bold leading-none">
-          OUR VISION
+        <h2 className="text-[#D7AB22] font-serif text-3xl uppercase md:text-5xl mb-6 font-bold leading-none">
+          {t("about.vision")}
         </h2>
 
         <p className="text-[#C29A1F] text-base leading-relaxed max-w-md mt-auto">
-          To be Dubai&apos;s most trusted real estate partner — pioneering a
-          future where every investment unlocks lasting prosperity, and every
-          client experiences unmatched clarity and confidence in their journey
-          toward building generational wealth.
+          {translation.vision}
         </p>
       </div>
 
@@ -144,15 +150,12 @@ function MissionVision4() {
         }}
       >
         <div className="max-w-md mt-0 sm:mt-auto">
-          <h2 className="font-serif text-3xl md:text-5xl font-bold leading-none text-[#0C2448] mb-6">
-            OUR MISSION
+          <h2 className="font-serif text-3xl md:text-5xl font-bold uppercase leading-none text-[#0C2448] mb-6">
+            {t("about.mission")}
           </h2>
 
           <p className="text-[#0C2448] text-base leading-relaxed">
-            To deliver bespoke real estate solutions that go beyond transactions
-            — empowering high-net-worth individuals and institutional investors
-            with exclusive access, strategic foresight, and discretionary
-            guidance at every stage of ownership.
+            {translation.mission}
           </p>
         </div>
       </div>
@@ -347,37 +350,31 @@ function Image1() {
 }
 
 export default function About() {
+  const t = useTranslations();
+  const { locale } = useParams();
+  const translation =
+    aboutSection.translations[locale as string] ??
+    aboutSection.translations["en-gb"];
+
   return (
     <section className="font-didot max-w-7xl mx-auto md:py-30 py-20">
       <div className="py-10 grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-2 items-center">
         <div className="">
-          <h1 className="md:text-2xl text-center md:p-2 text-xl">About</h1>
+          <h1 className="md:text-2xl text-center md:p-2 text-xl">
+            {t("about.about")}
+          </h1>
           <h1 className="md:text-6xl text-center p-1 text-4xl font-bold">
             ACE Ventures
           </h1>
           <h1 className="md:text-4xl text-center text-xl pb-8">
             Real Estate LLC
           </h1>
-          <p className="text-center text-xl italic">
-            Where Prestige meets Property
-          </p>
+          <p className="text-center text-xl italic">{translation.tagline}</p>
         </div>
         <Image1 />
       </div>
       <p className="md:text-lg text-base text font-medium max-w-7xl mx-auto text-[#0C2448] md:p-20 p-4 mb-8">
-        Ace Venture Real Estate LLC stands at the intersection of prestige,
-        expertise, and opportunity — a distinguished real estate brokerage built
-        on decades of collective experience in Dubai’s most dynamic property
-        markets and expanding rapidly on a global scale. We are not just brokers
-        — we are strategic partners to discerning individuals, visionary
-        investors, corporate leaders, and international families seeking the
-        most compelling real estate opportunities in the UAE and beyond. With
-        deep roots in Dubai’s luxury property landscape, our leadership brings a
-        legacy of market insight, trusted relationships, and unparalleled
-        execution that rivals the world’s most established real estate firms.
-        From iconic waterfront towers and penthouses to exclusive villas and
-        high‑yield investment assets, Ace Venture’s portfolio reflects the
-        pinnacle of architectural excellence and lifestyle aspiration.
+        {translation.paragraph}
       </p>
       <MissionVision4 />
     </section>

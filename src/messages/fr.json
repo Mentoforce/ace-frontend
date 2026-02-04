@@ -3,11 +3,12 @@
     "home": "Accueil",
     "about": "À propos",
     "careers": "Carrières",
+    "blogs": "Blogs",
     "cta": "Nous contacter"
   },
   "home": {
     "featured": "Biens en vedette",
-    "videoText": "Vivez une expérience de vie incomparable",
+    "videoText": "Découvrez une expérience de vie incomparable",
     "tagline": "Vivez au-dessus de l’ordinaire",
     "primeAreas": "Quartiers d’exception",
     "trustedDevelopers": "Promoteurs de confiance",
@@ -29,6 +30,10 @@
     "journal": "Journal",
     "design": "Récits de design",
     "curate": "Histoires sélectionnées"
+  },
+  "about": {
+    "about": "À propos",
+    "mission": "Notre mission",
+    "vision": "Notre vision"
   }
 }
-

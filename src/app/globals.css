@@ -68,7 +68,7 @@ body {
 }
 :root {
   --font-sans: var(--font-bricolage);
-  --font-serif: var(--font-lora);
+  --font-serif: var(--font-didot);
 }
 
 .font-bricolage {

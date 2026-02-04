@@ -105,7 +105,6 @@
 //   },
 // ];
 
-
 import { PrimeArea } from "@/types/primeArea";
 
 export const primeAreas: PrimeArea[] = [
@@ -124,6 +123,21 @@ export const primeAreas: PrimeArea[] = [
         description:
           "الخليج التجاري هو منطقة مركزية متكاملة الاستخدام في دبي، الإمارات العربية المتحدة، تقع على طول قناة دبي المائية وبالقرب من وسط مدينة دبي.",
       },
+      fr: {
+        title: "Business Bay",
+        description:
+          "Business Bay est un quartier central prestigieux à usage mixte à Dubaï, situé le long du canal de Dubaï et à proximité immédiate de Downtown Dubai.",
+      },
+      ru: {
+        title: "Бизнес-Бэй",
+        description:
+          "Business Bay — это престижный центральный район смешанного назначения в Дубае, расположенный вдоль Дубайского водного канала и рядом с Downtown Dubai.",
+      },
+      zh: {
+        title: "商业湾",
+        description:
+          "商业湾是位于阿联酋迪拜的核心高端综合用途区域，坐落于迪拜运河沿岸，并紧邻迪拜市中心。",
+      },
     },
   },
   {
@@ -140,6 +154,21 @@ export const primeAreas: PrimeArea[] = [
         title: "مرسى دبي",
         description:
           "مرسى دبي منطقة ساحلية صناعية فاخرة، تمتد على طول قناة بطول 3 كيلومترات، وتشتهر بأسلوب حياتها الفاخر، أبراجها السكنية العالية، وممشى مرسى دبي الحيوي.",
+      },
+      fr: {
+        title: "Dubai Marina",
+        description:
+          "Dubai Marina est un quartier résidentiel huppé en bord de mer, construit autour d’un canal artificiel de 3 kilomètres, réputé pour son style de vie luxueux, ses tours résidentielles emblématiques et sa promenade animée, la Dubai Marina Walk.",
+      },
+      ru: {
+        title: "Дубай Марина",
+        description:
+          "Dubai Marina — элитный прибрежный район с искусственным каналом протяжённостью 3 километра, известный своим роскошным образом жизни, высотными жилыми башнями и оживлённой набережной Dubai Marina Walk.",
+      },
+      zh: {
+        title: "迪拜码头",
+        description:
+          "迪拜码头是一个高端人工滨水社区，围绕一条长达3公里的运河而建，以奢华的生活方式、地标性高层住宅以及充满活力的迪拜码头步道而闻名。",
       },
     },
   },
@@ -158,6 +187,21 @@ export const primeAreas: PrimeArea[] = [
         description:
           "أبراج بحيرات جميرا هي مجتمع متعدد الاستخدامات في دبي، يضم أكثر من 80 برجاً عالياً موزعة في 26 مجموعة حول ثلاث بحيرات صناعية.",
       },
+      fr: {
+        title: "Jumeirah Lake Towers",
+        description:
+          "Jumeirah Lake Towers est une communauté à usage mixte à Dubaï, composée de plus de 80 tours de grande hauteur réparties en 26 ensembles autour de trois lacs artificiels.",
+      },
+      ru: {
+        title: "Джумейра Лейк Тауэрс",
+        description:
+          "Jumeirah Lake Towers — это многофункциональный район Дубая, включающий более 80 высотных зданий, сгруппированных в 26 кластеров вокруг трёх искусственных озёр.",
+      },
+      zh: {
+        title: "朱美拉湖塔",
+        description:
+          "朱美拉湖塔是迪拜的一个综合用途社区，由80多座高层建筑组成，分布在26个组团之中，环绕着三个人工湖泊。",
+      },
     },
   },
   {
@@ -174,6 +218,21 @@ export const primeAreas: PrimeArea[] = [
         title: "نخلة جميرا",
         description:
           "نخلة جميرا هي أرخبيل صناعي أيقوني في دبي على شكل نخلة، وتشتهر كوجهة فاخرة رائدة تحتوي على فنادق فخمة مثل أتلانتس والنخلة، وفيلات خاصة وشقق راقية.",
+      },
+      fr: {
+        title: "Palm Jumeirah",
+        description:
+          "Palm Jumeirah est un archipel artificiel emblématique de Dubaï en forme de palmier, reconnu comme une destination de luxe de premier plan, abritant des hôtels prestigieux tels qu’Atlantis The Palm, ainsi que des villas privées et des appartements haut de gamme.",
+      },
+      ru: {
+        title: "Пальма Джумейра",
+        description:
+          "Palm Jumeirah — знаковый искусственный архипелаг в форме пальмы, являющийся одной из главных люксовых локаций Дубая с престижными отелями, включая Atlantis The Palm, частными виллами и элитными апартаментами.",
+      },
+      zh: {
+        title: "朱美拉棕榈岛",
+        description:
+          "朱美拉棕榈岛是迪拜标志性的人工群岛，整体呈棕榈树形状，被誉为全球顶级奢华目的地之一，汇聚了亚特兰蒂斯棕榈岛酒店、私属别墅及高端公寓。",
       },
     },
   },
@@ -192,6 +251,21 @@ export const primeAreas: PrimeArea[] = [
         description:
           "وسط مدينة دبي هو مركز رئيسي يمتد على مساحة 2 كيلومتر مربع، منطقة متعددة الاستخدامات ونقطة جذب سياحية مزدهرة تم تطويرها بواسطة إعمار العقارية.",
       },
+      fr: {
+        title: "Downtown Dubai",
+        description:
+          "Downtown Dubai est un quartier central emblématique de 2 kilomètres carrés, à usage mixte et à forte attractivité touristique, développé par Emaar Properties.",
+      },
+      ru: {
+        title: "Даунтаун Дубай",
+        description:
+          "Downtown Dubai — это центральный многофункциональный район площадью 2 квадратных километра и один из ключевых туристических центров города, разработанный компанией Emaar Properties.",
+      },
+      zh: {
+        title: "迪拜市中心",
+        description:
+          "迪拜市中心是一个占地约2平方公里的标志性综合社区，也是繁华的旅游核心区域，由伊玛尔地产开发。",
+      },
     },
   },
   {
@@ -209,7 +283,21 @@ export const primeAreas: PrimeArea[] = [
         description:
           "وسط جبل علي هو مشروع ضخم متعدد الاستخدامات بمساحة 6.5 مليون متر مربع من تطوير شركة ليمتلس، يقع على طول شارع الشيخ زايد (E11) في دبي.",
       },
+      fr: {
+        title: "Downtown Jebel Ali",
+        description:
+          "Downtown Jebel Ali est un vaste projet à usage mixte couvrant 6,5 millions de mètres carrés, développé par Limitless et situé le long de Sheikh Zayed Road (E11) à Dubaï.",
+      },
+      ru: {
+        title: "Даунтаун Джебель-Али",
+        description:
+          "Downtown Jebel Ali — масштабный многофункциональный проект площадью 6,5 миллиона квадратных метров от компании Limitless, расположенный вдоль шоссе Sheikh Zayed Road (E11) в Дубае.",
+      },
+      zh: {
+        title: "杰贝阿里市中心",
+        description:
+          "杰贝阿里市中心是一个占地约650万平方米的大型综合用途开发项目，由 Limitless 开发，位于迪拜谢赫扎耶德路（E11）沿线。",
+      },
     },
   },
 ];
-

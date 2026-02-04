@@ -2,10 +2,38 @@
   "nav": {
     "home": "首页",
     "about": "关于我们",
-    "careers": "招聘"
+    "careers": "职业发展",
+    "blogs": "博客",
+    "cta": "联系我们"
   },
   "home": {
-    "featured": "精选房产",
-    "primeAreas": "黄金地段"
+    "featured": "精选房源",
+    "videoText": "体验无与伦比的生活方式",
+    "tagline": "超越平凡，臻享人生",
+    "primeAreas": "核心地段",
+    "trustedDevelopers": "值得信赖的开发商",
+    "blog": "博客"
+  },
+  "footer": {
+    "name": "姓名",
+    "email": "电子邮箱",
+    "phone": "电话",
+    "copyright": "ACE Ventures. 保留所有权利。"
+  },
+  "property": {
+    "contact": "联系我们"
+  },
+  "blog": {
+    "back": "← 返回洞察",
+    "view": "查看全部",
+    "read": "阅读文章",
+    "journal": "期刊",
+    "design": "设计叙事",
+    "curate": "精选故事"
+  },
+  "about": {
+    "about": "关于我们",
+    "mission": "我们的使命",
+    "vision": "我们的愿景"
   }
 }
