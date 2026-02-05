@@ -217,7 +217,7 @@ function BlogCard({ post, index, locale }: any) {
             <span>{post.readTime}</span>
           </div>
 
-          <h3 className="font-didot text-2xl text-[#0C2448] leading-snug mb-3 transition-colors duration-300 group-hover:text-[#8B6F4E] line-clamp-2">
+          <h3 className="font-didot text-2xl text-[#0C2448] leading-snug mb-3 transition-colors duration-300 group-hover:text-[#C29A1F] line-clamp-2">
             {content.title}
           </h3>
 
@@ -225,9 +225,9 @@ function BlogCard({ post, index, locale }: any) {
             {content.subtitle}
           </p>
 
-          <div className="mt-6 flex items-center gap-2 text-xs tracking-widest uppercase text-[#8B6F4E]">
+          <div className="mt-6 flex items-center gap-2 text-xs tracking-widest uppercase text-[#C29A1F]">
             {t("blog.read") || "READ ARTICLE"}
-            <span className="h-px w-6 bg-[#8B6F4E] transition-all duration-300 group-hover:w-10" />
+            <span className="h-px w-6 bg-[#C29A1F] transition-all duration-300 group-hover:w-10" />
           </div>
         </div>
       </div>

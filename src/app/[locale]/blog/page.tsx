@@ -81,7 +81,7 @@ export default function BlogsPage() {
   const t = useTranslations();
 
   return (
-    <main className="min-h-screen bg-[#FAF8F5] pt-32 pb-28">
+    <main className="min-h-screen bg-[#FAF8F5] py-32">
       <div className="max-w-7xl mx-auto px-6">
         {/* Editorial Header */}
         <div className="relative mb-28 text-center">
@@ -89,7 +89,7 @@ export default function BlogsPage() {
             {t("blog.journal") || "Journal"}
           </span>
 
-          <p className="text-xs uppercase tracking-[0.35em] text-slate-500 mb-6">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#0C2448]/70 mb-6">
             {t("blog.design") || "Design Narratives"}
           </p>
 
@@ -98,11 +98,11 @@ export default function BlogsPage() {
           </h1>
 
           <div className="mt-8 flex justify-center items-center gap-4">
-            <span className="h-px w-12 bg-[#8B6F4E]" />
-            <span className="text-[11px] tracking-widest uppercase text-slate-500">
+            <span className="h-px w-12 bg-[#C29A1F]" />
+            <span className="text-[11px] tracking-widest uppercase text-[#0C2448]/70">
               {t("blog.curate") || "Curated Stories"}
             </span>
-            <span className="h-px w-12 bg-[#8B6F4E]" />
+            <span className="h-px w-12 bg-[#C29A1F]" />
           </div>
         </div>
 
@@ -144,7 +144,7 @@ export default function BlogsPage() {
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h2 className="font-didot text-2xl text-[#0C2448] leading-snug mb-3 transition-colors duration-300 group-hover:text-[#8B6F4E] line-clamp-2">
+                    <h2 className="font-didot text-2xl text-[#0C2448] leading-snug mb-3 transition-colors duration-300 group-hover:text-[#C29A1F] line-clamp-2">
                       {content.title}
                     </h2>
 
@@ -152,9 +152,9 @@ export default function BlogsPage() {
                       {content.subtitle}
                     </p>
 
-                    <div className="mt-6 flex items-center gap-2 text-xs tracking-widest uppercase text-[#8B6F4E]">
+                    <div className="mt-6 flex items-center gap-2 text-xs tracking-widest uppercase text-[#C29A1F]">
                       {t("blog.read") || "READ ARTICLE"}
-                      <span className="h-px w-6 bg-[#8B6F4E] transition-all duration-300 group-hover:w-10" />
+                      <span className="h-px w-6 bg-[#C29A1F] transition-all duration-300 group-hover:w-10" />
                     </div>
                   </div>
                 </div>
