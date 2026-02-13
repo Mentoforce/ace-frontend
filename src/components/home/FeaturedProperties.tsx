@@ -1,6 +1,14 @@
 "use client";
 import { useTranslations } from "@/lib/i18n/client";
 import { featuredProperties } from "@/mock/properties";
+import {
+  IconBath,
+  IconBed,
+  IconCircleDotFilled,
+  IconLine,
+  IconMinusVertical,
+  IconRulerMeasure,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -10,7 +18,8 @@ export default function FeaturedProperties() {
   const t = useTranslations();
 
   return (
-    <section className="font-didot py-16 md:py-25 px-6 bg-linear-to-b from-[#EFE9E3] via-[#FAF8F5] to-white">
+    //  from-[#EFE9E3] via-[#FAF8F5] to-white
+    <section className="font-didot relative py-16 md:py-25 px-6 bg-linear-to-b ">
       <div className="max-w-7xl mx-auto">
         <h2 className="mb-12 md:text-5xl text-4xl font-bold text-start tracking-wide text-[#0C2448]">
           {t("home.featured")}
@@ -58,10 +67,9 @@ function PropertyCard({ property, content, t }: any) {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
         />
 
-        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-95 transition-opacity duration-300"></div>
 
-        {/* Favorite Heart Icon */}
+        {/* Favorite Heart */}
         <button
           onClick={() => setIsFavorite(!isFavorite)}
           className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/95 backdrop-blur-sm shadow-lg hover:bg-white transition-all duration-300 hover:scale-105 z-10"
@@ -69,10 +77,10 @@ function PropertyCard({ property, content, t }: any) {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill={isFavorite ? "#ffcc33" : "none"}
+            fill={isFavorite ? "#25D366" : "none"}
             viewBox="0 0 24 24"
             strokeWidth={2}
-            stroke={isFavorite ? "#f4c430" : "#0C2448"}
+            stroke={isFavorite ? "#128C7E" : "#0C2448"}
             className="w-5 h-5 transition-colors duration-300"
           >
             <path
@@ -86,12 +94,10 @@ function PropertyCard({ property, content, t }: any) {
 
       {/* Content */}
       <div className="p-4">
-        {/* Property Name */}
-        <h3 className="text-xl font-bold text-[#0C2448] mb-1 line-clamp-1 transition-colors duration-300">
+        <h3 className="text-xl font-bold text-[#0C2448] mb-1 line-clamp-1">
           {content.title}
         </h3>
 
-        {/* Location */}
         <p className="text-xs text-gray-500 mb-2 flex items-center gap-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +121,6 @@ function PropertyCard({ property, content, t }: any) {
           <span className="line-clamp-1">{content.location}</span>
         </p>
 
-        {/* Price */}
         <div className="text-xl font-semibold text-[#D7AB22] mb-2">
           AED{" "}
           <span className="font-bricolage">
@@ -123,49 +128,53 @@ function PropertyCard({ property, content, t }: any) {
           </span>
         </div>
 
-        {/* Details */}
-        <div className="flex items-center gap-4 text-xs text-gray-600 pb-4 border-b border-gray-100">
-          <div className="flex items-center gap-1.5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-4 h-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-              />
-            </svg>
+        {/* Property Details */}
+        <div className="flex flex-wrap items-center gap-3 justify-center text-xs text-gray-600 pb-4 border-b border-gray-200">
+          {/* Bedrooms */}
+          <div className="flex items-end gap-1.5">
+            <IconBed stroke={1.3} size={20} />
             <span>
               {property.bedrooms} {t("property.bedrooms")}
             </span>
           </div>
-          <div className="flex items-center gap-1.5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-4 h-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"
-              />
-            </svg>
+          <IconMinusVertical stroke={0.6} size={30} />
+          {/* <IconCircleDotFilled /> */}
+          {/* Bathrooms */}
+          <div className="flex items-end gap-1.5">
+            <IconBath stroke={1.3} size={20} />
+            <span>
+              {property.bathrooms} {t("property.bathrooms")}
+            </span>
+          </div>
+          <IconMinusVertical stroke={0.6} size={30} />
+
+          {/* Area */}
+          <div className="flex items-end gap-1.5">
+            <IconRulerMeasure stroke={1.3} size={20} />
             <span>{property.area} sq ft</span>
           </div>
         </div>
 
-        {/* CTA Button */}
-        <button className="w-full py-3 px-6 bg-[#0C2448]/80 text-white font-semibold rounded-lg hover:bg-[#0C2448] transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-[1.01] active:scale-[0.99]">
-          {t("property.contact") || "Contact Us"}
+        {/* WhatsApp CTA */}
+        <button
+          className="w-full mt-4 py-3 px-6 
+                     bg-[#E6F9F0] text-[#128C7E] 
+                     font-semibold rounded-lg 
+                     hover:bg-[#D0F5E4] 
+                     transition-all duration-300 
+                     shadow-sm hover:shadow-md 
+                     transform hover:scale-[1.01] active:scale-[0.99]
+                     flex items-center justify-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-5 h-5"
+          >
+            <path d="M12.04 2C6.58 2 2.12 6.46 2.12 11.92c0 1.93.51 3.8 1.48 5.44L2 22l4.77-1.57a9.88 9.88 0 005.27 1.54h.01c5.46 0 9.92-4.46 9.92-9.92C21.97 6.46 17.5 2 12.04 2zm5.76 14.24c-.24.67-1.41 1.28-1.94 1.35-.5.07-1.14.1-1.84-.13-.42-.13-.96-.31-1.66-.61-2.91-1.26-4.8-4.2-4.95-4.39-.15-.2-1.19-1.58-1.19-3.01 0-1.44.75-2.15 1.02-2.44.27-.3.6-.37.8-.37h.58c.18 0 .43-.07.67.5.24.57.83 2 .9 2.15.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.45.53-.15.15-.31.31-.13.61.17.3.76 1.26 1.64 2.04 1.12.99 2.07 1.3 2.37 1.44.3.15.48.13.65-.07.17-.2.73-.85.93-1.14.2-.3.4-.24.67-.15.27.1 1.72.81 2.01.96.3.15.5.22.57.35.07.13.07.76-.17 1.43z" />
+          </svg>
+          WhatsApp
         </button>
       </div>
     </div>

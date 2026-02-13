@@ -13,7 +13,7 @@ export default function Navbar1() {
 
   return (
     <nav
-      className="fixed top-0 w-full
+      className="fixed top-0 w-screen
       bg-white/90
       z-50 font-didot font-medium"
     >

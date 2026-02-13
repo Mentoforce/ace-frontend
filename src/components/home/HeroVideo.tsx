@@ -21,30 +21,33 @@ export default function HeroVideo() {
   }, []);
 
   return (
-    <div className={`hero ${loaded ? "loaded" : ""}`}>
-      <img
-        src="/try.png"
-        alt="Luxury real estate background"
-        className="hero-fallback"
-      />
+    <section className="h-screen">
+      <div className={`hero ${loaded ? "loaded" : ""}`}>
+        <img
+          src="/try.png"
+          alt="Luxury real estate background"
+          className="hero-fallback"
+        />
 
-      <video
-        ref={videoRef}
-        className="hero-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-      >
-        {/* <source src="/hero2.webm" type="video/webm" /> */}
-        {/* <source src="/hero2.mp4" type="video/mp4" /> */}
-        {/* <source src="/022.mp4" type="video/mp4" /> */}
-        {/* <source src="/023.mp4" type="video/mp4" /> */}
-      </video>
-      <h1 className="font-merriweather z-20 md:text-5xl/16 text-4xl text-center font-bold uppercase text-white tracking-wider top-60 left-1/2 -translate-x-1/2 [text-shadow:0_0_30px_rgba(0,0,0,1)] absolute">
-        {t("home.videoText")}
-      </h1>
-    </div>
+        <video
+          ref={videoRef}
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+        >
+          {/* <source src="/hero2.webm" type="video/webm" /> */}
+          {/* <source src="/hero2.mp4" type="video/mp4" /> */}
+          {/* <source src="/022.mp4" type="video/mp4" /> */}
+          {/* <source src="/023.mp4" type="video/mp4" /> */}
+          <source src="/hero21.mp4" type="video/mp4" />
+        </video>
+        <h1 className="font-merriweather z-20 md:text-5xl/16 text-4xl text-center font-bold uppercase text-white tracking-wider top-60 left-1/2 -translate-x-1/2 [text-shadow:0_0_30px_rgba(0,0,0,1)] absolute">
+          {t("home.videoText")}
+        </h1>
+      </div>
+    </section>
   );
 }
