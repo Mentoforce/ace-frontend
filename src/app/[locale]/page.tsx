@@ -9,12 +9,16 @@ import PrimeAreas from "@/components/home/PrimeAreas";
 import Tagline from "@/components/home/Tagline";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Marquee from "@/components/home/Marquee1";
+import FeaturedProperties1 from "@/components/home/FeaturedProperties1";
+import FeaturedProperties2 from "@/components/home/FeaturedProperties2";
 
 export default function HomePage() {
   return (
     <>
       <HeroVideo />
-      <FeaturedProperties />
+      {/* <FeaturedProperties /> */}
+      <FeaturedProperties1 />
+      <FeaturedProperties2 />
       <Tagline />
 
       <PrimeAreas />
@@ -22,8 +26,8 @@ export default function HomePage() {
       <BlogSection />
       <Marquee />
       {/* <DevelopersMarquee /> */}
-      <ContactTestimonials />
-      <Testimoials />
+      {/* <ContactTestimonials /> */}
+      {/* <Testimoials /> */}
       <Contact />
     </>
   );

@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-export default function FeaturedProperties() {
+export default function FeaturedProperties2() {
   const { locale } = useParams();
   const t = useTranslations();
 
@@ -127,29 +127,24 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* Property Details */}
-        <div className="flex flex-wrap items-center gap-3 justify-center text-xs text-gray-600 pb-4 border-b border-gray-200">
-          {/* Bedrooms */}
-          <div className="flex items-end gap-1.5">
-            <IconBed stroke={1.3} size={20} />
-            <span>
-              {property.bedrooms} {t("property.bedrooms")}
-            </span>
+        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-xl p-2 mb-4 text-xs text-[#212121]">
+          <div className="flex flex-col items-center gap-2">
+            <IconBed size={18} stroke={1.8} />
+            <span>{property.bedrooms} Beds</span>
           </div>
-          <IconMinusVertical stroke={0.6} size={30} />
-          {/* <IconCircleDotFilled /> */}
-          {/* Bathrooms */}
-          <div className="flex items-end gap-1.5">
-            <IconBath stroke={1.3} size={20} />
-            <span>
-              {property.bathrooms} {t("property.bathrooms")}
-            </span>
-          </div>
-          <IconMinusVertical stroke={0.6} size={30} />
 
-          {/* Area */}
-          <div className="flex items-end gap-1.5">
-            <IconRulerMeasure stroke={1.3} size={20} />
-            <span>{property.area} sq ft</span>
+          <div className="h-5 w-px bg-[#D1D5DB]" />
+
+          <div className="flex flex-col items-center gap-2">
+            <IconBath size={16} stroke={1.8} />
+            <span>{property.bathrooms} Baths</span>
+          </div>
+
+          <div className="h-5 w-px bg-[#D1D5DB]" />
+
+          <div className="flex flex-col items-center gap-2">
+            <IconRulerMeasure size={16} stroke={1.8} />
+            <span>{property.area} Sqft</span>
           </div>
         </div>
 

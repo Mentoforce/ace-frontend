@@ -43,7 +43,7 @@ export default function Navbar1() {
         />
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-6 px-5">
           <Link href="/">{t("nav.home")}</Link>
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/blog">{t("nav.blogs")}</Link>
