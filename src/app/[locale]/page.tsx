@@ -1,4 +1,7 @@
 import BlogSection from "@/components/home/BlogSection";
+import ContactTestimonials from "@/components/home/Contact";
+import Contact from "@/components/home/ContactUs";
+import Testimoials from "@/components/home/Testimonials";
 import FeaturedProperties from "@/components/home/FeaturedProperties";
 import HeroVideo from "@/components/home/HeroVideo";
 import DevelopersMarquee from "@/components/home/Marquee";
@@ -14,9 +17,12 @@ export default function HomePage() {
       <Tagline />
 
       <PrimeAreas />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <BlogSection />
-      <DevelopersMarquee />
+      {/* <DevelopersMarquee /> */}
+      <ContactTestimonials />
+      <Testimoials />
+      <Contact />
     </>
   );
 }

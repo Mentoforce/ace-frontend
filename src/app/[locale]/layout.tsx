@@ -1,6 +1,7 @@
 import { rtlLocales } from "@/lib/i18n/config";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Navbar1 from "@/components/layout/Navbar1";
 
 export default async function LocaleLayout({
   children,
@@ -18,7 +19,7 @@ export default async function LocaleLayout({
       dir={isRTL ? "rtl" : "ltr"}
       className="flex min-h-screen flex-col"
     >
-      <Navbar />
+      <Navbar1 />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>

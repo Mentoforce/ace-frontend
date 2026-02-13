@@ -21,13 +21,28 @@ export default function Navbar() {
     >
       {/* Top Bar */}
       <div className="flex items-center justify-between px-5">
-        <Image src="/logo2d.png" height={80} width={80} alt="ACE LOGO" />
+        {/* LOGO VARIANTS  */}
+        {/* <Image
+          src="/ace wn.png"
+          className="ms-2 p-3"
+          height={80}
+          width={80}
+          alt="ACE LOGO"
+        /> */}
+        <Image
+          src="/logowllc.png"
+          className="ms-2 p-3"
+          height={80}
+          width={80}
+          alt="ACE LOGO"
+        />
+        {/* <Image src="/logo2d.png" height={80} width={80} alt="ACE LOGO" /> */}
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-6">
           <Link href="/">{t("nav.home")}</Link>
           <Link href="/about">{t("nav.about")}</Link>
-          <Link href="#">{t("nav.careers")}</Link>
+          <Link href="/blog">{t("nav.blogs")}</Link>
           <LanguageSwitcher />
           <button className="bg-[#0C2448] text-white px-4 py-2 rounded-full">
             {t("nav.cta")}
@@ -57,14 +72,14 @@ export default function Navbar() {
         }`}
       >
         <div className="px-6 pb-5 pt-2 border-t border-black/10 flex flex-col gap-4 text-sm">
-          <Link onClick={() => setOpen(false)} href="#">
+          <Link onClick={() => setOpen(false)} href="/">
             {t("nav.home")}
           </Link>
-          <Link onClick={() => setOpen(false)} href="#">
+          <Link onClick={() => setOpen(false)} href="/about">
             {t("nav.about")}
           </Link>
-          <Link onClick={() => setOpen(false)} href="#">
-            {t("nav.careers")}
+          <Link onClick={() => setOpen(false)} href="/blog">
+            {t("nav.blogs")}
           </Link>
         </div>
       </div>
