@@ -1,5 +1,5 @@
 import BlogSection from "@/components/home/BlogSection";
-import FeaturedProperties from "@/components/home/FeaturedProperties";
+import FeaturedProperties from "@/components/home/FeaturedProperties1";
 import HeroVideo from "@/components/home/HeroVideo";
 import DevelopersMarquee from "@/components/home/Marquee1";
 import PrimeAreas from "@/components/home/PrimeAreas";
