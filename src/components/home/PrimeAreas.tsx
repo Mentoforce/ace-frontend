@@ -80,10 +80,11 @@ export default function PrimeAreas() {
   const t = useTranslations();
 
   return (
-    <section className="font-didot py-14 md:py-25 bg-linear-to-t from-[#EFE9E3] via-[#FAF8F5] to-white">
+    // from-[#EFE9E3] via-[#FAF8F5] to-white
+    <section className="font-didot py-14 md:py-25 bg-linear-to-t ">
       <div className="max-w-7xl mx-auto px-4 md:px-2">
         <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-12 md:grid-rows-6">
-          {/* ===== Title block (inside grid) ===== */}
+          {/*Title block*/}
           <div
             className="
               col-span-2
@@ -99,7 +100,7 @@ export default function PrimeAreas() {
             </div>
           </div>
 
-          {/* ===== Cards ===== */}
+          {/* Cards*/}
           {primeAreas.map((area, index) => {
             const content =
               area.translations[locale as string] ?? area.translations["en-gb"];

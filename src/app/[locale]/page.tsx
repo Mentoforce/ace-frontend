@@ -1,7 +1,7 @@
 import BlogSection from "@/components/home/BlogSection";
 import FeaturedProperties from "@/components/home/FeaturedProperties";
 import HeroVideo from "@/components/home/HeroVideo";
-import DevelopersMarquee from "@/components/home/Marquee";
+import DevelopersMarquee from "@/components/home/Marquee1";
 import PrimeAreas from "@/components/home/PrimeAreas";
 import Tagline from "@/components/home/Tagline";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
@@ -14,7 +14,7 @@ export default function HomePage() {
       <Tagline />
 
       <PrimeAreas />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <BlogSection />
       <DevelopersMarquee />
     </>
