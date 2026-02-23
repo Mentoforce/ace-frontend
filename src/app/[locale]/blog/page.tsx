@@ -152,10 +152,10 @@ export default function BlogsPage() {
                       {content.subtitle}
                     </p>
 
-                    <div className="mt-6 flex items-center gap-2 text-xs tracking-widest uppercase text-[#C29A1F]">
+                    {/* <div className="mt-6 flex items-center gap-2 text-xs tracking-widest uppercase text-[#C29A1F]">
                       {t("blog.read") || "READ ARTICLE"}
                       <span className="h-px w-6 bg-[#C29A1F] transition-all duration-300 group-hover:w-10" />
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </Link>
