@@ -2,6 +2,7 @@ import { rtlLocales } from "@/lib/i18n/config";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Navbar1 from "@/components/layout/Navbar1";
+import Navbar2 from "@/components/layout/Navbar2";
 
 export default async function LocaleLayout({
   children,

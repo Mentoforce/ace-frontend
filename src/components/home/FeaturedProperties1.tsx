@@ -76,7 +76,7 @@ function PropertyCard({ property, content, t }: any) {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill={isFavorite ? "#fce7a5" : "none"}
+            fill={isFavorite ? "#c29a1f" : "none"}
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke={isFavorite ? "#c28a2a" : "#0C2448"}

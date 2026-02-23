@@ -13,11 +13,11 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-5 left-1/2 -translate-x-1/2 
-      w-[90%] md:w-[60%]
+      className="fixed top-3 left-1/2 -translate-x-1/2 
+      w-[90%] md:w-[80%]
       bg-white/25 backdrop-blur-md
       md:rounded-full shadow-lg
-      z-50 font-didot font-medium rounded-2xl"
+      z-50 font-didot font-medium rounded-2xl backdrop-brightness-125"
     >
       {/* Top Bar */}
       <div className="flex items-center justify-between px-5">
@@ -44,7 +44,7 @@ export default function Navbar() {
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/blog">{t("nav.blogs")}</Link>
           {/* <LanguageSwitcher /> */}
-          <button className="bg-linear-to-l from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] px-4 py-2 rounded-full">
+          <button className="bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] px-4 py-2 rounded-full">
             {t("nav.cta")}
           </button>
         </div>

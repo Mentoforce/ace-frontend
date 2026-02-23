@@ -487,9 +487,49 @@ export default function About() {
         </div>
         <Image6 />
       </div>
-      <p className="md:text-lg text-base text font-medium max-w-7xl mx-auto text-[#0C2448] md:p-20 p-4 mb-8">
-        {translation.paragraph}
-      </p>
+      <div className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-3xl md:text-4xl font-semibold text-[#c29a1f] mb-8">
+          Who We Are
+        </h2>
+
+        <p className="text-[#0c2448] text-lg leading-relaxed mb-2">
+          Ace Ventures Real Estate LLC is a Dubai-based real estate brokerage
+          firm specializing in property investment advisory, luxury residential
+          sales, commercial real estate, off-plan projects, and complete
+          relocation solutions across Dubai, UAE.
+        </p>
+
+        <p className="text-[#0c2448] text-lg leading-relaxed">
+          We provide structured, research-driven real estate strategies designed
+          for investors, homeowners, international buyers, and portfolio-focused
+          wealth builders seeking long-term financial growth.
+        </p>
+      </div>
+
+      <div className=" py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#c29a1f] mb-12 text-center">
+            Who We Serve
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "Property Investors",
+              "End Users & Homeowners",
+              "International Buyers",
+              "Families Relocating to Dubai",
+              "Portfolio-Focused Wealth Builders",
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="border border-[#C28A2A]/30 p-6 rounded-xl hover:border-[#c29a1f] transition duration-300"
+              >
+                <p className="text-[#FCE7A5] text-lg font-medium">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       {/* <MissionVision4 /> */}
       {/* <div className="h-40" /> */}
       <MissionVision5 />

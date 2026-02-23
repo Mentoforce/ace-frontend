@@ -74,7 +74,7 @@ function FeatureCard({
   const isLeft = side === "left";
 
   return (
-    <div className="relative bg-white border border-[#C28A2A]/20 p-8 overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:border-[#C28A2A]/40 rounded-lg h-full">
+    <div className="relative bg-white border border-[#C28A2A]/20 p-6 overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:border-[#C28A2A]/40 rounded-lg h-full">
       {/* Side Gold Bar */}
       {isLeft ? (
         <div className="absolute top-0 left-0 w-0.75 h-full bg-linear-to-b from-[#FCE7A5] to-[#C28A2A]"></div>
@@ -83,7 +83,7 @@ function FeatureCard({
       )}
 
       {/* Icon - Top Left, above Title//mb-4 */}
-      <div className="mb-4">{icon}</div>
+      <div className="mb-3">{icon}</div>
 
       <h3 className="font-display text-[#0C2448] text-[22px] font-semibold leading-snug mb-0.5">
         {title}
@@ -120,7 +120,7 @@ export default function WhyChooseACE() {
       </div>
 
       {/* GRID LAYOUT - Mobile Responsive */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px_1fr] xl:grid-cols-[1fr_340px_1fr] gap-8 md:gap-10 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px_1fr] xl:grid-cols-[1fr_340px_1fr] gap-8 md:gap-10 items-center font-montserrat text-2xs">
         {/* LEFT CARDS */}
         <div className="flex flex-col gap-8 order-2 lg:order-1">
           {cards
@@ -133,24 +133,22 @@ export default function WhyChooseACE() {
         {/* CENTER IMAGE - Becomes top visual on mobile */}
         <div className="flex flex-col items-center gap-7 order-1 lg:order-2">
           <div className="relative w-full rounded-lg">
-            <div className="absolute -inset-2 rounded-lg border border-[#C28A2A]/25 pointer-events-none z-0"></div>
-
             <div
               className="relative z-1 overflow-hidden rounded-lg shadow-xl"
               style={{ aspectRatio: 3 / 4 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=85"
+                src="/why7.jpg"
                 alt="Luxury Dubai Property"
-                className="w-full h-full rounded-lg object-cover brightness-90 contrast-105"
+                className="w-full h-full rounded-lg object-cover object-center brightness-90 contrast-105"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-[#0c2448]/80 via-[#0c2448]/20 to-transparent"></div>
-
+              {/* <div className="absolute inset-0 bg-linear-to-t from-[#0c2448]/80 via-[#0c2448]/20 to-transparent"></div> */}
+              {/* 
               <div className="absolute bottom-0 left-0 right-0 z-10 py-4 px-5 text-center">
                 <span className="font-sans text-[9px] font-semibold tracking-[3px] uppercase text-white">
                   Dubai's Premier Real Estate
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

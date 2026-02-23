@@ -7,18 +7,19 @@ import { Menu } from "lucide-react";
 import LanguageSwitcher from "../common/LanguageSwitcher";
 import { useTranslations } from "@/lib/i18n/client";
 
-export default function Navbar1() {
+export default function Navbar2() {
   const t = useTranslations();
   const [open, setOpen] = useState(false);
 
   return (
     <nav
-      className="fixed top-0 
-      bg-white/20 backdrop-blur-md
-      z-50 font-didot font-medium backdrop-brightness-125 w-screen px-15"
+      className="fixed top-3 left-1/2 -translate-x-1/2 
+      w-[90%] md:w-[80%]
+      bg-white/25 backdrop-blur-md shadow-lg
+      z-50 font-didot font-medium rounded-lg backdrop-brightness-125"
     >
       {/* Top Bar */}
-      <div className="flex items-center justify-between mx-auto">
+      <div className="flex items-center justify-between px-5">
         {/* LOGO VARIANTS  */}
         {/* <Image
           src="/ace wn.png"
@@ -27,38 +28,29 @@ export default function Navbar1() {
           width={80}
           alt="ACE LOGO"
         /> */}
-        {/* <Image
-          src="/ace2d wn.png"
+        <Image
+          src="/logo3dwllc.png"
           className="ms-2 p-3"
           height={80}
           width={80}
           alt="ACE LOGO"
-        /> */}
-        <Image
-          src="/logo3dwllc.png"
-          height={80}
-          width={80}
-          className="p-1"
-          alt="ACE LOGO"
         />
+        {/* <Image src="/logo2d.png" height={80} width={80} alt="ACE LOGO" /> */}
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-6 font-medium">
+        <div className="hidden md:flex items-center gap-6">
           <Link href="/">{t("nav.home")}</Link>
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/blog">{t("nav.blogs")}</Link>
           {/* <LanguageSwitcher /> */}
-          {/* <button className="bg-[#0C2448] text-white px-4 py-2 rounded-lg">
-            {t("nav.cta")}
-          </button> */}
-          <button className=" bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg">
+          <button className="bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-bold px-4 py-2 rounded-lg">
             {t("nav.cta")}
           </button>
         </div>
 
         {/* Mobile */}
         <div className="flex md:hidden items-center gap-3">
-          {/* <LanguageSwitcher /> */}
+          <LanguageSwitcher />
           <button
             onClick={() => setOpen((v) => !v)}
             className="p-2 rounded-full hover:bg-black/5 transition"
