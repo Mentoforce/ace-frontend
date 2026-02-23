@@ -61,14 +61,14 @@ function BlogCard({ post, index, locale }: any) {
   return (
     <Link href={`/${locale}/blog/${post.slug}`} className="group block">
       {/* Card Frame */}
-      <div className="relative bg-white/60 rounded-2xl p-4 transition-shadow duration-500 group-hover:shadow-xl">
+      <div className="relative bg-white/60 rounded-lg p-4 transition-shadow duration-500 group-hover:shadow-xl">
         {/* Index */}
         <span className="absolute -top-4 -left-2 font-didot text-5xl text-[#8B6F4E]/15">
           {String(index + 1).padStart(2, "0")}
         </span>
 
         {/* Image */}
-        <div className="relative aspect-3/2 overflow-hidden rounded-xl">
+        <div className="relative aspect-3/2 overflow-hidden rounded-lg">
           <Image
             src={post.image}
             alt={content.title}

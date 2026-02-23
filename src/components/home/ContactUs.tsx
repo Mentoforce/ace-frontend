@@ -80,7 +80,7 @@ const ContactTestimonials = () => {
         <div
           className="
         flex flex-col md:flex-row 
-        bg-[#D2B48C] 
+        bg-[#D2B48C]/80 
         justify-center 
         gap-10 md:gap-48 
         items-center 
@@ -92,16 +92,16 @@ const ContactTestimonials = () => {
           <div
             className="
           w-full max-w-md md:w-120 
-          bg-[#FAF8F5] 
+          bg-[#FAF8F5]
           md:h-150 
           relative z-20 
           shadow-2xl 
           flex items-center 
-          rounded-xl mb-5 md:mb-0
+          rounded-lg mb-5 md:mb-0
         "
           >
             <div className="p-6 md:p-10 text-[#0c2448] w-full">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8">
                 Contact Us
               </h2>
 
@@ -161,15 +161,12 @@ const ContactTestimonials = () => {
             text-white 
             transition-all duration-500 
             bg-black/20 
-            rounded-2xl 
+            rounded-lg 
             p-6 md:p-10
           "
             >
               <div className="absolute -top-8 -left-4 md:-top-10 md:-left-8">
-                <IconQuoteFilled
-                  size={60}
-                  className="rotate-180 md:size-[80px]"
-                />
+                <IconQuoteFilled size={60} className="rotate-180 md:size-20" />
               </div>
 
               <p className="text-sm md:text-base leading-relaxed">

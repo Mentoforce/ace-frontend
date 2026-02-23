@@ -54,7 +54,7 @@ function PropertyCard({ property, content, t }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <div className="group relative bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden transition-all duration-300">
+    <div className="group relative bg-white rounded-lg border border-[#E5E5E5] overflow-hidden transition-all duration-300">
       {/* Image */}
       <div className=" h-50 overflow-hidden">
         <Image
@@ -72,10 +72,10 @@ function PropertyCard({ property, content, t }: any) {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill={isFavorite ? "#212121" : "none"}
+            fill={isFavorite ? "#c29a1f" : "none"}
             viewBox="0 0 24 24"
-            strokeWidth={1.8}
-            stroke="#212121"
+            strokeWidth={2}
+            stroke={isFavorite ? "#c29a1f" : "#0C2448"}
             className="w-5 h-5"
           >
             <path
@@ -106,7 +106,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* Details Box */}
-        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-xl p-2 mb-4 text-xs text-[#212121]">
+        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
           <div className="flex flex-col items-center gap-2">
             <IconBed size={18} stroke={1.8} />
             <span>{property.bedrooms} Beds</span>
@@ -128,7 +128,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* WhatsApp Button */}
-        <button className="w-full py-2 rounded-xl bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
+        <button className="w-full py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
           WhatsApp
         </button>
       </div>

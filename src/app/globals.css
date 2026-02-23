@@ -21,8 +21,6 @@ body {
   height: 100%;
 }
 
-
-
 .hero-fallback {
   position: absolute;
   inset: 0;
@@ -40,16 +38,14 @@ body {
 /* Video underneath */
 .hero-video {
   z-index: 1;
-}
-.hero-video {
   width: 100%;
   height: auto;
+  min-height: 100vh;
   max-height: 100vh;
   object-fit: cover;
   backface-visibility: hidden;
   transform: translateZ(0);
 }
-
 
 /* When video is ready */
 .hero.loaded .hero-fallback {

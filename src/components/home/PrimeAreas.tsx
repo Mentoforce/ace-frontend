@@ -120,7 +120,7 @@ export default function PrimeAreas() {
                 className={`
                   group relative
                   aspect-4/5 md:aspect-auto
-                  overflow-hidden rounded-2xl
+                  overflow-hidden rounded-lg
                   shadow-lg hover:shadow-2xl
                   transition-all duration-700
                   ${layoutMap[index]}

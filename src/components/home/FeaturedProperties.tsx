@@ -54,7 +54,7 @@ function PropertyCard({ property, content, t }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <div className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 hover:-translate-y-0.5 border border-gray-100">
+    <div className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 hover:-translate-y-0.5 border border-gray-100">
       {/* Image Container */}
       <div className="relative h-50 overflow-hidden">
         <Image
@@ -75,10 +75,10 @@ function PropertyCard({ property, content, t }: any) {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill={isFavorite ? "#25D366" : "none"}
+            fill={isFavorite ? "#c29a1f" : "none"}
             viewBox="0 0 24 24"
             strokeWidth={2}
-            stroke={isFavorite ? "#128C7E" : "#0C2448"}
+            stroke={isFavorite ? "#c29a1f" : "#0C2448"}
             className="w-5 h-5 transition-colors duration-300"
           >
             <path
@@ -154,16 +154,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* WhatsApp CTA */}
-        <button
-          className="w-full mt-4 py-3 px-6 
-                     bg-[#E6F9F0] text-[#128C7E] 
-                     font-semibold rounded-lg 
-                     hover:bg-[#D0F5E4] 
-                     transition-all duration-300 
-                     shadow-sm hover:shadow-md 
-                     transform hover:scale-[1.01] active:scale-[0.99]
-                     flex items-center justify-center gap-2"
-        >
+        <button className="w-full mt-4 py-3 px-6  bg-[#E6F9F0] text-[#128C7E] font-semibold rounded-lg hover:bg-[#D0F5E4] transition-all duration-300 shadow-sm hover:shadow-md transform hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

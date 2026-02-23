@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav
       className="fixed top-5 left-1/2 -translate-x-1/2 
       w-[90%] md:w-[60%]
-      bg-white/40 backdrop-blur-md
+      bg-white/25 backdrop-blur-md
       md:rounded-full shadow-lg
       z-50 font-didot font-medium rounded-2xl"
     >

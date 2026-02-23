@@ -14,8 +14,8 @@ export default function Navbar1() {
   return (
     <nav
       className="fixed top-0 w-screen
-      bg-white/90
-      z-50 font-didot font-medium"
+      bg-white/20 backdrop-blur-md
+      z-50 font-didot font-medium brightness-125 backdrop-brightness-125"
     >
       {/* Top Bar */}
       <div className="flex items-center justify-between px-5">
@@ -48,7 +48,7 @@ export default function Navbar1() {
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/blog">{t("nav.blogs")}</Link>
           <LanguageSwitcher />
-          <button className="bg-[#0C2448] text-white px-4 py-2 rounded-xl">
+          <button className="bg-[#0C2448] text-white px-4 py-2 rounded-lg">
             {t("nav.cta")}
           </button>
         </div>
