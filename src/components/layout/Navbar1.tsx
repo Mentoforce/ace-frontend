@@ -13,12 +13,12 @@ export default function Navbar1() {
 
   return (
     <nav
-      className="fixed top-0 w-screen
+      className="fixed top-0 
       bg-white/20 backdrop-blur-md
-      z-50 font-didot font-medium brightness-125 backdrop-brightness-125"
+      z-50 font-didot font-medium backdrop-brightness-125 w-screen px-35"
     >
       {/* Top Bar */}
-      <div className="flex items-center justify-between px-5">
+      <div className="flex items-center justify-between mx-auto">
         {/* LOGO VARIANTS  */}
         {/* <Image
           src="/ace wn.png"
@@ -35,27 +35,30 @@ export default function Navbar1() {
           alt="ACE LOGO"
         /> */}
         <Image
-          src="/logowllc.png"
+          src="/logo3dwllc.png"
           height={80}
           width={80}
-          className="ms-3 p-1"
+          className="p-1"
           alt="ACE LOGO"
         />
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-6 px-5">
+        <div className="hidden md:flex items-center gap-6  font-medium">
           <Link href="/">{t("nav.home")}</Link>
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/blog">{t("nav.blogs")}</Link>
-          <LanguageSwitcher />
-          <button className="bg-[#0C2448] text-white px-4 py-2 rounded-lg">
+          {/* <LanguageSwitcher /> */}
+          {/* <button className="bg-[#0C2448] text-white px-4 py-2 rounded-lg">
+            {t("nav.cta")}
+          </button> */}
+          <button className=" bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2 rounded-lg">
             {t("nav.cta")}
           </button>
         </div>
 
         {/* Mobile */}
         <div className="flex md:hidden items-center gap-3">
-          <LanguageSwitcher />
+          {/* <LanguageSwitcher /> */}
           <button
             onClick={() => setOpen((v) => !v)}
             className="p-2 rounded-full hover:bg-black/5 transition"

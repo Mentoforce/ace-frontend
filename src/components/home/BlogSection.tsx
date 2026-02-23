@@ -80,9 +80,9 @@ function BlogCard({ post, index, locale }: any) {
 
         {/* Content */}
         <div className="pt-6 px-2">
-          <div className="flex items-center gap-3 text-[11px] uppercase tracking-widest text-slate-500 mb-3">
+          <div className="flex items-center gap-3 text-[11px] uppercase tracking-widest text-[#757575] mb-3">
             <span>{post.date}</span>
-            <span className="w-1 h-1 rounded-full bg-slate-400" />
+            <span className="w-1 h-1 rounded-full bg-[#757575]" />
             <span>{post.readTime}</span>
           </div>
 
@@ -90,14 +90,14 @@ function BlogCard({ post, index, locale }: any) {
             {content.title}
           </h3>
 
-          <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">
+          <p className="text-sm text-[#757575] leading-relaxed line-clamp-3">
             {content.subtitle}
           </p>
 
-          <div className="mt-6 flex items-center gap-2 text-xs tracking-widest uppercase text-[#C29A1F]">
+          {/* <div className="mt-6 flex items-center gap-2 text-xs tracking-widest uppercase text-[#C29A1F]">
             {t("blog.read") || "READ ARTICLE"}
             <span className="h-px w-6 bg-[#C29A1F] transition-all duration-300 group-hover:w-10" />
-          </div>
+          </div> */}
         </div>
       </div>
     </Link>

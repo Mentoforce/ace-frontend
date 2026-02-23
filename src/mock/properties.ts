@@ -168,4 +168,168 @@ export const featuredProperties: Property[] = [
       },
     },
   },
+  {
+    _id: "5",
+    slug: "business-bay-luxury-residence",
+    price: 1580000,
+    area: 1750,
+    bedrooms: 2,
+    bathrooms: 3,
+    images: ["/featuredprop/p3.png"],
+    translations: {
+      "en-gb": {
+        title: "Business Bay Luxury Residence",
+        description:
+          "A contemporary residence in Business Bay combining canal views, modern design, and proximity to Downtown Dubai.",
+        location: "Business Bay, Dubai",
+      },
+      ar: {
+        title: "مسكن فاخر في الخليج التجاري",
+        description:
+          "مسكن عصري في الخليج التجاري يجمع بين إطلالات القناة، التصميم الحديث، والقرب من وسط مدينة دبي.",
+        location: "الخليج التجاري، دبي",
+      },
+      fr: {
+        title: "Résidence de luxe à Business Bay",
+        description:
+          "Résidence contemporaine à Business Bay offrant une vue sur le canal, un design moderne et une proximité immédiate avec Downtown Dubai.",
+        location: "Business Bay, Dubaï",
+      },
+      ru: {
+        title: "Роскошная резиденция в Business Bay",
+        description:
+          "Современная резиденция в Business Bay с видом на канал, стильным дизайном и близостью к Downtown Dubai.",
+        location: "Бизнес-Бэй, Дубай",
+      },
+      zh: {
+        title: "商业湾奢华公寓",
+        description:
+          "位于商业湾的现代高端住宅，融合运河景观、现代设计，并毗邻迪拜市中心。",
+        location: "商业湾，迪拜",
+      },
+    },
+  },
+  {
+    _id: "6",
+    slug: "business-bay-luxury-residence",
+    price: 1580000,
+    area: 1750,
+    bedrooms: 2,
+    bathrooms: 3,
+    images: ["/featuredprop/p3.png"],
+    translations: {
+      "en-gb": {
+        title: "Business Bay Luxury Residence",
+        description:
+          "A contemporary residence in Business Bay combining canal views, modern design, and proximity to Downtown Dubai.",
+        location: "Business Bay, Dubai",
+      },
+      ar: {
+        title: "مسكن فاخر في الخليج التجاري",
+        description:
+          "مسكن عصري في الخليج التجاري يجمع بين إطلالات القناة، التصميم الحديث، والقرب من وسط مدينة دبي.",
+        location: "الخليج التجاري، دبي",
+      },
+      fr: {
+        title: "Résidence de luxe à Business Bay",
+        description:
+          "Résidence contemporaine à Business Bay offrant une vue sur le canal, un design moderne et une proximité immédiate avec Downtown Dubai.",
+        location: "Business Bay, Dubaï",
+      },
+      ru: {
+        title: "Роскошная резиденция в Business Bay",
+        description:
+          "Современная резиденция в Business Bay с видом на канал, стильным дизайном и близостью к Downtown Dubai.",
+        location: "Бизнес-Бэй, Дубай",
+      },
+      zh: {
+        title: "商业湾奢华公寓",
+        description:
+          "位于商业湾的现代高端住宅，融合运河景观、现代设计，并毗邻迪拜市中心。",
+        location: "商业湾，迪拜",
+      },
+    },
+  },
+  {
+    _id: "7",
+    slug: "business-bay-luxury-residence",
+    price: 1580000,
+    area: 1750,
+    bedrooms: 2,
+    bathrooms: 3,
+    images: ["/featuredprop/p3.png"],
+    translations: {
+      "en-gb": {
+        title: "Business Bay Luxury Residence",
+        description:
+          "A contemporary residence in Business Bay combining canal views, modern design, and proximity to Downtown Dubai.",
+        location: "Business Bay, Dubai",
+      },
+      ar: {
+        title: "مسكن فاخر في الخليج التجاري",
+        description:
+          "مسكن عصري في الخليج التجاري يجمع بين إطلالات القناة، التصميم الحديث، والقرب من وسط مدينة دبي.",
+        location: "الخليج التجاري، دبي",
+      },
+      fr: {
+        title: "Résidence de luxe à Business Bay",
+        description:
+          "Résidence contemporaine à Business Bay offrant une vue sur le canal, un design moderne et une proximité immédiate avec Downtown Dubai.",
+        location: "Business Bay, Dubaï",
+      },
+      ru: {
+        title: "Роскошная резиденция в Business Bay",
+        description:
+          "Современная резиденция в Business Bay с видом на канал, стильным дизайном и близостью к Downtown Dubai.",
+        location: "Бизнес-Бэй, Дубай",
+      },
+      zh: {
+        title: "商业湾奢华公寓",
+        description:
+          "位于商业湾的现代高端住宅，融合运河景观、现代设计，并毗邻迪拜市中心。",
+        location: "商业湾，迪拜",
+      },
+    },
+  },
+  {
+    _id: "8",
+    slug: "business-bay-luxury-residence",
+    price: 1580000,
+    area: 1750,
+    bedrooms: 2,
+    bathrooms: 3,
+    images: ["/featuredprop/p3.png"],
+    translations: {
+      "en-gb": {
+        title: "Business Bay Luxury Residence",
+        description:
+          "A contemporary residence in Business Bay combining canal views, modern design, and proximity to Downtown Dubai.",
+        location: "Business Bay, Dubai",
+      },
+      ar: {
+        title: "مسكن فاخر في الخليج التجاري",
+        description:
+          "مسكن عصري في الخليج التجاري يجمع بين إطلالات القناة، التصميم الحديث، والقرب من وسط مدينة دبي.",
+        location: "الخليج التجاري، دبي",
+      },
+      fr: {
+        title: "Résidence de luxe à Business Bay",
+        description:
+          "Résidence contemporaine à Business Bay offrant une vue sur le canal, un design moderne et une proximité immédiate avec Downtown Dubai.",
+        location: "Business Bay, Dubaï",
+      },
+      ru: {
+        title: "Роскошная резиденция в Business Bay",
+        description:
+          "Современная резиденция в Business Bay с видом на канал, стильным дизайном и близостью к Downtown Dubai.",
+        location: "Бизнес-Бэй, Дубай",
+      },
+      zh: {
+        title: "商业湾奢华公寓",
+        description:
+          "位于商业湾的现代高端住宅，融合运河景观、现代设计，并毗邻迪拜市中心。",
+        location: "商业湾，迪拜",
+      },
+    },
+  },
 ];

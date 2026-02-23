@@ -74,6 +74,10 @@ body {
   font-family: var(--font-bricolage), sans-serif;
 }
 
+.font-montserrat {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
 .font-didot {
   font-family: var(--font-didot), serif;
 }

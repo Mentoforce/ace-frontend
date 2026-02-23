@@ -7,6 +7,9 @@ import {
   IconBrandTwitter,
   IconBrandWhatsapp,
   IconMail,
+  IconMapPin,
+  IconPhone,
+  IconPin,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,16 +26,16 @@ export default function Footer() {
       {/* Main Content */}
       <div className="relative z-10 flex flex-col md:flex-row gap-10 justify-around items-center font-didot font-medium px-6">
         {/* Logo + Socials */}
-        <div className="flex flex-col items-center md:items-start gap-4">
+        <div className="flex flex-col  gap-6">
           <Image
-            src="/logo2d.png"
-            height={200}
-            width={200}
+            src="/logo3dwllc.png"
+            height={150}
+            width={150}
             alt="ACE LOGO"
             priority
           />
 
-          <div className="flex gap-4 text-[#0C2448]/80">
+          <div className="flex gap-4 text-[#0C2448]/90">
             <IconBrandInstagram className="cursor-pointer hover:text-[#0C2448] transition" />
             <IconBrandFacebook className="cursor-pointer hover:text-[#0C2448] transition" />
             <IconBrandTwitter className="cursor-pointer hover:text-[#0C2448] transition" />
@@ -50,29 +53,19 @@ export default function Footer() {
         </div>
 
         {/* Contact Form */}
-        <div className="flex flex-col gap-3 w-full max-w-xs">
-          <input
-            type="text"
-            placeholder={t("footer.name")}
-            className="border border-[#0C2448]/50 bg-white/60 backdrop-blur px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#C29A1F]"
-          />
-          <input
-            type="email"
-            placeholder={t("footer.email")}
-            className="border border-[#0C2448]/50 bg-white/60 backdrop-blur px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#C29A1F]"
-          />
-          <input
-            type="tel"
-            placeholder="+971-5678957"
-            className="border border-[#0C2448]/50 bg-white/60 backdrop-blur px-3 py-2 rounded-xl focus:outline-none focus:ring-1 focus:ring-[#C29A1F]"
-          />
-
-          <button
-            type="submit"
-            className="bg-[#0C2448]/90 text-white py-2 rounded-xl cursor-pointer hover:bg-[#0C2448] transition"
-          >
-            Submit
-          </button>
+        <div className="flex flex-col gap-3 max-w-2xs">
+          <div className="flex gap-2 items-center">
+            <IconMapPin size={20} />
+            <p>Reef Tower, loremipsum, Dubai, lorem, 339182</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <IconMail size={20} />
+            <p>abc@infoaceventures.com</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <IconPhone size={20} />
+            <p>+91 8765993856</p>
+          </div>
         </div>
       </div>
 

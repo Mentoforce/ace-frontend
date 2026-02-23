@@ -1,5 +1,12 @@
 import "./globals.css";
-import { bricolage, didot, lora, merriweather, birthstone } from "./fonts";
+import {
+  bricolage,
+  didot,
+  lora,
+  merriweather,
+  birthstone,
+  montserrat,
+} from "./fonts";
 
 export default function RootLayout({
   children,
@@ -15,6 +22,7 @@ export default function RootLayout({
           ${lora.variable}
           ${merriweather.variable} 
           ${birthstone.variable}
+          ${montserrat.variable}
         min-h-screen antialiased bg-white text-gray-900`}
       >
         {children}

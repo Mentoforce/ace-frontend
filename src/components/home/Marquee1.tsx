@@ -54,7 +54,7 @@ export default function Marquee() {
                 .map((dev, i) => (
                   <div
                     key={`${dev._id}-${i}`}
-                    className="flex h-16 w-40 shrink-0 items-center justify-center"
+                    className="flex h-16 w-40 shrink-0 items-center justify-center my-10 mb-30"
                   >
                     <img
                       src={dev.logo}

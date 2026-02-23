@@ -45,7 +45,7 @@ export default function HeroVideo() {
           <source src="/website.mp4" type="video/mp4" />
         </video>
 
-        <h1 className="font-merriweather z-20 md:text-5xl/16 text-4xl text-center font-bold uppercase text-white tracking-wider top-60 left-1/2 -translate-x-1/2 [text-shadow:0_0_30px_rgba(0,0,0,1)] absolute">
+        <h1 className="font-merriweather z-20 md:text-5xl/16 text-4xl text-center font-bold uppercase text-white tracking-wider top-80 left-1/2 -translate-x-1/2 [text-shadow:0_0_30px_rgba(0,0,0,1)] absolute">
           {t("home.videoText")}
         </h1>
         <div className="absolute inset-0 bg-black/25" />

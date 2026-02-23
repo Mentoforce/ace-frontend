@@ -45,6 +45,10 @@ export default function FeaturedProperties2() {
             );
           })}
         </div>
+        {/* Desktop Carousel */}
+        <div className="hidden md:block relative">
+          <DesktopCarousel locale={locale} t={t} />
+        </div>
       </div>
     </section>
   );
@@ -267,6 +271,80 @@ function MobileCarousel({ locale, t }: any) {
         >
           ›
         </button>
+      </div>
+    </div>
+  );
+}
+
+function DesktopCarousel({ locale, t }: any) {
+  const [index, setIndex] = useState(0);
+  const total = featuredProperties.length;
+
+  const next = () => {
+    if (index < total - 4) {
+      setIndex(index + 1);
+    }
+  };
+
+  const prev = () => {
+    if (index > 0) {
+      setIndex(index - 1);
+    }
+  };
+
+  const maxIndex = total - 4;
+
+  return (
+    <div className="relative overflow-hidden">
+      {/* Track */}
+      <div
+        className="flex gap-6 transition-transform duration-500"
+        style={{
+          transform: `translateX(-${index * 25}%)`,
+        }}
+      >
+        {featuredProperties.map((property) => {
+          const content =
+            property.translations[locale as string] ??
+            property.translations["en-gb"];
+
+          return (
+            <div key={property._id} className="w-1/4 shrink-0">
+              <PropertyCard property={property} content={content} t={t} />
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Left Arrow */}
+      <button
+        onClick={prev}
+        disabled={index === 0}
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center disabled:opacity-30"
+      >
+        ‹
+      </button>
+
+      {/* Right Arrow */}
+      <button
+        onClick={next}
+        disabled={index >= maxIndex}
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center disabled:opacity-30"
+      >
+        ›
+      </button>
+
+      {/* Dots */}
+      <div className="mt-6 flex justify-center gap-2">
+        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              i === index ? "bg-[#0C2448] w-6" : "bg-gray-300 w-3"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );

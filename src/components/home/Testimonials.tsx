@@ -239,19 +239,21 @@ export const ContactTestimonials1 = () => {
   };
 
   return (
-    <section className="font-didot text-white h-150 mx-auto relative mt-50">
+    <section className="font-montserrat text-white mx-auto relative mb-30">
       <div>
-        <div className="flex bg-[#C29A1F]/15 justify-center gap-48 items-center overflow-visible h-120">
+        <div className="flex flex-col md:flex-row bg-[#faf8f5] md:bg-[#C29A1F]/10 justify-center gap-10 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
           {/* Contact Card - GOLD */}
-          <div className="w-120 bg-[#0C2448]  h-150 relative z-20 shadow-2xl flex items-center rounded-xl">
-            <div className="p-10 text-[#ffffff]">
+          <div className="w-full max-w-md md:w-120 bg-[#0C2448]  md:h-150 relative z-20 shadow-2xl flex items-center rounded-lg mb-5 md:mb-0">
+            <div className="p-6 md:p-10 text-[#ffffff] w-full">
               {/* <p className="uppercase tracking-widest text-xs font-semibold mb-2">
                 We are always ready
               </p> */}
 
-              <h2 className="text-3xl font-bold mb-8">Contact Us</h2>
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8 font-didot">
+                Contact Us
+              </h2>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                 <input
                   type="text"
                   name="fullName"
@@ -299,12 +301,15 @@ export const ContactTestimonials1 = () => {
           </div>
 
           {/* Testimonial Glass Card */}
-          <div className="relative h-120 flex items-center justify-center">
-            <div className="relative max-w-lg text-[#0c2448] transition-all duration-500 bg-[#0c2448]/10 backdrop-blur-lg border border-white/20 rounded-2xl p-10">
+          <div className="relative w-full max-w-lg md:h-120 flex items-center justify-center">
+            <div className="relative w-full text-[#212121] transition-all duration-500 bg-[#0c2448]/10 backdrop-blur-lg border border-white/20 rounded-2xl md:p-10 p-6">
               <div className="absolute -top-10 -left-8">
-                <IconQuoteFilled size={80} className="rotate-180" />
+                <IconQuoteFilled
+                  size={80}
+                  className="text-[#0c2848] rotate-180"
+                />
               </div>
-              <p className="text-base leading-relaxed">
+              <p className="text-sm leading-relaxed">
                 {testimonials[currentTestimonial].text}
               </p>
 
@@ -312,10 +317,10 @@ export const ContactTestimonials1 = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#C29A1F]/40" />
                   <div>
-                    <h4 className="text-lg">
+                    <h4 className="text-lg font-didot">
                       {testimonials[currentTestimonial].author}
                     </h4>
-                    <p className="text-sm opacity-70">
+                    <p className="text-xs opacity-70">
                       {testimonials[currentTestimonial].position}
                     </p>
                   </div>

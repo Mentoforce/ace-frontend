@@ -30,7 +30,7 @@ export default function Navbar() {
           alt="ACE LOGO"
         /> */}
         <Image
-          src="/logowllc.png"
+          src="/logo3dwllc.png"
           className="ms-2 p-3"
           height={80}
           width={80}
@@ -43,8 +43,8 @@ export default function Navbar() {
           <Link href="/">{t("nav.home")}</Link>
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/blog">{t("nav.blogs")}</Link>
-          <LanguageSwitcher />
-          <button className="bg-[#0C2448] text-white px-4 py-2 rounded-full">
+          {/* <LanguageSwitcher /> */}
+          <button className="bg-linear-to-l from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] px-4 py-2 rounded-full">
             {t("nav.cta")}
           </button>
         </div>

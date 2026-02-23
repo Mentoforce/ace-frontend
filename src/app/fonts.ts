@@ -4,6 +4,7 @@ import {
   Lora,
   Merriweather,
   Birthstone,
+  Montserrat,
 } from "next/font/google";
 
 export const bricolage = Bricolage_Grotesque({
@@ -40,5 +41,12 @@ export const birthstone = Birthstone({
   subsets: ["latin"],
   weight: "400", // Birthstone has single weight
   variable: "--font-birthstone",
+  display: "swap",
+});
+
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
