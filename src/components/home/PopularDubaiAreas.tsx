@@ -50,12 +50,13 @@ function Tag({ label }: { label: string }) {
 }
 
 export default function PopularDubaiAreas() {
+  //px-6 py-12
   return (
     <section
       className="
         relative min-h-screen w-full overflow-hidden
         flex flex-col items-center
-        px-6 py-12 bg-[url('/skyline.png')] bg-no-repeat bg-cover
+        section-padding bg-[url('/skyline.png')] bg-no-repeat bg-cover
       "
       // style={{
       //   background:

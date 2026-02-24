@@ -16,8 +16,8 @@ export default function FeaturedProperties1() {
   const t = useTranslations();
 
   return (
-    //  from-[#EFE9E3] via-[#FAF8F5] to-white
-    <section className="font-montserrat max-w-7xl mx-auto py-16 md:py-25 px-6 bg-linear-to-b ">
+    //  from-[#EFE9E3] via-[#FAF8F5] to-white, py-16 md:py-25 px-6
+    <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b ">
       <div className="">
         <h2 className="mb-12 md:text-5xl text-4xl font-didot font-bold text-center tracking-wide text-[#0C2448]">
           {t("home.featured")}

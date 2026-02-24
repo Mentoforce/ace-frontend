@@ -99,10 +99,10 @@ function FeatureCard({
     </div>
   );
 }
-
+//px-6 md:px-10 py-12
 export default function WhyChooseACE() {
   return (
-    <section className="max-w-7xl font-didot mx-auto px-6 md:px-10 py-12 mb-8">
+    <section className="max-w-7xl font-didot mx-auto section-padding mb-8">
       {/* HEADER */}
       <div className="text-center mt-10 md:mt-20">
         <h2

@@ -10,9 +10,9 @@ import { useEffect, useRef, useState } from "react";
 export default function BlogSection() {
   const { locale } = useParams<{ locale: string }>();
   const t = useTranslations();
-
+  //py-20 px-6
   return (
-    <section className="py-20 px-6 bg-[#FAF8F5]">
+    <section className=" section-padding ">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-end mb-20">
@@ -61,7 +61,7 @@ function BlogCard({ post, index, locale }: any) {
   return (
     <Link href={`/${locale}/blog/${post.slug}`} className="group block">
       {/* Card Frame */}
-      <div className="relative bg-white/60 rounded-lg p-4 transition-shadow duration-500 group-hover:shadow-xl">
+      <div className="relative bg-[#E0E0E0] rounded-lg p-4 transition-shadow duration-500 group-hover:shadow-xl">
         {/* Index */}
         <span className="absolute -top-4 -left-2 font-didot text-5xl text-[#8B6F4E]/15">
           {String(index + 1).padStart(2, "0")}

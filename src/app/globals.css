@@ -29,6 +29,10 @@ body {
   object-fit: cover;
 }
 
+.section-padding{
+  padding: 4rem 1.5rem;
+}
+
 /* Image visible by default */
 .hero-fallback {
   z-index: 2;

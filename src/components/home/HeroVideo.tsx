@@ -21,7 +21,7 @@ export default function HeroVideo() {
   }, []);
 
   return (
-    <section className="h-screen">
+    <section className="h-screen mb-8">
       <div className={`hero ${loaded ? "loaded" : ""}`}>
         <img
           src="/try.png"
