@@ -9,6 +9,9 @@ import {
   IconBath,
   IconRulerMeasure,
   IconMapPin,
+  IconArrowRightToArc,
+  IconChevronRight,
+  IconChevronLeft,
 } from "@tabler/icons-react";
 
 export default function FeaturedProperties1() {
@@ -19,7 +22,10 @@ export default function FeaturedProperties1() {
     //  from-[#EFE9E3] via-[#FAF8F5] to-white, py-16 md:py-25 px-6
     <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b ">
       <div className="">
-        <h2 className="mb-12 md:text-5xl text-4xl font-didot font-bold text-center tracking-wide text-[#0C2448]">
+        <h2
+          className="font-didot text-[#0C2448] text-center font-display mb-12 text-4xl md:text-5xl lg:text-6xl p-3.5"
+          style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
+        >
           {t("home.featured")}
         </h2>
 
@@ -205,9 +211,9 @@ function MobileCarousel({ locale, t }: any) {
             prev();
             startAutoPlay();
           }}
-          className="w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center active:scale-95"
+          className="w-9 h-9 rounded-full bg-[#eeeeee]/50  flex items-center justify-center active:scale-95"
         >
-          ‹
+          <IconChevronLeft size={12} />
         </button>
 
         {/* Dots */}
@@ -229,9 +235,9 @@ function MobileCarousel({ locale, t }: any) {
             next();
             startAutoPlay();
           }}
-          className="w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center active:scale-95"
+          className="w-9 h-9 rounded-full bg-[#eeeeee]/50 flex items-center justify-center active:scale-95"
         >
-          ›
+          <IconChevronRight size={12} />
         </button>
       </div>
     </div>
@@ -298,16 +304,16 @@ function DesktopCarousel({ locale, t }: any) {
       </div>
 
       {/* Dots */}
-      <div className="mt-8 relative flex justify-center gap-2">
+      <div className="mt-18 relative flex justify-center gap-2">
         <button
           onClick={() => {
             stopAutoPlay();
             prev();
             startAutoPlay();
           }}
-          className=" -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center"
+          className=" -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#eeeeee]/50 flex items-center justify-center"
         >
-          ‹
+          <IconChevronLeft size={14} />
         </button>
         {Array.from({ length: maxIndex + 1 }).map((_, i) => (
           <button
@@ -327,9 +333,9 @@ function DesktopCarousel({ locale, t }: any) {
             next();
             startAutoPlay();
           }}
-          className="-translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center"
+          className="-translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-[#eeeeee]/50 flex items-center justify-center"
         >
-          ›
+          <IconChevronRight size={14} />
         </button>
       </div>
     </div>

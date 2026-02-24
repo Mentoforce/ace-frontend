@@ -12,7 +12,10 @@ export default function PrimeAreas() {
   return (
     // from-[#EFE9E3] via-[#FAF8F5] to-white, py-14 md:py-25
     <section className="font-montserrat px-6 bg-linear-to-t ">
-      <h2 className="text-[#0C2448] text-center font-didot mb-12 text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight text-c p-3.5">
+      <h2
+        className="font-didot text-[#0C2448] text-center font-display mb-12 text-4xl md:text-5xl lg:text-6xl p-3.5"
+        style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
+      >
         {t("home.primeAreas")}
       </h2>
 

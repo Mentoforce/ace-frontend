@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 
 export default function BlogSection() {
   const { locale } = useParams<{ locale: string }>();
@@ -15,8 +16,11 @@ export default function BlogSection() {
     <section className="section-padding">
       <div className="max-w-7xl mx-auto overflow-x-hidden">
         {/* Header */}
-        <div className="flex justify-center items-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-didot font-semibold text-[#0C2448] tracking-tight">
+        <div className="flex justify-center items-center">
+          <h2
+            className="font-didot text-[#0C2448] text-center font-display mb-12 text-4xl md:text-5xl lg:text-6xl p-3.5"
+            style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
+          >
             {t("home.blog")}
           </h2>
         </div>
@@ -95,31 +99,27 @@ function DesktopBlogCarousel({ locale }: any) {
       </div>
 
       {/* Controls */}
-      <div className="mt-12 flex items-center justify-center gap-6">
-        {/* Left Arrow */}
+      <div className="mt-18 relative flex justify-center gap-2">
         <button
           onClick={() => {
             stopAutoPlay();
             prev();
             startAutoPlay();
           }}
-          className="w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center active:scale-95"
+          className=" -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#eeeeee]/50 flex items-center justify-center"
         >
-          ‹
+          <IconChevronLeft size={14} />
         </button>
-
-        {/* Dots (only valid slide positions) */}
-        <div className="flex gap-2">
-          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIndex(i)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                i === index ? "bg-[#0C2448] w-6" : "bg-gray-300 w-3"
-              }`}
-            />
-          ))}
-        </div>
+        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIndex(i)}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              i === index ? "bg-[#0C2448] w-6" : "bg-gray-300 w-3"
+            }`}
+          />
+        ))}
+        {/* Left Arrow */}
 
         {/* Right Arrow */}
         <button
@@ -128,9 +128,9 @@ function DesktopBlogCarousel({ locale }: any) {
             next();
             startAutoPlay();
           }}
-          className="w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center active:scale-95"
+          className="-translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-[#eeeeee]/50 flex items-center justify-center"
         >
-          ›
+          <IconChevronRight size={14} />
         </button>
       </div>
     </div>
@@ -213,46 +213,41 @@ function MobileBlogCarousel({ locale }: any) {
       </div>
 
       {/* Controls */}
-      <div className="mt-8 flex items-center justify-center gap-4">
-        {/* Left Button */}
+      <div className="mt-4 flex items-center justify-center gap-4">
+        {/* Left Arrow */}
         <button
           onClick={() => {
             stopAutoPlay();
             prev();
             startAutoPlay();
           }}
-          className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center active:scale-95"
+          className="w-9 h-9 rounded-full bg-[#eeeeee]/50  flex items-center justify-center active:scale-95"
         >
-          ‹
+          <IconChevronLeft size={12} />
         </button>
 
         {/* Dots */}
         <div className="flex gap-2">
           {latestBlogs.map((_, i) => (
-            <button
+            <span
               key={i}
-              onClick={() => {
-                stopAutoPlay();
-                setIndex(i);
-                startAutoPlay();
-              }}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === index ? "bg-slate-800 w-8" : "bg-slate-300 w-2"
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === index ? "bg-[#0C2448] w-4" : "bg-gray-300 w-2"
               }`}
             />
           ))}
         </div>
 
-        {/* Right Button */}
+        {/* Right Arrow */}
         <button
           onClick={() => {
             stopAutoPlay();
             next();
             startAutoPlay();
           }}
-          className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center active:scale-95"
+          className="w-9 h-9 rounded-full bg-[#eeeeee]/50 flex items-center justify-center active:scale-95"
         >
-          ›
+          <IconChevronRight size={12} />
         </button>
       </div>
     </div>
