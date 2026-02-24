@@ -12,19 +12,19 @@ export default function PrimeAreas() {
   return (
     // from-[#EFE9E3] via-[#FAF8F5] to-white, py-14 md:py-25
     <section className="font-montserrat section-padding bg-linear-to-t ">
-      <div className="max-w-7xl mx-auto px-4 md:px-2">
-        <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-12 md:grid-rows-6">
+      <div className=" mx-auto px-4 md:px-2">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-12 md:grid-rows-6">
           {/*Title block*/}
           <div
             className="
               col-span-2
               flex flex-col justify-center
               rounded-2xl
-              md:col-span-4 md:row-span-1
+              md:col-span-4 md:row-span-1 
             "
           >
             <div className="relative">
-              <h2 className="text-[#0C2448] font-didot text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight text-start p-2">
+              <h2 className="text-[#0C2448] font-didot text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight text-c p-3.5">
                 {t("home.primeAreas")}
               </h2>
             </div>
@@ -66,7 +66,7 @@ export default function PrimeAreas() {
                 />
 
                 {/* Default overlay */}
-                <div className="absolute inset-0 bg-linear-to-t from-[#0C2448]/80 via-[#0C2448]/30 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0C2448]/80 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-0" />
 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-linear-to-br from-[#0C2448]/70 via-black/70 to-[#0C2448]/70 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
@@ -83,9 +83,9 @@ export default function PrimeAreas() {
                 </div>
 
                 {/* Title */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-2">
-                  <div className="w-12 h-1 bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] rounded-full mb-3 transition-transform duration-500 group-hover:scale-x-0 origin-left" />
-                  <p className=" text-white font-didot text-lg md:text-xl lg:text-2xl drop-shadow-lg">
+                <div className="absolute bottom-0 left-0 right-0 p-4 transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-2">
+                  {/* <div className="w-12 h-1 bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] rounded-full mb-3 transition-transform duration-500 group-hover:scale-x-0 origin-left" /> */}
+                  <p className=" text-white font-didot text-right text-lg md:text-xl lg:text-2xl drop-shadow-lg">
                     {content.title}
                   </p>
                 </div>

@@ -12,19 +12,19 @@ export default function BlogSection() {
   const t = useTranslations();
   //py-20 px-6
   return (
-    <section className=" section-padding ">
+    <section className="section-padding">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex justify-between items-end mb-20">
+        <div className="flex justify-center items-center mb-20">
           <h2 className="text-4xl md:text-5xl font-didot font-semibold text-[#0C2448] tracking-tight">
             {t("home.blog")}
           </h2>
-          <Link
+          {/* <Link
             href={`/${locale}/blog`}
             className="text-sm font-medium border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
           >
             {t("blog.view") || "View all"}
-          </Link>
+          </Link> */}
         </div>
 
         {/* Mobile */}
@@ -61,9 +61,9 @@ function BlogCard({ post, index, locale }: any) {
   return (
     <Link href={`/${locale}/blog/${post.slug}`} className="group block">
       {/* Card Frame */}
-      <div className="relative bg-[#E0E0E0] rounded-lg p-4 transition-shadow duration-500 group-hover:shadow-xl">
+      <div className="relative bg-[#eeeeee]/50 rounded-lg p-4 transition-shadow duration-500 group-hover:shadow-xl">
         {/* Index */}
-        <span className="absolute -top-4 -left-2 font-didot text-5xl text-[#8B6F4E]/15">
+        <span className="absolute -top-4 -left-2 font-didot text-5xl text-[#E0E0E0]">
           {String(index + 1).padStart(2, "0")}
         </span>
 
@@ -80,17 +80,17 @@ function BlogCard({ post, index, locale }: any) {
 
         {/* Content */}
         <div className="pt-6 px-2">
-          <div className="flex items-center gap-3 text-[11px] uppercase tracking-widest text-[#757575] mb-3">
+          <div className="flex items-center gap-3 text-[11px] uppercase tracking-widest text-[#212121] mb-3">
             <span>{post.date}</span>
-            <span className="w-1 h-1 rounded-full bg-[#757575]" />
+            <span className="w-1 h-1 rounded-full bg-[#212121]" />
             <span>{post.readTime}</span>
           </div>
 
-          <h3 className="font-didot text-2xl text-[#0C2448] leading-snug mb-3 transition-colors duration-300 group-hover:text-[#C29A1F] line-clamp-2">
+          <h3 className="font-didot text-2xl text-[#0C2448] leading-snug mb-3 line-clamp-2">
             {content.title}
           </h3>
 
-          <p className="text-sm text-[#757575] leading-relaxed line-clamp-3">
+          <p className="text-sm text-[#212121] leading-relaxed line-clamp-3">
             {content.subtitle}
           </p>
 

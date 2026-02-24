@@ -74,25 +74,17 @@ function FeatureCard({
   const isLeft = side === "left";
 
   return (
-    <div className="relative bg-white border border-[#C28A2A]/20 p-6 overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:border-[#C28A2A]/40 rounded-lg h-full">
+    <div className="relative bg-[#eeeeee]/50 p-6 overflow-hidden group transition-all duration-300 rounded-lg h-full">
       {/* Side Gold Bar */}
-      {isLeft ? (
-        <div className="absolute top-0 left-0 w-0.75 h-full bg-linear-to-b from-[#FCE7A5] to-[#C28A2A]"></div>
-      ) : (
-        <div className="absolute top-0 right-0 w-0.75 h-full bg-linear-to-b from-[#FCE7A5] to-[#C28A2A]"></div>
-      )}
-
+      {/* <div className="absolute top-0 left-0 w-0.75 h-full bg-linear-to-b from-[#FCE7A5] to-[#C28A2A]"></div> */}
       {/* Icon - Top Left, above Title//mb-4 */}
       <div className="mb-3">{icon}</div>
-
       <h3 className="font-display text-[#0C2448] text-[22px] font-semibold leading-snug mb-0.5">
         {title}
       </h3>
-
-      <span className="text-[13px] mb-0.5 block text-[#757575]">
+      <span className="text-[13px] mb-0.5 block text-[#212121]">
         {subtitle}
       </span>
-
       <p className="text-[12.5px] font-light text-[#212121] leading-[1.9] tracking-[0.2px]">
         {description}
       </p>
@@ -106,16 +98,17 @@ export default function WhyChooseACE() {
       {/* HEADER */}
       <div className="text-center mt-10 md:mt-20">
         <h2
-          className="font-display font-light text-[#0C2448] leading-tight mb-5 text-4xl md:text-5xl"
+          className="font-display font-light text-[#0C2448] leading-tight mb-3 text-4xl md:text-5xl"
           style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
         >
           Why Choose
           <span className="font-semibold"> ACE Ventures</span>
           <br />
         </h2>
-
-        <p className="text-[11px] text-[#212121] font-semibold tracking-[3.5px] uppercase mb-10 md:mb-15">
-          Elite Advisory · Strategic Execution · Complete Real Estate Solutions
+        <p className=" flex justify-center gap-2 text-[15px] font-montserrat text-[#212121] mb-10 md:mb-15">
+          Elite Advisory
+          <span> · </span>
+          Strategic Execution <span> · </span> Complete Real Estate Solutions
         </p>
       </div>
 
