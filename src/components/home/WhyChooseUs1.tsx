@@ -74,7 +74,7 @@ function FeatureCard({
   const isLeft = side === "left";
 
   return (
-    <div className="relative bg-[#eeeeee]/50 p-6 overflow-hidden group transition-all duration-300 rounded-lg h-full">
+    <div className="relative shadow-xl bg-[#eeeeee]/50 p-6 overflow-hidden group transition-all duration-300 rounded-lg h-full">
       {/* Side Gold Bar */}
       {/* <div className="absolute top-0 left-0 w-0.75 h-full bg-linear-to-b from-[#FCE7A5] to-[#C28A2A]"></div> */}
       {/* Icon - Top Left, above Title//mb-4 */}

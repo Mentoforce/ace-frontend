@@ -40,15 +40,14 @@ function Tag({ label }: { label: string }) {
     <span
       className="
         inline-block whitespace-nowrap
-        bg-white/30 backdrop-blur-lg
+        bg-white/25 backdrop-blur-lg
         border border-white/90
         rounded-full
         px-5 py-2.5
         text-[13.5px] font-normal text-[#0c2848]
         shadow-sm
         cursor-pointer
-        transition-all duration-200
-        hover:bg-[#FCE7A5]/95 hover:border-[#c29a1f] hover:shadow-md hover:-translate-y-0.5
+        transition-all duration-200 hover:shadow-md hover:-translate-y-0.5
         select-none
       "
     >

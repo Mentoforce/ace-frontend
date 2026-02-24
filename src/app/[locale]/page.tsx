@@ -15,6 +15,7 @@ import FeaturedProperties1 from "@/components/home/FeaturedProperties1";
 import FeaturedProperties2 from "@/components/home/FeaturedProperties2";
 import WhyChooseACE from "@/components/home/WhyChooseUs1";
 import PopularDubaiAreas from "@/components/home/PopularDubaiAreas";
+import PopularDubaiAreas1 from "@/components/home/PopularDubaiAreas1";
 
 export default function HomePage() {
   return (
@@ -29,7 +30,8 @@ export default function HomePage() {
       <WhyChooseACE />
 
       {/* <WhyChooseUs /> */}
-      <PopularDubaiAreas />
+      {/* <PopularDubaiAreas /> */}
+      <PopularDubaiAreas1 />
       <BlogSection />
 
       <Marquee />
