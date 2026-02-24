@@ -6,7 +6,7 @@ export default function PopularDubaiAreas1() {
   //px-6 py-12
   return (
     <section
-      className="
+      className="pointer-events-none
         relative md:min-h-screen w-full overflow-hidden
       "
     >

@@ -241,15 +241,18 @@ export const ContactTestimonials1 = () => {
   return (
     <section className="font-montserrat text-white mx-auto relative mb-30">
       <div>
-        <div className="flex flex-col md:flex-row bg-[#faf8f5] md:bg-[#C29A1F]/10 justify-center gap-10 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
+        <div className="flex flex-col md:flex-row bg-[#eeeeee] md:bg-[#eeeeee] justify-center gap-10 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
           {/* Contact Card - GOLD */}
-          <div className="w-full max-w-md md:w-120 bg-[#0C2448]  md:h-150 relative z-20 shadow-2xl flex items-center rounded-lg mb-5 md:mb-0">
-            <div className="p-6 md:p-10 text-[#ffffff] w-full">
+          <div className="w-full max-w-md md:w-120 bg-[#0C2448]  md:h-140 relative z-20 shadow-2xl flex items-center rounded-lg mb-5 md:mb-0">
+            <div className="p-6 md:py-0 md:h-130 md:px-10 text-[#ffffff] w-full flex flex-col justify-evenly">
               {/* <p className="uppercase tracking-widest text-xs font-semibold mb-2">
                 We are always ready
               </p> */}
 
-              <h2 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8 font-didot">
+              <h2
+                className=" text-[#ffffff] leading-tight text-4xl font-didot"
+                style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
+              >
                 Contact Us
               </h2>
 
@@ -292,7 +295,7 @@ export const ContactTestimonials1 = () => {
 
                 <button
                   type="submit"
-                  className="mt-6 px-6 py-3 bg-[#ffffff] rounded-lg text-[#0c2448] text-sm font-semibold hover:scale-105 transition"
+                  className="font-didot bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg"
                 >
                   Send Message
                 </button>
@@ -320,9 +323,9 @@ export const ContactTestimonials1 = () => {
                     <h4 className="text-lg font-didot">
                       {testimonials[currentTestimonial].author}
                     </h4>
-                    <p className="text-xs opacity-70">
+                    {/* <p className="text-xs opacity-70">
                       {testimonials[currentTestimonial].position}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
 

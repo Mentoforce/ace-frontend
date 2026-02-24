@@ -9,7 +9,6 @@ import {
   IconBath,
   IconRulerMeasure,
   IconMapPin,
-  IconArrowRightToArc,
   IconChevronRight,
   IconChevronLeft,
 } from "@tabler/icons-react";
@@ -116,20 +115,20 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* Details Box */}
-        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-1 mb-4 text-xs text-[#212121]">
+        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
           <div className="flex flex-col items-center gap-1">
             <IconBed size={18} stroke={1.8} />
             <span>{property.bedrooms} Beds</span>
           </div>
 
-          <div className="h-5 w-px bg-[#D1D5DB]" />
+          <div className="h-5 w-px bg-[#E5E5E5]" />
 
           <div className="flex flex-col items-center gap-1">
             <IconBath size={16} stroke={1.8} />
             <span>{property.bathrooms} Baths</span>
           </div>
 
-          <div className="h-5 w-px bg-[#D1D5DB]" />
+          <div className="h-5 w-px bg-[#E5E5E5]" />
 
           <div className="flex flex-col items-center gap-1">
             <IconRulerMeasure size={16} stroke={1.8} />
@@ -138,7 +137,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* WhatsApp Button */}
-        <button className="w-full font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
+        <button className="w-full cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
           WhatsApp
         </button>
       </div>

@@ -28,7 +28,7 @@ export default function Marquee() {
 
   return (
     <section>
-      <div className="relative mx-auto w-full overflow-hidden bg-linear-to-br py-4">
+      <div className="relative mx-auto w-full overflow-hidden bg-linear-to-br pb-3">
         {/* Gold hairlines */}
         {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[#D7AB22]/40" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-[#D7AB22]/40" /> */}
