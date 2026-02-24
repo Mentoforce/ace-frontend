@@ -29,8 +29,9 @@ export default function HomePage() {
       <WhyChooseACE />
 
       {/* <WhyChooseUs /> */}
-      <BlogSection />
       <PopularDubaiAreas />
+      <BlogSection />
+
       <Marquee />
       {/* <DevelopersMarquee /> */}
       {/* <ContactTestimonials /> */}
