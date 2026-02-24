@@ -1,13 +1,39 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About Us",
-    "careers": "Careers"
+    "about": "About",
+    "careers": "Careers",
+    "blogs": "Blogs",
+    "cta": "Get in Touch"
   },
   "home": {
-    "featured": "Featured Properties"
+    "featured": "Featured Properties",
+    "videoText": "Experience Umatched Living Experience",
+    "tagline": "Live Above the Ordinary",
+    "primeAreas": "Prime Areas",
+    "trustedDevelopers": "Trusted Developers",
+    "blog": "Blogs"
+  },
+  "footer": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "phone",
+    "copyright": "ACE Ventures. All rights reserved."
   },
   "property": {
     "contact": "Contact Us"
+  },
+  "blog": {
+    "back": "← Back to Insights",
+    "view": "View All",
+    "read": "READ ARTICLE",
+    "journal": "Journal",
+    "design": "Reading Time",
+    "curate": "Curated Stories"
+  },
+  "about": {
+    "about": "About",
+    "mission": "Our Mission",
+    "vision": "Our Vision"
   }
 }
