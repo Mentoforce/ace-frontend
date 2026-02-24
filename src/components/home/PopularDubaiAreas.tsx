@@ -4,27 +4,35 @@
 
 import Image from "next/image";
 
-const leftAreas = [
-  ["Dubai South", "Arabian Ranches", "Silicon Oasis", "DIFC"],
+const leftAreas2 = [["Jumeirah Bay Island"], ["Dubai Marina"]];
+
+const leftAreas1 = [
   ["Downtown Dubai", "Dubai Sports City"],
   ["Springs Dubai", "Damac Hills"],
-  ["Jumeirah Bay Island"],
-  ["Dubai Marina"],
 ];
 
-const rightAreas = [
-  ["Discover Gardens", "Akoya Oxygen", "Dubai Hills Estate"],
-  ["Jeleb Ali Free Zone (JAFZA)"],
+const rightAreas1 = [
   ["Business Bay", "Bluewaters Island"],
   ["Al Barsha", "Downtown Jebel Ali"],
-  ["Dubai Creek Harbour"],
 ];
 
-const topAreas = [
+const rightAreas2 = [["Jeleb Ali Free Zone (JAFZA)"], ["Dubai Creek Harbour"]];
+
+const topAreas1 = [
   "Palm Jumeirah",
   "Dubai Land",
   "City Walk Dubai",
   "Jumeirah Village Circle - JVC",
+];
+
+const topAreas2 = [
+  "Dubai South",
+  "Arabian Ranches",
+  "Silicon Oasis",
+  "DIFC",
+  "Discover Gardens",
+  "Akoya Oxygen",
+  "Dubai Hills Estate",
 ];
 
 function Tag({ label }: { label: string }) {
@@ -54,9 +62,9 @@ export default function PopularDubaiAreas() {
   return (
     <section
       className="
-        relative min-h-screen w-full overflow-hidden
+        relative min-h-screen h-[110vh] w-full overflow-hidden
         flex flex-col items-center
-        section-padding bg-[url('/skyline.png')] bg-no-repeat bg-cover
+        section-padding bg-[url('/skyline1.jpeg')] bg-no-repeat bg-cover
       "
       // style={{
       //   background:
@@ -84,10 +92,15 @@ export default function PopularDubaiAreas() {
       </h2>
 
       {/* Scene */}
-      <div className="relative z-10 w-full max-w-7xl font-montserrat">
+      <div className="relative z-10 w-full max-w-7xl font-montserrat text-[#212121]">
         {/* Top row */}
-        <div className="mb-4 flex flex-wrap justify-center gap-3">
-          {topAreas.map((area) => (
+        <div className="mb-4 flex flex-wrap justify-center gap-5">
+          {topAreas1.map((area) => (
+            <Tag key={area} label={area} />
+          ))}
+        </div>
+        <div className="mb-4 flex flex-wrap justify-center gap-5">
+          {topAreas2.map((area) => (
             <Tag key={area} label={area} />
           ))}
         </div>
@@ -95,18 +108,28 @@ export default function PopularDubaiAreas() {
         {/* Middle: Left tags | City image | Right tags */}
         <div className="flex items-end justify-center gap-0">
           {/* LEFT */}
-          <div className="hidden lg:flex flex-col items-start gap-3.5 pb-16 flex-1">
-            {leftAreas.map((row, i) => (
-              <div key={i} className="flex flex-wrap gap-3">
-                {row.map((area) => (
-                  <Tag key={area} label={area} />
-                ))}
-              </div>
-            ))}
+          <div className="">
+            <div className="hidden lg:flex flex-col items-end gap-5 pb-3.5 flex-1">
+              {leftAreas1.map((row, i) => (
+                <div key={i} className="flex flex-wrap gap-3">
+                  {row.map((area) => (
+                    <Tag key={area} label={area} />
+                  ))}
+                </div>
+              ))}
+            </div>
+            <div className="hidden lg:flex flex-col items-end mr-20 gap-5 pb-16 flex-1">
+              {leftAreas2.map((row, i) => (
+                <div key={i} className="flex flex-wrap gap-3">
+                  {row.map((area) => (
+                    <Tag key={area} label={area} />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* CITY IMAGE */}
-          <div className="relative z-10 w-full max-w-5 shrink-0 px-2">
+          <div className="relative z-10 w-130 shrink-0 px-2">
             {/* <Image
               src="/skyline.png"
               alt="Dubai iconic skyline featuring Burj Al Arab, Burj Khalifa, Museum of the Future and Dubai Frame"
@@ -118,20 +141,31 @@ export default function PopularDubaiAreas() {
           </div>
 
           {/* RIGHT */}
-          <div className="hidden lg:flex flex-col items-end gap-3.5 pb-16 flex-1">
-            {rightAreas.map((row, i) => (
-              <div key={i} className="flex flex-wrap justify-end gap-3">
-                {row.map((area) => (
-                  <Tag key={area} label={area} />
-                ))}
-              </div>
-            ))}
+          <div>
+            <div className="hidden lg:flex flex-col items-start gap-3.5 pb-3.5 flex-1">
+              {rightAreas1.map((row, i) => (
+                <div key={i} className="flex flex-wrap justify-end gap-5">
+                  {row.map((area) => (
+                    <Tag key={area} label={area} />
+                  ))}
+                </div>
+              ))}
+            </div>
+            <div className="hidden lg:flex flex-col items-start ml-15 gap-3.5 pb-16 flex-1">
+              {rightAreas2.map((row, i) => (
+                <div key={i} className="flex flex-wrap justify-end gap-5">
+                  {row.map((area) => (
+                    <Tag key={area} label={area} />
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Mobile: all tags below image */}
         <div className="mt-6 flex flex-wrap justify-center gap-3 lg:hidden pb-10">
-          {[...leftAreas.flat(), ...rightAreas.flat()].map((area) => (
+          {[...leftAreas1.flat(), ...rightAreas1.flat()].map((area) => (
             <Tag key={area} label={area} />
           ))}
         </div>
