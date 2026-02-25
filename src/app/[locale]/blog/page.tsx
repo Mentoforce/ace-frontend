@@ -81,7 +81,7 @@ export default function BlogsPage() {
   const t = useTranslations();
 
   return (
-    <main className="min-h-screen bg-[#FAF8F5] py-32">
+    <main className="min-h-screen  py-32">
       <div className="max-w-7xl mx-auto px-6">
         {/* Editorial Header */}
         <div className="relative mb-28 text-center">
@@ -119,9 +119,9 @@ export default function BlogsPage() {
                 className="group block"
               >
                 {/* Card Frame */}
-                <div className="relative bg-white/60 rounded-2xl p-4 transition-shadow duration-500 group-hover:shadow-xl">
+                <div className="relative bg-[#eeeeee]/50 rounded-2xl p-4 transition-shadow duration-500 group-hover:shadow-xl">
                   {/* Index */}
-                  <span className="absolute -top-4 -left-2 font-didot text-5xl text-[#8B6F4E]/15">
+                  <span className="absolute -top-4 -left-2 font-didot text-5xl text-[#E0E0E0]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 
@@ -138,17 +138,17 @@ export default function BlogsPage() {
 
                   {/* Content */}
                   <div className="pt-6 px-2">
-                    <div className="flex items-center gap-3 text-[11px] uppercase tracking-widest text-slate-500 mb-3">
+                    <div className="flex items-center gap-3 text-[11px] uppercase tracking-widest text-[#212121] mb-3">
                       <span>{post.date}</span>
-                      <span className="w-1 h-1 rounded-full bg-slate-400" />
+                      <span className="w-1 h-1 rounded-full bg-[#212121]" />
                       <span>{post.readTime}</span>
                     </div>
 
-                    <h2 className="font-didot text-2xl text-[#0C2448] leading-snug mb-3 transition-colors duration-300 group-hover:text-[#C29A1F] line-clamp-2">
+                    <h2 className="font-didot text-2xl text-[#0C2448] leading-snug mb-3 line-clamp-2">
                       {content.title}
                     </h2>
 
-                    <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">
+                    <p className="text-sm text-[#212121] leading-relaxed line-clamp-3">
                       {content.subtitle}
                     </p>
 
