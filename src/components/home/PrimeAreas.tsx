@@ -19,7 +19,7 @@ export default function PrimeAreas() {
         {t("home.primeAreas")}
       </h2>
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:auto-rows-[90px]">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:auto-rows-[90px]">
         {/*Title block*/}
 
         {/* Cards*/}

@@ -30,7 +30,7 @@ export default function HomePage() {
       <WhyChooseACE />
 
       {/* <WhyChooseUs /> */}
-      {/* <PopularDubaiAreas /> */}
+      <PopularDubaiAreas />
       <PopularDubaiAreas1 />
       <BlogSection />
 
