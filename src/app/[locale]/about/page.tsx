@@ -74,19 +74,6 @@ const pillars = [
   },
 ];
 
-// ─── SUB-COMPONENTS ───────────────────────────────────────────────────────────
-
-function EyebrowLabel({ text }: { text: string }) {
-  return (
-    <div className="flex items-center gap-3 mb-4">
-      <div className="w-8 h-px bg-[#c29a1f]" />
-      <span className="text-[11px] tracking-[0.25em] uppercase text-[#c29a1f] font-medium font-sans">
-        {text}
-      </span>
-    </div>
-  );
-}
-
 function SectionHeading({
   children,
   light = false,
@@ -123,7 +110,7 @@ export default function About() {
           }}
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto section-padding grid lg:grid-cols-2 gap-16 items-center w-full">
+        <div className="relative z-10 max-w-7xl mx-auto  grid lg:grid-cols-2 gap-16 items-center w-full">
           {/* Left */}
           <div>
             <h1 className="font-serif text-5xl md:text-6xl leading-[1.08] font-didot text-[#0c2448] mb-6">
@@ -173,8 +160,8 @@ export default function About() {
       </section>
 
       {/* ── ABOUT ── */}
-      <section id="about" className="bg-white py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto section-padding grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <section id="about" className="bg-white section-padding">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left */}
           <div>
             <SectionHeading>
@@ -865,6 +852,7 @@ function Image6() {
     </div>
   );
 }
+
 export function About1() {
   const t = useTranslations();
   const { locale } = useParams();
