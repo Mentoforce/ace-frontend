@@ -239,18 +239,18 @@ export const ContactTestimonials1 = () => {
   };
 
   return (
-    <section className="font-montserrat text-white mx-auto relative mb-30">
+    <section className="font-montserrat text-white mx-auto relative md:mb-30">
       <div>
-        <div className="flex flex-col md:flex-row bg-[#eeeeee] md:bg-[#eeeeee] justify-center gap-10 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
+        <div className="flex flex-col md:flex-row bg-[#eeeeee] md:bg-[#eeeeee] justify-center gap-20 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
           {/* Contact Card - GOLD */}
-          <div className="w-full max-w-md md:w-120 bg-[#0C2448]  md:h-140 relative z-20 shadow-2xl flex items-center rounded-lg mb-5 md:mb-0">
+          <div className="w-full max-w-md md:w-120 bg-[#0C2448] md:h-140 relative z-20 shadow-2xl flex items-center rounded-lg mb-0">
             <div className="p-6 md:py-0 md:h-130 md:px-10 text-[#ffffff] w-full flex flex-col justify-evenly">
               {/* <p className="uppercase tracking-widest text-xs font-semibold mb-2">
                 We are always ready
               </p> */}
 
               <h2
-                className=" text-[#ffffff] leading-tight text-4xl font-didot"
+                className=" text-[#ffffff] leading-tight text-4xl font-didot md:mb-0 mb-8"
                 style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
               >
                 Contact Us
@@ -306,13 +306,13 @@ export const ContactTestimonials1 = () => {
           {/* Testimonial Glass Card */}
           <div className="relative w-full max-w-lg md:h-120 flex items-center justify-center">
             <div className="relative w-full text-[#212121] transition-all duration-500 bg-[#0c2448]/10 backdrop-blur-lg border border-white/20 rounded-2xl md:p-10 p-6">
-              <div className="absolute -top-10 -left-8">
+              <div className="absolute -top-10 -left-4 md:-left-8">
                 <IconQuoteFilled
-                  size={80}
+                  size={70}
                   className="text-[#0c2848] rotate-180"
                 />
               </div>
-              <p className="text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed mt-3 md:mt-0">
                 {testimonials[currentTestimonial].text}
               </p>
 
