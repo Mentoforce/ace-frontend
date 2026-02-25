@@ -18,21 +18,21 @@ const ContactTestimonials = () => {
       text: "The team helped us gain traction with our new line of products. They are relentless in delivering great access to an enterprise-valuable value add items.  Highly recommended!!!",
       author: "Gabriel Dealo",
       position: "Chairman, CEO",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test1.jpg",
     },
     {
       id: 2,
       text: "Working with this team has transformed our business operations. Their innovative solutions and dedicated support have exceeded our expectations at every turn. Highly recommended for anyone looking to scale.",
       author: "Sarah Johnson",
       position: "Managing Director",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test2.jpg",
     },
     {
       id: 3,
       text: "Exceptional service and outstanding results. The team's expertise and professionalism made our project a complete success. We couldn't be happier with the outcome and ongoing partnership.",
       author: "Michael Chen",
       position: "VP of Operations",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test3.jpg",
     },
   ];
 
@@ -186,24 +186,24 @@ export const ContactTestimonials1 = () => {
   const testimonials = [
     {
       id: 1,
-      text: "The team helped us gain traction with our new line of products. They are relentless in delivering great access to an enterprise-valuable value add items.  Highly recommended!!!",
+      text: "The team helped us gain traction with our new line of products. They are relentless in delivering great access to an enterprise-valuable value add items.  Highly recommended. Must try their services!!!",
       author: "Gabriel Dealo",
       position: "Chairman, CEO",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test1.jpg",
     },
     {
       id: 2,
       text: "Working with this team has transformed our business operations. Their innovative solutions and dedicated support have exceeded our expectations at every turn. Highly recommended for anyone looking to scale.",
       author: "Sarah Johnson",
       position: "Managing Director",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test2.jpg",
     },
     {
       id: 3,
       text: "Exceptional service and outstanding results. The team's expertise and professionalism made our project a complete success. We couldn't be happier with the outcome and ongoing partnership.",
       author: "Michael Chen",
       position: "VP of Operations",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test3.jpg",
     },
   ];
 
@@ -239,18 +239,18 @@ export const ContactTestimonials1 = () => {
   };
 
   return (
-    <section className="font-montserrat text-white mx-auto relative mb-30">
+    <section className="font-montserrat text-white mx-auto relative md:mb-30">
       <div>
-        <div className="flex flex-col md:flex-row bg-[#eeeeee] md:bg-[#eeeeee] justify-center gap-10 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
+        <div className="flex flex-col md:flex-row bg-[#eeeeee] md:bg-[#eeeeee] justify-center gap-20 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
           {/* Contact Card - GOLD */}
-          <div className="w-full max-w-md md:w-120 bg-[#0C2448]  md:h-140 relative z-20 shadow-2xl flex items-center rounded-lg mb-5 md:mb-0">
+          <div className="w-full max-w-md md:w-120 bg-[#0C2448] md:h-140 relative z-20 shadow-2xl flex items-center rounded-lg mb-0">
             <div className="p-6 md:py-0 md:h-130 md:px-10 text-[#ffffff] w-full flex flex-col justify-evenly">
               {/* <p className="uppercase tracking-widest text-xs font-semibold mb-2">
                 We are always ready
               </p> */}
 
               <h2
-                className=" text-[#ffffff] leading-tight text-4xl font-didot"
+                className=" text-[#ffffff] leading-tight text-4xl font-didot md:mb-0 mb-8"
                 style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
               >
                 Contact Us
@@ -306,19 +306,22 @@ export const ContactTestimonials1 = () => {
           {/* Testimonial Glass Card */}
           <div className="relative w-full max-w-lg md:h-120 flex items-center justify-center">
             <div className="relative w-full text-[#212121] transition-all duration-500 bg-[#0c2448]/10 backdrop-blur-lg border border-white/20 rounded-2xl md:p-10 p-6">
-              <div className="absolute -top-10 -left-8">
+              <div className="absolute -top-10 -left-4 md:-left-8">
                 <IconQuoteFilled
-                  size={80}
+                  size={70}
                   className="text-[#0c2848] rotate-180"
                 />
               </div>
-              <p className="text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed mt-3 md:mt-0">
                 {testimonials[currentTestimonial].text}
               </p>
 
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#C29A1F]/40" />
+                  <img
+                    src={testimonials[currentTestimonial].avatar}
+                    className="rounded-full h-15"
+                  />
                   <div>
                     <h4 className="text-lg font-didot">
                       {testimonials[currentTestimonial].author}

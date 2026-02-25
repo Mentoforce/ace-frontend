@@ -19,7 +19,7 @@ export default function FeaturedProperties1() {
 
   return (
     //  from-[#EFE9E3] via-[#FAF8F5] to-white, py-16 md:py-25 px-6
-    <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b ">
+    <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b -mt-15 md:mt-0">
       <div className="">
         <h2
           className="font-didot text-[#0C2448] text-center font-display mb-12 text-4xl md:text-5xl lg:text-6xl p-3.5"
@@ -63,9 +63,9 @@ function PropertyCard({ property, content, t }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <div className="group w-72 relative bg-white rounded-lg border border-[#E5E5E5] overflow-hidden transition-all duration-300">
+    <div className="group md:w-72 w-83 max-w-[95vh] relative bg-white rounded-lg border border-[#E5E5E5] overflow-hidden transition-all duration-300">
       {/* Image */}
-      <div className="h-45 overflow-hidden">
+      <div className="h-45 max-w-[95vh] overflow-hidden">
         <Image
           src={property.images[0]}
           alt={content.title}
@@ -216,7 +216,7 @@ function MobileCarousel({ locale, t }: any) {
         </button>
 
         {/* Dots */}
-        <div className="flex gap-2">
+        {/* <div className="flex gap-2">
           {featuredProperties.map((_, i) => (
             <span
               key={i}
@@ -225,7 +225,7 @@ function MobileCarousel({ locale, t }: any) {
               }`}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* Right Arrow */}
         <button

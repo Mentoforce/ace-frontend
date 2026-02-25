@@ -13,7 +13,7 @@ export default function BlogSection() {
   const t = useTranslations();
 
   return (
-    <section className="section-padding">
+    <section className="md:section-padding px-3 py-12">
       <div className="max-w-7xl mx-auto overflow-x-hidden">
         {/* Header */}
         <div className="flex justify-center items-center">
@@ -227,7 +227,7 @@ function MobileBlogCarousel({ locale }: any) {
         </button>
 
         {/* Dots */}
-        <div className="flex gap-2">
+        {/* <div className="flex gap-2">
           {latestBlogs.map((_, i) => (
             <span
               key={i}
@@ -236,7 +236,7 @@ function MobileBlogCarousel({ locale }: any) {
               }`}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* Right Arrow */}
         <button

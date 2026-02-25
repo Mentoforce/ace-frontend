@@ -212,7 +212,7 @@ export default function HomePage() {
                   i !== pillars.length - 1 ? "border-b border-[#EEEEEE]" : ""
                 } group`}
               >
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <span className="font-serif text-5xl font-light text-[#c29a1f]/20 group-hover:text-[#c29a1f]/40 transition-colors leading-none">
                     {p.num}
                   </span>
@@ -321,7 +321,7 @@ export default function HomePage() {
               growth above short-term transactional thinking.
             </p>
           </div>
-          <div className="flex gap-10 flex-shrink-0">
+          <div className="flex gap-10 shrink-0">
             {[
               { val: "100%", sub: "Compliant" },
               { val: "360°", sub: "Coverage" },
@@ -337,55 +337,6 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── CTA FOOTER ── */}
-      <section id="contact" className="bg-[#0c2848] py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <EyebrowLabel text="Get Started" />
-            <SectionHeading light>
-              Ready to Build Your{" "}
-              <em className="not-italic text-[#FCE7A5]">
-                Dubai Property Strategy?
-              </em>
-            </SectionHeading>
-            <p className="mt-5 text-white/50 text-[14px] leading-relaxed font-light max-w-md">
-              Speak with an advisor and receive a tailored property investment
-              plan aligned with your goals.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
-            <a
-              href="#"
-              className="bg-[#c29a1f] hover:bg-[#FCE7A5] text-[#0c2848] px-10 py-4 text-[12px] font-semibold tracking-[0.15em] uppercase text-center transition-colors"
-            >
-              Schedule a Consultation
-            </a>
-            <a
-              href="#"
-              className="border border-white/25 hover:border-[#c29a1f] text-white/70 hover:text-[#FCE7A5] px-10 py-4 text-[12px] font-medium tracking-[0.12em] uppercase text-center transition-colors"
-            >
-              View Properties
-            </a>
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            <span className="font-serif text-white text-base font-semibold tracking-wide">
-              ACE VENTURES
-            </span>
-            <span className="text-[#C28A2A] text-[10px] tracking-[0.2em] uppercase ml-2">
-              Real Estate LLC
-            </span>
-          </div>
-          <p className="text-white/30 text-[12px]">
-            Dubai Real Estate Experts | Investment Advisory | Complete Property
-            Solutions
-          </p>
         </div>
       </section>
     </main>

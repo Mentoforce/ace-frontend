@@ -74,12 +74,12 @@ function FeatureCard({
   const isLeft = side === "left";
 
   return (
-    <div className="relative shadow-lg bg-[#eeeeee]/20 p-6 overflow-hidden group transition-all duration-300 rounded-lg h-full">
+    <div className="relative shadow-lg bg-[#eeeeee]/20 md:p-6 p-4 overflow-hidden group transition-all duration-300 rounded-lg h-full">
       {/* Side Gold Bar */}
       {/* <div className="absolute top-0 left-0 w-0.75 h-full bg-linear-to-b from-[#FCE7A5] to-[#C28A2A]"></div> */}
       {/* Icon - Top Left, above Title//mb-4 */}
-      <div className="mb-3">{icon}</div>
-      <h3 className="font-display text-[#0C2448] text-[22px] font-semibold leading-snug mb-0.5">
+      <div className="md:mb-3 mb-1">{icon}</div>
+      <h3 className="font-display text-[#0C2448] md:text-[22px] text-[20px] font-semibold leading-snug mb-0.5">
         {title}
       </h3>
       <span className="text-[13px] mb-0.5 block text-[#212121]">
@@ -94,7 +94,7 @@ function FeatureCard({
 //px-6 md:px-10 py-12
 export default function WhyChooseACE() {
   return (
-    <section className="max-w-7xl font-didot mx-auto section-padding mb-8">
+    <section className="max-w-7xl font-didot mx-auto section-padding  mb-8">
       {/* HEADER */}
       <div className="text-center mt-10 md:mt-20">
         <h2
@@ -104,7 +104,7 @@ export default function WhyChooseACE() {
           Why Choose Us
           <br />
         </h2>
-        <p className=" flex justify-center gap-2 text-[15px] font-montserrat uppercase text-[#212121] mb-10 md:mb-15">
+        <p className=" flex justify-center gap-2 md:text-[15px] text-xs flex-wrap font-montserrat uppercase text-[#212121] mb-10 md:mb-15">
           Elite Advisory
           <span> · </span>
           Strategic Execution <span> · </span> Complete Real Estate Solutions
@@ -112,9 +112,9 @@ export default function WhyChooseACE() {
       </div>
 
       {/* GRID LAYOUT - Mobile Responsive */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px_1fr] xl:grid-cols-[1fr_340px_1fr] gap-8 md:gap-10 items-center font-montserrat text-2xs">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px_1fr] xl:grid-cols-[1fr_340px_1fr] gap-6 md:gap-10 items-center font-montserrat text-2xs">
         {/* LEFT CARDS */}
-        <div className="flex flex-col gap-8 order-2 lg:order-1">
+        <div className="flex flex-col gap-6 order-2 lg:order-1">
           {cards
             .filter((c) => c.side === "left")
             .map((card) => (
@@ -123,9 +123,9 @@ export default function WhyChooseACE() {
         </div>
 
         {/* CENTER IMAGE - Becomes top visual on mobile */}
-        <div className="flex flex-col items-center gap-7 order-1 lg:order-2">
+        <div className="flex flex-col items-center gap-7 order-2">
           <div
-            className="relative z-1 rounded-lg h-125 shadow-xl"
+            className="relative z-1 rounded-lg h-125 max-w-[90vw] shadow-xl"
             style={{ aspectRatio: 3 / 4 }}
           >
             <img
