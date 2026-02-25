@@ -5,7 +5,7 @@ import skylineMobile from "../../../public/primeareas/Mobile 6.svg";
 
 export default function PopularDubaiAreas1() {
   return (
-    <section className="pointer-events-none relative w-full min-h-[400px] md:min-h-screen overflow-hidden">
+    <section className="pointer-events-none relative w-full min-h-100 md:min-h-screen overflow-hidden">
       {/* Desktop */}
       <Image
         src={skyline}
