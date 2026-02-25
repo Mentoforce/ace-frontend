@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 // ─── DATA ────────────────────────────────────────────────────────────────────
 
 const services = [
@@ -212,7 +210,7 @@ export default function HomePage() {
                   i !== pillars.length - 1 ? "border-b border-[#EEEEEE]" : ""
                 } group`}
               >
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <span className="font-serif text-5xl font-light text-[#c29a1f]/20 group-hover:text-[#c29a1f]/40 transition-colors leading-none">
                     {p.num}
                   </span>
@@ -321,7 +319,7 @@ export default function HomePage() {
               growth above short-term transactional thinking.
             </p>
           </div>
-          <div className="flex gap-10 flex-shrink-0">
+          <div className="flex gap-10 shrink-0">
             {[
               { val: "100%", sub: "Compliant" },
               { val: "360°", sub: "Coverage" },

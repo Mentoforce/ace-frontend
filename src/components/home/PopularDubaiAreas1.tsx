@@ -1,5 +1,5 @@
 import Image from "next/image";
-import skyline from "../../../public/Popular dubai area.svg";
+import skyline from "../../../public/primeareas/Popular dubai area.svg";
 import skyline1 from "../../../public/skyline4.svg";
 
 export default function PopularDubaiAreas1() {

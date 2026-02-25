@@ -18,21 +18,21 @@ const ContactTestimonials = () => {
       text: "The team helped us gain traction with our new line of products. They are relentless in delivering great access to an enterprise-valuable value add items.  Highly recommended!!!",
       author: "Gabriel Dealo",
       position: "Chairman, CEO",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test1.jpg",
     },
     {
       id: 2,
       text: "Working with this team has transformed our business operations. Their innovative solutions and dedicated support have exceeded our expectations at every turn. Highly recommended for anyone looking to scale.",
       author: "Sarah Johnson",
       position: "Managing Director",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test2.jpg",
     },
     {
       id: 3,
       text: "Exceptional service and outstanding results. The team's expertise and professionalism made our project a complete success. We couldn't be happier with the outcome and ongoing partnership.",
       author: "Michael Chen",
       position: "VP of Operations",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test3.jpg",
     },
   ];
 
@@ -186,24 +186,24 @@ export const ContactTestimonials1 = () => {
   const testimonials = [
     {
       id: 1,
-      text: "The team helped us gain traction with our new line of products. They are relentless in delivering great access to an enterprise-valuable value add items.  Highly recommended!!!",
+      text: "The team helped us gain traction with our new line of products. They are relentless in delivering great access to an enterprise-valuable value add items.  Highly recommended. Must try their services!!!",
       author: "Gabriel Dealo",
       position: "Chairman, CEO",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test1.jpg",
     },
     {
       id: 2,
       text: "Working with this team has transformed our business operations. Their innovative solutions and dedicated support have exceeded our expectations at every turn. Highly recommended for anyone looking to scale.",
       author: "Sarah Johnson",
       position: "Managing Director",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test2.jpg",
     },
     {
       id: 3,
       text: "Exceptional service and outstanding results. The team's expertise and professionalism made our project a complete success. We couldn't be happier with the outcome and ongoing partnership.",
       author: "Michael Chen",
       position: "VP of Operations",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/testimonials/test3.jpg",
     },
   ];
 
@@ -318,7 +318,10 @@ export const ContactTestimonials1 = () => {
 
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#C29A1F]/40" />
+                  <img
+                    src={testimonials[currentTestimonial].avatar}
+                    className="rounded-full h-15"
+                  />
                   <div>
                     <h4 className="text-lg font-didot">
                       {testimonials[currentTestimonial].author}
