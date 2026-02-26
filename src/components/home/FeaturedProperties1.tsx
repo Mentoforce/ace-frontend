@@ -63,7 +63,7 @@ function PropertyCard({ property, content, t }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <div className="group md:w-72 w-83 max-w-[95vh] relative bg-white rounded-lg border border-[#E5E5E5] overflow-hidden transition-all duration-300">
+    <div className="group md:w-72 w-83 max-w-[95vh] relative bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden transition-all duration-300">
       {/* Image */}
       <div className="h-45 max-w-[95vh] overflow-hidden">
         <Image
@@ -115,7 +115,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* Details Box */}
-        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
+        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-2xl p-2 mb-4 text-xs text-[#212121]">
           <div className="flex flex-col items-center gap-1">
             <IconBed size={18} stroke={1.8} />
             <span>{property.bedrooms} Beds</span>
@@ -137,7 +137,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* WhatsApp Button */}
-        <button className="w-full cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
+        <button className="w-full cursor-pointer font-didot py-2 rounded-2xl bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
           WhatsApp
         </button>
       </div>
@@ -159,7 +159,7 @@ function MobileCarousel({ locale, t }: any) {
   /** -------- Autoplay -------- */
   const startAutoPlay = () => {
     stopAutoPlay();
-    intervalRef.current = setInterval(next, 3000);
+    intervalRef.current = setInterval(next, 2500);
   };
 
   const stopAutoPlay = () => {
@@ -264,7 +264,7 @@ function DesktopCarousel({ locale, t }: any) {
     stopAutoPlay();
     intervalRef.current = setInterval(() => {
       next();
-    }, 3000); // 3 seconds
+    }, 1500); // 2.5 seconds
   };
 
   const stopAutoPlay = () => {

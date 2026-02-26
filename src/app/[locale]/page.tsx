@@ -27,14 +27,16 @@ export default function HomePage() {
       {/* <Tagline /> */}
 
       <PrimeAreas />
+      <Marquee />
+
       <WhyChooseACE />
 
       {/* <WhyChooseUs /> */}
-      {/* <PopularDubaiAreas /> */}
-      <PopularDubaiAreas1 />
+      <PopularDubaiAreas />
+      {/* <PopularDubaiAreas1 /> */}
       <BlogSection />
 
-      <Marquee />
+      {/* <Marquee /> */}
       {/* <DevelopersMarquee /> */}
       {/* <ContactTestimonials /> */}
       {/* <Testimoials /> */}

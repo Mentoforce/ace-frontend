@@ -144,7 +144,7 @@ function BlogCard({ post, index, locale }: any) {
 
   return (
     <Link href={`/${locale}/blog/${post.slug}`} className="group block">
-      <div className="relative bg-[#eeeeee]/50 rounded-lg p-4 transition-shadow duration-500 group-hover:shadow-xl">
+      <div className="relative bg-[#faf8f5]/90 rounded-lg p-4 transition-shadow duration-500 group-hover:shadow-xl">
         <span className="absolute -top-4 -left-2 font-didot text-5xl text-[#E0E0E0]">
           {String(index + 1).padStart(2, "0")}
         </span>
