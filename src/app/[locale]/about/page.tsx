@@ -1,206 +1,206 @@
 //-----------------------------------------------variant 2-----------------------------------------------------
-// import Image from "next/image";
-// import {
-//   IconTrendingUp,
-//   IconHome,
-//   IconWorld,
-//   IconUsers,
-//   IconBriefcase,
-//   IconBuildingSkyscraper,
-// } from "@tabler/icons-react";
+import Image from "next/image";
+import {
+  IconTrendingUp,
+  IconHome,
+  IconWorld,
+  IconUsers,
+  IconBriefcase,
+  IconBuildingSkyscraper,
+} from "@tabler/icons-react";
 
-// export default function AboutPage() {
-//   return (
-//     <main className="bg-white overflow-x-hidden">
-//       {/* ───────────────── HERO ───────────────── */}
-//       <section className="relative min-h-[90vh] flex items-center">
-//         <div className="absolute inset-0">
-//           <Image
-//             src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600"
-//             alt="Dubai Skyline"
-//             fill
-//             priority
-//             className="object-cover brightness-[0.45]"
-//           />
-//         </div>
+export default function AboutPage() {
+  return (
+    <main className="bg-white overflow-x-hidden">
+      {/* ───────────────── HERO ───────────────── */}
+      <section className="relative min-h-[90vh] flex items-center">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600"
+            alt="Dubai Skyline"
+            fill
+            priority
+            className="object-cover brightness-[0.45]"
+          />
+        </div>
 
-//         <div className="relative z-10 max-w-6xl mx-auto px-6 text-white">
-//           <h1 className="font-didot text-6xl md:text-7xl leading-tight mb-6">
-//             Ace Ventures
-//             <br />
-//             Real Estate LLC
-//           </h1>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-white">
+          <h1 className="font-didot text-6xl md:text-7xl leading-tight mb-6">
+            Ace Ventures
+            <br />
+            Real Estate LLC
+          </h1>
 
-//           <p className="max-w-3xl text-white/80 text-lg leading-relaxed font-light">
-//             Dubai Real Estate Experts | Investment Advisory | Complete Property
-//             Solutions
-//           </p>
-//         </div>
-//       </section>
+          <p className="max-w-3xl text-white/80 text-lg leading-relaxed font-light">
+            Dubai Real Estate Experts | Investment Advisory | Complete Property
+            Solutions
+          </p>
+        </div>
+      </section>
 
-//       {/* ───────────────── FLOATING STRIP ───────────────── */}
-//       <section className="relative -mt-20 z-20">
-//         <div className="max-w-6xl mx-auto px-6">
-//           <div className="bg-white shadow-2xl rounded-2xl grid md:grid-cols-3 text-center overflow-hidden">
-//             {[
-//               {
-//                 number: "Investment Advisory",
-//                 label: "Strategic Property Planning",
-//               },
-//               {
-//                 number: "Luxury & Commercial",
-//                 label: "Residential & Business Assets",
-//               },
-//               {
-//                 number: "End-to-End Support",
-//                 label: "Acquisition to Handover",
-//               },
-//             ].map((item) => (
-//               <div
-//                 key={item.label}
-//                 className="py-10 border-r last:border-none px-6"
-//               >
-//                 <h3 className="font-didot text-xl text-[#0c2848]">
-//                   {item.number}
-//                 </h3>
-//                 <p className="text-sm text-gray-500 mt-2">{item.label}</p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
+      {/* ───────────────── FLOATING STRIP ───────────────── */}
+      <section className="relative -mt-20 z-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="bg-white shadow-2xl rounded-2xl grid md:grid-cols-3 text-center overflow-hidden">
+            {[
+              {
+                number: "Investment Advisory",
+                label: "Strategic Property Planning",
+              },
+              {
+                number: "Luxury & Commercial",
+                label: "Residential & Business Assets",
+              },
+              {
+                number: "End-to-End Support",
+                label: "Acquisition to Handover",
+              },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="py-10 border-r last:border-none px-6"
+              >
+                <h3 className="font-didot text-xl text-[#0c2848]">
+                  {item.number}
+                </h3>
+                <p className="text-sm text-gray-500 mt-2">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-//       {/* ───────────────── STORY ───────────────── */}
-//       <section className="py-32">
-//         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-//           <div>
-//             <h2 className="font-didot text-5xl text-[#0c2848] mb-8 leading-snug">
-//               Complete Real Estate Solutions in Dubai – Under One Roof
-//             </h2>
+      {/* ───────────────── STORY ───────────────── */}
+      <section className="py-32">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <h2 className="font-didot text-5xl text-[#0c2848] mb-8 leading-snug">
+              Complete Real Estate Solutions in Dubai – Under One Roof
+            </h2>
 
-//             <div className="space-y-6 text-gray-600 leading-relaxed text-[16px]">
-//               <p>
-//                 Ace Ventures Real Estate LLC is a Dubai-based real estate
-//                 brokerage firm specializing in property investment advisory,
-//                 luxury residential sales, commercial real estate, off-plan
-//                 projects, and complete relocation solutions in Dubai, UAE.
-//               </p>
+            <div className="space-y-6 text-gray-600 leading-relaxed text-[16px]">
+              <p>
+                Ace Ventures Real Estate LLC is a Dubai-based real estate
+                brokerage firm specializing in property investment advisory,
+                luxury residential sales, commercial real estate, off-plan
+                projects, and complete relocation solutions in Dubai, UAE.
+              </p>
 
-//               <p>
-//                 From acquisition strategy to title transfer and post-handover
-//                 support, every stage is managed with compliance, transparency,
-//                 and precision.
-//               </p>
+              <p>
+                From acquisition strategy to title transfer and post-handover
+                support, every stage is managed with compliance, transparency,
+                and precision.
+              </p>
 
-//               <p>
-//                 We provide structured, research-driven real estate solutions
-//                 tailored for investors, homeowners, international buyers, and
-//                 families relocating to Dubai.
-//               </p>
-//             </div>
-//           </div>
+              <p>
+                We provide structured, research-driven real estate solutions
+                tailored for investors, homeowners, international buyers, and
+                families relocating to Dubai.
+              </p>
+            </div>
+          </div>
 
-//           <div className="relative h-[600px]">
-//             <Image
-//               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200"
-//               alt="Dubai Real Estate"
-//               fill
-//               className="object-cover rounded-2xl"
-//             />
-//           </div>
-//         </div>
-//       </section>
+          <div className="relative h-[600px]">
+            <Image
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200"
+              alt="Dubai Real Estate"
+              fill
+              className="object-cover rounded-2xl"
+            />
+          </div>
+        </div>
+      </section>
 
-//       {/* ───────────────── WHO WE SERVE ───────────────── */}
-//       <section className="py-28 bg-[#0c2848]">
-//         <div className="max-w-7xl mx-auto px-6">
-//           <h2 className="font-didot text-5xl text-white text-center mb-20">
-//             Who We Serve
-//           </h2>
+      {/* ───────────────── WHO WE SERVE ───────────────── */}
+      <section className="py-28 bg-[#0c2848]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-didot text-5xl text-white text-center mb-20">
+            Who We Serve
+          </h2>
 
-//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//             {[
-//               { icon: IconTrendingUp, label: "Property Investors" },
-//               { icon: IconHome, label: "End Users & Homeowners" },
-//               { icon: IconWorld, label: "International Buyers" },
-//               { icon: IconUsers, label: "Families Relocating to Dubai" },
-//               {
-//                 icon: IconBriefcase,
-//                 label: "Portfolio-Focused Wealth Builders",
-//               },
-//             ].map((item) => {
-//               const Icon = item.icon;
-//               return (
-//                 <div
-//                   key={item.label}
-//                   className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-[#C28A2A]/60 transition-all duration-300"
-//                 >
-//                   <Icon
-//                     size={34}
-//                     stroke={1.5}
-//                     className="text-[#C28A2A] mb-6"
-//                   />
-//                   <h3 className="text-white text-lg font-medium">
-//                     {item.label}
-//                   </h3>
-//                 </div>
-//               );
-//             })}
-//           </div>
-//         </div>
-//       </section>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { icon: IconTrendingUp, label: "Property Investors" },
+              { icon: IconHome, label: "End Users & Homeowners" },
+              { icon: IconWorld, label: "International Buyers" },
+              { icon: IconUsers, label: "Families Relocating to Dubai" },
+              {
+                icon: IconBriefcase,
+                label: "Portfolio-Focused Wealth Builders",
+              },
+            ].map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.label}
+                  className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-[#C28A2A]/60 transition-all duration-300"
+                >
+                  <Icon
+                    size={34}
+                    stroke={1.5}
+                    className="text-[#C28A2A] mb-6"
+                  />
+                  <h3 className="text-white text-lg font-medium">
+                    {item.label}
+                  </h3>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-//       {/* ───────────────── SERVICES TIMELINE ───────────────── */}
-//       <section className="py-32 bg-white">
-//         <div className="max-w-4xl mx-auto px-6">
-//           <h2 className="font-didot text-5xl text-[#0c2848] text-center mb-20">
-//             Our Service Architecture
-//           </h2>
+      {/* ───────────────── SERVICES TIMELINE ───────────────── */}
+      <section className="py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-didot text-5xl text-[#0c2848] text-center mb-20">
+            Our Service Architecture
+          </h2>
 
-//           <div className="space-y-16 border-l border-[#0c2848]/20 pl-10">
-//             {[
-//               "Dubai Property Investment Advisory",
-//               "Luxury Villas & Apartments for Sale",
-//               "Off-Plan & Pre-Launch Project Strategy",
-//               "Commercial Real Estate Brokerage",
-//               "Portfolio Structuring & Asset Optimization",
-//               "Leasing & Property Management",
-//               "Mortgage & Financing Coordination",
-//               "Relocation & Migration Assistance",
-//             ].map((service, index) => (
-//               <div key={service} className="relative">
-//                 <div className="absolute -left-[46px] top-1 w-6 h-6 bg-[#C28A2A] rounded-full"></div>
-//                 <span className="text-[#C28A2A] text-sm tracking-widest">
-//                   {(index + 1).toString().padStart(2, "0")}
-//                 </span>
-//                 <h4 className="font-didot text-xl text-[#0c2848] mt-2">
-//                   {service}
-//                 </h4>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
+          <div className="space-y-16 border-l border-[#0c2848]/20 pl-10">
+            {[
+              "Dubai Property Investment Advisory",
+              "Luxury Villas & Apartments for Sale",
+              "Off-Plan & Pre-Launch Project Strategy",
+              "Commercial Real Estate Brokerage",
+              "Portfolio Structuring & Asset Optimization",
+              "Leasing & Property Management",
+              "Mortgage & Financing Coordination",
+              "Relocation & Migration Assistance",
+            ].map((service, index) => (
+              <div key={service} className="relative">
+                <div className="absolute -left-[46px] top-1 w-6 h-6 bg-[#C28A2A] rounded-full"></div>
+                <span className="text-[#C28A2A] text-sm tracking-widest">
+                  {(index + 1).toString().padStart(2, "0")}
+                </span>
+                <h4 className="font-didot text-xl text-[#0c2848] mt-2">
+                  {service}
+                </h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-//       {/* ───────────────── PHILOSOPHY ───────────────── */}
-//       <section className="py-24 bg-[#f5f5f5] text-center">
-//         <h2 className="font-didot text-4xl text-[#0c2848] mb-6">
-//           Built for Today. Positioned for the Future.
-//         </h2>
+      {/* ───────────────── PHILOSOPHY ───────────────── */}
+      <section className="py-24 bg-[#f5f5f5] text-center">
+        <h2 className="font-didot text-4xl text-[#0c2848] mb-6">
+          Built for Today. Positioned for the Future.
+        </h2>
 
-//         <p className="max-w-3xl mx-auto text-gray-600 leading-relaxed">
-//           We don’t just facilitate transactions — we design property strategies
-//           aligned with long-term financial growth.
-//         </p>
+        <p className="max-w-3xl mx-auto text-gray-600 leading-relaxed">
+          We don’t just facilitate transactions — we design property strategies
+          aligned with long-term financial growth.
+        </p>
 
-//         <div className="mt-10 text-sm text-gray-500">
-//           Dubai Real Estate Brokerage | Property Investment Advisory | Complete
-//           Real Estate Solutions in UAE
-//         </div>
-//       </section>
-//     </main>
-//   );
-// }
+        <div className="mt-10 text-sm text-gray-500">
+          Dubai Real Estate Brokerage | Property Investment Advisory | Complete
+          Real Estate Solutions in UAE
+        </div>
+      </section>
+    </main>
+  );
+}
 
 //============================================variant 1==========================================================
 // import Image from "next/image";
