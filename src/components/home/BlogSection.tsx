@@ -13,7 +13,7 @@ export default function BlogSection() {
   const t = useTranslations();
 
   return (
-    <section className="md:section-padding px-3 py-12">
+    <section className="section-padding px-3">
       <div className="max-w-7xl mx-auto overflow-x-hidden">
         {/* Header */}
         <div className="flex justify-center items-center">

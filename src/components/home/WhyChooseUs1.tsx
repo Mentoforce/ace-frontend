@@ -94,10 +94,7 @@ function FeatureCard({
 //px-6 md:px-10 py-12
 export default function WhyChooseACE() {
   return (
-    <section
-      className=" font-didot mx-auto section-padding bg-[#faf8f5]/90"
-      style={{ paddingBottom: "6rem" }}
-    >
+    <section className=" font-didot mx-auto section-padding bg-[#faf8f5]/90">
       {/* HEADER */}
       <div className="max-w-7xl mx-auto">
         <div className="text-center">

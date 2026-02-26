@@ -239,7 +239,7 @@ export const ContactTestimonials1 = () => {
   };
 
   return (
-    <section className="font-montserrat text-white mx-auto relative md:mb-30">
+    <section className="font-montserrat section-padding text-white mx-auto relative md:mb-15">
       <div>
         <div className="flex flex-col md:flex-row md:bg-[#FAF8F5] justify-center gap-20 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
           {/* Contact Card - GOLD */}

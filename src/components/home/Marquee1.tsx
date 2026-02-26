@@ -27,7 +27,7 @@ export default function Marquee() {
   }, []);
 
   return (
-    <section className="mt-15">
+    <section className="section-padding -mb-10">
       <div className="relative mx-auto w-full overflow-hidden bg-linear-to-br pb-3">
         {/* Heading */}
         <div className="mb-2 text-center">
@@ -55,7 +55,7 @@ export default function Marquee() {
                 .map((dev, i) => (
                   <div
                     key={`${dev._id}-${i}`}
-                    className="flex h-16 w-40 shrink-0 items-center justify-center my-10 mb-30"
+                    className="flex w-40 shrink-0 items-center justify-center my-10"
                   >
                     <img
                       src={dev.logo}
