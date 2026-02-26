@@ -1,6 +1,5 @@
 import BlogSection from "@/components/home/BlogSection";
-import ContactTestimonials from "@/components/home/Contact";
-import Contact from "@/components/home/ContactUs";
+
 import Testimoials, {
   ContactTestimonials1,
 } from "@/components/home/Testimonials";
@@ -8,7 +7,7 @@ import HeroVideo from "@/components/home/HeroVideo";
 import DevelopersMarquee from "@/components/home/Marquee1";
 import PrimeAreas from "@/components/home/PrimeAreas";
 import Tagline from "@/components/home/Tagline";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
+
 import Marquee from "@/components/home/Marquee1";
 import FeaturedProperties1 from "@/components/home/FeaturedProperties1";
 import WhyChooseACE from "@/components/home/WhyChooseUs1";

@@ -30,14 +30,17 @@ export default function Marquee() {
     <section className="section-padding -mb-10">
       <div className="relative mx-auto w-full overflow-hidden bg-linear-to-br pb-3">
         {/* Heading */}
-        <div className="mb-2 text-center">
-          <h3 className="font-didot text-4xl md:text-5xl font-display mb-4 tracking-wide text-[#0C2448]">
+        <div className=" text-center">
+          <h2
+            className="font-didot text-[#0C2448] leading-tight mb-3 text-4xl md:text-5xl"
+            style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
+          >
             {t("home.trustedDevelopers")}
-          </h3>
+            <br />
+          </h2>
           <p className=" flex justify-center gap-2 md:text-[15px] text-xs flex-wrap font-montserrat uppercase text-[#212121] mb-10">
-            Elite Advisory
-            <span> · </span>
-            Strategic Execution <span> · </span> Complete Real Estate Solutions
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia
+            perferendis aliquam{" "}
           </p>
         </div>
 
@@ -55,7 +58,7 @@ export default function Marquee() {
                 .map((dev, i) => (
                   <div
                     key={`${dev._id}-${i}`}
-                    className="flex w-40 shrink-0 items-center justify-center my-10"
+                    className="flex w-50 px-5 shrink-0 items-center justify-center my-10"
                   >
                     <img
                       src={dev.logo}
