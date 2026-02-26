@@ -32,23 +32,6 @@ export default function FeaturedProperties1() {
         <MobileCarousel locale={locale} t={t} />
       </div>
 
-      {/* Desktop Grid */}
-      {/* <div className="hidden md:grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
-          {featuredProperties.map((property) => {
-            const content =
-              property.translations[locale as string] ??
-              property.translations["en-gb"];
-
-            return (
-              <PropertyCard
-                key={property._id}
-                property={property}
-                content={content}
-                t={t}
-              />
-            );
-          })}
-        </div> */}
       {/* Desktop Carousel */}
       <div className="hidden md:block relative">
         <DesktopCarousel locale={locale} t={t} />
@@ -208,22 +191,10 @@ function MobileCarousel({ locale, t }: any) {
             prev();
             startAutoPlay();
           }}
-          className="w-9 h-9 rounded-full bg-[#eeeeee]/50  flex items-center justify-center active:scale-95"
+          className="w-9 h-9 rounded-full bg-[#faf8f5]/70  flex items-center justify-center active:scale-95"
         >
           <IconChevronLeft size={12} />
         </button>
-
-        {/* Dots */}
-        {/* <div className="flex gap-2">
-          {featuredProperties.map((_, i) => (
-            <span
-              key={i}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                i === index ? "bg-[#0C2448] w-4" : "bg-gray-300 w-2"
-              }`}
-            />
-          ))}
-        </div> */}
 
         {/* Right Arrow */}
         <button
@@ -232,7 +203,7 @@ function MobileCarousel({ locale, t }: any) {
             next();
             startAutoPlay();
           }}
-          className="w-9 h-9 rounded-full bg-[#eeeeee]/50 flex items-center justify-center active:scale-95"
+          className="w-9 h-9 rounded-full bg-[#faf8f5]/70 flex items-center justify-center active:scale-95"
         >
           <IconChevronRight size={12} />
         </button>
@@ -308,7 +279,7 @@ function DesktopCarousel({ locale, t }: any) {
             prev();
             startAutoPlay();
           }}
-          className=" -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#eeeeee]/50 flex items-center justify-center"
+          className=" -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#faf8f5]/90 flex items-center justify-center"
         >
           <IconChevronLeft size={14} />
         </button>
@@ -321,7 +292,6 @@ function DesktopCarousel({ locale, t }: any) {
             }`}
           />
         ))}
-        {/* Left Arrow */}
 
         {/* Right Arrow */}
         <button
@@ -330,7 +300,7 @@ function DesktopCarousel({ locale, t }: any) {
             next();
             startAutoPlay();
           }}
-          className="-translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-[#eeeeee]/50 flex items-center justify-center"
+          className="-translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-[#faf8f5]/90 flex items-center justify-center"
         >
           <IconChevronRight size={14} />
         </button>
