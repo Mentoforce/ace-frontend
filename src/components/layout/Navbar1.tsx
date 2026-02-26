@@ -14,7 +14,7 @@ export default function Navbar1() {
   return (
     <nav
       className="fixed top-0 
-      bg-white/20 backdrop-blur-md
+      bg-white/55 backdrop-blur-md
       z-50 font-didot font-medium backdrop-brightness-125 w-screen md:px-15 px-5"
     >
       {/* Top Bar */}

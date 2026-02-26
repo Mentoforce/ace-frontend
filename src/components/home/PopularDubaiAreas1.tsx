@@ -33,18 +33,19 @@
 import Image from "next/image";
 import skyline from "../../../public/primeareas/Popular dubai area.svg";
 import skylineTablet from "../../../public/primeareas/Tablet.svg";
-import skylineMobile from "../../../public/primeareas/Mobile 6.svg";
+import skylineMobile from "../../../public/primeareas/Mobile iphone.svg";
+import skylineMobile1 from "../../../public/primeareas/Frame 361.svg";
 
 export default function PopularDubaiAreas1() {
   return (
-    <section className="pointer-events-none relative w-full min-h-100 md:min-h-screen overflow-hidden">
+    <section className="pointer-events-none relative h-screen xl:h-[110vh] overflow-hidden">
       {/* Desktop */}
       <Image
         src={skyline}
         alt=""
         fill
         priority
-        className="hidden lg:block object-contain"
+        className="hidden lg:block xl:object-cover object-contain"
       />
 
       {/* Tablet */}

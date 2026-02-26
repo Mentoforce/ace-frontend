@@ -61,7 +61,7 @@ export default function PopularDubaiAreas() {
   return (
     <section
       className="
-        relative min-h-screen h-[110vh] w-full overflow-hidden
+        relative min-h-screen h-[110vh] xl:h-[120vh] w-full overflow-hidden
         flex flex-col items-center
         section-padding bg-[url('/skyline1.jpeg')] bg-no-repeat bg-cover
       "
@@ -83,8 +83,7 @@ export default function PopularDubaiAreas() {
       <h2
         className="
           relative z-10 mb-9
-          font-serif text-4xl md:text-5xl
-          font-bold tracking-wide text-[#0c2848] text-center font-didot
+          font-serif text-4xl md:text-5xl tracking-wide text-[#0c2848] text-center font-didot
         "
       >
         Popular Dubai Areas

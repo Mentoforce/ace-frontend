@@ -27,18 +27,19 @@ export default function Marquee() {
   }, []);
 
   return (
-    <section>
+    <section className="mt-15">
       <div className="relative mx-auto w-full overflow-hidden bg-linear-to-br pb-3">
-        {/* Gold hairlines */}
-        {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[#D7AB22]/40" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-[#D7AB22]/40" /> */}
-
         {/* Heading */}
-        {/* <div className="mb-5 text-center">
-          <h3 className="font-didot text-base md:text-xl tracking-wide text-[#0C2448]/90">
+        <div className="mb-2 text-center">
+          <h3 className="font-didot text-4xl md:text-5xl font-display mb-4 tracking-wide text-[#0C2448]">
             {t("home.trustedDevelopers")}
           </h3>
-        </div> */}
+          <p className=" flex justify-center gap-2 md:text-[15px] text-xs flex-wrap font-montserrat uppercase text-[#212121] mb-10">
+            Elite Advisory
+            <span> · </span>
+            Strategic Execution <span> · </span> Complete Real Estate Solutions
+          </p>
+        </div>
 
         {/* Fade edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-linear-to-r from-[#ffffff] to-transparent" />

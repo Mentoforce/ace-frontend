@@ -18,8 +18,7 @@ export default function FeaturedProperties1() {
   const t = useTranslations();
 
   return (
-    //  from-[#EFE9E3] via-[#FAF8F5] to-white, py-16 md:py-25 px-6
-    <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b -mt-15 md:mt-0">
+    <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b">
       <div className="">
         <h2
           className="font-didot text-[#0C2448] text-center font-display mb-12 text-4xl md:text-5xl lg:text-6xl p-3.5"
@@ -33,23 +32,6 @@ export default function FeaturedProperties1() {
           <MobileCarousel locale={locale} t={t} />
         </div>
 
-        {/* Desktop Grid */}
-        {/* <div className="hidden md:grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
-          {featuredProperties.map((property) => {
-            const content =
-              property.translations[locale as string] ??
-              property.translations["en-gb"];
-
-            return (
-              <PropertyCard
-                key={property._id}
-                property={property}
-                content={content}
-                t={t}
-              />
-            );
-          })}
-        </div> */}
         {/* Desktop Carousel */}
         <div className="hidden md:block relative">
           <DesktopCarousel locale={locale} t={t} />
@@ -63,7 +45,7 @@ function PropertyCard({ property, content, t }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <div className="group md:w-72 w-83 max-w-[95vh] relative bg-white rounded-lg border border-[#E5E5E5] overflow-hidden transition-all duration-300">
+    <div className="group md:w-72 w-83 max-w-[95vh] relative bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden transition-all duration-300">
       {/* Image */}
       <div className="h-45 max-w-[95vh] overflow-hidden">
         <Image
@@ -115,7 +97,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* Details Box */}
-        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
+        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-2xl p-2 mb-4 text-xs text-[#212121]">
           <div className="flex flex-col items-center gap-1">
             <IconBed size={18} stroke={1.8} />
             <span>{property.bedrooms} Beds</span>
@@ -137,7 +119,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* WhatsApp Button */}
-        <button className="w-full cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
+        <button className="w-full cursor-pointer font-didot py-2 rounded-2xl bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
           WhatsApp
         </button>
       </div>
@@ -159,7 +141,7 @@ function MobileCarousel({ locale, t }: any) {
   /** -------- Autoplay -------- */
   const startAutoPlay = () => {
     stopAutoPlay();
-    intervalRef.current = setInterval(next, 3000);
+    intervalRef.current = setInterval(next, 2500);
   };
 
   const stopAutoPlay = () => {
@@ -210,22 +192,10 @@ function MobileCarousel({ locale, t }: any) {
             prev();
             startAutoPlay();
           }}
-          className="w-9 h-9 rounded-full bg-[#eeeeee]/50  flex items-center justify-center active:scale-95"
+          className="w-9 h-9 rounded-full bg-[#faf8f5]/70  flex items-center justify-center active:scale-95"
         >
           <IconChevronLeft size={12} />
         </button>
-
-        {/* Dots */}
-        {/* <div className="flex gap-2">
-          {featuredProperties.map((_, i) => (
-            <span
-              key={i}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                i === index ? "bg-[#0C2448] w-4" : "bg-gray-300 w-2"
-              }`}
-            />
-          ))}
-        </div> */}
 
         {/* Right Arrow */}
         <button
@@ -234,7 +204,7 @@ function MobileCarousel({ locale, t }: any) {
             next();
             startAutoPlay();
           }}
-          className="w-9 h-9 rounded-full bg-[#eeeeee]/50 flex items-center justify-center active:scale-95"
+          className="w-9 h-9 rounded-full bg-[#faf8f5]/70 flex items-center justify-center active:scale-95"
         >
           <IconChevronRight size={12} />
         </button>
@@ -264,7 +234,7 @@ function DesktopCarousel({ locale, t }: any) {
     stopAutoPlay();
     intervalRef.current = setInterval(() => {
       next();
-    }, 3000); // 3 seconds
+    }, 1500); // 2.5 seconds
   };
 
   const stopAutoPlay = () => {
@@ -310,7 +280,7 @@ function DesktopCarousel({ locale, t }: any) {
             prev();
             startAutoPlay();
           }}
-          className=" -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#eeeeee]/50 flex items-center justify-center"
+          className=" -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#faf8f5]/90 flex items-center justify-center"
         >
           <IconChevronLeft size={14} />
         </button>
@@ -323,7 +293,6 @@ function DesktopCarousel({ locale, t }: any) {
             }`}
           />
         ))}
-        {/* Left Arrow */}
 
         {/* Right Arrow */}
         <button
@@ -332,7 +301,7 @@ function DesktopCarousel({ locale, t }: any) {
             next();
             startAutoPlay();
           }}
-          className="-translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-[#eeeeee]/50 flex items-center justify-center"
+          className="-translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-[#faf8f5]/90 flex items-center justify-center"
         >
           <IconChevronRight size={14} />
         </button>
