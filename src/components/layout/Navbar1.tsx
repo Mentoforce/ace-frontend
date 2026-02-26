@@ -19,21 +19,6 @@ export default function Navbar1() {
     >
       {/* Top Bar */}
       <div className="flex items-center justify-between mx-auto">
-        {/* LOGO VARIANTS  */}
-        {/* <Image
-          src="/ace wn.png"
-          className="ms-2 p-3"
-          height={80}
-          width={80}
-          alt="ACE LOGO"
-        /> */}
-        {/* <Image
-          src="/ace2d wn.png"
-          className="ms-2 p-3"
-          height={80}
-          width={80}
-          alt="ACE LOGO"
-        /> */}
         <Link href="/">
           <Image
             src="/logo3dwllc.png"
@@ -53,9 +38,11 @@ export default function Navbar1() {
           {/* <button className="bg-[#0C2448] text-white px-4 py-2 rounded-lg">
             {t("nav.cta")}
           </button> */}
-          <button className=" bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg">
-            {t("nav.cta")}
-          </button>
+          <Link href="/list-your-property">
+            <button className=" bg-linear-to-r cursor-pointer from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg">
+              {t("nav.cta")}
+            </button>
+          </Link>
         </div>
 
         {/* Mobile */}

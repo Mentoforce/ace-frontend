@@ -7,8 +7,8 @@ import Image from "next/image";
 const leftAreas2 = [["Jumeirah Bay Island"], ["Dubai Marina"]];
 
 const leftAreas1 = [
-  ["Downtown Dubai", "Dubai Sports City"],
   ["Springs Dubai", "Damac Hills"],
+  ["Downtown Dubai", "Dubai Sports City"],
 ];
 
 const rightAreas1 = [
@@ -61,64 +61,51 @@ export default function PopularDubaiAreas() {
   return (
     <section
       className="
-        relative min-h-screen h-[110vh] xl:h-[120vh] w-full overflow-hidden
+        relative min-h-screen w-full overflow-hidden
         flex flex-col items-center
-        section-padding bg-[url('/skyline1.jpeg')] bg-no-repeat bg-cover
+        section-padding bg-[url('/frame367.png')] bg-no-repeat bg-cover
       "
-      // style={{
-      //   background:
-      //     "linear-gradient(170deg, #b8d4e8 0%, #d4e8f0 20%, #e8d5a8 60%, #c8a870 100%)",
-      // }}
     >
-      {/* Sky atmospheric overlay
-      <div
-        className="pointer-events-none absolute inset-0 z-0"
-        // style={{
-        //   background:
-        //     "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(180,215,235,0.8) 0%, transparent 70%), radial-gradient(ellipse 80% 50% at 50% 100%, rgba(190,150,80,0.55) 0%, transparent 60%)",
-        // }}
-      /> */}
-
       {/* Heading */}
       <h2
         className="
-          relative z-10 mb-9
-          font-serif text-4xl md:text-5xl tracking-wide text-[#0c2848] text-center font-didot
+          relative z-10 mb-10 text-4xl md:text-5xl tracking-wide text-[#0c2848] text-center font-didot
         "
+        style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
       >
         Popular Dubai Areas
       </h2>
 
       {/* Scene */}
-      <div className="relative z-10 w-full max-w-7xl font-montserrat text-[#212121]">
+      <div className="relative mex-w-7xl z-10 w-full font-montserrat text-[#212121]">
         {/* Top row */}
-        <div className="mb-4 flex flex-wrap justify-center gap-5">
+        <div className="mb-4 flex flex-wrap justify-center gap-3 md:gap-8">
           {topAreas1.map((area) => (
             <Tag key={area} label={area} />
           ))}
         </div>
-        <div className="mb-4 flex flex-wrap justify-center gap-5">
+        <div className="mb-4 flex flex-wrap justify-center gap-3 md:gap-8">
           {topAreas2.map((area) => (
             <Tag key={area} label={area} />
           ))}
         </div>
 
         {/* Middle: Left tags | City image | Right tags */}
-        <div className="flex items-end justify-center gap-0">
+        <div className="flex justify-center">
           {/* LEFT */}
           <div className="">
             <div className="hidden lg:flex flex-col items-end gap-5 pb-3.5 flex-1">
               {leftAreas1.map((row, i) => (
-                <div key={i} className="flex flex-wrap gap-3">
+                <div key={i} className="flex no-wrap gap-8">
                   {row.map((area) => (
                     <Tag key={area} label={area} />
                   ))}
                 </div>
               ))}
             </div>
-            <div className="hidden lg:flex flex-col items-end mr-20 gap-5 pb-16 flex-1">
+            <div className="hidden lg:flex flex-col items-center gap-6 pb-16 flex-1">
               {leftAreas2.map((row, i) => (
-                <div key={i} className="flex flex-wrap gap-3">
+                <div key={i} className="flex no-wrap gap-8">
                   {row.map((area) => (
                     <Tag key={area} label={area} />
                   ))}
@@ -127,22 +114,21 @@ export default function PopularDubaiAreas() {
             </div>
           </div>
 
-          <div className="relative z-10 w-130 shrink-0 px-2">
-            {/* <Image
-              src="/skyline.png"
+          <div className=" relative w-170 mt-5 md:pt-150 pt-50">
+            <Image
+              src="/infographic.svg"
               alt="Dubai iconic skyline featuring Burj Al Arab, Burj Khalifa, Museum of the Future and Dubai Frame"
-              width={580}
-              height={460}
+              fill
               priority
-              className="w-full object-contain drop-shadow-2xl"
-            /> */}
+              className="w-full md:object-cover object-contain overflow-visible -z-10 drop-shadow-2xl"
+            />
           </div>
 
           {/* RIGHT */}
           <div>
             <div className="hidden lg:flex flex-col items-start gap-3.5 pb-3.5 flex-1">
               {rightAreas1.map((row, i) => (
-                <div key={i} className="flex flex-wrap justify-end gap-5">
+                <div key={i} className="flex no-wrap justify-end gap-8">
                   {row.map((area) => (
                     <Tag key={area} label={area} />
                   ))}
@@ -151,7 +137,7 @@ export default function PopularDubaiAreas() {
             </div>
             <div className="hidden lg:flex flex-col items-start ml-15 gap-3.5 pb-16 flex-1">
               {rightAreas2.map((row, i) => (
-                <div key={i} className="flex flex-wrap justify-end gap-5">
+                <div key={i} className="flex flex-wrap justify-end gap-8">
                   {row.map((area) => (
                     <Tag key={area} label={area} />
                   ))}

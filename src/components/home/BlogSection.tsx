@@ -19,7 +19,7 @@ export default function BlogSection() {
         <div className="flex justify-center items-center">
           <h2
             className="font-didot text-[#0C2448] text-center font-display mb-12 text-4xl md:text-5xl lg:text-6xl p-3.5"
-            style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
+            style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
           >
             {t("home.blog")}
           </h2>

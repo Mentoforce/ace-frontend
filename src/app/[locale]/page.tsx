@@ -13,6 +13,7 @@ import FeaturedProperties1 from "@/components/home/FeaturedProperties1";
 import WhyChooseACE from "@/components/home/WhyChooseUs1";
 import PopularDubaiAreas from "@/components/home/PopularDubaiAreas";
 import PopularDubaiAreas1 from "@/components/home/PopularDubaiAreas1";
+import StickyCTA from "@/components/home/StickyCTA";
 
 export default function HomePage() {
   return (
@@ -37,6 +38,7 @@ export default function HomePage() {
       {/* <ContactTestimonials /> */}
       {/* <Testimoials /> */}
       <ContactTestimonials1 />
+      <StickyCTA />
       {/* <Contact /> */}
     </>
   );
