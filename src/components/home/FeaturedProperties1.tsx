@@ -19,22 +19,21 @@ export default function FeaturedProperties1() {
 
   return (
     //  from-[#EFE9E3] via-[#FAF8F5] to-white, py-16 md:py-25 px-6
-    <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b -mt-15 md:mt-0">
-      <div className="">
-        <h2
-          className="font-didot text-[#0C2448] text-center font-display mb-12 text-4xl md:text-5xl lg:text-6xl p-3.5"
-          style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
-        >
-          {t("home.featured")}
-        </h2>
+    <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b">
+      <h2
+        className="font-didot text-[#0C2448] text-center font-display mb-8 text-4xl md:text-5xl lg:text-6xl p-3.5"
+        style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
+      >
+        {t("home.featured")}
+      </h2>
 
-        {/* Mobile Carousel */}
-        <div className="md:hidden flex justify-center">
-          <MobileCarousel locale={locale} t={t} />
-        </div>
+      {/* Mobile Carousel */}
+      <div className="md:hidden flex justify-center">
+        <MobileCarousel locale={locale} t={t} />
+      </div>
 
-        {/* Desktop Grid */}
-        {/* <div className="hidden md:grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+      {/* Desktop Grid */}
+      {/* <div className="hidden md:grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
           {featuredProperties.map((property) => {
             const content =
               property.translations[locale as string] ??
@@ -50,10 +49,9 @@ export default function FeaturedProperties1() {
             );
           })}
         </div> */}
-        {/* Desktop Carousel */}
-        <div className="hidden md:block relative">
-          <DesktopCarousel locale={locale} t={t} />
-        </div>
+      {/* Desktop Carousel */}
+      <div className="hidden md:block relative">
+        <DesktopCarousel locale={locale} t={t} />
       </div>
     </section>
   );

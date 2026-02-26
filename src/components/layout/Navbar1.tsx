@@ -34,17 +34,19 @@ export default function Navbar1() {
           width={80}
           alt="ACE LOGO"
         /> */}
-        <Image
-          src="/logo3dwllc.png"
-          height={80}
-          width={80}
-          className="p-1"
-          alt="ACE LOGO"
-        />
+        <Link href="/">
+          <Image
+            src="/logo3dwllc.png"
+            height={80}
+            width={80}
+            className="p-1"
+            alt="ACE LOGO"
+          />
+        </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-6 font-medium">
-          <Link href="/">{t("nav.home")}</Link>
+          {/* <Link href="/">{t("nav.home")}</Link> */}
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/blog">{t("nav.blogs")}</Link>
           {/* <LanguageSwitcher /> */}
@@ -79,9 +81,9 @@ export default function Navbar1() {
         }`}
       >
         <div className="px-6 pb-5 pt-2 border-t border-black/10 flex flex-col gap-4 text-sm">
-          <Link onClick={() => setOpen(false)} href="/">
+          {/* <Link onClick={() => setOpen(false)} href="/">
             {t("nav.home")}
-          </Link>
+          </Link> */}
           <Link onClick={() => setOpen(false)} href="/about">
             {t("nav.about")}
           </Link>
