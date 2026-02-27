@@ -1,33 +1,33 @@
 import Image from "next/image";
 export default function StickyCTA() {
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col">
+    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 md:gap-3 md:flex md:flex-col hidden">
       <a href="#">
         <Image
-          src="/whatsapp.svg"
+          src="/CTA/whatsapp1.svg"
           alt="WhatsApp"
-          width={98}
-          height={98}
+          width={48}
+          height={48}
           className="hover:scale-110 transition"
         />
       </a>
 
       <a href="#">
         <Image
-          src="/call.svg"
+          src="/CTA/call1.svg"
           alt="Call"
-          width={98}
-          height={98}
+          width={48}
+          height={48}
           className="hover:scale-110 transition"
         />
       </a>
 
       <a href="#">
         <Image
-          src="/chat-bubble.svg"
+          src="/CTA/Frame355.svg"
           alt="Email"
-          width={98}
-          height={98}
+          width={48}
+          height={48}
           className="hover:scale-110 transition"
         />
       </a>
