@@ -56,15 +56,15 @@ export default function Footer() {
         <div className="flex flex-col gap-3 max-w-2xs">
           <div className="flex gap-3 items-center">
             <IconMapPin size={24} />
-            <p>Reef Tower, loremipsum, Dubai, lorem, 339182</p>
+            <p>Office No: 1811, Parkl ane Tower, Business Bay, Dubai</p>
           </div>
           <div className="flex gap-3 items-center">
             <IconMail size={20} />
-            <p>abc@infoaceventures.com</p>
+            <p>info@aceventuresrealestate.com</p>
           </div>
           <div className="flex gap-3 items-center">
             <IconPhone size={20} />
-            <p>+91 8765993856</p>
+            <p>+971563553279</p>
           </div>
         </div>
       </div>
