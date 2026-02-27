@@ -33,7 +33,7 @@ export default function Marquee() {
         <div className=" text-center">
           <h2
             className="font-didot text-[#0C2448] leading-tight mb-3 text-4xl md:text-5xl"
-            style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
+            style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
           >
             {t("home.trustedDevelopers")}
             <br />

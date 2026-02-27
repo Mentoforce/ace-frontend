@@ -179,6 +179,7 @@ export const ContactTestimonials1 = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
@@ -239,7 +240,10 @@ export const ContactTestimonials1 = () => {
   };
 
   return (
-    <section className="font-montserrat section-padding text-white mx-auto relative md:mb-15">
+    <section
+      className="font-montserrat section-padding text-white mx-auto relative md:mb-15"
+      style={{ paddingInline: "0px" }}
+    >
       <div>
         <div className="flex flex-col md:flex-row md:bg-[#FAF8F5] justify-center gap-20 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
           {/* Contact Card - GOLD */}
@@ -271,6 +275,14 @@ export const ContactTestimonials1 = () => {
                   name="email"
                   placeholder="Email Address"
                   value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full bg-transparent border-b outline-none py-2 border-[#ffffff]/60 focus:border-[#ffffff]"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
                   onChange={handleInputChange}
                   className="w-full bg-transparent border-b outline-none py-2 border-[#ffffff]/60 focus:border-[#ffffff]"
                 />

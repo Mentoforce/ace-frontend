@@ -22,7 +22,7 @@ export default function FeaturedProperties1() {
     <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b">
       <h2
         className="font-didot text-[#0C2448] text-center font-display mb-8 text-4xl md:text-5xl lg:text-6xl p-3.5"
-        style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
+        style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
       >
         {t("home.featured")}
       </h2>
@@ -96,7 +96,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* Details Box */}
-        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-2xl p-2 mb-4 text-xs text-[#212121]">
+        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
           <div className="flex flex-col items-center gap-1">
             <IconBed size={18} stroke={1.8} />
             <span>{property.bedrooms} Beds</span>
@@ -118,7 +118,7 @@ function PropertyCard({ property, content, t }: any) {
         </div>
 
         {/* WhatsApp Button */}
-        <button className="w-full cursor-pointer font-didot py-2 rounded-2xl bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
+        <button className="w-full cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
           WhatsApp
         </button>
       </div>

@@ -19,8 +19,9 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[url('/q5.jpg')] bg-contain md:bg-repeat-x bg-no-repeat bg-bottom rounded-2xl pt-12 overflow-hidden md:section-padding px-2">
+    <footer className="relative bg-[url('/q5.jpg')] bg-contain md:bg-repeat-x bg-no-repeat bg-bottom pt-12 overflow-hidden md:section-padding px-2">
       {/* Overlay */}
+      <div className="h-0.5 bg-linear-to-l from-white via-[#212121] to-white w-full mb-10"></div>
       <span className="absolute inset-0 bg-white/70 backdrop-grayscale z-0" />
 
       {/* Main Content */}
@@ -45,7 +46,7 @@ export default function Footer() {
         </div>
 
         {/* Navigation */}
-        <div className="flex flex-col gap-3 text-[#0C2448]">
+        <div className="flex flex-col gap-3 text-[#0C2448] text-[14px] font-montserrat font-semibold">
           <Link href="/">{t("nav.home")}</Link>
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/blog">{t("nav.blogs")}</Link>
@@ -53,7 +54,7 @@ export default function Footer() {
         </div>
 
         {/* Contact Form */}
-        <div className="flex flex-col gap-3 max-w-2xs">
+        <div className="flex flex-col gap-3 max-w-2xs font-montserrat font-semibold text-[14px]">
           <div className="flex gap-3 items-center">
             <IconMapPin size={24} />
             <p>Office No: 1811, Parkl ane Tower, Business Bay, Dubai</p>
@@ -70,7 +71,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="relative mt-12 mx-auto w-fit p-4 text-center text-sm text-[#0C2448] font-didot border-t-2">
+      <div className="relative mt-12 mx-auto w-fit p-4 text-center text-sm text-[#0C2448] font-montserrat">
         © {year} {t("footer.copyright")}
       </div>
     </footer>
