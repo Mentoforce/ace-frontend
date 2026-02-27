@@ -3,13 +3,14 @@ import { BlogPost } from "@/types/blog";
 export const latestBlogs: BlogPost[] = [
   {
     _id: "1",
-    slug: "Dubai Unveils Vision",
+    slug: "dubai-unveils-vision",
     image: "/blog/1.jpg",
     date: "31/01/2026",
     readTime: "5 minute read",
     translations: {
       "en-gb": {
-        title: "Dubai Unveils Vision for New Gold-Centric District to Strengthen Global Bullion Leadership",
+        title:
+          "Dubai Unveils Vision for New Gold-Centric District to Strengthen Global Bullion Leadership",
         subtitle:
           "Dubai has announced ambitious plans to develop a new district centered around physical gold, reinforcing its long-standing position as a global hub for precious metals trading.",
         content:
@@ -25,16 +26,18 @@ export const latestBlogs: BlogPost[] = [
   },
   {
     _id: "2",
-    slug: "Dubai Smashes Property",
+    slug: "dubai-smashes-property",
     image: "/blog/2.jpg",
     date: "30/01/2026",
     readTime: "5 minute read",
     translations: {
       "en-gb": {
-        title: "Dubai Smashes Property Market Record with AED 15.6 Billion in Single-Day Transactions",
+        title:
+          "Dubai Smashes Property Market Record with AED 15.6 Billion in Single-Day Transactions",
         subtitle:
           "Dubai’s real estate market has reached a historic milestone, recording AED 15.6 billion in property transactions in a single day",
-content:"Dubai’s real estate market has reached a historic milestone, recording AED 15.6 billion in property transactions in a single day — the highest ever achieved in the emirate’s history. A total of 1,501 deals were closed, highlighting exceptional demand across residential, commercial, and luxury segments. The surge was largely driven by strong activity in premium and high-end developments, reflecting sustained confidence from both regional and international investors. Market analysts attribute the record-breaking performance to Dubai’s investor-friendly policies, robust economic growth, long-term residency incentives, and its reputation as a safe haven for global capital. The achievement underscores the emirate’s continued dominance as one of the world’s most dynamic and resilient real estate markets."
+        content:
+          "Dubai’s real estate market has reached a historic milestone, recording AED 15.6 billion in property transactions in a single day — the highest ever achieved in the emirate’s history. A total of 1,501 deals were closed, highlighting exceptional demand across residential, commercial, and luxury segments. The surge was largely driven by strong activity in premium and high-end developments, reflecting sustained confidence from both regional and international investors. Market analysts attribute the record-breaking performance to Dubai’s investor-friendly policies, robust economic growth, long-term residency incentives, and its reputation as a safe haven for global capital. The achievement underscores the emirate’s continued dominance as one of the world’s most dynamic and resilient real estate markets.",
       },
       // ar: {
       //   title: "سوق الإيجارات في دبي لعام 2025 من منظور المستأجر",
@@ -46,16 +49,18 @@ content:"Dubai’s real estate market has reached a historic milestone, recordin
   },
   {
     _id: "3",
-    slug: "Mohammed bin Rashid Al Maktoum Highlights ",
+    slug: "mohammed-bin-rashid-al-maktoum-highlights",
     image: "/blog/3.jpg",
     date: "29/01/2026",
     readTime: "5 minute read",
     translations: {
       "en-gb": {
-        title: "Mohammed bin Rashid Al Maktoum Highlights Dubai’s Real Estate Momentum in New Strategic Update",
+        title:
+          "Mohammed bin Rashid Al Maktoum Highlights Dubai’s Real Estate Momentum in New Strategic Update",
         subtitle:
           "His Highness Sheikh Mohammed bin Rashid Al Maktoum, Vice President and Prime Minister of the UAE and Ruler of Dubai, recently shared insights into the remarkable progress of Dubai’s real estate sector.",
-        content:"His Highness Sheikh Mohammed bin Rashid Al Maktoum, Vice President and Prime Minister of the UAE and Ruler of Dubai, recently shared insights into the remarkable progress of Dubai’s real estate sector. Emphasizing sustained growth, investor confidence, and the emirate’s long-term vision, he noted that the property market continues to attract global attention due to its transparency, innovation, and strong regulatory framework. With landmark developments shaping the skyline—led by icons such as the Burj Khalifa—Dubai remains a symbol of ambition and opportunity. The update reinforces the city’s position as one of the world’s most dynamic and resilient real estate destinations, driven by strategic planning and forward-looking leadership."
+        content:
+          "His Highness Sheikh Mohammed bin Rashid Al Maktoum, Vice President and Prime Minister of the UAE and Ruler of Dubai, recently shared insights into the remarkable progress of Dubai’s real estate sector. Emphasizing sustained growth, investor confidence, and the emirate’s long-term vision, he noted that the property market continues to attract global attention due to its transparency, innovation, and strong regulatory framework. With landmark developments shaping the skyline—led by icons such as the Burj Khalifa—Dubai remains a symbol of ambition and opportunity. The update reinforces the city’s position as one of the world’s most dynamic and resilient real estate destinations, driven by strategic planning and forward-looking leadership.",
       },
       // ar: {
       //   title:
@@ -68,17 +73,18 @@ content:"Dubai’s real estate market has reached a historic milestone, recordin
   },
   {
     _id: "4",
-    slug: "Ras Al Khaimah Sees Sharp Surge",
+    slug: "ras-al-khaimah-ssees-sharp-surge",
     image: "/blog/4.jpg",
     date: "28/01/2026",
     readTime: "5 minute read",
     translations: {
       "en-gb": {
-        title: "Ras Al Khaimah Sees Sharp Surge in Property Prices as Villa Rates Climb 42%",
+        title:
+          "Ras Al Khaimah Sees Sharp Surge in Property Prices as Villa Rates Climb 42%",
         subtitle:
           "The real estate market in Ras Al Khaimah is witnessing a significant upswing, with villa prices recording an impressive 42% increase amid rising demand and constrained supply.",
         content:
-"The real estate market in Ras Al Khaimah is witnessing a significant upswing, with villa prices recording an impressive 42% increase amid rising demand and constrained supply. The emirate has rapidly gained attention from regional and international investors seeking waterfront living, luxury developments, and high-return investment opportunities. Major infrastructure expansion, tourism growth, and premium residential projects along the coastline are fueling this momentum. Industry experts note that limited inventory in prime communities, combined with growing buyer confidence, is accelerating price appreciation and positioning Ras Al Khaimah as one of the UAE’s fastest-growing property hotspots.",
+          "The real estate market in Ras Al Khaimah is witnessing a significant upswing, with villa prices recording an impressive 42% increase amid rising demand and constrained supply. The emirate has rapidly gained attention from regional and international investors seeking waterfront living, luxury developments, and high-return investment opportunities. Major infrastructure expansion, tourism growth, and premium residential projects along the coastline are fueling this momentum. Industry experts note that limited inventory in prime communities, combined with growing buyer confidence, is accelerating price appreciation and positioning Ras Al Khaimah as one of the UAE’s fastest-growing property hotspots.",
       },
       // ar: {
       //   title: "ماذا تكشف بيانات عام 2025 عن ارتفاع الأسعار أو تباطؤها؟",
@@ -89,18 +95,21 @@ content:"Dubai’s real estate market has reached a historic milestone, recordin
     },
   },
   //This is just the replicated part of the above id, change them for full page(5,6,7)
-    {
+  {
     _id: "5",
-    slug: "A comparative look at major real estate markets",
+    slug: "a-comparative-look-at-major-real-estate-markets",
     image: "/blog/5.jpg",
     date: "31/01/2026",
     readTime: "5 minute read",
     translations: {
       "en-gb": {
-        title: "Global Property Markets Compared: Why the United Arab Emirates Stands Out for Real Estate Investors",
+        title:
+          "Global Property Markets Compared: Why the United Arab Emirates Stands Out for Real Estate Investors",
         subtitle:
           "A comparative look at major real estate markets—including the United States, United Kingdom, Singapore, and Turkey",
-        content:"A comparative look at major real estate markets—including the United States, United Kingdom, Singapore, and Turkey—highlights significant differences in taxation, capital gains policies, and average returns on investment. While Western markets often impose higher income taxes and capital gains levies, the United Arab Emirates continues to attract global investors with its zero income tax and zero capital gains tax structure. Coupled with competitive average ROI figures and a strong regulatory framework, the UAE remains one of the most appealing destinations for property investment. As international buyers seek stability, profitability, and long-term growth, tax efficiency and market performance are playing a decisive role in shaping global real estate strategies."},
+        content:
+          "A comparative look at major real estate markets—including the United States, United Kingdom, Singapore, and Turkey—highlights significant differences in taxation, capital gains policies, and average returns on investment. While Western markets often impose higher income taxes and capital gains levies, the United Arab Emirates continues to attract global investors with its zero income tax and zero capital gains tax structure. Coupled with competitive average ROI figures and a strong regulatory framework, the UAE remains one of the most appealing destinations for property investment. As international buyers seek stability, profitability, and long-term growth, tax efficiency and market performance are playing a decisive role in shaping global real estate strategies.",
+      },
 
       // ar: {
       //   title: "سوق الإيجارات في دبي عام 2025 وما يعنيه ذلك للمُلّاك",
@@ -110,7 +119,7 @@ content:"Dubai’s real estate market has reached a historic milestone, recordin
       // },
     },
   },
-    {
+  {
     _id: "6",
     slug: "dubai-rental-market-landlords",
     image: "/blog/6.jpg",
@@ -118,11 +127,13 @@ content:"Dubai’s real estate market has reached a historic milestone, recordin
     readTime: "5 minute read",
     translations: {
       "en-gb": {
-        title: "Gulf Cooperation Council Real Estate Market Set to Sustain Upward Momentum in H1 2026",
+        title:
+          "Gulf Cooperation Council Real Estate Market Set to Sustain Upward Momentum in H1 2026",
         subtitle:
           "The GCC real estate sector is expected to maintain its upward trajectory in the first half of 2026,underpinned by strong economic fundamentals, population growth, and sustained investor confidence.",
         content:
-"The GCC real estate sector is expected to maintain its upward trajectory in the first half of 2026, underpinned by strong economic fundamentals, population growth, and sustained investor confidence. Key markets such as the United Arab Emirates, Saudi Arabia, and Qatar continue to benefit from diversification strategies, large-scale infrastructure projects, and pro-investment regulatory reforms. Rising demand for residential, mixed-use, and hospitality assets—alongside government-backed development initiatives—has strengthened transaction volumes and price resilience. Analysts note that stable oil revenues, expanding non-oil sectors, and increasing foreign direct investment are reinforcing market stability, positioning the GCC as one of the most dynamic and opportunity-rich real estate regions globally in 2026."},    // ar: {
+          "The GCC real estate sector is expected to maintain its upward trajectory in the first half of 2026, underpinned by strong economic fundamentals, population growth, and sustained investor confidence. Key markets such as the United Arab Emirates, Saudi Arabia, and Qatar continue to benefit from diversification strategies, large-scale infrastructure projects, and pro-investment regulatory reforms. Rising demand for residential, mixed-use, and hospitality assets—alongside government-backed development initiatives—has strengthened transaction volumes and price resilience. Analysts note that stable oil revenues, expanding non-oil sectors, and increasing foreign direct investment are reinforcing market stability, positioning the GCC as one of the most dynamic and opportunity-rich real estate regions globally in 2026.",
+      }, // ar: {
       //   title: "سوق الإيجارات في دبي عام 2025 وما يعنيه ذلك للمُلّاك",
       //   subtitle: "دليل شامل لتعظيم العوائد في ظل اقتصاد متغير.",
       //   content:
@@ -130,18 +141,21 @@ content:"Dubai’s real estate market has reached a historic milestone, recordin
       // },
     },
   },
-    {
+  {
     _id: "7",
-    slug: "Dubai Real Estate 2026",
+    slug: "dubai-real-estate-2026",
     image: "/blog/1.jpg",
     date: "31/01/2026",
     readTime: "5 minute read",
     translations: {
       "en-gb": {
-        title: "Dubai Real Estate 2026: Market Shifts Toward Value, Connectivity and Quality",
+        title:
+          "Dubai Real Estate 2026: Market Shifts Toward Value, Connectivity and Quality",
         subtitle:
           "Dubai’s property market is entering a more mature and strategic phase in 2026, with investors prioritizing long-term value over short-term hype.",
-        content:"Dubai’s property market is entering a more mature and strategic phase in 2026, with investors prioritizing long-term value over short-term hype. Enhanced infrastructure, expanding metro connectivity, and new master-planned communities are reshaping demand patterns across the city. Iconic landmarks such as the Burj Khalifa continue to symbolize growth, but today’s buyers are focusing more on location fundamentals, developer credibility, and build quality. Luxury villas and waterfront residences remain resilient, even during market corrections, reflecting sustained appetite for premium living. Analysts suggest that as supply stabilizes and regulations strengthen, Dubai’s real estate sector is evolving into a performance-driven market defined by stability, transparency, and smart investment decisions."},
+        content:
+          "Dubai’s property market is entering a more mature and strategic phase in 2026, with investors prioritizing long-term value over short-term hype. Enhanced infrastructure, expanding metro connectivity, and new master-planned communities are reshaping demand patterns across the city. Iconic landmarks such as the Burj Khalifa continue to symbolize growth, but today’s buyers are focusing more on location fundamentals, developer credibility, and build quality. Luxury villas and waterfront residences remain resilient, even during market corrections, reflecting sustained appetite for premium living. Analysts suggest that as supply stabilizes and regulations strengthen, Dubai’s real estate sector is evolving into a performance-driven market defined by stability, transparency, and smart investment decisions.",
+      },
       // ar: {
       //   title: "سوق الإيجارات في دبي عام 2025 وما يعنيه ذلك للمُلّاك",
       //   subtitle: "دليل شامل لتعظيم العوائد في ظل اقتصاد متغير.",

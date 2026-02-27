@@ -118,7 +118,7 @@ export default function About() {
       <section className="relative min-h-[90vh] bg-[#000000]/60 flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600"
+            src="/about/about-hero.jpg"
             alt="Dubai Skyline"
             fill
             priority
@@ -133,7 +133,7 @@ export default function About() {
               Real Estate
             </h1>
 
-            <p className="max-w-3xl text-white/80 text-lg leading-relaxed font-light">
+            <p className="max-w-3xl text-white/80 text-lg leading-relaxed">
               Where Prestige Meets Property
             </p>
           </div>
@@ -162,56 +162,68 @@ export default function About() {
 
       {/* ── ABOUT ── */}
       <section id="about" className="bg-white section-padding">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          {/* Left */}
-          <div>
-            <SectionHeading>
-              A Partner in Every Property Decision
-            </SectionHeading>
-            <div className="mt-8 space-y-5 text-[#212121] text-[15px] leading-[1.9] font-montserrat">
-              <p>
-                Ace Ventures Real Estate LLC is a Dubai-based real estate
-                brokerage specializing in investment advisory, luxury
-                residential sales, commercial real estate, off-plan projects,
-                and complete relocation solutions.
-              </p>
-              <p>
-                We are structured around a single conviction: every property
-                decision should be backed by research, guided by expertise, and
-                executed with precision. From a first-time buyer to a seasoned
-                portfolio investor, every client receives the same depth of
-                strategic attention.
-              </p>
-              <p>
-                From acquisition strategy to title transfer and post-handover
-                support, every stage is managed with compliance, transparency,
-                and precision.
-              </p>
+        <div className="max-w-7xl mx-auto">
+          {/* Top Row: Content + Image */}
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* Left — Content */}
+            <div>
+              <SectionHeading>
+                A Partner in Every Property Decision
+              </SectionHeading>
+
+              <div className="mt-8 space-y-5 text-[#212121] text-[15px] leading-[1.9] font-montserrat">
+                <p>
+                  Ace Ventures Real Estate LLC is a Dubai-based real estate
+                  brokerage specializing in investment advisory, luxury
+                  residential sales, commercial real estate, off-plan projects,
+                  and complete relocation solutions.
+                </p>
+                <p>
+                  We are structured around a single conviction: every property
+                  decision should be backed by research, guided by expertise,
+                  and executed with precision. From a first-time buyer to a
+                  seasoned portfolio investor, every client receives the same
+                  depth of strategic attention.
+                </p>
+                <p>
+                  From acquisition strategy to title transfer and post-handover
+                  support, every stage is managed with compliance, transparency,
+                  and precision.
+                </p>
+              </div>
+            </div>
+
+            {/* Right — Image */}
+            <div className="relative w-full h-105 rounded-2xl overflow-hidden">
+              <Image
+                src="/about/aboutus.jpeg" // change path
+                alt="Ace Ventures Real Estate"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
 
-          {/* Right — pillars */}
-          <div className="space-y-0">
+          {/* Bottom Row — Pillars Horizontal */}
+          <div className="mt-20 grid md:grid-cols-3 ">
             {pillars.map((p, i) => (
               <div
                 key={p.num}
-                className={`flex gap-6 p-8 ${
-                  i !== pillars.length - 1 ? "border-b border-[#EEEEEE]" : ""
-                } group`}
+                className={`p-6 group ${
+                  i !== pillars.length - 1 ? "md:border-r border-[#EEEEEE]" : ""
+                }`}
               >
-                <div className="shrink-0">
-                  <span className=" text-5xl font-didot text-[#c29a1f]/20 group-hover:text-[#c29a1f]/30 transition-colors leading-none">
-                    {p.num}
-                  </span>
-                </div>
-                <div>
-                  <h4 className="text-[#0c2848] text-[14px] font-didot tracking-wide mb-2">
-                    {p.title}
-                  </h4>
-                  <p className="text-[#757575] text-[13.5px] font-montserrat leading-relaxed font-light">
-                    {p.desc}
-                  </p>
-                </div>
+                <span className="block text-4xl font-didot text-[#c29a1f]/20 group-hover:text-[#c29a1f]/30 transition-colors leading-none mb-4">
+                  {p.num}
+                </span>
+
+                <h4 className="text-[#0c2848] text-[15px] font-didot tracking-wide mb-2">
+                  {p.title}
+                </h4>
+
+                <p className="text-[#212121] text-[14px] font-montserrat leading-relaxed ">
+                  {p.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -236,12 +248,12 @@ export default function About() {
             {services.map((s) => (
               <div
                 key={s.title}
-                className="bg-white p-8 group hover:bg-[#c29a1f]/10 transition-colors duration-300"
+                className="bg-white p-7 group hover:bg-[#c29a1f]/3 transition-colors duration-300"
               >
                 <h3 className="text-[#0c2848] font-didot  text-[13.5px] font-semibold tracking-wide mb-3 transition-colors">
                   {s.title}
                 </h3>
-                <p className="text-[212121] font-montserrat  text-[13px] leading-relaxed font-light transition-colors">
+                <p className="text-[212121] font-montserrat  text-[13px] leading-relaxed transition-colors">
                   {s.desc}
                 </p>
               </div>
@@ -293,7 +305,7 @@ export default function About() {
       </section>
 
       {/* ── PHILOSOPHY BANNER ── */}
-      <section className="bg-[#faf8f5]/90 section-padding">
+      <section className="bg-white section-padding">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center justify-between gap-10">
           <div>
             {/* <EyebrowLabel text="Our Philosophy" /> */}
@@ -312,9 +324,9 @@ export default function About() {
           </div>
         </div>
       </section>
-      <div className="section-padding bg-white">
-        <MissionVision7 />
-      </div>
+
+      <MissionVision7 />
+      <div className="py-10"></div>
     </main>
   );
 }
@@ -399,7 +411,7 @@ function MissionVision7() {
     aboutSection.translations[locale as string] ??
     aboutSection.translations["en-gb"];
   return (
-    <section className="max-w-6xl mx-auto relative overflow-hidden flex flex-col sm:flex-row rounded-none md:rounded-3xl">
+    <section className="max-w-6xl mx-auto relative overflow-hidden flex flex-col sm:flex-row rounded-2xl">
       {/* ─── LEFT PANEL — Our Vision (Dark Navy) ─── */}
       <div
         className="
@@ -434,7 +446,7 @@ function MissionVision7() {
         "
         style={{
           background:
-            "linear-gradient(15deg, #faf8f5 0%, #faf8f5 45%, #faf8f5 100%)",
+            "linear-gradient(15deg, #faf8f5 0%, #faf8f5 45%, #c29a1f26 100%)",
         }}
       >
         <div className="max-w-md mt-0 sm:mt-auto">

@@ -18,44 +18,59 @@ export default function BlogDetailPage() {
     post.translations[locale as string] ?? post.translations["en-gb"];
 
   return (
-    <main className="min-h-screen bg-[#FAF8F5]">
-      {/* Article Header/Hero */}
-      <header className="relative h-[50vh] w-full">
-        <Image
-          src={post.image}
-          alt={content.title}
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <div className="max-w-4xl px-6 text-white">
-            <h1 className="text-3xl text-left md:text-center md:text-5xl font-didot font-bold mb-4">
+    <main
+      className="min-h-screen section-padding"
+      style={{ paddingTop: "8rem" }}
+    >
+      <article className="max-w-6xl mx-auto px-6">
+        {/* Image Card */}
+        <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-white">
+          <div className="relative h-85 w-full">
+            <Image
+              src={post.image}
+              alt={content.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+
+          {/* Title + Meta */}
+          <div className="p-8">
+            <h1 className="text-3xl md:text-4xl font-didot font-semibold text-[#0C2448] leading-tight mb-4">
               {content.title}
             </h1>
-            <p className="text-lg text-left md:text-center md:text-xl font-light opacity-90">
-              {content.subtitle}
-            </p>
+
+            <div className="flex items-center justify-between text-sm text-gray-500">
+              <span>{post.date}</span>
+              {/* <span className="text-[#0C2448]">{post.category}</span> */}
+            </div>
           </div>
         </div>
-      </header>
 
-      {/* Article Body */}
-      <article className="max-w-5xl mx-auto px-6 py-16">
-        <div className="prose prose-lg prose-slate max-w-none">
-          <div className="text-slate-700 leading-relaxed whitespace-pre-wrap">
+        {/* Subtitle Block */}
+        {content.subtitle && (
+          <div className="mt-10 text-lg md:text-xl text-[#212121] font-montserrat">
+            {content.subtitle}
+          </div>
+        )}
+
+        {/* Article Content */}
+        <div className="mt-8">
+          <div className="text-[#212121] font-montserrat leading-relaxed whitespace-pre-wrap">
             {content.content}
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-gray-200">
+        {/* Back Link */}
+        {/* <div className="mt-16 pt-8 border-t border-gray-200">
           <Link
             href={`/${locale}`}
             className="text-[#0C2448] font-semibold flex items-center gap-2 hover:gap-3 transition-all"
           >
             {t("blog.back") || "← Back to Insights"}
           </Link>
-        </div>
+        </div> */}
       </article>
     </main>
   );

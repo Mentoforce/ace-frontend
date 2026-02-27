@@ -4,6 +4,7 @@ import { useTranslations } from "@/lib/i18n/client";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
+  IconBrandLinkedin,
   IconBrandTwitter,
   IconBrandWhatsapp,
   IconMail,
@@ -37,11 +38,22 @@ export default function Footer() {
           />
 
           <div className="flex gap-4 text-[#0C2448]/90">
-            <IconBrandInstagram className="cursor-pointer hover:text-[#0C2448] transition" />
-            <IconBrandFacebook className="cursor-pointer hover:text-[#0C2448] transition" />
-            <IconBrandTwitter className="cursor-pointer hover:text-[#0C2448] transition" />
-            <IconMail className="cursor-pointer hover:text-[#0C2448] transition" />
-            <IconBrandWhatsapp className="cursor-pointer hover:text-[#0C2448] transition" />
+            <a href="">
+              <IconBrandInstagram className="cursor-pointer hover:text-[#0C2448] transition" />
+            </a>
+            <a href="">
+              {" "}
+              <IconBrandFacebook className="cursor-pointer hover:text-[#0C2448] transition" />
+            </a>
+            <a href="">
+              <IconBrandLinkedin className="cursor-pointer hover:text-[#0C2448] transition" />
+            </a>
+            <a href="mailto:">
+              <IconMail className="cursor-pointer hover:text-[#0C2448] transition" />
+            </a>
+            <a href="https://wa.me/971563553279">
+              <IconBrandWhatsapp className="cursor-pointer hover:text-[#0C2448] transition" />
+            </a>
           </div>
         </div>
 
@@ -61,7 +73,9 @@ export default function Footer() {
           </div>
           <div className="flex gap-3 items-center">
             <IconMail size={20} />
-            <p>info@aceventuresrealestate.com</p>
+            <p>
+              <a href="mailto:">info@aceventuresrealestate.com</a>
+            </p>
           </div>
           <div className="flex gap-3 items-center">
             <IconPhone size={20} />

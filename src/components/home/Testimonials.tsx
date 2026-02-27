@@ -247,7 +247,7 @@ export const ContactTestimonials1 = () => {
       <div>
         <div className="flex flex-col md:flex-row md:bg-[#FAF8F5] justify-center gap-20 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
           {/* Contact Card - GOLD */}
-          <div className="w-full max-w-md md:w-120 bg-[#0C2448] md:h-140 relative z-20 shadow-2xl flex items-center rounded-lg mb-0">
+          <div className="w-full max-w-md md:w-120 bg-[#0C2448] md:h-140 relative z-20 shadow-2xl flex items-center rounded-2xl mb-0">
             <div className="p-6 md:py-0 md:h-130 md:px-10 text-[#ffffff] w-full flex flex-col justify-evenly">
               {/* <p className="uppercase tracking-widest text-xs font-semibold mb-2">
                 We are always ready
