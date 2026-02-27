@@ -133,7 +133,7 @@ export default function About() {
               Real Estate
             </h1>
 
-            <p className="max-w-3xl text-white/80 text-lg leading-relaxed">
+            <p className="max-w-3xl text-white/80 text-lg leading-relaxed font-montserrat">
               Where Prestige Meets Property
             </p>
           </div>

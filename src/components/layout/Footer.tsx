@@ -61,7 +61,7 @@ export default function Footer() {
         <div className="flex flex-col gap-3 text-[#0C2448] text-[14px] font-montserrat font-semibold">
           <Link href="/">{t("nav.home")}</Link>
           <Link href="/about">{t("nav.about")}</Link>
-          <Link href="/blog">{t("nav.blogs")}</Link>
+          <Link href="/news">{t("nav.blogs")}</Link>
           <Link href="#">{t("nav.careers")}</Link>
         </div>
 

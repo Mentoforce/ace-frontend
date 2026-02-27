@@ -137,12 +137,12 @@ function DesktopBlogCarousel({ locale }: any) {
 }
 
 //EDITORIAL CARD
-function BlogCard({ post, index, locale }: any) {
+export function BlogCard({ post, index, locale }: any) {
   const content = post.translations[locale] ?? post.translations["en-gb"];
   const t = useTranslations();
 
   return (
-    <Link href={`/${locale}/blog/${post.slug}`} className="group block">
+    <Link href={`/${locale}/news/${post.slug}`} className="group block">
       <div className="relative bg-[#faf8f5]/90 rounded-lg p-4 transition-shadow duration-500 group-hover:shadow-xl">
         <div className="relative aspect-3/2 overflow-hidden rounded-lg">
           <Image

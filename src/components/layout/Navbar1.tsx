@@ -33,7 +33,7 @@ export default function Navbar1() {
         <div className="hidden md:flex items-center gap-6 font-medium">
           {/* <Link href="/">{t("nav.home")}</Link> */}
           <Link href="/about">{t("nav.about")}</Link>
-          <Link href="/blog">{t("nav.blogs")}</Link>
+          <Link href="/news">{t("nav.blogs")}</Link>
           {/* <LanguageSwitcher /> */}
           {/* <button className="bg-[#0C2448] text-white px-4 py-2 rounded-lg">
             {t("nav.cta")}
@@ -74,7 +74,7 @@ export default function Navbar1() {
           <Link onClick={() => setOpen(false)} href="/about">
             {t("nav.about")}
           </Link>
-          <Link onClick={() => setOpen(false)} href="/blog">
+          <Link onClick={() => setOpen(false)} href="/news">
             {t("nav.blogs")}
           </Link>
         </div>
