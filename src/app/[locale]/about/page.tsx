@@ -161,7 +161,7 @@ export default function About() {
       </section>
 
       {/* ── ABOUT ── */}
-      <section id="about" className="bg-white section-padding">
+      <section id="about" className="bg-white md:section-padding py-20 px-5">
         <div className="max-w-7xl mx-auto">
           {/* Top Row: Content + Image */}
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -231,7 +231,10 @@ export default function About() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section id="services" className="bg-[#faf8f5]/90 section-padding">
+      <section
+        id="services"
+        className="bg-[#faf8f5]/90 md:section-padding py-20 px-5"
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <div>
@@ -263,7 +266,7 @@ export default function About() {
       </section>
 
       {/* ── WHO WE SERVE ── */}
-      <section className="bg-white section-padding">
+      <section className="bg-white md:section-padding py-20 px-5">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <SectionHeading>
@@ -305,7 +308,7 @@ export default function About() {
       </section>
 
       {/* ── PHILOSOPHY BANNER ── */}
-      <section className="bg-white section-padding">
+      <section className="bg-white md:section-padding py-20 px-5">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center justify-between gap-10">
           <div>
             {/* <EyebrowLabel text="Our Philosophy" /> */}

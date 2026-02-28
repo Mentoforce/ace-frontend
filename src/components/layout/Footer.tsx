@@ -38,14 +38,14 @@ export default function Footer() {
           />
 
           <div className="flex gap-4 text-[#0C2448]/90">
-            <a href="">
+            <a href=" https://www.instagram.com/ace_ventures_real_estate/ ">
               <IconBrandInstagram className="cursor-pointer hover:text-[#0C2448] transition" />
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/profile.php?id=61587749997598">
               {" "}
               <IconBrandFacebook className="cursor-pointer hover:text-[#0C2448] transition" />
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/in/ace-ventures-real-estate-llc-240b883a7">
               <IconBrandLinkedin className="cursor-pointer hover:text-[#0C2448] transition" />
             </a>
             <a href="mailto:">
