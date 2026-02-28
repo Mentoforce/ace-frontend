@@ -343,8 +343,8 @@ export const featuredProperties: Property1[] = [
     currency: "AED",
 
     area: 1920,
-    bedrooms: 3,
-    bathrooms: 3,
+    bedrooms: "3",
+    bathrooms: "3",
     // handover: "Ready",
     status: "off_plan",
     // garden: "Community",

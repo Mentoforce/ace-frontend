@@ -23,9 +23,10 @@ export type Property1 = {
   price: number;
   currency: string; // "USD", "AED"
   dldNumber?: string;
+  developer_logo?: string;
   area: number;
-  bedrooms: number;
-  bathrooms?: number;
+  bedrooms: string;
+  bathrooms?: string;
   // handover?: string;
   launch_date?: string;
   status: string; //"Ready, offplan"
