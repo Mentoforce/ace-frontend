@@ -12,6 +12,7 @@ import {
   IconChevronRight,
   IconChevronLeft,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function FeaturedProperties1() {
   const { locale } = useParams();
@@ -44,85 +45,87 @@ function PropertyCard({ property, content, t }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
-    <div className="group md:w-72 w-83 max-w-[95vh] relative bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden transition-all duration-300">
-      {/* Image */}
-      <div className="h-45 max-w-[95vh] overflow-hidden">
-        <Image
-          src={property.images[0]}
-          alt={content.title}
-          width={302}
-          height={200}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-103"
-        />
+    <Link href={`/en-gb/property/${property.slug}`}>
+      <div className="group md:w-72 w-83 max-w-[95vh] relative bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden transition-all duration-300">
+        {/* Image */}
+        <div className="h-45 max-w-[95vh] overflow-hidden">
+          <Image
+            src={property.images[0]}
+            alt={content.title}
+            width={302}
+            height={200}
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-103"
+          />
 
-        {/* Heart */}
-        <button
-          onClick={() => setIsFavorite(!isFavorite)}
-          className="absolute top-3 right-4 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill={isFavorite ? "#c29a1f" : "none"}
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke={isFavorite ? "#c28a2a" : "#0C2448"}
-            className="w-4 h-4"
+          {/* Heart */}
+          <button
+            onClick={() => setIsFavorite(!isFavorite)}
+            className="absolute top-3 right-4 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-            />
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill={isFavorite ? "#c29a1f" : "none"}
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke={isFavorite ? "#c28a2a" : "#0C2448"}
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Content */}
+        <div className="p-3 font-montserrat">
+          {/* Title */}
+          <h3 className="text-[18px] font-didot font-bold text-[#0c2448] mb-2 leading-tight line-clamp-1">
+            {content.title}
+          </h3>
+
+          {/* Location */}
+          <div className="flex items-center gap-2 text-[14px] text-[#212121] mb-3">
+            <IconMapPin size={14} stroke={1.8} />
+            <span>{content.location}</span>
+          </div>
+
+          {/* Price */}
+          <div className="text-[20px] font-didot font-bold text-[#0c2448] mb-3">
+            AED {property.price?.toLocaleString()}
+          </div>
+
+          {/* Details Box */}
+          <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
+            <div className="flex flex-col items-center gap-1">
+              <IconBed size={18} stroke={1.8} />
+              <span>{property.bedrooms} Beds</span>
+            </div>
+
+            <div className="h-5 w-px bg-[#E5E5E5]" />
+
+            <div className="flex flex-col items-center gap-1">
+              <IconBath size={16} stroke={1.8} />
+              <span>{property.bathrooms} Baths</span>
+            </div>
+
+            <div className="h-5 w-px bg-[#E5E5E5]" />
+
+            <div className="flex flex-col items-center gap-1">
+              <IconRulerMeasure size={16} stroke={1.8} />
+              <span>{property.area} Sqft</span>
+            </div>
+          </div>
+
+          {/* WhatsApp Button */}
+          <button className="w-full cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
+            WhatsApp
+          </button>
+        </div>
       </div>
-
-      {/* Content */}
-      <div className="p-3 font-montserrat">
-        {/* Title */}
-        <h3 className="text-[18px] font-didot font-bold text-[#0c2448] mb-2 leading-tight line-clamp-1">
-          {content.title}
-        </h3>
-
-        {/* Location */}
-        <div className="flex items-center gap-2 text-[14px] text-[#212121] mb-3">
-          <IconMapPin size={14} stroke={1.8} />
-          <span>{content.location}</span>
-        </div>
-
-        {/* Price */}
-        <div className="text-[20px] font-didot font-bold text-[#0c2448] mb-3">
-          AED {property.price?.toLocaleString()}
-        </div>
-
-        {/* Details Box */}
-        <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
-          <div className="flex flex-col items-center gap-1">
-            <IconBed size={18} stroke={1.8} />
-            <span>{property.bedrooms} Beds</span>
-          </div>
-
-          <div className="h-5 w-px bg-[#E5E5E5]" />
-
-          <div className="flex flex-col items-center gap-1">
-            <IconBath size={16} stroke={1.8} />
-            <span>{property.bathrooms} Baths</span>
-          </div>
-
-          <div className="h-5 w-px bg-[#E5E5E5]" />
-
-          <div className="flex flex-col items-center gap-1">
-            <IconRulerMeasure size={16} stroke={1.8} />
-            <span>{property.area} Sqft</span>
-          </div>
-        </div>
-
-        {/* WhatsApp Button */}
-        <button className="w-full cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
-          WhatsApp
-        </button>
-      </div>
-    </div>
+    </Link>
   );
 }
 

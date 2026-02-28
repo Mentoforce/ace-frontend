@@ -1,6 +1,6 @@
-import { Property } from "@/types/property";
+import { Property, Property1 } from "@/types/property";
 
-export const featuredProperties: Property[] = [
+export const featuredPropertie: Property[] = [
   {
     _id: "1",
     slug: "marina-waterfront-residence",
@@ -330,6 +330,129 @@ export const featuredProperties: Property[] = [
           "位于商业湾的现代高端住宅，融合运河景观、现代设计，并毗邻迪拜市中心。",
         location: "商业湾，迪拜",
       },
+    },
+  },
+];
+
+export const featuredProperties: Property1[] = [
+  {
+    _id: "1",
+    slug: "marina-waterfront-residence",
+
+    price: 1850000,
+    currency: "AED",
+    dldNumber: "71488746372",
+
+    area: 1920,
+    bua: 1938,
+    bedrooms: 3,
+    bathrooms: 3,
+    kitchenType: "Semi Closed",
+    handover: "Ready",
+
+    design: "Modern Layout",
+    balcony: "Spacious",
+    garden: "Community",
+
+    images: [
+      "/featuredprop/p1.jpg",
+      "/featuredprop/p2.jpg",
+      "/featuredprop/p3.png",
+      "/featuredprop/b.jpg",
+    ],
+
+    videoUrl: "",
+
+    agent: {
+      name: "Furqan Akhuwain",
+      title: "Property Consultant",
+      phone: "+971563553279",
+      whatsapp: "971563553279",
+      image: "/agent/agent1.jpg",
+      rera: "37968",
+    },
+
+    amenities: [
+      "Balcony",
+      "Built-in Wardrobes",
+      "Central A/C",
+      "Children’s Play Area",
+      "Private Pool",
+      "Private Garden",
+      "Concierge Service",
+      "Security",
+    ],
+
+    translations: {
+      "en-gb": {
+        title: "Marina Waterfront Residence",
+        description:
+          "An elegant waterfront apartment offering panoramic marina views, refined interiors, and direct access to Dubai Marina Walk.",
+        location: "Dubai Marina, Dubai",
+      },
+      ar: { title: "", description: "", location: "" },
+      fr: { title: "", description: "", location: "" },
+      ru: { title: "", description: "", location: "" },
+      zh: { title: "", description: "", location: "" },
+    },
+  },
+
+  {
+    _id: "2",
+    slug: "downtown-burj-view-apartment",
+
+    price: 2650000,
+    currency: "AED",
+    dldNumber: "81234567890",
+
+    area: 2150,
+    bua: 2150,
+    bedrooms: 3,
+    bathrooms: 4,
+    kitchenType: "Open Kitchen",
+    handover: "Ready",
+
+    design: "Contemporary",
+    balcony: "Yes",
+    garden: "No",
+
+    images: [
+      "/featuredprop/p2.jpg",
+      "/featuredprop/p1.jpg",
+      "/featuredprop/b.jpg",
+    ],
+
+    videoUrl: "",
+
+    agent: {
+      name: "Furqan Akhuwain",
+      title: "Property Consultant",
+      phone: "+971563553279",
+      whatsapp: "971563553279",
+      image: "/agent/agent1.jpg",
+      rera: "37968",
+    },
+
+    amenities: [
+      "Gym",
+      "Infinity Pool",
+      "24/7 Security",
+      "Valet Parking",
+      "Concierge",
+      "High-Speed Elevators",
+    ],
+
+    translations: {
+      "en-gb": {
+        title: "Downtown Burj View Apartment",
+        description:
+          "A sophisticated residence featuring unobstructed views of Burj Khalifa and world-class lifestyle amenities.",
+        location: "Downtown Dubai, Dubai",
+      },
+      ar: { title: "", description: "", location: "" },
+      fr: { title: "", description: "", location: "" },
+      ru: { title: "", description: "", location: "" },
+      zh: { title: "", description: "", location: "" },
     },
   },
 ];
