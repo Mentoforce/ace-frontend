@@ -284,7 +284,7 @@ export default function About() {
             <div>
               {/* Heading */}
               <div className="mb-5 text-center md:text-left">
-                <SectionHeading>From First Homes to Global</SectionHeading>
+                <SectionHeading>Invest Smart. Grow Strong</SectionHeading>
               </div>
 
               {/* Icon List */}
@@ -300,7 +300,7 @@ export default function About() {
                       className="text-[#0C2448] group-hover:scale-110 transition"
                     />
 
-                    <span className="text-[#212121] font-montserrat text-[15px] font-medium">
+                    <span className="text-[#212121] font-montserrat text-[17px] font-medium">
                       {c.label}
                     </span>
                   </div>

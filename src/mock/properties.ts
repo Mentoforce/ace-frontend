@@ -337,9 +337,9 @@ export const featuredPropertie: Property[] = [
 export const featuredProperties: Property1[] = [
   {
     _id: "1",
-    slug: "marina-waterfront-residence",
+    slug: "vision-simplex-tower-A",
 
-    price: 1850000,
+    price: 1.3,
     currency: "AED",
 
     area: 1920,
@@ -379,9 +379,9 @@ export const featuredProperties: Property1[] = [
 
     translations: {
       "en-gb": {
-        title: "Marina Waterfront Residence",
+        title: "Vision-Simplex Tower A",
         description:
-          "An elegant waterfront apartment offering panoramic marina views, refined interiors, and direct access to Dubai Marina Walk.",
+          "Vision Simplex Tower A is an upcoming residential development situated within Mercedes-Benz Places in Binghatti City, a prominent address in Meydan. Developed by Binghatti Properties, the project will offer a diverse collection of residential units thoughtfully designed to accommodate a range of lifestyle preferences and living requirements.\n\nThe development is planned to deliver a connected and well-balanced residential environment, with layouts that prioritize functionality and everyday comfort. Residents will have access to a swimming pool, a fully equipped gym, and a dedicated children’s play area, supporting both relaxation and active living within the community.\n\nStrategically positioned with convenient access to major road networks, including Al Khail Road (E44) and Sheikh Mohammed Bin Zayed Road (E311), the development ensures seamless connectivity across Meydan and the wider Dubai area.",
         location: "Dubai Marina, Dubai",
       },
       ar: { title: "", description: "", location: "" },
