@@ -584,7 +584,9 @@ export default function PropertyDetailPage() {
                     <p className=" font-didot text-lg">
                       ACE Ventures Real Estate
                     </p>
-                    <p className="text-xs fonnt-montserrat opacity-60">RERA:</p>
+                    <p className="text-xs font-montserrat opacity-60">
+                      RERA: 60432
+                    </p>
                   </div>
                 </div>
 

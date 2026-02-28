@@ -20,7 +20,7 @@ export type Property1 = {
   slug: string;
 
   // Pricing
-  price: number;
+  price: string;
   currency: string; // "USD", "AED"
   dldNumber?: string;
   developer_logo?: string;
@@ -36,7 +36,7 @@ export type Property1 = {
   details: { label: string; value: string }[];
   payment_plan: number[];
   unit_types: UnitType[];
-  brochure: string;
+  brochure?: string;
   // {
   //   developer: string;
   //   type: string;
