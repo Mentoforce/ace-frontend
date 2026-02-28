@@ -267,7 +267,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <SectionHeading>
-              Structured Solutions for Every Client
+              From First Homes to Global Portfolios <br /> We Build Real Estate
+              Success Stories
             </SectionHeading>
           </div>
 

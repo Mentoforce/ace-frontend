@@ -23,35 +23,34 @@ export type Property1 = {
   price: number;
   currency: string; // "USD", "AED"
   dldNumber?: string;
-
-  // Basic Info
-  area: number; // in sq ft
+  area: number;
   bedrooms: number;
-  bathrooms: number;
-  kitchenType?: string;
-  handover?: string;
+  bathrooms?: number;
+  // handover?: string;
   launch_date?: string;
-
-  // Layout Info
-  bua?: number;
-  design?: string;
-  balcony?: string;
-  garden?: string;
-
+  status: string; //"Ready, offplan"
+  //commercial:boolean
   // Media
   images: string[];
-  videoUrl?: string;
+  details: { label: string; value: string }[];
+  // {
+  //   developer: string;
+  //   type: string;
+  //   handover_date: string;
+  //   status: string;
+  //   bedrooms: string;
+  //   payment_plan: string;
+  //   title_type: string;
+  //   launch_date?: string;
+  //   built_up_area?: string;
+  //   furnished: string;
+  //   bath?: string;
+  //   plot_area?: string;
+  //   parking: string;
+  // },
 
   // Agent Info
   //agent later from other db in backend
-  agent: {
-    name: string;
-    title: string;
-    phone: string;
-    whatsapp: string;
-    image: string;
-    rera?: string;
-  };
 
   // Amenities
   amenities: string[];

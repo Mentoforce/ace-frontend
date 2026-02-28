@@ -341,18 +341,13 @@ export const featuredProperties: Property1[] = [
 
     price: 1850000,
     currency: "AED",
-    dldNumber: "71488746372",
 
     area: 1920,
-    bua: 1938,
     bedrooms: 3,
     bathrooms: 3,
-    kitchenType: "Semi Closed",
-    handover: "Ready",
-
-    design: "Modern Layout",
-    balcony: "Spacious",
-    garden: "Community",
+    // handover: "Ready",
+    status: "off_plan",
+    // garden: "Community",
 
     images: [
       "/featuredprop/p1.jpg",
@@ -360,18 +355,17 @@ export const featuredProperties: Property1[] = [
       "/featuredprop/p3.png",
       "/featuredprop/b.jpg",
     ],
-
-    videoUrl: "",
-
-    agent: {
-      name: "Furqan Akhuwain",
-      title: "Property Consultant",
-      phone: "+971563553279",
-      whatsapp: "971563553279",
-      image: "/agent/agent1.jpg",
-      rera: "37968",
-    },
-
+    details: [
+      { label: "Developer", value: "" },
+      { label: "Type", value: "" },
+      { label: "Title Type", value: "" },
+      { label: "Payment Plan", value: "" },
+      { label: "Handover Date", value: "" },
+      { label: "Parking", value: "" },
+      { label: "Bedrooms", value: "" },
+      { label: "Status", value: "" },
+      { label: "Furnished", value: "" },
+    ],
     amenities: [
       "Balcony",
       "Built-in Wardrobes",
@@ -389,65 +383,6 @@ export const featuredProperties: Property1[] = [
         description:
           "An elegant waterfront apartment offering panoramic marina views, refined interiors, and direct access to Dubai Marina Walk.",
         location: "Dubai Marina, Dubai",
-      },
-      ar: { title: "", description: "", location: "" },
-      fr: { title: "", description: "", location: "" },
-      ru: { title: "", description: "", location: "" },
-      zh: { title: "", description: "", location: "" },
-    },
-  },
-
-  {
-    _id: "2",
-    slug: "downtown-burj-view-apartment",
-
-    price: 2650000,
-    currency: "AED",
-    dldNumber: "81234567890",
-
-    area: 2150,
-    bua: 2150,
-    bedrooms: 3,
-    bathrooms: 4,
-    kitchenType: "Open Kitchen",
-    handover: "Ready",
-
-    design: "Contemporary",
-    balcony: "Yes",
-    garden: "No",
-
-    images: [
-      "/featuredprop/p2.jpg",
-      "/featuredprop/p1.jpg",
-      "/featuredprop/b.jpg",
-    ],
-
-    videoUrl: "",
-
-    agent: {
-      name: "Furqan Akhuwain",
-      title: "Property Consultant",
-      phone: "+971563553279",
-      whatsapp: "971563553279",
-      image: "/agent/agent1.jpg",
-      rera: "37968",
-    },
-
-    amenities: [
-      "Gym",
-      "Infinity Pool",
-      "24/7 Security",
-      "Valet Parking",
-      "Concierge",
-      "High-Speed Elevators",
-    ],
-
-    translations: {
-      "en-gb": {
-        title: "Downtown Burj View Apartment",
-        description:
-          "A sophisticated residence featuring unobstructed views of Burj Khalifa and world-class lifestyle amenities.",
-        location: "Downtown Dubai, Dubai",
       },
       ar: { title: "", description: "", location: "" },
       fr: { title: "", description: "", location: "" },
