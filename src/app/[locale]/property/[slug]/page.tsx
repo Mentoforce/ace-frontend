@@ -1,8 +1,22 @@
 "use client";
 
 import { featuredProperties } from "@/mock/properties";
+import {
+  IconBrandWhatsapp,
+  IconDownload,
+  IconLocation,
+  IconMapPin,
+  IconPhone,
+  IconPower,
+  IconTools,
+  IconKey,
+  IconChevronDown,
+  IconRuler,
+  IconBed,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import { useParams, notFound } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 // export function PropertyDetailPage1() {
 //   const { slug, locale } = useParams<{ slug: string; locale: string }>();
@@ -157,27 +171,71 @@ export default function PropertyDetailPage() {
   if (!property) return notFound();
   const content =
     property.translations[locale] ?? property.translations["en-gb"];
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [openIndex, setOpenIndex] = useState<string | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const touchStartX = useRef<number | null>(null);
+
+  const openImage = (index: number) => setActiveIndex(index);
+  const closeImage = () => setActiveIndex(null);
+
+  const nextImage = () => {
+    if (activeIndex === null) return;
+    setActiveIndex((activeIndex + 1) % property.images.length);
+  };
+
+  const prevImage = () => {
+    if (activeIndex === null) return;
+    setActiveIndex(
+      (activeIndex - 1 + property.images.length) % property.images.length,
+    );
+  };
+
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (activeIndex === null) return;
+
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+      if (e.key === "Escape") closeImage();
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [activeIndex]);
 
   return (
-    <main className="min-h-screen section-padding">
+    <main className="min-h-screen section-padding font-montserrat">
       <div className=" mx-auto px-6">
         {/* ── TOP PHOTO GRID ─────────────────────────────────────────────── */}
         {/* Layout: main image left (2/3) + vertical thumbnail strip right (1/3) */}
         <div className="grid lg:grid-cols-3 gap-3">
           {/* Main image */}
-          <div className="lg:col-span-2 relative aspect-2/1 rounded-2xl overflow-hidden">
+          <div
+            onClick={() => openImage(0)}
+            className="lg:col-span-2 relative aspect-2/1 rounded-2xl overflow-hidden cursor-pointer"
+          >
             <Image
               src={property.images[0]}
               alt={content.title}
               fill
               className="object-cover"
             />
-            <div className="absolute bottom-4 left-4 bg-[#0C2448] text-white px-4 py-2 rounded-full text-sm font-medium">
-              {property.currency} {property.price.toLocaleString()}
+            <div className="absolute bottom-4 left-4">
+              <div className="flex gap-3">
+                <div className=" bg-[#0C2448] text-white px-4 py-2 rounded-lg text-lg font-semibold font-montserrat">
+                  <span className="font-medium text-md">Starting from</span>{" "}
+                  {property.currency} {property.price.toLocaleString()}
+                </div>
+                <button className=" bg-white/50 text-[#0c2448] px-4 py-2 rounded-lg text-md font-montserrat flex gap-1 items-center">
+                  <IconDownload size={14} />
+                  Download Brochure
+                </button>
+              </div>
             </div>
             {/* Share / Save icons overlay */}
             <div className="absolute top-4 right-4 flex gap-2">
-              <button className="bg-white/40 backdrop-blur-sm p-2 rounded-full shadow hover:bg-white transition">
+              {/* <button className="bg-white/40 backdrop-blur-sm p-2 rounded-full shadow hover:bg-white transition">
                 <svg
                   className="w-4 h-4 text-gray-700"
                   fill="none"
@@ -191,56 +249,65 @@ export default function PropertyDetailPage() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </button>
-              <button className="bg-white/40 backdrop-blur-sm p-2 rounded-full shadow hover:bg-white transition">
+              </button> */}
+              <button
+                onClick={() => setIsFavorite(!isFavorite)}
+                className="bg-white/40 backdrop-blur-sm p-2 rounded-full shadow hover:bg-white transition"
+              >
                 <svg
-                  className="w-4 h-4 text-gray-700"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill={isFavorite ? "#c29a1f" : "none"}
                   viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke={isFavorite ? "#c28a2a" : "#0C2448"}
+                  className="w-4 h-4"
                 >
                   <path
-                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                   />
                 </svg>
               </button>
             </div>
             {/* Location badge */}
-            {content.location && (
+            {/* {content.location && (
               <div className="absolute top-4 left-4 bg-white/40 backdrop-blur-sm text-gray-800 px-3 py-1.5 rounded-full text-xs font-medium shadow">
                 {content.location}
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Vertical thumbnail strip */}
           <div className="flex flex-col gap-3">
             {property.images.slice(1, 3).map((img, i) => {
+              const realIndex = i + 1;
               const extraImages = property.images.length - 3;
               const showOverlay = property.images.length > 3 && i === 1;
 
               return (
                 <div
                   key={i}
-                  className="relative rounded-xl overflow-hidden"
+                  onClick={() => openImage(realIndex)}
+                  className="relative rounded-xl overflow-hidden cursor-pointer"
                   style={{ aspectRatio: "2/1" }}
                 >
                   <Image
                     src={img}
                     alt=""
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    className="object-cover transition-transform duration-300"
                   />
 
                   {showOverlay && (
-                    <div className="absolute inset-0 bg-black/55 flex items-center justify-center">
-                      <span className="text-white text-lg font-semibold">
-                        +{extraImages} More
-                      </span>
-                    </div>
+                    // <div className="absolute inset-0 bg-black/55 flex items-center justify-center">
+                    <button
+                      onClick={() => openImage(3)}
+                      className="bottom-2 right-2 cursor-pointer bg-white rounded-lg p-2 absolute font-semibold"
+                    >
+                      +{extraImages} More
+                    </button>
+                    // </div>
                   )}
                 </div>
               );
@@ -249,42 +316,24 @@ export default function PropertyDetailPage() {
         </div>
 
         {/* ── CONTENT + STICKY SIDEBAR ───────────────────────────────────── */}
-        <div className="grid lg:grid-cols-3 gap-12 mt-10">
+        <div className="grid lg:grid-cols-3 gap-12 mt-5">
           {/* LEFT — main content */}
           <div className="lg:col-span-2">
             {/* DLD + Title */}
             {property.dldNumber && (
               <p className="text-xs text-gray-400 mb-3 flex items-center gap-2">
-                <span className="inline-block bg-gray-100 text-gray-500 px-3 py-1 rounded-full text-xs">
-                  DLD Permit Number: {property.dldNumber}
+                <span className="inline-block bg-[#e0e0e0] text-[#212121] px-4 py-2 rounded-full text-xs">
+                  DLD Permit Number:{" "}
+                  <span className="font-bold">{property.dldNumber}</span>
                 </span>
               </p>
             )}
-            <h1 className="text-3xl font-semibold text-[#212121] mb-4 leading-snug">
+            <h1 className="text-3xl font-semibold font-didot text-[#212121] mb-4 leading-snug">
               {content.title}
             </h1>
-            <div className="flex flex-wrap items-center gap-5 text-sm text-gray-500 mb-3">
+            <div className="flex flex-wrap font-montserrat items-center gap-5 text-sm text-[#212121] mb-3">
               <span className="flex items-center gap-1.5">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.8}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <circle
-                    cx={12}
-                    cy={9}
-                    r={2.5}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <IconMapPin stroke={1} size={15} />
                 {content.location}
               </span>
             </div>
@@ -293,12 +342,14 @@ export default function PropertyDetailPage() {
             </button> */}
 
             {/* Property Details Grid */}
-            <h2 className="font-semibold text-[#212121]">Property Details</h2>
-            <div className="mt-8 bg-white rounded-2xl border border-gray-200 overflow-hidden">
+            <h2 className="font-semibold font-didot text-xl mt-6 text-[#212121]">
+              Property Details
+            </h2>
+            <div className="mt-4 bg-white rounded-2xl border border-[#e0e0e0] overflow-hidden">
               {/* <div className="px-6 py-4 border-b border-gray-100"> */}
 
               {/* </div> */}
-              <div className="grid grid-cols-2 md:grid-cols-3 divide-x divide-y divide-gray-100 text-sm">
+              <div className="grid grid-cols-2 md:grid-cols-3 divide-x divide-y divide-[#e0e0e0] text-sm">
                 {property.details?.map((item, index) => (
                   <Detail
                     key={index}
@@ -310,25 +361,25 @@ export default function PropertyDetailPage() {
             </div>
 
             {/* Description */}
-            <div className="mt-12">
-              <h2 className="text-xl font-semibold mb-4 text-[#212121]">
+            <div className="mt-12 font-montserrat">
+              <h2 className="text-xl font-didot font-semibold mb-4 text-[#212121]">
                 Property Description
               </h2>
-              <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+              <p className="text-[#212121] font-sm leading-relaxed whitespace-pre-wrap">
                 {content.description}
               </p>
             </div>
 
             {/* Amenities */}
-            <div className="mt-12">
-              <h2 className="text-xl font-semibold mb-6 text-[#212121]">
+            <div className="mt-12 font-montserrat">
+              <h2 className="text-xl font-semibold font-didot mb-6 text-[#212121]">
                 Amenities
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
                 {property.amenities.map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 text-gray-700"
+                    className="flex items-center gap-2 text-[#212121]"
                   >
                     <svg
                       className="w-4 h-4 text-[#C29A1F] shrink-0"
@@ -348,6 +399,165 @@ export default function PropertyDetailPage() {
                 ))}
               </div>
             </div>
+            <div className="mt-12 font-montserrat">
+              <h2 className="text-xl font-semibold font-didot mb-6 text-[#212121]">
+                Payment Plan
+              </h2>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {property.payment_plan
+                  .filter((_, index, arr) => {
+                    if (arr.length === 2) {
+                      return index === 0 || index === arr.length - 1;
+                    }
+                    return true;
+                  })
+                  .map((percent, i, arr) => {
+                    const labels = [
+                      "First Installment",
+                      "Under Construction",
+                      "On Handover",
+                    ];
+                    const icons = [IconPower, IconTools, IconKey];
+
+                    let label = labels[i];
+                    let Icon = icons[i];
+
+                    if (arr.length === 2) {
+                      if (i === 0) {
+                        label = labels[0];
+                        Icon = icons[0];
+                      } else {
+                        label = labels[2];
+                        Icon = icons[2];
+                      }
+                    }
+
+                    return (
+                      <div
+                        key={i}
+                        className="relative bg-[#faf8f5] rounded-2xl p-6 h-35 flex flex-col justify-end gap-2 text-[#212121]"
+                      >
+                        {/* Top Right Icon */}
+                        <div className="absolute top-4 right-4">
+                          <Icon size={40} stroke={1.5} />
+                        </div>
+
+                        {/* Percentage */}
+                        <div className="text-4xl font-semibold font-didot">
+                          {percent}%
+                        </div>
+
+                        {/* Label */}
+                        <div className="text-sm">{label}</div>
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
+            <section className="mt-12 font-montserrat">
+              <h2 className="text-3xl font-didot text-[#212121] mb-6">
+                Floor Plans
+              </h2>
+
+              {property.unit_types.map((unit, unitIdx) => (
+                <div key={unitIdx} className="mb-10">
+                  <h3 className="text-lg font-semibold text-[#0c2448] mb-4">
+                    {unit.unit_type}
+                  </h3>
+
+                  <div className="space-y-4">
+                    {unit.beds.map((bed, bedIdx) => {
+                      const key = `${unitIdx}-${bedIdx}`;
+                      const isOpen = openIndex === key;
+
+                      return (
+                        <div
+                          key={key}
+                          className="border border-gray-200 rounded-2xl overflow-hidden"
+                        >
+                          {/* Header */}
+                          <div
+                            onClick={() => setOpenIndex(isOpen ? null : key)}
+                            className="cursor-pointer bg-[#] p-5 flex justify-between items-center"
+                          >
+                            <div className="flex items-center gap-10">
+                              {/* Bed */}
+                              <div className="flex items-center gap-2">
+                                <div className="bg-[#faf8f5] p-2 rounded-lg">
+                                  <IconBed size={20} />
+                                </div>
+                                <span className="font-medium text-[#212121]">
+                                  {bed.number}
+                                </span>
+                              </div>
+
+                              {/* Size Range */}
+                              <div className="flex items-center gap-2">
+                                <div className="bg-[faf8f5] p-2 rounded-lg">
+                                  <IconRuler size={20} />
+                                </div>
+                                <div>
+                                  <div className="font-medium text-[#212121]">
+                                    {bed.size_range}
+                                  </div>
+                                  <div className="text-xs text-gray-500">
+                                    Size range
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <IconChevronDown
+                              size={20}
+                              className={`transition-transform ${
+                                isOpen ? "rotate-180" : ""
+                              }`}
+                            />
+                          </div>
+
+                          {/* Content */}
+                          {isOpen && (
+                            <div className="p-5 bg-white">
+                              <div className="grid grid-cols-3 text-sm font-medium text-gray-500 border-b pb-3">
+                                <div>Type</div>
+                                <div>Size (Sqft)</div>
+                                <div>Floor Plan</div>
+                              </div>
+
+                              {bed.types.map((type, idx) => (
+                                <div
+                                  key={idx}
+                                  className="grid grid-cols-3 items-center py-6 border-b last:border-none"
+                                >
+                                  <div className="text-[#212121]">
+                                    {type.name}
+                                  </div>
+
+                                  <div className="text-[#212121]">
+                                    {type.area}
+                                  </div>
+
+                                  <div>
+                                    <Image
+                                      src={type.floor_plan}
+                                      alt="Floor Plan"
+                                      width={120}
+                                      height={80}
+                                      className="rounded-lg object-cover"
+                                    />
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </section>
           </div>
 
           {/* RIGHT — Sticky CTA card */}
@@ -357,7 +567,7 @@ export default function PropertyDetailPage() {
             - Becomes sticky (top-24) as you scroll down past it
             The `sticky top-24` class handles this natively in CSS.
           */}
-          <div className="relative">
+          <div className="relative max-w-sm mx-auto">
             <div className="sticky top-24">
               <div className=" bg-[#0C2448] text-white p-6 rounded-2xl shadow-xl mb-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -371,23 +581,29 @@ export default function PropertyDetailPage() {
                     />
                   </div>
                   <div>
-                    <p className="font-semibold">ACE Ventures Real Estate</p>
-                    <p className="text-xs opacity-60">RERA:</p>
+                    <p className=" font-didot text-lg">
+                      ACE Ventures Real Estate
+                    </p>
+                    <p className="text-xs font-montserrat opacity-60">
+                      RERA: 60432
+                    </p>
                   </div>
                 </div>
 
                 <a
                   href={`tel:`}
-                  className="block w-full bg-[#1E3A8A] text-center py-3 rounded-lg font-medium mb-3"
+                  className="gap-2 justify-center items-center flex w-full font-didot bg-[#0572D7] text-center py-3 rounded-lg font-bold mb-3"
                 >
+                  <IconPhone />
                   Call
                 </a>
 
                 <a
                   href={`https://wa.me/`}
                   target="_blank"
-                  className="block w-full bg-green-500 text-center py-3 rounded-lg font-medium"
+                  className="gap-2 justify-center w-full items-center flex font-didot bg-[#29A71A] text-center py-3 rounded-lg font-bold"
                 >
+                  <IconBrandWhatsapp />
                   WhatsApp
                 </a>
               </div>
@@ -403,15 +619,81 @@ export default function PropertyDetailPage() {
           </div>
         </div>
       </div>
+      {activeIndex !== null && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex flex-col justify-center items-center">
+          {/* Close */}
+          <button
+            onClick={closeImage}
+            className="absolute top-6 right-6 text-white text-3xl"
+          >
+            ✕
+          </button>
+
+          {/* Left Arrow */}
+          <button
+            onClick={prevImage}
+            className="absolute left-6 bg-white/20 backdrop-blur-md p-3 rounded-full text-white hover:bg-white/40 transition"
+          >
+            ‹
+          </button>
+
+          {/* Image Container with Swipe */}
+          <div
+            className="relative w-[90%] max-w-6xl h-[75vh]"
+            onTouchStart={(e) => (touchStartX.current = e.touches[0].clientX)}
+            onTouchEnd={(e) => {
+              if (touchStartX.current === null) return;
+              const delta = e.changedTouches[0].clientX - touchStartX.current;
+
+              if (delta > 50) prevImage();
+              if (delta < -50) nextImage();
+
+              touchStartX.current = null;
+            }}
+          >
+            <Image
+              src={property.images[activeIndex]}
+              alt="Preview"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={nextImage}
+            className="absolute right-6 bg-white/20 backdrop-blur-md p-3 rounded-full text-white hover:bg-white/40 transition"
+          >
+            ›
+          </button>
+
+          {/* Thumbnail Strip */}
+          <div className="absolute bottom-6 w-full flex justify-center gap-3 px-6 overflow-x-auto">
+            {property.images.map((img, index) => (
+              <div
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className={`relative w-20 h-14 rounded-lg overflow-hidden cursor-pointer border-2 ${
+                  activeIndex === index
+                    ? "border-white"
+                    : "border-transparent opacity-60"
+                }`}
+              >
+                <Image src={img} alt="" fill className="object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </main>
   );
 }
 
 function Detail({ label, value }: { label: string; value: string }) {
   return (
-    <div className="p-5">
-      <p className="text-gray-400 text-xs mb-1">{label}</p>
-      <p className="font-medium text-[#212121] text-sm">{value}</p>
+    <div className="p-3">
+      <p className="text-[#212121] text-sm mb-1">{label}</p>
+      <p className="font-semibold text-[#212121] text-sm">{value}</p>
     </div>
   );
 }

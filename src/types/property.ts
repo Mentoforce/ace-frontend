@@ -20,7 +20,7 @@ export type Property1 = {
   slug: string;
 
   // Pricing
-  price: number;
+  price: string;
   currency: string; // "USD", "AED"
   dldNumber?: string;
   developer_logo?: string;
@@ -34,6 +34,9 @@ export type Property1 = {
   // Media
   images: string[];
   details: { label: string; value: string }[];
+  payment_plan: number[];
+  unit_types: UnitType[];
+  brochure?: string;
   // {
   //   developer: string;
   //   type: string;
@@ -65,47 +68,17 @@ export type Property1 = {
   };
 };
 
-// export type Property = {
-//   _id: string;
-//   slug: string;
-//   price: number;
-//   area: number;
-//   bedrooms: number;
-//   bathrooms: number;
-//   images: string[];
-//   translations: {
-//     [locale: string]: {
-//       title: string;
-//       description: string;
-//       location: string;
-//     };
-//   };
-// };
+interface UnitType {
+  unit_type: string; // Apartment, Penthouse
 
-// export type Property1 = {
-//   _id: string;
-//   slug: string;
-//   price: number;
-//   currency: string; // "USD", "AED"
-//   dldNumber?: string;
-//   developer_logo?: string;
-//   area: number;
-//   bedrooms: string;
-//   bathrooms?: string;
-
-//   launch_date?: string;
-//   status: string; //"Ready, offplan"
-
-//   images: string[];
-//   details: { label: string; value: string }[];
-
-//   amenities: string[];
-
-//   translations: {
-//     [locale: string]: {
-//       title: string;
-//       description: string;
-//       location: string;
-//     };
-//   };
-// };
+  beds: {
+    number: string; // "1 Bed", "2 Beds"
+    size_range: string; // "754 - 894 Sqft"
+    types: {
+      name: string; // "Type A"
+      area: string; // "754"
+      price?: string;
+      floor_plan: string; // image url
+    }[];
+  }[];
+}

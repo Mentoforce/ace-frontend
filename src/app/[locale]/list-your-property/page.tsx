@@ -129,9 +129,9 @@ export default function ListPropertyPage() {
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-[14px] focus:outline-none"
               />
 
-              <select className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-[14px] focus:outline-none">
+              {/* <select className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-[14px] focus:outline-none">
                 <option>Please Select</option>
-              </select>
+              </select> */}
 
               <select className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-[14px] focus:outline-none">
                 <option>Property Type</option>

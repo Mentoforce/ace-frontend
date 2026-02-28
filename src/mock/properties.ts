@@ -348,7 +348,7 @@ export const featuredProperties: Property1[] = [
     // handover: "Ready",
     status: "off_plan",
     // garden: "Community",
-
+    // dldNumber: "123456",
     images: [
       "/featuredprop/p1.jpg",
       "/featuredprop/p2.jpg",
@@ -376,7 +376,104 @@ export const featuredProperties: Property1[] = [
       "Concierge Service",
       "Security",
     ],
-
+    payment_plan: [1, 2, 3],
+    unit_types: [
+      {
+        unit_type: "Apartment",
+        beds: [
+          {
+            number: "1 Bed",
+            size_range: "754 - 894 Sqft",
+            types: [
+              {
+                name: "Type A",
+                area: "754",
+                price: "AED 1,150,000",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Type B",
+                area: "894",
+                price: "AED 1,320,000",
+                floor_plan: "/floorplans/1bed-894.jpg",
+              },
+            ],
+          },
+          {
+            number: "2 Beds",
+            size_range: "1,266 - 1,549 Sqft",
+            types: [
+              {
+                name: "Type A",
+                area: "1,266",
+                price: "AED 2,050,000",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+              {
+                name: "Type B",
+                area: "1,549",
+                price: "AED 2,320,000",
+                floor_plan: "/floorplans/2bed-1549.jpg",
+              },
+            ],
+          },
+          {
+            number: "3 Beds",
+            size_range: "2,127 - 2,267 Sqft",
+            types: [
+              {
+                name: "Type A",
+                area: "2,127",
+                price: "AED 3,450,000",
+                floor_plan: "/floorplans/3bed-2127.jpg",
+              },
+              {
+                name: "Type B",
+                area: "2,267",
+                price: "AED 3,780,000",
+                floor_plan: "/floorplans/3bed-2267.jpg",
+              },
+            ],
+          },
+          {
+            number: "4 Beds",
+            size_range: "2,771 - 2,975 Sqft",
+            types: [
+              {
+                name: "Type A",
+                area: "2,771",
+                price: "AED 4,950,000",
+                floor_plan: "/floorplans/4bed-2771.jpg",
+              },
+              {
+                name: "Type B",
+                area: "2,975",
+                price: "AED 5,300,000",
+                floor_plan: "/floorplans/4bed-2975.jpg",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        unit_type: "Penthouse",
+        beds: [
+          {
+            number: "5 Beds",
+            size_range: "9,398 Sqft",
+            types: [
+              {
+                name: "Signature Layout",
+                area: "9,398",
+                price: "AED 18,500,000",
+                floor_plan: "/floorplans/5bed-penthouse.jpg",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    brochure: "",
     translations: {
       "en-gb": {
         title: "Vision-Simplex Tower A",
