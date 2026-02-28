@@ -447,15 +447,16 @@ export const featuredProperties: Property1[] = [
       zh: { title: "", description: "", location: "" },
     },
   },
-  {
-    _id: "2",
-    slug: "vision-simplex-tower-A",
 
-    price: "1.3M",
+  {
+    _id: "3",
+    slug: "the-brooks-at-sobha-sanctuary",
+
+    price: "4M",
     currency: "AED",
 
-    area: 385,
-    bedrooms: "Studio, 1-3",
+    area: 2521,
+    bedrooms: "4,5",
     bathrooms: "",
     // handover: "Ready",
     status: "off_plan",
@@ -468,13 +469,13 @@ export const featuredProperties: Property1[] = [
       "/featuredprop/b.jpg",
     ],
     details: [
-      { label: "Developer", value: "Binghatti Developers" },
-      { label: "Type", value: "Apartments" },
+      { label: "Developer", value: "Sobha Realty" },
+      { label: "Type", value: "Villas" },
       { label: "Title Type", value: "Freehold" },
-      { label: "Payment Plan", value: "70/30" },
-      { label: "Handover Date", value: "Q2 2028" },
+      { label: "Payment Plan", value: "60/40" },
+      { label: "Handover Date", value: "Q3 2029" },
       { label: "Parking", value: "1" },
-      { label: "Bedrooms", value: "Studio, 1-3" },
+      { label: "Bedrooms", value: "4-5 Beds" },
       { label: "Status", value: "Off-Plan" },
       { label: "Furnished", value: "Unfurnished" },
     ],
@@ -489,56 +490,98 @@ export const featuredProperties: Property1[] = [
       "Business Centre",
       "Security and Concierge",
     ],
-    payment_plan: [20, 50, 30],
+    payment_plan: [20, 40, 40],
     unit_types: [
       {
-        unit_type: "Apartment",
+        unit_type: "Villas",
         beds: [
           {
-            number: "Studio",
-            size_range: "385 Sqft",
+            number: "4 Bed",
+            size_range: "2521-3329 Sqft",
             types: [
               {
-                name: "Type 1",
-                area: "385",
-                price: "AED 1.3M",
+                name: "Garden Villas T4 Bedroom - Type A",
+                area: "2521",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type AM",
+                area: "2521",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type B",
+                area: "2459",
+                price: "4M",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type BM",
+                area: "2459",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type B Variant 1",
+                area: "2459",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type B Variant 1 - M",
+                area: "2459",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type C",
+                area: "3430",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type CM",
+                area: "3430",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type D",
+                area: "3329",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type DM",
+                area: "3329",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type D- Variant 1",
+                area: "3329",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Garden Villas T4 Bedroom - Type D- Variant 1- M",
+                area: "3329",
+                price: "-",
                 floor_plan: "/floorplans/1bed-754.jpg",
               },
             ],
           },
           {
-            number: "1 Bed",
-            size_range: "632 Sqft",
+            number: "5 Bed",
+            size_range: "4106-4155 Sqft",
             types: [
               {
-                name: "Type 1",
-                area: "632",
+                name: "Courtyard Villas T5 Bedroom - Type A",
+                area: "4106",
                 price: "-",
                 floor_plan: "/floorplans/2bed-1266.jpg",
-              },
-            ],
-          },
-          {
-            number: "2 Beds",
-            size_range: "992 Sqft",
-            types: [
-              {
-                name: "Type 1",
-                area: "992",
-                price: "-",
-                floor_plan: "/floorplans/3bed-2127.jpg",
-              },
-            ],
-          },
-          {
-            number: "3 Beds",
-            size_range: "1321",
-            types: [
-              {
-                name: "Type 1",
-                area: "1321",
-                price: "-",
-                floor_plan: "/floorplans/4bed-2771.jpg",
               },
             ],
           },
@@ -548,7 +591,7 @@ export const featuredProperties: Property1[] = [
     brochure: "",
     translations: {
       "en-gb": {
-        title: "Mareva",
+        title: "The Brooks at Sobha Sanctuary",
         description:
           "Vision Simplex Tower A is an upcoming residential development situated within Mercedes-Benz Places in Binghatti City, a prominent address in Meydan. Developed by Binghatti Properties, the project will offer a diverse collection of residential units thoughtfully designed to accommodate a range of lifestyle preferences and living requirements.\n\nThe development is planned to deliver a connected and well-balanced residential environment, with layouts that prioritize functionality and everyday comfort. Residents will have access to a swimming pool, a fully equipped gym, and a dedicated children’s play area, supporting both relaxation and active living within the community.\n\nStrategically positioned with convenient access to major road networks, including Al Khail Road (E44) and Sheikh Mohammed Bin Zayed Road (E311), the development ensures seamless connectivity across Meydan and the wider Dubai area.",
         location: "Mercedes-Benz Places, Binghatti City, Meydan",
