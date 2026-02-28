@@ -3,22 +3,22 @@
     "home": "Home",
     "about": "About",
     "careers": "Careers",
-    "blogs": "Blogs",
-    "cta": "Get in Touch"
+    "blogs": "News",
+    "cta": "List Your Property"
   },
   "home": {
     "featured": "Featured Properties",
     "videoText": "Experience Umatched Living Experience",
     "tagline": "Live Above the Ordinary",
     "primeAreas": "Prime Areas",
-    "trustedDevelopers": "Trusted Developers",
-    "blog": "Blogs"
+    "trustedDevelopers": "Trusted Developers' Projects",
+    "blog": "Real Estate News"
   },
   "footer": {
     "name": "Name",
     "email": "Email",
     "phone": "phone",
-    "copyright": "ACE Ventures. All rights reserved."
+    "copyright": "ACE Ventures. All rights reserved by Mentoforce."
   },
   "property": {
     "contact": "Contact Us"

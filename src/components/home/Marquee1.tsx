@@ -27,18 +27,21 @@ export default function Marquee() {
   }, []);
 
   return (
-    <section>
+    <section className="section-padding -mb-10">
       <div className="relative mx-auto w-full overflow-hidden bg-linear-to-br pb-3">
-        {/* Gold hairlines */}
-        {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[#D7AB22]/40" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-[#D7AB22]/40" /> */}
-
         {/* Heading */}
-        {/* <div className="mb-5 text-center">
-          <h3 className="font-didot text-base md:text-xl tracking-wide text-[#0C2448]/90">
+        <div className=" text-center">
+          <h2
+            className="font-didot text-[#0C2448] leading-tight mb-3 text-4xl md:text-5xl"
+            style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
+          >
             {t("home.trustedDevelopers")}
-          </h3>
-        </div> */}
+            <br />
+          </h2>
+          <p className=" flex justify-center gap-2 md:text-[15px] text-xs flex-wrap font-montserrat uppercase text-[#212121] mb-10">
+            Exclusive Access to Dubai’s Most Distinguished Developments{" "}
+          </p>
+        </div>
 
         {/* Fade edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-linear-to-r from-[#ffffff] to-transparent" />
@@ -54,7 +57,7 @@ export default function Marquee() {
                 .map((dev, i) => (
                   <div
                     key={`${dev._id}-${i}`}
-                    className="flex h-16 w-40 shrink-0 items-center justify-center my-10 mb-30"
+                    className="flex w-50 px-5 shrink-0 items-center justify-center my-10"
                   >
                     <img
                       src={dev.logo}

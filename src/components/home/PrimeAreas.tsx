@@ -11,9 +11,9 @@ export default function PrimeAreas() {
 
   return (
     // from-[#EFE9E3] via-[#FAF8F5] to-white, py-14 md:py-25
-    <section className="font-montserrat px-6 bg-linear-to-t ">
+    <section className="font-montserrat px-6 bg-[#faf8f5]/90 section-padding">
       <h2
-        className="font-didot text-[#0C2448] text-center font-display mb-12 text-4xl md:text-5xl lg:text-6xl p-3.5"
+        className="font-didot text-[#0C2448] text-center font-display mb-8 text-4xl md:text-5xl"
         style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
       >
         {t("home.primeAreas")}
@@ -42,7 +42,7 @@ export default function PrimeAreas() {
               className={`
                   group relative
                   aspect-4/5 md:aspect-auto
-                  overflow-hidden rounded-lg
+                  overflow-hidden rounded-2xl
                   shadow-lg hover:shadow-2xl
                   transition-all duration-700
                   ${layoutMap[index]}

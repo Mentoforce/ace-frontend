@@ -14,46 +14,35 @@ export default function Navbar1() {
   return (
     <nav
       className="fixed top-0 
-      bg-white/20 backdrop-blur-md
+      bg-white/55 backdrop-blur-md
       z-50 font-didot font-medium backdrop-brightness-125 w-screen md:px-15 px-5"
     >
       {/* Top Bar */}
       <div className="flex items-center justify-between mx-auto">
-        {/* LOGO VARIANTS  */}
-        {/* <Image
-          src="/ace wn.png"
-          className="ms-2 p-3"
-          height={80}
-          width={80}
-          alt="ACE LOGO"
-        /> */}
-        {/* <Image
-          src="/ace2d wn.png"
-          className="ms-2 p-3"
-          height={80}
-          width={80}
-          alt="ACE LOGO"
-        /> */}
-        <Image
-          src="/logo3dwllc.png"
-          height={80}
-          width={80}
-          className="p-1"
-          alt="ACE LOGO"
-        />
+        <Link href="/">
+          <Image
+            src="/logo3dwllc.png"
+            height={80}
+            width={80}
+            className="p-1"
+            alt="ACE LOGO"
+          />
+        </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-6 font-medium">
-          <Link href="/">{t("nav.home")}</Link>
+          {/* <Link href="/">{t("nav.home")}</Link> */}
           <Link href="/about">{t("nav.about")}</Link>
-          <Link href="/blog">{t("nav.blogs")}</Link>
+          <Link href="/news">{t("nav.blogs")}</Link>
           {/* <LanguageSwitcher /> */}
           {/* <button className="bg-[#0C2448] text-white px-4 py-2 rounded-lg">
             {t("nav.cta")}
           </button> */}
-          <button className=" bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg">
-            {t("nav.cta")}
-          </button>
+          <Link href="/list-your-property">
+            <button className=" bg-linear-to-r cursor-pointer from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg">
+              {t("nav.cta")}
+            </button>
+          </Link>
         </div>
 
         {/* Mobile */}
@@ -79,13 +68,13 @@ export default function Navbar1() {
         }`}
       >
         <div className="px-6 pb-5 pt-2 border-t border-black/10 flex flex-col gap-4 text-sm">
-          <Link onClick={() => setOpen(false)} href="/">
+          {/* <Link onClick={() => setOpen(false)} href="/">
             {t("nav.home")}
-          </Link>
+          </Link> */}
           <Link onClick={() => setOpen(false)} href="/about">
             {t("nav.about")}
           </Link>
-          <Link onClick={() => setOpen(false)} href="/blog">
+          <Link onClick={() => setOpen(false)} href="/news">
             {t("nav.blogs")}
           </Link>
         </div>

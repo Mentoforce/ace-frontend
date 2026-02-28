@@ -179,6 +179,7 @@ export const ContactTestimonials1 = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
+    phone: "",
     subject: "",
     message: "",
   });
@@ -239,11 +240,14 @@ export const ContactTestimonials1 = () => {
   };
 
   return (
-    <section className="font-montserrat text-white mx-auto relative md:mb-30">
+    <section
+      className="font-montserrat section-padding text-white mx-auto relative md:mb-15"
+      style={{ paddingInline: "0px" }}
+    >
       <div>
-        <div className="flex flex-col md:flex-row bg-[#eeeeee] md:bg-[#eeeeee] justify-center gap-20 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
+        <div className="flex flex-col md:flex-row md:bg-[#FAF8F5] justify-center gap-20 md:gap-48 items-center overflow-visible py-16 md:h-120 px-5">
           {/* Contact Card - GOLD */}
-          <div className="w-full max-w-md md:w-120 bg-[#0C2448] md:h-140 relative z-20 shadow-2xl flex items-center rounded-lg mb-0">
+          <div className="w-full max-w-md md:w-120 bg-[#0C2448] md:h-140 relative z-20 shadow-2xl flex items-center rounded-2xl mb-0">
             <div className="p-6 md:py-0 md:h-130 md:px-10 text-[#ffffff] w-full flex flex-col justify-evenly">
               {/* <p className="uppercase tracking-widest text-xs font-semibold mb-2">
                 We are always ready
@@ -271,6 +275,14 @@ export const ContactTestimonials1 = () => {
                   name="email"
                   placeholder="Email Address"
                   value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full bg-transparent border-b outline-none py-2 border-[#ffffff]/60 focus:border-[#ffffff]"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
                   onChange={handleInputChange}
                   className="w-full bg-transparent border-b outline-none py-2 border-[#ffffff]/60 focus:border-[#ffffff]"
                 />

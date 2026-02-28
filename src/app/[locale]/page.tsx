@@ -1,21 +1,19 @@
 import BlogSection from "@/components/home/BlogSection";
-import ContactTestimonials from "@/components/home/Contact";
-import Contact from "@/components/home/ContactUs";
+
 import Testimoials, {
   ContactTestimonials1,
 } from "@/components/home/Testimonials";
-import FeaturedProperties from "@/components/home/FeaturedProperties";
 import HeroVideo from "@/components/home/HeroVideo";
 import DevelopersMarquee from "@/components/home/Marquee1";
 import PrimeAreas from "@/components/home/PrimeAreas";
 import Tagline from "@/components/home/Tagline";
-import WhyChooseUs from "@/components/home/WhyChooseUs";
+
 import Marquee from "@/components/home/Marquee1";
 import FeaturedProperties1 from "@/components/home/FeaturedProperties1";
-import FeaturedProperties2 from "@/components/home/FeaturedProperties2";
 import WhyChooseACE from "@/components/home/WhyChooseUs1";
 import PopularDubaiAreas from "@/components/home/PopularDubaiAreas";
 import PopularDubaiAreas1 from "@/components/home/PopularDubaiAreas1";
+import StickyCTA from "@/components/home/StickyCTA";
 
 export default function HomePage() {
   return (
@@ -24,21 +22,23 @@ export default function HomePage() {
       {/* <FeaturedProperties /> */}
       <FeaturedProperties1 />
       {/* <FeaturedProperties2 /> */}
-      {/* <Tagline /> */}
 
       <PrimeAreas />
-      <WhyChooseACE />
+      <Marquee />
 
+      <WhyChooseACE />
+      {/* <Tagline /> */}
       {/* <WhyChooseUs /> */}
-      {/* <PopularDubaiAreas /> */}
-      <PopularDubaiAreas1 />
+      <PopularDubaiAreas />
+      {/* <PopularDubaiAreas1 /> */}
       <BlogSection />
 
-      <Marquee />
+      {/* <Marquee /> */}
       {/* <DevelopersMarquee /> */}
       {/* <ContactTestimonials /> */}
       {/* <Testimoials /> */}
       <ContactTestimonials1 />
+      <StickyCTA />
       {/* <Contact /> */}
     </>
   );
