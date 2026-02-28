@@ -64,3 +64,48 @@ export type Property1 = {
     };
   };
 };
+
+// export type Property = {
+//   _id: string;
+//   slug: string;
+//   price: number;
+//   area: number;
+//   bedrooms: number;
+//   bathrooms: number;
+//   images: string[];
+//   translations: {
+//     [locale: string]: {
+//       title: string;
+//       description: string;
+//       location: string;
+//     };
+//   };
+// };
+
+// export type Property1 = {
+//   _id: string;
+//   slug: string;
+//   price: number;
+//   currency: string; // "USD", "AED"
+//   dldNumber?: string;
+//   developer_logo?: string;
+//   area: number;
+//   bedrooms: string;
+//   bathrooms?: string;
+
+//   launch_date?: string;
+//   status: string; //"Ready, offplan"
+
+//   images: string[];
+//   details: { label: string; value: string }[];
+
+//   amenities: string[];
+
+//   translations: {
+//     [locale: string]: {
+//       title: string;
+//       description: string;
+//       location: string;
+//     };
+//   };
+// };
