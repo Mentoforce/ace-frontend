@@ -449,13 +449,13 @@ export const featuredProperties: Property1[] = [
   },
   {
     _id: "2",
-    slug: "vision-simplex-tower-A",
+    slug: "mareva2-the-oasis",
 
-    price: "1.3M",
+    price: "13.8 M",
     currency: "AED",
 
-    area: 385,
-    bedrooms: "Studio, 1-3",
+    area: 7257,
+    bedrooms: "4,5,6",
     bathrooms: "",
     // handover: "Ready",
     status: "off_plan",
@@ -468,13 +468,13 @@ export const featuredProperties: Property1[] = [
       "/featuredprop/b.jpg",
     ],
     details: [
-      { label: "Developer", value: "Binghatti Developers" },
-      { label: "Type", value: "Apartments" },
+      { label: "Developer", value: "Emaar" },
+      { label: "Type", value: "Villas" },
       { label: "Title Type", value: "Freehold" },
-      { label: "Payment Plan", value: "70/30" },
-      { label: "Handover Date", value: "Q2 2028" },
+      { label: "Payment Plan", value: "80/20" },
+      { label: "Handover Date", value: "Q1 2030" },
       { label: "Parking", value: "1" },
-      { label: "Bedrooms", value: "Studio, 1-3" },
+      { label: "Bedrooms", value: "4,5,6" },
       { label: "Status", value: "Off-Plan" },
       { label: "Furnished", value: "Unfurnished" },
     ],
@@ -489,56 +489,86 @@ export const featuredProperties: Property1[] = [
       "Business Centre",
       "Security and Concierge",
     ],
-    payment_plan: [20, 50, 30],
+    payment_plan: [10, 70, 20],
     unit_types: [
       {
-        unit_type: "Apartment",
+        unit_type: "Villa",
         beds: [
           {
-            number: "Studio",
-            size_range: "385 Sqft",
+            number: "4 Beds",
+            size_range: "7257-7301 Sqft",
             types: [
               {
-                name: "Type 1",
-                area: "385",
-                price: "AED 1.3M",
+                name: "Type A",
+                area: "7257",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Type B",
+                area: "7254",
+                price: "AED 13.8M",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+              {
+                name: "Type C",
+                area: "7301",
+                price: "-",
                 floor_plan: "/floorplans/1bed-754.jpg",
               },
             ],
           },
           {
-            number: "1 Bed",
-            size_range: "632 Sqft",
+            number: "5 Beds",
+            size_range: "7965-10,363 Sqft",
             types: [
               {
-                name: "Type 1",
-                area: "632",
+                name: "Type A",
+                area: "7965",
+                price: "15.9M",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+              {
+                name: "Type B",
+                area: "8101",
+                price: "-",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+              {
+                name: "Type C",
+                area: "10398",
+                price: "-",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+              {
+                name: "Type D",
+                area: "10290",
+                price: "-",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+              {
+                name: "Type E",
+                area: "10363",
                 price: "-",
                 floor_plan: "/floorplans/2bed-1266.jpg",
               },
             ],
           },
           {
-            number: "2 Beds",
-            size_range: "992 Sqft",
+            number: "6 Beds",
+            size_range: "12986-12778 Sqft",
             types: [
               {
-                name: "Type 1",
-                area: "992",
+                name: "Type A",
+                area: "12986",
                 price: "-",
                 floor_plan: "/floorplans/3bed-2127.jpg",
               },
-            ],
-          },
-          {
-            number: "3 Beds",
-            size_range: "1321",
-            types: [
               {
-                name: "Type 1",
-                area: "1321",
-                price: "-",
-                floor_plan: "/floorplans/4bed-2771.jpg",
+                name: "Type B",
+                area: "12778",
+                price: "27.1M",
+                floor_plan: "/floorplans/3bed-2127.jpg",
               },
             ],
           },
@@ -548,9 +578,9 @@ export const featuredProperties: Property1[] = [
     brochure: "",
     translations: {
       "en-gb": {
-        title: "Mareva",
+        title: "Mareva 2 The Oasis",
         description:
-          "Vision Simplex Tower A is an upcoming residential development situated within Mercedes-Benz Places in Binghatti City, a prominent address in Meydan. Developed by Binghatti Properties, the project will offer a diverse collection of residential units thoughtfully designed to accommodate a range of lifestyle preferences and living requirements.\n\nThe development is planned to deliver a connected and well-balanced residential environment, with layouts that prioritize functionality and everyday comfort. Residents will have access to a swimming pool, a fully equipped gym, and a dedicated children’s play area, supporting both relaxation and active living within the community.\n\nStrategically positioned with convenient access to major road networks, including Al Khail Road (E44) and Sheikh Mohammed Bin Zayed Road (E311), the development ensures seamless connectivity across Meydan and the wider Dubai area.",
+          "Marèva 2 is an upcoming villa enclave within The Oasis by Emaar, set amidst palm-lined avenues, tranquil blue lagoons, and lush green surroundings. Developed by Emaar Properties, the project will feature an exclusive collection of 4, 5, and 6-bedroom villas designed with spacious open-plan layouts and private outdoor areas. The community’s natural setting is intended to foster a peaceful, breezy ambiance, complemented by scenic water views and landscaped walkways woven through verdant spaces.\n\nResidents will benefit from a comprehensive range of lifestyle amenities, including community parks and children’s playgrounds, dedicated jogging and cycling tracks, wellness and spa facilities, and sports courts. The development will also incorporate retail centres, schools, beaches, a clubhouse, swimming pools, and pocket parks, creating a well-rounded living environment. Convenient access to Sheikh Zayed Bin Hamdan Road (D54) and Emirates Road (E611) will ensure smooth connectivity to key destinations across Dubai.",
         location: "Mercedes-Benz Places, Binghatti City, Meydan",
       },
       ar: { title: "", description: "", location: "" },
