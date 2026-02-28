@@ -34,6 +34,9 @@ export type Property1 = {
   // Media
   images: string[];
   details: { label: string; value: string }[];
+  payment_plan: number[];
+  unit_types: UnitType[];
+  brochure: string;
   // {
   //   developer: string;
   //   type: string;
@@ -64,3 +67,18 @@ export type Property1 = {
     };
   };
 };
+
+interface UnitType {
+  unit_type: string; // Apartment, Penthouse
+
+  beds: {
+    number: string; // "1 Bed", "2 Beds"
+    size_range: string; // "754 - 894 Sqft"
+    types: {
+      name: string; // "Type A"
+      area: string; // "754"
+      price?: string;
+      floor_plan: string; // image url
+    }[];
+  }[];
+}
