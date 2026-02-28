@@ -48,36 +48,36 @@ export default function FeaturedProperties1() {
 //     <Link href={`/en-gb/property/${property.slug}`}>
 //       <div className="group md:w-72 w-83 max-w-[95vh] relative bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden transition-all duration-300">
 //         {/* Image */}
-//         <div className="h-45 max-w-[95vh] overflow-hidden">
-//           <Image
-//             src={property.images[0]}
-//             alt={content.title}
-//             width={302}
-//             height={200}
-//             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-103"
-//           />
+// <div className="h-45 max-w-[95vh] overflow-hidden">
+//   <Image
+//     src={property.images[0]}
+//     alt={content.title}
+//     width={302}
+//     height={200}
+//     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-103"
+//   />
 
-//           {/* Heart */}
-//           <button
-//             onClick={() => setIsFavorite(!isFavorite)}
-//             className="absolute top-3 right-4 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
-//           >
-//             <svg
-//               xmlns="http://www.w3.org/2000/svg"
-//               fill={isFavorite ? "#c29a1f" : "none"}
-//               viewBox="0 0 24 24"
-//               strokeWidth={2}
-//               stroke={isFavorite ? "#c28a2a" : "#0C2448"}
-//               className="w-4 h-4"
-//             >
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-//               />
-//             </svg>
-//           </button>
-//         </div>
+//   {/* Heart */}
+//   <button
+//     onClick={() => setIsFavorite(!isFavorite)}
+//     className="absolute top-3 right-4 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
+//   >
+//     <svg
+//       xmlns="http://www.w3.org/2000/svg"
+//       fill={isFavorite ? "#c29a1f" : "none"}
+//       viewBox="0 0 24 24"
+//       strokeWidth={2}
+//       stroke={isFavorite ? "#c28a2a" : "#0C2448"}
+//       className="w-4 h-4"
+//     >
+//       <path
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//         d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+//       />
+//     </svg>
+//   </button>
+// </div>
 
 //         {/* Content */}
 //         <div className="p-3 font-montserrat">
@@ -93,36 +93,36 @@ export default function FeaturedProperties1() {
 //           </div>
 
 //           {/* Price */}
-//           <div className="text-[20px] font-didot font-bold text-[#0c2448] mb-3">
-//             AED {property.price?.toLocaleString()}
-//           </div>
+// <div className="text-[20px] font-didot font-bold text-[#0c2448] mb-3">
+//   AED {property.price?.toLocaleString()}
+// </div>
 
-//           {/* Details Box */}
-//           <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
-//             <div className="flex flex-col items-center gap-1">
-//               <IconBed size={18} stroke={1.8} />
-//               <span>{property.bedrooms} Beds</span>
-//             </div>
+// {/* Details Box */}
+// <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
+//   <div className="flex flex-col items-center gap-1">
+//     <IconBed size={18} stroke={1.8} />
+//     <span>{property.bedrooms} Beds</span>
+//   </div>
 
-//             <div className="h-5 w-px bg-[#E5E5E5]" />
+//   <div className="h-5 w-px bg-[#E5E5E5]" />
 
-//             <div className="flex flex-col items-center gap-1">
-//               <IconBath size={16} stroke={1.8} />
-//               <span>{property.bathrooms} Baths</span>
-//             </div>
+//   <div className="flex flex-col items-center gap-1">
+//     <IconBath size={16} stroke={1.8} />
+//     <span>{property.bathrooms} Baths</span>
+//   </div>
 
-//             <div className="h-5 w-px bg-[#E5E5E5]" />
+//   <div className="h-5 w-px bg-[#E5E5E5]" />
 
-//             <div className="flex flex-col items-center gap-1">
-//               <IconRulerMeasure size={16} stroke={1.8} />
-//               <span>{property.area} Sqft</span>
-//             </div>
-//           </div>
+//   <div className="flex flex-col items-center gap-1">
+//     <IconRulerMeasure size={16} stroke={1.8} />
+//     <span>{property.area} Sqft</span>
+//   </div>
+// </div>
 
-//           {/* WhatsApp Button */}
-//           <button className="w-full cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
-//             WhatsApp
-//           </button>
+// {/* WhatsApp Button */}
+// <button className="w-full cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white">
+//   WhatsApp
+// </button>
 //         </div>
 //       </div>
 //     </Link>
@@ -134,16 +134,22 @@ function PropertyCard({ property, content }: any) {
     <Link href={`/en-gb/property/${property.slug}`}>
       <div className="group w-[320px] bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
         {/* Image Section */}
-        <div className="relative h-[200px] w-full overflow-hidden">
+        <div className="relative h-50 w-full overflow-hidden">
           <Image
-            src={property.images?.[0]}
+            src={property.images[0]}
             alt={content.title}
-            fill
-            className="object-cover group-hover:scale-105 transition duration-700"
+            width={302}
+            height={200}
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-103"
           />
+
           {/* Heart */}
           <button
-            onClick={() => setIsFavorite(!isFavorite)}
+            onClick={(e) => {
+              e.stopPropagation(); // ⬅ prevents card click
+              e.preventDefault();
+              setIsFavorite(!isFavorite);
+            }}
             className="absolute top-3 right-4 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
           >
             <svg
@@ -161,9 +167,8 @@ function PropertyCard({ property, content }: any) {
               />
             </svg>
           </button>
-          {/* Offplan Badge */}
-          {property.status?.toLowerCase() === "offplan" && (
-            <span className="absolute top-4 left-4 bg-gray-600 text-white text-sm px-4 py-1 rounded-full font-medium shadow">
+          {property.status?.toLowerCase() === "off_plan" && (
+            <span className="absolute top-3 left-3 bg-[#0c2448] text-white text-sm px-4 py-1 rounded-full font-medium shadow">
               Off-Plan
             </span>
           )}
@@ -177,15 +182,13 @@ function PropertyCard({ property, content }: any) {
               {content.title}
             </h3>
 
-            {property.developer_logo && (
-              <Image
-                src={property.developer_logo}
-                alt="Developer"
-                width={70}
-                height={25}
-                className="object-contain h-6 w-auto"
-              />
-            )}
+            <Image
+              src="/developers/azizi1.png"
+              alt="Developer"
+              width={80}
+              height={35}
+              className="object-contain h-8 w-auto"
+            />
           </div>
 
           {/* Location */}
@@ -196,34 +199,39 @@ function PropertyCard({ property, content }: any) {
 
           {/* Starting Price */}
           <div className="mb-3">
-            <p className="text-sm text-gray-500">Starting Price</p>
-            <p className="text-lg font-semibold text-[#0C2448]">
-              {property.currency} {property.price?.toLocaleString()}
+            <p className="text-sm font-montserrat text-[#0c2448]">
+              Starting from{" "}
+              <span className="text-lg font-didot font-bold text-[#0c2448] mb-3">
+                AED {property.price?.toLocaleString()}
+              </span>
             </p>
           </div>
 
-          {/* Specs Strip */}
-          <div className="flex items-center justify-between bg-gray-100 rounded-lg px-4 py-2 text-sm text-gray-600 mb-4">
-            {/* Bedrooms */}
-            <div className="flex items-center gap-1">
-              <IconBed size={16} />
-              <span>{property.bedrooms}</span>
+          {/* Details Box */}
+          <div className="flex items-center justify-around border border-[#E5E5E5] rounded-lg p-2 mb-4 text-xs text-[#212121]">
+            <div className="flex flex-col items-center gap-1">
+              <IconBed size={18} stroke={1.8} />
+              <span>{property.bedrooms} Beds</span>
             </div>
 
-            {/* Divider */}
-            <div className="h-5 w-px bg-gray-300" />
+            <div className="h-10 w-px bg-[#E5E5E5]" />
 
-            {/* Area */}
-            <div className="flex items-center gap-1">
-              <IconRulerMeasure size={16} />
-              <span>{property.area} SQ.FT.</span>
+            <div className="flex flex-col items-center gap-1">
+              <IconRulerMeasure size={16} stroke={1.8} />
+              <span>{property.area} Sqft</span>
             </div>
           </div>
 
           {/* WhatsApp Button */}
-          <button className="w-full py-3 rounded-lg bg-[#CFE3C7] text-[#2F6B2F] font-semibold text-[16px] transition-all duration-200 hover:bg-[#2F6B2F] hover:text-white">
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="w-full text-center block cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white"
+          >
             WhatsApp
-          </button>
+          </a>
         </div>
       </div>
     </Link>
@@ -320,24 +328,29 @@ function DesktopCarousel({ locale, t }: any) {
   const [index, setIndex] = useState(0);
   const total = featuredProperties.length;
   const visibleCards = 4;
-  const maxIndex = total - visibleCards;
+
+  const maxIndex = Math.max(total - visibleCards, 0);
+  const showControls = total > visibleCards;
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const next = () => {
+    if (!showControls) return;
     setIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
 
   const prev = () => {
+    if (!showControls) return;
     setIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
   /* ---------------- Autoplay ---------------- */
   const startAutoPlay = () => {
+    if (!showControls) return;
     stopAutoPlay();
     intervalRef.current = setInterval(() => {
       next();
-    }, 1500); // 2.5 seconds
+    }, 1500);
   };
 
   const stopAutoPlay = () => {
@@ -345,9 +358,9 @@ function DesktopCarousel({ locale, t }: any) {
   };
 
   useEffect(() => {
-    startAutoPlay();
+    if (showControls) startAutoPlay();
     return stopAutoPlay;
-  }, []);
+  }, [showControls]);
 
   return (
     <div
@@ -359,7 +372,9 @@ function DesktopCarousel({ locale, t }: any) {
       <div
         className="flex gap-6 transition-transform duration-700 ease-in-out"
         style={{
-          transform: `translateX(-${index * 25}%)`,
+          transform: showControls
+            ? `translateX(-${index * 25}%)`
+            : "translateX(0)",
         }}
       >
         {featuredProperties.map((property) => {
@@ -375,40 +390,45 @@ function DesktopCarousel({ locale, t }: any) {
         })}
       </div>
 
-      {/* Dots */}
-      <div className="mt-18 relative flex justify-center gap-2">
-        <button
-          onClick={() => {
-            stopAutoPlay();
-            prev();
-            startAutoPlay();
-          }}
-          className=" -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-[#faf8f5]/90 flex items-center justify-center"
-        >
-          <IconChevronLeft size={14} />
-        </button>
-        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+      {/* Controls (Only if more than 4 cards) */}
+      {showControls && (
+        <div className="mt-18 relative flex justify-center gap-2">
+          {/* Left Arrow */}
           <button
-            key={i}
-            onClick={() => setIndex(i)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              i === index ? "bg-[#0C2448] w-6" : "bg-gray-300 w-3"
-            }`}
-          />
-        ))}
+            onClick={() => {
+              stopAutoPlay();
+              prev();
+              startAutoPlay();
+            }}
+            className="w-10 h-10 rounded-full bg-[#faf8f5]/90 flex items-center justify-center"
+          >
+            <IconChevronLeft size={14} />
+          </button>
 
-        {/* Right Arrow */}
-        <button
-          onClick={() => {
-            stopAutoPlay();
-            next();
-            startAutoPlay();
-          }}
-          className="-translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-[#faf8f5]/90 flex items-center justify-center"
-        >
-          <IconChevronRight size={14} />
-        </button>
-      </div>
+          {/* Dots */}
+          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === index ? "bg-[#0C2448] w-6" : "bg-gray-300 w-3"
+              }`}
+            />
+          ))}
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => {
+              stopAutoPlay();
+              next();
+              startAutoPlay();
+            }}
+            className="w-10 h-10 rounded-full bg-[#faf8f5]/90 flex items-center justify-center"
+          >
+            <IconChevronRight size={14} />
+          </button>
+        </div>
+      )}
     </div>
   );
 }
