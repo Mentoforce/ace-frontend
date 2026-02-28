@@ -1,28 +1,34 @@
 "use client";
 
-import { IconCircleCheck } from "@tabler/icons-react";
+import {
+  IconCircleCheck,
+  IconBuildingBank,
+  IconFileDescription,
+  IconWorld,
+  IconScale,
+} from "@tabler/icons-react";
 import Image from "next/image";
 
 export default function ListPropertyPage() {
   return (
-    <div className="font-montserrat text-[#1f2e45]">
+    <div className="font-montserrat text-[#0c2448]">
       {/* ================= HERO ================= */}
       <section className="relative w-full overflow-hidden min-h-[90vh]">
         <Image
-          src="/Mask group.svg" // put image in public/images
+          src="/listyp/wwebsite.jpg"
           alt="Residential Buildings"
           fill
           priority
-          className="object-cover "
+          className="object-cover brightness-[0.5]"
         />
 
         {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-[#0c2448]/40 to-[#0c2448]/20" /> */}
+        {/* <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-white/20" /> */}
 
         {/* Content */}
         <div className="relative z-10 h-[70vh] flex items-center justify-center px-6">
-          <h1 className="font-didot text-[48px] text-center text-[#1f2e45]">
-            Fast-track your Sale or Rental Process
+          <h1 className="font-didot text-[48px] text-center font-bold text-white">
+            Accelerate Your Sale or Rental Today
           </h1>
         </div>
       </section>
@@ -32,8 +38,8 @@ export default function ListPropertyPage() {
         <div className=" mx-auto grid md:grid-cols-[1.2fr_1fr] gap-16">
           {/* LEFT SIDE */}
           <div>
-            <h2 className="font-didot text-[36px] mb-10">
-              Why list your property with us?
+            <h2 className="font-didot text-[36px] mb-15">
+              Why list with <span className="font-bold">ACE VENTURES ?</span>
             </h2>
 
             {/* Item 1 */}
@@ -41,14 +47,14 @@ export default function ListPropertyPage() {
               <div className="flex gap-3 items-center mb-3">
                 <IconCircleCheck size={20} />
                 <h3 className="font-didot text-[24px]">
-                  38 years of unrivalled track record.
+                  Data-Led Valuation Within 24 Hours.
                 </h3>
               </div>
               <p className="text-[14px] leading-7 text-[#212121]">
-                We opened our doors in 1986, making us the UAE’s
-                longest-established real estate company, with an unrivalled
-                track record. Our reputation for consistent customer excellence
-                has earned us a Google Reviews satisfaction score of 4.3/5.
+                We analyse live transaction data, buyer demand trends, and
+                community absorption rates to determine the optimal pricing
+                strategy — protecting your value while accelerating serious
+                enquiries.
               </p>
             </div>
 
@@ -57,37 +63,50 @@ export default function ListPropertyPage() {
               <div className="flex gap-3 items-center mb-3">
                 <IconCircleCheck size={20} />
                 <h3 className="font-didot text-[24px]">
-                  Highest number of leads generated in the market.
+                  Global Investor Reach.
                 </h3>
               </div>
               <p className="text-[14px] leading-7 text-[#212121]">
-                We have an active database of over 750,000 clients, are present
-                across all major property portals, and are consistently the top
-                lead generator on all major UAE property portals.
+                Your property is showcased across premium UAE portals,
+                international investor networks, and targeted digital campaigns
+                reaching qualified buyers across Europe, Asia, GCC, and beyond.
               </p>
             </div>
 
             {/* Item 3 */}
+            <div className="mb-8">
+              <div className="flex gap-3 items-center mb-3">
+                <IconCircleCheck size={20} />
+                <h3 className="font-didot text-[24px]">
+                  Luxury Presentation Standards.
+                </h3>
+              </div>
+              <p className="text-[14px] leading-7 text-[#212121]">
+                Professional photography, cinematic video, investor-focused
+                copywriting, and ROI highlighting ensure your property competes
+                at the highest tier in its category.
+              </p>
+            </div>
+
+            {/*Item 4 */}
             <div>
               <div className="flex gap-3 items-center mb-3">
                 <IconCircleCheck size={20} />
                 <h3 className="font-didot text-[24px]">
-                  Over 30,000 properties sold.
+                  Seamless Transaction Management.
                 </h3>
               </div>
               <p className="text-[14px] leading-7 text-[#212121]">
-                Our team of more than 150 community specialists across five
-                branches in Abu Dhabi and Dubai are here to help. With more than
-                30,000 properties sold and over 8,500 managed properties, you
-                can relax in the knowledge that your property will be in safe
-                hands.
+                From listing agreements and buyer qualification to trustee
+                coordination and transfer supervision — we handle every detail
+                with precision and discretion.
               </p>
             </div>
           </div>
 
           {/* RIGHT SIDE FORM */}
           <div className="bg-[#0c2448] p-10 rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
-            <h3 className="font-didot text-[36px] mb-6 text-white">
+            <h3 className="font-didot text-[32px] mb-6 text-white">
               Schedule a call with our property consultants
             </h3>
 
@@ -118,9 +137,22 @@ export default function ListPropertyPage() {
                 <option>Property Type</option>
               </select>
 
+              <select className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-[14px] focus:outline-none">
+                <option>Current Status</option>
+                <option>Vacant</option>
+                <option>Rented</option>
+                <option>Off-Plan</option>
+              </select>
+
               <input
                 type="text"
                 placeholder="Location"
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-[14px] focus:outline-none"
+              />
+
+              <input
+                type="text"
+                placeholder="Message"
                 className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-[14px] focus:outline-none"
               />
 
@@ -131,6 +163,87 @@ export default function ListPropertyPage() {
                 Submit
               </button>
             </form>
+          </div>
+        </div>
+      </section>
+      {/* ================= LISTING JOURNEY ================= */}
+      <section className="section-padding max-w-7xl mx-auto">
+        <h2 className="font-didot text-[36px] mb-12">YOUR LISTING JOURNEY</h2>
+
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Step 1 */}
+          <div className="border border-gray-200 p-8 rounded-xl bg-white shadow-sm">
+            <div className="mb-5">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#c29a1f] text-black">
+                <IconBuildingBank size={22} />
+              </div>
+            </div>
+            <p className="text-[12px] uppercase tracking-widest text-[#212121] mb-2">
+              Step 1
+            </p>
+            <h3 className="font-didot text-[20px] mb-3">
+              Strategic Valuation Consultation
+            </h3>
+            <p className="text-[14px] leading-7 text-[#212121]">
+              A confidential advisory session to assess pricing strategy,
+              positioning and timing.
+            </p>
+          </div>
+
+          {/* Step 2 */}
+          <div className="border border-gray-200 p-8 rounded-xl bg-white shadow-sm">
+            <div className="mb-5">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#c29a1f] text-black">
+                <IconFileDescription size={22} />
+              </div>
+            </div>
+            <p className="text-[12px] uppercase tracking-widest text-[#212121] mb-2">
+              Step 2
+            </p>
+            <h3 className="font-didot text-[20px] mb-3">
+              Listing & Compliance Execution
+            </h3>
+            <p className="text-[14px] leading-7 text-[#212121]">
+              Formal documentation, regulatory alignment and launch preparation.
+            </p>
+          </div>
+
+          {/* Step 3 */}
+          <div className="border border-gray-200 p-8 rounded-xl bg-white shadow-sm">
+            <div className="mb-5">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#c29a1f] text-black">
+                <IconWorld size={22} />
+              </div>
+            </div>
+            <p className="text-[12px] uppercase tracking-widest text-[#212121] mb-2">
+              Step 3
+            </p>
+            <h3 className="font-didot text-[20px] mb-3">
+              Global Marketing Activation
+            </h3>
+            <p className="text-[14px] leading-7 text-[#212121]">
+              Targeted exposure across premium digital platforms, investor
+              databases and premium portals.
+            </p>
+          </div>
+
+          {/* Step 4 */}
+          <div className="border border-gray-200 p-8 rounded-xl bg-white shadow-sm">
+            <div className="mb-5">
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#c29a1f] text-black">
+                <IconScale size={22} />
+              </div>
+            </div>
+            <p className="text-[12px] uppercase tracking-widest text-[#212121] mb-2">
+              Step 4
+            </p>
+            <h3 className="font-didot text-[20px] mb-3">
+              Negotiation & Deal Closure
+            </h3>
+            <p className="text-[14px] leading-7 text-[#212121]">
+              Offer optimisation, structured negotiation, and seamless transfer
+              coordination.
+            </p>
           </div>
         </div>
       </section>

@@ -115,7 +115,7 @@ export default function About() {
   return (
     <main className="font-sans overflow-x-hidden">
       {/* ── HERO ── */}
-      <section className="relative min-h-[90vh] bg-[#000000]/60 flex items-center">
+      <section className="relative min-h-[90vh]  flex items-center">
         <div className="absolute inset-0">
           <Image
             src="/about/about-hero.jpg"
