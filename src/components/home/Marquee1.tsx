@@ -39,8 +39,7 @@ export default function Marquee() {
             <br />
           </h2>
           <p className=" flex justify-center gap-2 md:text-[15px] text-xs flex-wrap font-montserrat uppercase text-[#212121] mb-10">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quia
-            perferendis aliquam{" "}
+            Exclusive Access to Dubai’s Most Distinguished Developments{" "}
           </p>
         </div>
 
