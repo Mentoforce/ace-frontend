@@ -165,7 +165,7 @@ export default function PropertyDetailPage() {
         {/* Layout: main image left (2/3) + vertical thumbnail strip right (1/3) */}
         <div className="grid lg:grid-cols-3 gap-3">
           {/* Main image */}
-          <div className="lg:col-span-2 relative aspect-[16/10] rounded-2xl overflow-hidden">
+          <div className="lg:col-span-2 relative aspect-2/1 rounded-2xl overflow-hidden">
             <Image
               src={property.images[0]}
               alt={content.title}
@@ -218,20 +218,33 @@ export default function PropertyDetailPage() {
 
           {/* Vertical thumbnail strip */}
           <div className="flex flex-col gap-3">
-            {property.images.slice(1, 5).map((img, i) => (
-              <div
-                key={i}
-                className="relative rounded-xl overflow-hidden"
-                style={{ aspectRatio: "16/10" }}
-              >
-                <Image
-                  src={img}
-                  alt=""
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
+            {property.images.slice(1, 3).map((img, i) => {
+              const extraImages = property.images.length - 3;
+              const showOverlay = property.images.length > 3 && i === 1;
+
+              return (
+                <div
+                  key={i}
+                  className="relative rounded-xl overflow-hidden"
+                  style={{ aspectRatio: "2/1" }}
+                >
+                  <Image
+                    src={img}
+                    alt=""
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+
+                  {showOverlay && (
+                    <div className="absolute inset-0 bg-black/55 flex items-center justify-center">
+                      <span className="text-white text-lg font-semibold">
+                        +{extraImages} More
+                      </span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -332,17 +345,16 @@ export default function PropertyDetailPage() {
                 {property.area} Sq. Ft
               </span>
             </div>
-            <button className="text-sm text-[#1E3A8A] underline underline-offset-2 hover:text-[#0C2448] transition mb-2">
+            {/* <button className="text-sm text-[#1E3A8A] underline underline-offset-2 hover:text-[#0C2448] transition mb-2">
               Calculate your Mortgage Calculator
-            </button>
+            </button> */}
 
             {/* Property Details Grid */}
+            <h2 className="font-semibold text-[#212121]">Property Details</h2>
             <div className="mt-8 bg-white rounded-2xl border border-gray-200 overflow-hidden">
-              <div className="px-6 py-4 border-b border-gray-100">
-                <h2 className="font-semibold text-[#212121]">
-                  Property Details
-                </h2>
-              </div>
+              {/* <div className="px-6 py-4 border-b border-gray-100"> */}
+
+              {/* </div> */}
               <div className="grid grid-cols-2 md:grid-cols-3 divide-x divide-y divide-gray-100 text-sm">
                 <Detail
                   label="BUA"
