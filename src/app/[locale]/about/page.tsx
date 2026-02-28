@@ -115,7 +115,7 @@ export default function About() {
   return (
     <main className="font-sans overflow-x-hidden">
       {/* ── HERO ── */}
-      <section className="relative min-h-[90vh] bg-[#000000]/60 flex items-center">
+      <section className="relative min-h-[90vh]  flex items-center">
         <div className="absolute inset-0">
           <Image
             src="/about/about-hero.jpg"
@@ -161,7 +161,7 @@ export default function About() {
       </section>
 
       {/* ── ABOUT ── */}
-      <section id="about" className="bg-white section-padding">
+      <section id="about" className="bg-white md:section-padding py-20 px-5">
         <div className="max-w-7xl mx-auto">
           {/* Top Row: Content + Image */}
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -231,7 +231,10 @@ export default function About() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section id="services" className="bg-[#faf8f5]/90 section-padding">
+      <section
+        id="services"
+        className="bg-[#faf8f5]/90 md:section-padding py-20 px-5"
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <div>
@@ -263,50 +266,53 @@ export default function About() {
       </section>
 
       {/* ── WHO WE SERVE ── */}
-      <section className="bg-white section-padding">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-16">
-            <SectionHeading>
-              From First Homes to Global Portfolios <br /> We Build Real Estate
-              Success Stories
-            </SectionHeading>
-          </div>
+      <section className="bg-white py-20 px-5 md:section-padding">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* LEFT — Image */}
+            <div className="relative w-full h-[320px] md:h-[520px] rounded-2xl overflow-hidden">
+              <Image
+                src="/about/photo2.jpg" // place in public/images
+                alt="Real Estate Success"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {clients.map((c) => (
-              <div
-                key={c.label}
-                className="border border-[#e0e0e0] p-6 rounded-lg text-center"
-              >
-                <c.icon
-                  size={30}
-                  stroke={1.5}
-                  className="mx-auto mb-4 text-[#0c2848]"
-                />
-                <span className="text-[#212121] font-montserrat text-[12.5px] font-medium">
-                  {c.label}
-                </span>
+            {/* RIGHT — Content */}
+            <div>
+              {/* Heading */}
+              <div className="mb-5 text-center md:text-left">
+                <SectionHeading>From First Homes to Global</SectionHeading>
               </div>
-            ))}
+
+              {/* Icon List */}
+              <div className="ml-5 md:ml-0 divide-y divide-[#e5e5e5]">
+                {clients.map((c, index) => (
+                  <div
+                    key={c.label}
+                    className="flex items-center gap-5 py-7 group"
+                  >
+                    <c.icon
+                      size={26}
+                      stroke={1.6}
+                      className="text-[#0C2448] group-hover:scale-110 transition"
+                    />
+
+                    <span className="text-[#212121] font-montserrat text-[15px] font-medium">
+                      {c.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          {/* <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {clients.map((c) => (
-              <div
-                key={c.label}
-                className="bg-white/5 border border-[#e0e0e0] p-6 rounded-lg text-center group hover:bg-[#e0e0e0]/40 hover:border-[#e0e0e0]/90 transition-all duration-200"
-              >
-                <span className="text-3xl block mb-4">{c.icon}</span>
-                <span className="text-[#212121] font-montserrat text-[12.5px] font-medium leading-snug block">
-                  {c.label}
-                </span>
-              </div>
-            ))}
-          </div> */}
         </div>
       </section>
 
       {/* ── PHILOSOPHY BANNER ── */}
-      <section className="bg-white section-padding">
+      <section className="bg-white md:section-padding py-20 px-5">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center justify-between gap-10">
           <div>
             {/* <EyebrowLabel text="Our Philosophy" /> */}
