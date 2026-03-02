@@ -354,6 +354,10 @@ export const featuredProperties: Property1[] = [
       "/featuredprop/p2.jpg",
       "/featuredprop/p3.png",
       "/featuredprop/b.jpg",
+      "/featuredprop/p1.jpg",
+      "/featuredprop/p2.jpg",
+      "/featuredprop/p3.png",
+      "/featuredprop/b.jpg",
     ],
     details: [
       { label: "Developer", value: "Binghatti Developers" },
@@ -363,7 +367,7 @@ export const featuredProperties: Property1[] = [
       { label: "Handover Date", value: "Q2 2028" },
       { label: "Parking", value: "1" },
       { label: "Bedrooms", value: "Studio, 1-3" },
-      { label: "Status", value: "Off-Plan" },
+      { label: "Status", value: "Under Construction" },
       { label: "Furnished", value: "Unfurnished" },
     ],
     amenities: [
@@ -475,7 +479,7 @@ export const featuredProperties: Property1[] = [
       { label: "Handover Date", value: "Q1 2030" },
       { label: "Parking", value: "1" },
       { label: "Bedrooms", value: "4,5,6" },
-      { label: "Status", value: "Off-Plan" },
+      { label: "Status", value: "Under Construction" },
       { label: "Furnished", value: "Unfurnished" },
     ],
     amenities: [
@@ -589,7 +593,6 @@ export const featuredProperties: Property1[] = [
       zh: { title: "", description: "", location: "" },
     },
   },
-
   {
     _id: "3",
     slug: "the-brooks-at-sobha-sanctuary",
@@ -599,7 +602,7 @@ export const featuredProperties: Property1[] = [
 
     area: 2521,
     bedrooms: "4,5",
-    bathrooms: "",
+    // bathrooms: "",
     // handover: "Ready",
     status: "off_plan",
     // garden: "Community",
@@ -618,7 +621,7 @@ export const featuredProperties: Property1[] = [
       { label: "Handover Date", value: "Q3 2029" },
       { label: "Parking", value: "1" },
       { label: "Bedrooms", value: "4-5 Beds" },
-      { label: "Status", value: "Off-Plan" },
+      { label: "Status", value: "Under Construction" },
       { label: "Furnished", value: "Unfurnished" },
     ],
     amenities: [
@@ -722,6 +725,24 @@ export const featuredProperties: Property1[] = [
               {
                 name: "Courtyard Villas T5 Bedroom - Type A",
                 area: "4106",
+                price: "7.3M",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+              {
+                name: "Courtyard Villas T5 Bedroom - Type AM",
+                area: "4106",
+                price: "-",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+              {
+                name: "Courtyard Villas T5 Bedroom - Type A Variant 1",
+                area: "4153",
+                price: "-",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+              {
+                name: "Courtyard Villas T5 Bedroom - Type A Variant 1 - M",
+                area: "4155",
                 price: "-",
                 floor_plan: "/floorplans/2bed-1266.jpg",
               },

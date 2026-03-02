@@ -206,14 +206,14 @@ export default function PropertyDetailPage() {
 
   return (
     <main className="min-h-screen section-padding font-montserrat">
-      <div className=" mx-auto px-6">
+      <div className=" mx-auto md:px-6">
         {/* ── TOP PHOTO GRID ─────────────────────────────────────────────── */}
         {/* Layout: main image left (2/3) + vertical thumbnail strip right (1/3) */}
         <div className="grid lg:grid-cols-3 gap-3">
-          {/* Main image */}
+          {/* ================= MAIN IMAGE ================= */}
           <div
             onClick={() => openImage(0)}
-            className="lg:col-span-2 relative aspect-2/1 rounded-2xl overflow-hidden cursor-pointer"
+            className="relative aspect-2/1 rounded-2xl overflow-hidden cursor-pointer lg:col-span-2"
           >
             <Image
               src={property.images[0]}
@@ -221,65 +221,50 @@ export default function PropertyDetailPage() {
               fill
               className="object-cover"
             />
+
+            {/* Price + Brochure */}
             <div className="absolute bottom-4 left-4">
               <div className="flex gap-3">
-                <div className=" bg-[#0C2448] text-white px-4 py-2 rounded-lg text-lg font-semibold font-montserrat">
-                  <span className="font-medium text-md">Starting from</span>{" "}
+                <div className="bg-[#0C2448] text-white px-4 py-2 rounded-lg md:text-lg text-sm font-semibold font-montserrat">
+                  <span className="font-medium md:text-md text-sm">
+                    Starting from
+                  </span>{" "}
                   {property.currency} {property.price.toLocaleString()}
                 </div>
-                <button className=" bg-white/50 text-[#0c2448] px-4 py-2 rounded-lg text-md font-montserrat flex gap-1 items-center">
+
+                <button className="bg-white/50 text-[#0c2448] px-4 py-2 rounded-lg md:text-md text-sm font-montserrat flex gap-1 items-center">
                   <IconDownload size={14} />
-                  Download Brochure
+                  <span className="hidden md:flex">Download Brochure</span>
                 </button>
               </div>
             </div>
-            {/* Share / Save icons overlay */}
-            <div className="absolute top-4 right-4 flex gap-2">
-              {/* <button className="bg-white/40 backdrop-blur-sm p-2 rounded-full shadow hover:bg-white transition">
-                <svg
-                  className="w-4 h-4 text-gray-700"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button> */}
-              <button
-                onClick={() => setIsFavorite(!isFavorite)}
-                className="bg-white/40 backdrop-blur-sm p-2 rounded-full shadow hover:bg-white transition"
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // ⬅ prevents card click
+                e.preventDefault();
+                setIsFavorite(!isFavorite);
+              }}
+              className="absolute top-3 right-4 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill={isFavorite ? "#c29a1f" : "none"}
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke={isFavorite ? "#c28a2a" : "#0C2448"}
+                className="w-4 h-4"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill={isFavorite ? "#c29a1f" : "none"}
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke={isFavorite ? "#c28a2a" : "#0C2448"}
-                  className="w-4 h-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                  />
-                </svg>
-              </button>
-            </div>
-            {/* Location badge */}
-            {/* {content.location && (
-              <div className="absolute top-4 left-4 bg-white/40 backdrop-blur-sm text-gray-800 px-3 py-1.5 rounded-full text-xs font-medium shadow">
-                {content.location}
-              </div>
-            )} */}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </button>
           </div>
 
-          {/* Vertical thumbnail strip */}
-          <div className="flex flex-col gap-3">
+          {/* ================= DESKTOP THUMBNAILS ================= */}
+          <div className="hidden lg:flex flex-col gap-3">
             {property.images.slice(1, 3).map((img, i) => {
               const realIndex = i + 1;
               const extraImages = property.images.length - 3;
@@ -289,30 +274,47 @@ export default function PropertyDetailPage() {
                 <div
                   key={i}
                   onClick={() => openImage(realIndex)}
-                  className="relative rounded-xl overflow-hidden cursor-pointer"
-                  style={{ aspectRatio: "2/1" }}
+                  className="relative rounded-xl overflow-hidden cursor-pointer aspect-2/1"
                 >
-                  <Image
-                    src={img}
-                    alt=""
-                    fill
-                    className="object-cover transition-transform duration-300"
-                  />
+                  <Image src={img} alt="" fill className="object-cover" />
 
                   {showOverlay && (
-                    // <div className="absolute inset-0 bg-black/55 flex items-center justify-center">
                     <button
                       onClick={() => openImage(3)}
-                      className="bottom-2 right-2 cursor-pointer bg-white rounded-lg p-2 absolute font-semibold"
+                      className="absolute bottom-2 right-2 bg-white rounded-lg px-3 py-1 font-semibold text-sm"
                     >
                       +{extraImages} More
                     </button>
-                    // </div>
                   )}
                 </div>
               );
             })}
           </div>
+        </div>
+
+        {/* ================= MOBILE THUMBNAILS ================= */}
+        <div className="mt-3 flex gap-2 overflow-x-auto lg:hidden">
+          {property.images.slice(1, 5).map((img, i) => {
+            const realIndex = i + 1;
+            const extraImages = property.images.length - 5;
+            const showOverlay = property.images.length > 5 && i === 3;
+
+            return (
+              <div
+                key={i}
+                onClick={() => openImage(realIndex)}
+                className="relative min-w-21.25 h-21.25 rounded-lg overflow-hidden shrink-0 cursor-pointer"
+              >
+                <Image src={img} alt="" fill className="object-cover" />
+
+                {showOverlay && (
+                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-white text-sm font-semibold">
+                    +{extraImages} More
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {/* ── CONTENT + STICKY SIDEBAR ───────────────────────────────────── */}
