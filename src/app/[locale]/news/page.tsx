@@ -34,17 +34,17 @@ export default function NewsPage() {
               </div>
 
               <div>
-                <h2 className="text-3xl font-semibold text-[#212121] leading-snug mb-4">
+                <h2 className="text-3xl font-semibold font-didot text-[#0C2448] leading-snug mb-4">
                   {featured.translations[locale]?.title ??
                     featured.translations["en-gb"]?.title}
                 </h2>
 
-                <p className="text-[#757575] mb-6 line-clamp-3">
+                <p className="text-[#212121] font-montserrat mb-6 line-clamp-3">
                   {featured.translations[locale]?.subtitle ??
                     featured.translations["en-gb"]?.subtitle}
                 </p>
 
-                <div className="flex items-center justify-between text-sm text-[#9E9E9E]">
+                <div className="flex items-center justify-between text-sm text-gray-500">
                   <span>{featured.date}</span>
                   {/* <span>{featured.category}</span> */}
                 </div>
@@ -117,10 +117,10 @@ export default function NewsPage() {
                     </div>
 
                     <div>
-                      <p className="text-sm font-medium text-[#212121] line-clamp-2">
+                      <p className="text-sm font-medium font-didot text-[#0c2448] line-clamp-2">
                         {content.title}
                       </p>
-                      <p className="text-xs text-[#9E9E9E] mt-1">{post.date}</p>
+                      <p className="text-xs text-gray-500 mt-1">{post.date}</p>
                     </div>
                   </Link>
                 );
