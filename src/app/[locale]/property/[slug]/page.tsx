@@ -18,166 +18,44 @@ import Image from "next/image";
 import { useParams, notFound } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-// export function PropertyDetailPage1() {
-//   const { slug, locale } = useParams<{ slug: string; locale: string }>();
-
-//   const property = featuredProperties.find((p) => p.slug === slug);
-//   if (!property) return notFound();
-
-//   const content =
-//     property.translations[locale] ?? property.translations["en-gb"];
-
-//   return (
-//     <main className=" min-h-screen section-padding">
-//       <div className="max-w-7xl mx-auto px-6">
-//         {/* TOP GRID */}
-//         <div className="grid lg:grid-cols-3 gap-12">
-//           {/* LEFT SIDE */}
-//           <div className="lg:col-span-2">
-//             {/* Main Image */}
-//             <div className="relative aspect-16/10 rounded-2xl overflow-hidden">
-//               <Image
-//                 src={property.images[0]}
-//                 alt={content.title}
-//                 fill
-//                 className="object-cover"
-//               />
-
-//               <div className="absolute bottom-4 left-4 bg-[#0C2448] text-white px-4 py-2 rounded-full text-sm font-medium">
-//                 {property.currency} {property.price.toLocaleString()}
-//               </div>
-//             </div>
-
-//             {/* Thumbnail Grid */}
-//             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-//               {property.images.slice(1, 5).map((img, i) => (
-//                 <div
-//                   key={i}
-//                   className="relative aspect-square rounded-xl overflow-hidden"
-//                 >
-//                   <Image src={img} alt="" fill className="object-cover" />
-//                 </div>
-//               ))}
-//             </div>
-
-//             {/* Title */}
-//             <div className="mt-10">
-//               {property.dldNumber && (
-//                 <p className="text-xs text-gray-500 mb-3">
-//                   DLD Permit Number: {property.dldNumber}
-//                 </p>
-//               )}
-
-//               <h1 className="text-3xl font-semibold text-[#212121] mb-4">
-//                 {content.title}
-//               </h1>
-
-//               <div className="flex flex-wrap gap-6 text-sm text-gray-600">
-//                 <span>{content.location}</span>
-//                 <span>{property.bedrooms} Beds</span>
-//                 <span>{property.bathrooms} Baths</span>
-//                 <span>{property.area} Sq. Ft</span>
-//               </div>
-//             </div>
-
-//             {/* Property Details Grid */}
-//             <div className="mt-10 bg-white rounded-2xl border border-gray-200 overflow-hidden">
-//               <div className="grid grid-cols-2 md:grid-cols-3 divide-x divide-y text-sm">
-//                 <Detail
-//                   label="BUA"
-//                   value={`${property.bua ?? property.area} sq. ft`}
-//                 />
-//                 <Detail label="Design" value={property.design ?? "-"} />
-//                 <Detail label="Bedrooms" value={`${property.bedrooms}`} />
-//                 <Detail label="Bathrooms" value={`${property.bathrooms}`} />
-//                 <Detail label="Kitchen" value={property.kitchenType ?? "-"} />
-//                 <Detail label="Balcony" value={property.balcony ?? "-"} />
-//                 <Detail label="Garden" value={property.garden ?? "-"} />
-//                 <Detail label="Handover" value={property.handover ?? "-"} />
-//               </div>
-//             </div>
-
-//             {/* Description */}
-//             <div className="mt-12">
-//               <h2 className="text-xl font-semibold mb-4">
-//                 Property Description
-//               </h2>
-//               <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-//                 {content.description}
-//               </p>
-//             </div>
-
-//             {/* Amenities */}
-//             <div className="mt-12">
-//               <h2 className="text-xl font-semibold mb-6">Amenities</h2>
-//               <div className="grid md:grid-cols-3 gap-4 text-sm">
-//                 {property.amenities.map((item, i) => (
-//                   <div key={i} className="flex items-center gap-2">
-//                     <span className="text-[#C29A1F]">✓</span>
-//                     {item}
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* RIGHT SIDE — Sticky CTA */}
-//           <div className="relative">
-//             <div className="sticky top-24 bg-[#0C2448] text-white p-6 rounded-2xl shadow-xl">
-//               <div className="flex items-center gap-4 mb-6">
-//                 <Image
-//                   src={property.agent.image}
-//                   alt={property.agent.name}
-//                   width={60}
-//                   height={60}
-//                   className="rounded-full"
-//                 />
-//                 <div>
-//                   <p className="font-semibold">{property.agent.name}</p>
-//                   <p className="text-sm opacity-80">{property.agent.title}</p>
-//                   {property.agent.rera && (
-//                     <p className="text-xs opacity-60">
-//                       RERA: {property.agent.rera}
-//                     </p>
-//                   )}
-//                 </div>
-//               </div>
-
-//               <a
-//                 href={`tel:${property.agent.phone}`}
-//                 className="block w-full bg-[#1E3A8A] text-center py-3 rounded-lg font-medium mb-3"
-//               >
-//                 Call
-//               </a>
-
-//               <a
-//                 href={`https://wa.me/${property.agent.whatsapp}`}
-//                 target="_blank"
-//                 className="block w-full bg-green-500 text-center py-3 rounded-lg font-medium"
-//               >
-//                 WhatsApp
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </main>
-//   );
-// }
-
 export default function PropertyDetailPage() {
   const { slug, locale } = useParams<{ slug: string; locale: string }>();
   const property = featuredProperties.find((p) => p.slug === slug);
   if (!property) return notFound();
   const content =
     property.translations[locale] ?? property.translations["en-gb"];
-  const [isFavorite, setIsFavorite] = useState(false);
   const [openIndex, setOpenIndex] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const touchStartX = useRef<number | null>(null);
   const [selectedFloorPlan, setSelectedFloorPlan] = useState<string | null>(
     null,
   );
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("likedProperties");
+    if (!stored) return;
+
+    const liked = JSON.parse(stored);
+    if (liked.includes(property.slug)) {
+      setIsFavorite(true);
+    }
+  }, [property.slug]);
+
+  const toggleFavorite = () => {
+    const stored = localStorage.getItem("likedProperties");
+    let liked = stored ? JSON.parse(stored) : [];
+
+    if (liked.includes(property.slug)) {
+      liked = liked.filter((slug: string) => slug !== property.slug);
+      setIsFavorite(false);
+    } else {
+      liked.push(property.slug);
+      setIsFavorite(true);
+    }
+
+    localStorage.setItem("likedProperties", JSON.stringify(liked));
+  };
 
   const openImage = (index: number) => setActiveIndex(index);
   const closeImage = () => setActiveIndex(null);
@@ -267,7 +145,7 @@ export default function PropertyDetailPage() {
               onClick={(e) => {
                 e.stopPropagation(); // ⬅ prevents card click
                 e.preventDefault();
-                setIsFavorite(!isFavorite);
+                toggleFavorite();
               }}
               className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
             >
@@ -758,3 +636,150 @@ function Detail({ label, value }: { label: string; value: string }) {
     </div>
   );
 }
+
+// export function PropertyDetailPage1() {
+//   const { slug, locale } = useParams<{ slug: string; locale: string }>();
+
+//   const property = featuredProperties.find((p) => p.slug === slug);
+//   if (!property) return notFound();
+
+//   const content =
+//     property.translations[locale] ?? property.translations["en-gb"];
+
+//   return (
+//     <main className=" min-h-screen section-padding">
+//       <div className="max-w-7xl mx-auto px-6">
+//         {/* TOP GRID */}
+//         <div className="grid lg:grid-cols-3 gap-12">
+//           {/* LEFT SIDE */}
+//           <div className="lg:col-span-2">
+//             {/* Main Image */}
+//             <div className="relative aspect-16/10 rounded-2xl overflow-hidden">
+//               <Image
+//                 src={property.images[0]}
+//                 alt={content.title}
+//                 fill
+//                 className="object-cover"
+//               />
+
+//               <div className="absolute bottom-4 left-4 bg-[#0C2448] text-white px-4 py-2 rounded-full text-sm font-medium">
+//                 {property.currency} {property.price.toLocaleString()}
+//               </div>
+//             </div>
+
+//             {/* Thumbnail Grid */}
+//             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+//               {property.images.slice(1, 5).map((img, i) => (
+//                 <div
+//                   key={i}
+//                   className="relative aspect-square rounded-xl overflow-hidden"
+//                 >
+//                   <Image src={img} alt="" fill className="object-cover" />
+//                 </div>
+//               ))}
+//             </div>
+
+//             {/* Title */}
+//             <div className="mt-10">
+//               {property.dldNumber && (
+//                 <p className="text-xs text-gray-500 mb-3">
+//                   DLD Permit Number: {property.dldNumber}
+//                 </p>
+//               )}
+
+//               <h1 className="text-3xl font-semibold text-[#212121] mb-4">
+//                 {content.title}
+//               </h1>
+
+//               <div className="flex flex-wrap gap-6 text-sm text-gray-600">
+//                 <span>{content.location}</span>
+//                 <span>{property.bedrooms} Beds</span>
+//                 <span>{property.bathrooms} Baths</span>
+//                 <span>{property.area} Sq. Ft</span>
+//               </div>
+//             </div>
+
+//             {/* Property Details Grid */}
+//             <div className="mt-10 bg-white rounded-2xl border border-gray-200 overflow-hidden">
+//               <div className="grid grid-cols-2 md:grid-cols-3 divide-x divide-y text-sm">
+//                 <Detail
+//                   label="BUA"
+//                   value={`${property.bua ?? property.area} sq. ft`}
+//                 />
+//                 <Detail label="Design" value={property.design ?? "-"} />
+//                 <Detail label="Bedrooms" value={`${property.bedrooms}`} />
+//                 <Detail label="Bathrooms" value={`${property.bathrooms}`} />
+//                 <Detail label="Kitchen" value={property.kitchenType ?? "-"} />
+//                 <Detail label="Balcony" value={property.balcony ?? "-"} />
+//                 <Detail label="Garden" value={property.garden ?? "-"} />
+//                 <Detail label="Handover" value={property.handover ?? "-"} />
+//               </div>
+//             </div>
+
+//             {/* Description */}
+//             <div className="mt-12">
+//               <h2 className="text-xl font-semibold mb-4">
+//                 Property Description
+//               </h2>
+//               <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">
+//                 {content.description}
+//               </p>
+//             </div>
+
+//             {/* Amenities */}
+//             <div className="mt-12">
+//               <h2 className="text-xl font-semibold mb-6">Amenities</h2>
+//               <div className="grid md:grid-cols-3 gap-4 text-sm">
+//                 {property.amenities.map((item, i) => (
+//                   <div key={i} className="flex items-center gap-2">
+//                     <span className="text-[#C29A1F]">✓</span>
+//                     {item}
+//                   </div>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* RIGHT SIDE — Sticky CTA */}
+//           <div className="relative">
+//             <div className="sticky top-24 bg-[#0C2448] text-white p-6 rounded-2xl shadow-xl">
+//               <div className="flex items-center gap-4 mb-6">
+//                 <Image
+//                   src={property.agent.image}
+//                   alt={property.agent.name}
+//                   width={60}
+//                   height={60}
+//                   className="rounded-full"
+//                 />
+//                 <div>
+//                   <p className="font-semibold">{property.agent.name}</p>
+//                   <p className="text-sm opacity-80">{property.agent.title}</p>
+//                   {property.agent.rera && (
+//                     <p className="text-xs opacity-60">
+//                       RERA: {property.agent.rera}
+//                     </p>
+//                   )}
+//                 </div>
+//               </div>
+
+//               <a
+//                 href={`tel:${property.agent.phone}`}
+//                 className="block w-full bg-[#1E3A8A] text-center py-3 rounded-lg font-medium mb-3"
+//               >
+//                 Call
+//               </a>
+
+//               <a
+//                 href={`https://wa.me/${property.agent.whatsapp}`}
+//                 target="_blank"
+//                 className="block w-full bg-green-500 text-center py-3 rounded-lg font-medium"
+//               >
+//                 WhatsApp
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </main>
+//   );
+// }
