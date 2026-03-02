@@ -270,7 +270,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* LEFT — Image */}
-            <div className="relative w-full h-[320px] md:h-[520px] rounded-2xl overflow-hidden">
+            <div className="relative w-full h-80  md:h-130 rounded-2xl overflow-hidden">
               <Image
                 src="/about/photo2.jpg" // place in public/images
                 alt="Real Estate Success"
@@ -284,7 +284,7 @@ export default function About() {
             <div>
               {/* Heading */}
               <div className="mb-5 text-center md:text-left">
-                <SectionHeading>Invest Smart. Grow Strong</SectionHeading>
+                <SectionHeading>Ready to Make a Move</SectionHeading>
               </div>
 
               {/* Icon List */}

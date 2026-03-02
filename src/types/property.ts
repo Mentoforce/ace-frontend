@@ -37,6 +37,7 @@ export type Property1 = {
   payment_plan: number[];
   unit_types: UnitType[];
   brochure?: string;
+  map_src?: string;
   // {
   //   developer: string;
   //   type: string;
