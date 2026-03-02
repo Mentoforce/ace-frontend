@@ -200,7 +200,6 @@ Link: ${propertyLink}
 
   //---------------------phone---------------------------------------
   const companyPhone = "+971563553279"; // MUST be E.164 format
-  const sanitizedPhone = companyPhone.replace(/[^\d+]/g, "");
   return (
     <main className="min-h-screen section-padding font-montserrat mt-6">
       <div className=" mx-auto md:px-6">
@@ -660,29 +659,14 @@ Link: ${propertyLink}
                     </p>
                   </div>
                 </div>
-                {/* <a
-                  href={`tel:`}
+                <a
+                  href={`tel:+971563553279`}
                   className="gap-2 justify-center items-center flex w-full font-didot bg-[#0572D7] text-center py-3 rounded-lg font-bold mb-3"
                 >
                   <IconPhone />
                   Call
-                </a> */}
-                <a
-                  href={`tel:${sanitizedPhone}`}
-                  aria-label={`Call ${sanitizedPhone}`}
-                  onClick={() => {
-                    if (
-                      typeof window !== "undefined" &&
-                      !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
-                    ) {
-                      console.log("Desktop call attempt:", sanitizedPhone);
-                    }
-                  }}
-                  className="gap-2 justify-center items-center flex w-full font-didot bg-[#0572D7] text-white text-center py-3 rounded-lg font-bold mb-3 hover:bg-[#045bb0] transition-colors duration-200"
-                >
-                  <IconPhone />
-                  Call
                 </a>
+
                 <button
                   onClick={handleWhatsAppClick}
                   className="gap-2 justify-center w-full items-center flex font-didot bg-[#29A71A] text-center py-3 rounded-lg font-bold"
