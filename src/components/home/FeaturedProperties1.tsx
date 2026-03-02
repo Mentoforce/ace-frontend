@@ -43,8 +43,10 @@ export default function FeaturedProperties1() {
 
 function PropertyCard({ property, content }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "919899598446"; // without + and spaces
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const phoneNumber = "971563553279";
 
     const propertyLink = `${window.location.origin}/en-gb/property/${property.slug}`;
 
@@ -153,16 +155,16 @@ Link: ${propertyLink}
           </div>
 
           {/* Location */}
-          <div className="flex items-center text-xs text-[#212121] h-10 mb-3">
-            <IconMapPin size={14} className="mr-1" />
+          <div className="flex text-xs text-[#212121] h-10 mb-3">
+            <IconMapPin size={14} className="mr-0.5" />
             {content.location}
           </div>
 
           {/* Price */}
           <div className="mb-3">
-            <p className="text-sm font-montserrat text-[#0c2448]">
+            <p className="text-md font-didot text-[#0c2448]">
               Starting from{" "}
-              <span className="text-lg font-didot font-bold text-[#0c2448]">
+              <span className="text-xl font-didot font-bold text-[#0c2448]">
                 AED {property.price?.toLocaleString()}
               </span>
             </p>

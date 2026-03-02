@@ -178,7 +178,7 @@ export default function PropertyDetailPage() {
     return () => window.removeEventListener("keydown", handleKey);
   }, [activeIndex]);
   const handleWhatsAppClick = () => {
-    const phoneNumber = ""; // without + and spaces
+    const phoneNumber = "971563553279"; // without + and spaces
 
     const propertyLink = `${window.location.origin}/en-gb/property/${property.slug}`;
 
@@ -199,10 +199,10 @@ Link: ${propertyLink}
   };
 
   //---------------------phone---------------------------------------
-  const companyPhone = "+919876543210"; // MUST be E.164 format
+  const companyPhone = "+971563553279"; // MUST be E.164 format
   const sanitizedPhone = companyPhone.replace(/[^\d+]/g, "");
   return (
-    <main className="min-h-screen section-padding font-montserrat">
+    <main className="min-h-screen section-padding font-montserrat mt-6">
       <div className=" mx-auto md:px-6">
         {/* ── TOP PHOTO GRID ─────────────────────────────────────────────── */}
         {/* Layout: main image left (2/3) + vertical thumbnail strip right (1/3) */}
@@ -575,17 +575,17 @@ Link: ${propertyLink}
               <h2 className="text-2xl font-bold font-didot text-[#212121] mb-6">
                 Enquire Now
               </h2>
-              <div className="w-full bg-white shadow-xl rounded-2xl p-8 border border-gray-200">
+              <div className="w-full bg-[#faf8f5] rounded-2xl p-8 ">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* First Row */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <input
                       type="text"
                       name="name"
                       placeholder="Name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A]"
+                      className="w-full border bg-white border-[#e0e0e0] rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A]"
                     />
 
                     <input
@@ -594,7 +594,7 @@ Link: ${propertyLink}
                       placeholder="Email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A]"
+                      className="w-full border bg-white border-[#e0e0e0] rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A]"
                     />
 
                     <input
@@ -603,7 +603,7 @@ Link: ${propertyLink}
                       placeholder="Phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A]"
+                      className="w-full border bg-white border-[#e0e0e0] rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A]"
                     />
                   </div>
 
@@ -614,14 +614,14 @@ Link: ${propertyLink}
                     placeholder="Your Query"
                     value={formData.query}
                     onChange={handleInputChange}
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A] resize-none"
+                    className="w-full border bg-white border-[#e0e0e0] rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A] resize-none"
                   />
 
                   {/* Third Row - Center Button */}
                   <div className="flex justify-center">
                     <button
                       type="submit"
-                      className=" font-didot bg-linear-to-r cursor-pointer from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg"
+                      className=" font-didot min-w-xs bg-linear-to-r cursor-pointer from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg"
                     >
                       {loading ? "Submitting" : "Submit"}
                     </button>

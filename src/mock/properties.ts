@@ -586,7 +586,7 @@ export const featuredProperties: Property1[] = [
         title: "Mareva 2 The Oasis",
         description:
           "Marèva 2 is an upcoming villa enclave within The Oasis by Emaar, set amidst palm-lined avenues, tranquil blue lagoons, and lush green surroundings. Developed by Emaar Properties, the project will feature an exclusive collection of 4, 5, and 6-bedroom villas designed with spacious open-plan layouts and private outdoor areas. The community’s natural setting is intended to foster a peaceful, breezy ambiance, complemented by scenic water views and landscaped walkways woven through verdant spaces.\n\nResidents will benefit from a comprehensive range of lifestyle amenities, including community parks and children’s playgrounds, dedicated jogging and cycling tracks, wellness and spa facilities, and sports courts. The development will also incorporate retail centres, schools, beaches, a clubhouse, swimming pools, and pocket parks, creating a well-rounded living environment. Convenient access to Sheikh Zayed Bin Hamdan Road (D54) and Emirates Road (E611) will ensure smooth connectivity to key destinations across Dubai.",
-        location: "Mercedes-Benz Places, Binghatti City, Meydan",
+        location: "Me'aisem Second- Dubai, UAE",
       },
       ar: { title: "", description: "", location: "" },
       fr: { title: "", description: "", location: "" },
@@ -760,7 +760,7 @@ export const featuredProperties: Property1[] = [
         title: "The Brooks at Sobha Sanctuary",
         description:
           "The Brooks at Sobha Sanctuary is a residential project in Dubai, positioned within a serene, green setting that combines expansive open landscapes with convenient urban connectivity. This off-plan development by Sobha Realty will present residences featuring generous layouts, thoughtfully planned to support both comfort and functionality. The project integrates private homes with carefully curated outdoor spaces, fostering a lifestyle centred on wellness and leisure.\n Residents will enjoy access to a wide selection of amenities, including landscaped gardens, open green areas, dedicated dining spaces, a vibrant splash pad, a central beach lagoon, cycling tracks, and a fully equipped gym. With close proximity to Sheikh Mohammed Bin Zayed Road (E311) and Al Khail Road (E44), the development offers seamless connectivity to key destinations throughout Dubai.",
-        location: "-",
+        location: "Al Yufrah 1- Dubai, UAE",
       },
       ar: { title: "", description: "", location: "" },
       fr: { title: "", description: "", location: "" },
@@ -885,7 +885,7 @@ export const featuredProperties: Property1[] = [
         title: "Tahiti",
         description:
           "Tahiti is an upcoming residential development located within DAMAC Islands, forming part of a tranquil island-inspired neighbourhood characterised by open spaces and waterfront-themed surroundings. This off-plan project by Damac Properties will feature a selection of residential units designed with comfortable and practical layouts to suit modern living.\n The development is planned to prioritise convenience and accessibility, blending light-filled interiors with landscaped outdoor areas to establish a calm and welcoming environment. Residents will benefit from a range of lifestyle amenities, including a swimming pool, children’s play area, garden spaces, a fully equipped gym, BBQ area, and sports facilities, encouraging both relaxation and active living. Connectivity will be facilitated through Al Asayel Street (D63) and Sheikh Zayed Road (E11), providing efficient access to key destinations across Dubai.",
-        location: "-",
+        location: "Al Thanyah First- Barsha Heights, Dubai, UAE",
       },
       ar: { title: "", description: "", location: "" },
       fr: { title: "", description: "", location: "" },
