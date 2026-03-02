@@ -615,8 +615,8 @@ export default function PropertyDetailPage() {
             - Becomes sticky (top-24) as you scroll down past it
             The `sticky top-24` class handles this natively in CSS.
           */}
-          <div className="relative">
-            <div className="sticky top-24">
+          <div className="relative max-w-sm">
+            <div className="sticky top-24 flex flex-col">
               <div className=" bg-[#0C2448] text-white p-6 rounded-2xl shadow-xl mb-6">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="rounded-full h-16 w-16 flex justify-center overflow-hidden bg-white">
