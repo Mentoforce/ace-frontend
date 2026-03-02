@@ -182,14 +182,15 @@ function PropertyCard({ property, content }: any) {
             <h3 className="text-lg font-semibold text-[#0c2448] font-didot leading-tight line-clamp-2 min-h-12">
               {content.title}
             </h3>
-
-            <Image
-              src={property.developer_logo}
-              alt="Developer"
-              width={80}
-              height={55}
-              className="object-contain h-8 w-auto shrink-0"
-            />
+            {property.developer_logo && (
+              <Image
+                src={property.developer_logo}
+                alt="Developer"
+                width={80}
+                height={55}
+                className="object-contain h-8 w-auto shrink-0"
+              />
+            )}
           </div>
 
           {/* Location */}
@@ -224,7 +225,7 @@ function PropertyCard({ property, content }: any) {
           </div>
 
           {/* Push button to bottom */}
-          <a
+          {/* <a
             href="https://wa.me/"
             target="_blank"
             rel="noopener noreferrer"
@@ -232,7 +233,16 @@ function PropertyCard({ property, content }: any) {
             className="mt-auto w-full text-center block cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white"
           >
             WhatsApp
-          </a>
+          </a> */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation(); // prevent card navigation
+              window.open("https://wa.me/", "_blank");
+            }}
+            className="mt-auto w-full text-center cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white"
+          >
+            WhatsApp
+          </button>
         </div>
       </div>
     </Link>
