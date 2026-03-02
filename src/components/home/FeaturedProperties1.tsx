@@ -43,7 +43,26 @@ export default function FeaturedProperties1() {
 
 function PropertyCard({ property, content }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "919899598446"; // without + and spaces
 
+    const propertyLink = `${window.location.origin}/en-gb/property/${property.slug}`;
+
+    const message = `
+Hello, I'm interested in this property:
+
+Name: ${property.title}
+Location: ${property.location}
+Link: ${propertyLink}
+  `;
+
+    const encodedMessage = encodeURIComponent(message);
+
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      "_blank",
+    );
+  };
   useEffect(() => {
     const stored = localStorage.getItem("likedProperties");
     if (!stored) return;
@@ -163,37 +182,12 @@ function PropertyCard({ property, content }: any) {
               <span>{property.area} Sqft</span>
             </div>
           </div>
-
-          {/* Push button to bottom */}
-          {/* <a
-            href="https://wa.me/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
+          <button
+            onClick={handleWhatsAppClick}
             className="mt-auto w-full text-center block cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white"
           >
             WhatsApp
-          </a> */}
-          {/* <button
-            onClick={(e) => {
-              e.stopPropagation(); // prevent card navigation
-              e.preventDefault();
-              const message = `Hi, \n I am interested in this property:\n\n ${content.title}\n Location: ${content.location}\n Price: AED ${property.price?.toLocaleString()} \n\n Please share more details.\n\n Property Link: ${window.location.origin}/en-gb/property/${property.slug}`;
-              //const whatsappUrl = `https://wa.me/971563553279?text=${encodeURIComponent(message)}`;
-              const baseUrl =
-                typeof window !== "undefined" &&
-                /Android|iPhone/i.test(navigator.userAgent)
-                  ? "https://api.whatsapp.com/send"
-                  : "https://web.whatsapp.com/send";
-
-              const whatsappUrl = `${baseUrl}?phone=971563553279&text=${encodeURIComponent(message)}`;
-              //const whatsappUrl = `https://api.whatsapp.com/send?phone=971563553279&text=${encodeURIComponent(message)}`;
-              window.open("https://wa.me/", "_blank");
-            }}
-            className="mt-auto w-full text-center cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white"
-          >
-            WhatsApp
-          </button> */}
+          </button>
         </div>
       </div>
     </Link>

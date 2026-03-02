@@ -177,7 +177,26 @@ export default function PropertyDetailPage() {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [activeIndex]);
+  const handleWhatsAppClick = () => {
+    const phoneNumber = ""; // without + and spaces
 
+    const propertyLink = `${window.location.origin}/en-gb/property/${property.slug}`;
+
+    const message = `
+Hello, I'm interested in this property:
+
+Name: ${content.title}
+Location: ${content.location}
+Link: ${propertyLink}
+  `;
+
+    const encodedMessage = encodeURIComponent(message);
+
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      "_blank",
+    );
+  };
   return (
     <main className="min-h-screen section-padding font-montserrat">
       <div className=" mx-auto md:px-6">
@@ -644,14 +663,13 @@ export default function PropertyDetailPage() {
                   <IconPhone />
                   Call
                 </a>
-                <a
-                  href={`https://wa.me/`}
-                  target="_blank"
+                <button
+                  onClick={handleWhatsAppClick}
                   className="gap-2 justify-center w-full items-center flex font-didot bg-[#29A71A] text-center py-3 rounded-lg font-bold"
                 >
                   <IconBrandWhatsapp />
                   WhatsApp
-                </a>
+                </button>
               </div>
               {property.map_src && (
                 <div className=" text-white rounded-2xl overflow-hidden shadow-xl">

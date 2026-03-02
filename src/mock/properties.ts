@@ -463,7 +463,7 @@ export const featuredProperties: Property1[] = [
     status: "off_plan",
     // garden: "Community",
     // dldNumber: "123456",
-    developer_logo: "/developers/Emar1.jpg",
+    developer_logo: "/developers/Emar1.png",
     images: [
       "/featuredprop/Mareva2/01.webp",
       "/featuredprop/Mareva2/02.webp",
