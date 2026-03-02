@@ -44,9 +44,12 @@ export default function Navbar() {
           <Link href="/about">{t("nav.about")}</Link>
           <Link href="/blog">{t("nav.blogs")}</Link>
           {/* <LanguageSwitcher /> */}
-          <button className="bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] px-4 py-2 rounded-full">
+          <Link
+            href="/list-your-property"
+            className="bg-linear-to-r cursor-pointer from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg inline-block"
+          >
             {t("nav.cta")}
-          </button>
+          </Link>
         </div>
 
         {/* Mobile */}

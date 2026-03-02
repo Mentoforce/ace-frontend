@@ -38,10 +38,11 @@ export default function Navbar1() {
           {/* <button className="bg-[#0C2448] text-white px-4 py-2 rounded-lg">
             {t("nav.cta")}
           </button> */}
-          <Link href="/list-your-property">
-            <button className=" bg-linear-to-r cursor-pointer from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg">
-              {t("nav.cta")}
-            </button>
+          <Link
+            href="/list-your-property"
+            className="bg-linear-to-r cursor-pointer from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg inline-block"
+          >
+            {t("nav.cta")}
           </Link>
         </div>
 
