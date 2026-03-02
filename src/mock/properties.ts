@@ -349,6 +349,7 @@ export const featuredProperties: Property1[] = [
     status: "off_plan",
     // garden: "Community",
     // dldNumber: "123456",
+    developer_logo: "/developers/Binghatti-logo-dark.webp1.png",
     images: [
       "/featuredprop/p1.jpg",
       "/featuredprop/p2.jpg",
@@ -465,6 +466,7 @@ export const featuredProperties: Property1[] = [
     status: "off_plan",
     // garden: "Community",
     // dldNumber: "123456",
+    developer_logo: "/developers/Emar1.jpg",
     images: [
       "/featuredprop/p1.jpg",
       "/featuredprop/p2.jpg",
@@ -607,6 +609,7 @@ export const featuredProperties: Property1[] = [
     status: "off_plan",
     // garden: "Community",
     // dldNumber: "123456",
+    developer_logo: "/developers/sobha1.png",
     images: [
       "/featuredprop/p1.jpg",
       "/featuredprop/p2.jpg",
@@ -756,8 +759,132 @@ export const featuredProperties: Property1[] = [
       "en-gb": {
         title: "The Brooks at Sobha Sanctuary",
         description:
-          "Vision Simplex Tower A is an upcoming residential development situated within Mercedes-Benz Places in Binghatti City, a prominent address in Meydan. Developed by Binghatti Properties, the project will offer a diverse collection of residential units thoughtfully designed to accommodate a range of lifestyle preferences and living requirements.\n\nThe development is planned to deliver a connected and well-balanced residential environment, with layouts that prioritize functionality and everyday comfort. Residents will have access to a swimming pool, a fully equipped gym, and a dedicated children’s play area, supporting both relaxation and active living within the community.\n\nStrategically positioned with convenient access to major road networks, including Al Khail Road (E44) and Sheikh Mohammed Bin Zayed Road (E311), the development ensures seamless connectivity across Meydan and the wider Dubai area.",
-        location: "Mercedes-Benz Places, Binghatti City, Meydan",
+          "The Brooks at Sobha Sanctuary is a residential project in Dubai, positioned within a serene, green setting that combines expansive open landscapes with convenient urban connectivity. This off-plan development by Sobha Realty will present residences featuring generous layouts, thoughtfully planned to support both comfort and functionality. The project integrates private homes with carefully curated outdoor spaces, fostering a lifestyle centred on wellness and leisure.\n Residents will enjoy access to a wide selection of amenities, including landscaped gardens, open green areas, dedicated dining spaces, a vibrant splash pad, a central beach lagoon, cycling tracks, and a fully equipped gym. With close proximity to Sheikh Mohammed Bin Zayed Road (E311) and Al Khail Road (E44), the development offers seamless connectivity to key destinations throughout Dubai.",
+        location: "-",
+      },
+      ar: { title: "", description: "", location: "" },
+      fr: { title: "", description: "", location: "" },
+      ru: { title: "", description: "", location: "" },
+      zh: { title: "", description: "", location: "" },
+    },
+  },
+  {
+    _id: "4",
+    slug: "tahiti",
+
+    price: "2.75M",
+    currency: "AED",
+
+    area: 2185,
+    bedrooms: "4,5,6",
+    // bathrooms: "",
+    // handover: "Ready",
+    status: "off_plan",
+    // garden: "Community",
+    // dldNumber: "123456",
+    developer_logo: "/developers/Damac1.png",
+    images: [
+      "/featuredprop/p1.jpg",
+      "/featuredprop/p2.jpg",
+      "/featuredprop/p3.png",
+      "/featuredprop/b.jpg",
+    ],
+    details: [
+      { label: "Developer", value: "DAMAC Properties" },
+      { label: "Type", value: "Townhouses, Villas" },
+      { label: "Title Type", value: "Freehold" },
+      { label: "Payment Plan", value: "75/25" },
+      { label: "Handover Date", value: "Q4 2030" },
+      { label: "Parking", value: "1" },
+      { label: "Bedrooms", value: "4-6 Beds" },
+      { label: "Status", value: "Under Construction" },
+      { label: "Furnished", value: "Unfurnished" },
+    ],
+    amenities: [
+      "Longue",
+      "Gym and Fitness",
+      "Jogging Track",
+      "Parking",
+      "Children’s Play Area",
+      "Swimming Pool",
+      "Park",
+      "Business Centre",
+      "Security and Concierge",
+    ],
+    payment_plan: [20, 55, 25],
+    unit_types: [
+      {
+        unit_type: "Townhouses",
+        beds: [
+          {
+            number: "4 Beds",
+            size_range: "2185 Sqft",
+            types: [
+              {
+                name: "Type DSTH - M1",
+                area: "2185",
+                price: "2.75M",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+            ],
+          },
+          {
+            number: "5 Beds",
+            size_range: "2829-3159 Sqft",
+            types: [
+              {
+                name: "Type DSTH - E",
+                area: "3159",
+                price: "-",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+              {
+                name: "Type DSTH - M2",
+                area: "2829",
+                price: "-",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        unit_type: "Villas",
+        beds: [
+          {
+            number: "5 Beds",
+            size_range: "3492 Sqft",
+            types: [
+              {
+                name: "Type DSTW",
+                area: "3492",
+                price: "-",
+                floor_plan: "/floorplans/1bed-754.jpg",
+              },
+            ],
+          },
+          {
+            number: "6 Beds",
+            size_range: "6276 Sqft",
+            types: [
+              {
+                name: "Type DS - V45",
+                area: "6276",
+                price: "-",
+                floor_plan: "/floorplans/2bed-1266.jpg",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    brochure: "",
+    translations: {
+      "en-gb": {
+        title: "Tahiti",
+        description:
+          "Tahiti is an upcoming residential development located within DAMAC Islands, forming part of a tranquil island-inspired neighbourhood characterised by open spaces and waterfront-themed surroundings. This off-plan project by Damac Properties will feature a selection of residential units designed with comfortable and practical layouts to suit modern living.\n The development is planned to prioritise convenience and accessibility, blending light-filled interiors with landscaped outdoor areas to establish a calm and welcoming environment. Residents will benefit from a range of lifestyle amenities, including a swimming pool, children’s play area, garden spaces, a fully equipped gym, BBQ area, and sports facilities, encouraging both relaxation and active living. Connectivity will be facilitated through Al Asayel Street (D63) and Sheikh Zayed Road (E11), providing efficient access to key destinations across Dubai.",
+        location: "-",
       },
       ar: { title: "", description: "", location: "" },
       fr: { title: "", description: "", location: "" },

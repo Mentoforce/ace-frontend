@@ -344,7 +344,7 @@ export default function PropertyDetailPage() {
             </button> */}
 
             {/* Property Details Grid */}
-            <h2 className="font-semibold font-didot text-xl mt-6 text-[#212121]">
+            <h2 className="text-2xl font-bold font-didot text-[#212121] my-6">
               Property Details
             </h2>
             <div className="mt-4 bg-white rounded-2xl border border-[#e0e0e0] overflow-hidden">
@@ -364,7 +364,7 @@ export default function PropertyDetailPage() {
 
             {/* Description */}
             <div className="mt-12 font-montserrat">
-              <h2 className="text-xl font-didot font-semibold mb-4 text-[#212121]">
+              <h2 className="text-2xl font-bold font-didot text-[#212121] mb-6">
                 Property Description
               </h2>
               <p className="text-[#212121] font-sm leading-relaxed whitespace-pre-wrap">
@@ -374,7 +374,7 @@ export default function PropertyDetailPage() {
 
             {/* Amenities */}
             <div className="mt-12 font-montserrat">
-              <h2 className="text-xl font-semibold font-didot mb-6 text-[#212121]">
+              <h2 className="text-2xl font-bold font-didot text-[#212121] mb-6">
                 Amenities
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
@@ -402,7 +402,7 @@ export default function PropertyDetailPage() {
               </div>
             </div>
             <div className="mt-12 font-montserrat">
-              <h2 className="text-xl font-semibold font-didot mb-6 text-[#212121]">
+              <h2 className="text-2xl font-bold font-didot text-[#212121] mb-6">
                 Payment Plan
               </h2>
 
@@ -458,13 +458,13 @@ export default function PropertyDetailPage() {
               </div>
             </div>
             <section className="mt-12 font-montserrat">
-              <h2 className="text-3xl font-didot text-[#212121] mb-6">
+              <h2 className="text-2xl font-bold font-didot text-[#212121] mb-6">
                 Floor Plans
               </h2>
 
               {property.unit_types.map((unit, unitIdx) => (
                 <div key={unitIdx} className="mb-10">
-                  <h3 className="text-lg font-semibold text-[#0c2448] mb-4">
+                  <h3 className="text-lg font-didot text-[#0c2448] mb-4">
                     {unit.unit_type}
                   </h3>
 
@@ -476,12 +476,12 @@ export default function PropertyDetailPage() {
                       return (
                         <div
                           key={key}
-                          className="border border-gray-200 rounded-2xl overflow-hidden"
+                          className="border border-[#757575] rounded-2xl overflow-hidden"
                         >
                           {/* Header */}
                           <div
                             onClick={() => setOpenIndex(isOpen ? null : key)}
-                            className="cursor-pointer bg-[#] p-5 flex justify-between items-center"
+                            className="cursor-pointer  p-5 flex justify-between items-center"
                           >
                             <div className="flex items-center gap-10">
                               {/* Bed */}
@@ -521,16 +521,17 @@ export default function PropertyDetailPage() {
                           {/* Content */}
                           {isOpen && (
                             <div className="p-5 bg-white">
-                              <div className="grid grid-cols-3 text-sm font-medium text-gray-500 border-b pb-3">
+                              <div className="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1.2fr] font-montserrat text-sm font-medium text-gray-500 border-b pb-3">
                                 <div>Type</div>
                                 <div>Size (Sqft)</div>
+                                <div>Price (AED)</div>
                                 <div>Floor Plan</div>
                               </div>
 
                               {bed.types.map((type, idx) => (
                                 <div
                                   key={idx}
-                                  className="grid grid-cols-3 items-center py-6 border-b last:border-none"
+                                  className="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1.2fr] gap-4 items-center py-6 border-b text-[#212121] border-[#757575] last:border-none"
                                 >
                                   <div className="text-[#212121]">
                                     {type.name}
@@ -539,7 +540,9 @@ export default function PropertyDetailPage() {
                                   <div className="text-[#212121]">
                                     {type.area}
                                   </div>
-
+                                  <div className="text-[#212121]">
+                                    {type.price ?? "-"}
+                                  </div>
                                   <div>
                                     <Image
                                       src={type.floor_plan}

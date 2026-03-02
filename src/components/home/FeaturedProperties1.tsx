@@ -20,7 +20,7 @@ export default function FeaturedProperties1() {
 
   return (
     //  from-[#EFE9E3] via-[#FAF8F5] to-white, py-16 md:py-25 px-6
-    <section className="font-montserrat max-w-7xl mx-auto section-padding bg-linear-to-b">
+    <section className="font-montserrat mx-auto max-w-350 section-padding bg-linear-to-b">
       <h2
         className="font-didot text-[#0C2448] text-center font-display mb-8 text-4xl md:text-5xl lg:text-6xl p-3.5"
         style={{ fontSize: "clamp(30px, 4.2vw, 54px)" }}
@@ -131,22 +131,22 @@ export default function FeaturedProperties1() {
 function PropertyCard({ property, content }: any) {
   const [isFavorite, setIsFavorite] = useState(false);
   return (
-    <Link href={`/en-gb/property/${property.slug}`}>
-      <div className="group w-[320px] bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
-        {/* Image Section */}
-        <div className="relative h-50 w-full overflow-hidden">
+    <Link href={`/en-gb/property/${property.slug}`} className="h-full">
+      <div className="group w-[320px] h-full flex flex-col bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+        {/* ================= Image Section ================= */}
+        <div className="relative h-50 w-full overflow-hidden shrink-0">
           <Image
             src={property.images[0]}
             alt={content.title}
             width={302}
             height={200}
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-103"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
 
           {/* Heart */}
           <button
             onClick={(e) => {
-              e.stopPropagation(); // ⬅ prevents card click
+              e.stopPropagation();
               e.preventDefault();
               setIsFavorite(!isFavorite);
             }}
@@ -167,6 +167,7 @@ function PropertyCard({ property, content }: any) {
               />
             </svg>
           </button>
+
           {property.status?.toLowerCase() === "off_plan" && (
             <span className="absolute top-3 left-3 bg-[#0c2448] text-white text-sm px-4 py-1 rounded-full font-medium shadow">
               Off-Plan
@@ -174,34 +175,34 @@ function PropertyCard({ property, content }: any) {
           )}
         </div>
 
-        {/* Content */}
-        <div className="p-4">
+        {/* ================= Content ================= */}
+        <div className="p-4 flex flex-col flex-1">
           {/* Title + Developer */}
-          <div className="flex justify-between items-start mb-2">
-            <h3 className="text-lg font-semibold text-[#2c2c2c] leading-tight">
+          <div className="flex justify-between items-start mb-2 gap-2">
+            <h3 className="text-lg font-semibold text-[#0c2448] font-didot leading-tight line-clamp-2 min-h-[48px]">
               {content.title}
             </h3>
 
             <Image
-              src="/developers/azizi1.png"
+              src={property.developer_logo}
               alt="Developer"
               width={80}
               height={35}
-              className="object-contain h-8 w-auto"
+              className="object-contain h-8 w-auto shrink-0"
             />
           </div>
 
           {/* Location */}
-          <div className="flex items-center text-sm text-gray-500 mb-3">
+          <div className="flex items-center text-xs text-[#212121] h-10 mb-3">
             <IconMapPin size={14} className="mr-1" />
             {content.location}
           </div>
 
-          {/* Starting Price */}
+          {/* Price */}
           <div className="mb-3">
             <p className="text-sm font-montserrat text-[#0c2448]">
               Starting from{" "}
-              <span className="text-lg font-didot font-bold text-[#0c2448] mb-3">
+              <span className="text-lg font-didot font-bold text-[#0c2448]">
                 AED {property.price?.toLocaleString()}
               </span>
             </p>
@@ -222,13 +223,13 @@ function PropertyCard({ property, content }: any) {
             </div>
           </div>
 
-          {/* WhatsApp Button */}
+          {/* Push button to bottom */}
           <a
             href="https://wa.me/"
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="w-full text-center block cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white"
+            className="mt-auto w-full text-center block cursor-pointer font-didot py-2 rounded-lg bg-[#29A71A]/20 text-[#29A71A] text-[18px] font-semibold transition-all duration-200 hover:bg-[#29A71A] hover:text-white"
           >
             WhatsApp
           </a>
@@ -373,7 +374,7 @@ function DesktopCarousel({ locale, t }: any) {
         className="flex gap-6 transition-transform duration-700 ease-in-out"
         style={{
           transform: showControls
-            ? `translateX(-${index * 25}%)`
+            ? `translateX(-${index * 25.5}%)`
             : "translateX(0)",
         }}
       >
@@ -392,7 +393,7 @@ function DesktopCarousel({ locale, t }: any) {
 
       {/* Controls (Only if more than 4 cards) */}
       {showControls && (
-        <div className="mt-18 relative flex justify-center gap-2">
+        <div className="mt-18 relative flex justify-center items-center gap-2">
           {/* Left Arrow */}
           <button
             onClick={() => {
