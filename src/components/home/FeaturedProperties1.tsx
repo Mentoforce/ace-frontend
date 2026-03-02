@@ -169,7 +169,7 @@ function PropertyCard({ property, content }: any) {
           </button>
 
           {property.status?.toLowerCase() === "off_plan" && (
-            <span className="absolute top-3 left-3 bg-[#0c2448] text-white text-sm px-4 py-1 rounded-full font-medium shadow">
+            <span className="absolute top-2 left-2 bg-[#0c2448] text-white text-xs px-3 py-1 rounded-full font-light shadow">
               Off-Plan
             </span>
           )}
@@ -179,7 +179,7 @@ function PropertyCard({ property, content }: any) {
         <div className="p-4 flex flex-col flex-1">
           {/* Title + Developer */}
           <div className="flex justify-between items-start mb-2 gap-2">
-            <h3 className="text-lg font-semibold text-[#0c2448] font-didot leading-tight line-clamp-2 min-h-[48px]">
+            <h3 className="text-lg font-semibold text-[#0c2448] font-didot leading-tight line-clamp-2 min-h-12">
               {content.title}
             </h3>
 
@@ -187,7 +187,7 @@ function PropertyCard({ property, content }: any) {
               src={property.developer_logo}
               alt="Developer"
               width={80}
-              height={35}
+              height={55}
               className="object-contain h-8 w-auto shrink-0"
             />
           </div>

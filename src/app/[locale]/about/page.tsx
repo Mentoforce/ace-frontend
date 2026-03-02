@@ -284,7 +284,7 @@ export default function About() {
             <div>
               {/* Heading */}
               <div className="mb-5 text-center md:text-left">
-                <SectionHeading>Invest Smart. Grow Strong</SectionHeading>
+                <SectionHeading>Ready to Make a Move</SectionHeading>
               </div>
 
               {/* Icon List */}

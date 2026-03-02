@@ -175,6 +175,9 @@ export default function PropertyDetailPage() {
   const [openIndex, setOpenIndex] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const touchStartX = useRef<number | null>(null);
+  const [selectedFloorPlan, setSelectedFloorPlan] = useState<string | null>(
+    null,
+  );
 
   const openImage = (index: number) => setActiveIndex(index);
   const closeImage = () => setActiveIndex(null);
@@ -190,6 +193,20 @@ export default function PropertyDetailPage() {
       (activeIndex - 1 + property.images.length) % property.images.length,
     );
   };
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedFloorPlan(null);
+      }
+    };
+    if (selectedFloorPlan) {
+      document.addEventListener("keydown", handleEsc);
+    }
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, [selectedFloorPlan]);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -231,11 +248,19 @@ export default function PropertyDetailPage() {
                   </span>{" "}
                   {property.currency} {property.price.toLocaleString()}
                 </div>
-
-                <button className="bg-white/50 text-[#0c2448] px-4 py-2 rounded-lg md:text-md text-sm font-montserrat flex gap-1 items-center">
-                  <IconDownload size={14} />
-                  <span className="hidden md:flex">Download Brochure</span>
-                </button>
+                {property.brochure && (
+                  <a
+                    href={property.brochure}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="bg-white/50 text-[#0c2448] backdrop-blur-sm font-semibold px-4 py-2 rounded-lg md:text-md text-sm font-montserrat flex gap-1 items-center"
+                  >
+                    <IconDownload size={16} stroke={2.5} />
+                    <span className="hidden md:flex">Download Brochure</span>
+                  </a>
+                )}
               </div>
             </div>
             <button
@@ -244,7 +269,7 @@ export default function PropertyDetailPage() {
                 e.preventDefault();
                 setIsFavorite(!isFavorite);
               }}
-              className="absolute top-3 right-4 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
+              className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -442,7 +467,7 @@ export default function PropertyDetailPage() {
                       >
                         {/* Top Right Icon */}
                         <div className="absolute top-4 right-4">
-                          <Icon size={40} stroke={1.5} />
+                          <Icon size={35} stroke={1.5} />
                         </div>
 
                         {/* Percentage */}
@@ -476,7 +501,7 @@ export default function PropertyDetailPage() {
                       return (
                         <div
                           key={key}
-                          className="border border-[#757575] rounded-2xl overflow-hidden"
+                          className="border border-[#e0e0e0] rounded-2xl overflow-hidden"
                         >
                           {/* Header */}
                           <div
@@ -521,7 +546,7 @@ export default function PropertyDetailPage() {
                           {/* Content */}
                           {isOpen && (
                             <div className="p-5 bg-white">
-                              <div className="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1.2fr] font-montserrat text-sm font-medium text-gray-500 border-b pb-3">
+                              <div className="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1.2fr] font-montserrat text-sm font-medium text-[#212121] border-b border-[#e0e0e0] pb-3">
                                 <div>Type</div>
                                 <div>Size (Sqft)</div>
                                 <div>Price (AED)</div>
@@ -531,7 +556,7 @@ export default function PropertyDetailPage() {
                               {bed.types.map((type, idx) => (
                                 <div
                                   key={idx}
-                                  className="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1.2fr] gap-4 items-center py-6 border-b text-[#212121] border-[#757575] last:border-none"
+                                  className="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1.2fr] gap-4 items-center py-6 border-b text-[#212121] border-[#e0e0e0] last:border-none"
                                 >
                                   <div className="text-[#212121]">
                                     {type.name}
@@ -549,7 +574,10 @@ export default function PropertyDetailPage() {
                                       alt="Floor Plan"
                                       width={120}
                                       height={80}
-                                      className="rounded-lg object-cover"
+                                      onClick={() =>
+                                        setSelectedFloorPlan(type.floor_plan)
+                                      }
+                                      className="rounded-lg object-cover cursor-pointer hover:scale-105 transition"
                                     />
                                   </div>
                                 </div>
@@ -572,9 +600,9 @@ export default function PropertyDetailPage() {
             - Becomes sticky (top-24) as you scroll down past it
             The `sticky top-24` class handles this natively in CSS.
           */}
-          <div className="relative max-w-sm mx-auto">
+          <div className="relative">
             <div className="sticky top-24">
-              <div className=" bg-[#0C2448] text-white p-6 rounded-2xl shadow-xl mb-10">
+              <div className=" bg-[#0C2448] text-white p-6 rounded-2xl shadow-xl mb-6">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="rounded-full h-16 w-16 flex justify-center overflow-hidden bg-white">
                     <Image
@@ -594,7 +622,6 @@ export default function PropertyDetailPage() {
                     </p>
                   </div>
                 </div>
-
                 <a
                   href={`tel:`}
                   className="gap-2 justify-center items-center flex w-full font-didot bg-[#0572D7] text-center py-3 rounded-lg font-bold mb-3"
@@ -602,7 +629,6 @@ export default function PropertyDetailPage() {
                   <IconPhone />
                   Call
                 </a>
-
                 <a
                   href={`https://wa.me/`}
                   target="_blank"
@@ -612,14 +638,16 @@ export default function PropertyDetailPage() {
                   WhatsApp
                 </a>
               </div>
-              <div className=" text-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center gap-4 mb-6">
-                  <div>
-                    <p className="font-semibold">ACE Ventures Real Estate</p>
-                    <p className="text-xs opacity-60">RERA: 60432</p>
-                  </div>
+              {property.map_src && (
+                <div className=" text-white rounded-2xl overflow-hidden shadow-xl">
+                  <iframe
+                    src={property.map_src}
+                    width="500"
+                    height="400"
+                    loading="lazy"
+                  />
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
@@ -644,7 +672,7 @@ export default function PropertyDetailPage() {
 
           {/* Image Container with Swipe */}
           <div
-            className="relative w-[90%] max-w-6xl h-[75vh]"
+            className="relative w-[90%] max-w-7xl h-[75vh]"
             onTouchStart={(e) => (touchStartX.current = e.touches[0].clientX)}
             onTouchEnd={(e) => {
               if (touchStartX.current === null) return;
@@ -687,6 +715,34 @@ export default function PropertyDetailPage() {
                 <Image src={img} alt="" fill className="object-cover" />
               </div>
             ))}
+          </div>
+        </div>
+      )}
+      {selectedFloorPlan && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-6"
+          onClick={() => setSelectedFloorPlan(null)}
+        >
+          <div
+            className="relative max-w-5xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedFloorPlan(null)}
+              className="absolute -top-6 right-6 text-white text-3xl"
+            >
+              ✕
+            </button>
+
+            {/* Full Image */}
+            <div className="relative w-full h-[90vh]">
+              <Image
+                src={selectedFloorPlan}
+                alt="Floor Plan"
+                fill
+                className="w-full h-auto rounded-2xl object-contain p-4"
+              />
+            </div>
           </div>
         </div>
       )}

@@ -26,8 +26,8 @@ export default function ListPropertyPage() {
         {/* <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-white/20" /> */}
 
         {/* Content */}
-        <div className="relative z-10 h-[70vh] flex items-center justify-center px-6">
-          <h1 className="font-didot text-[48px] text-center font-bold text-white">
+        <div className="relative z-10 h-[90vh] flex items-center justify-center px-6">
+          <h1 className="font-didot text-white text-6xl md:text-7xl leading-tight">
             Accelerate Your Sale or Rental Today
           </h1>
         </div>
