@@ -2,6 +2,7 @@
 
 import { IconQuoteFilled } from "@tabler/icons-react";
 import { useState, useEffect } from "react";
+import toast from "react-hot-toast";
 
 const ContactTestimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -176,13 +177,78 @@ const ContactTestimonials = () => {
 
 export const ContactTestimonials1 = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    fullName: "",
+    name: "",
     email: "",
     phone: "",
     subject: "",
     message: "",
   });
+
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric", // Must be 'numeric' or '2-digit'
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+    timeZone: "Asia/Kolkata",
+  };
+
+  const currentDate = new Date();
+  const formatter = new Intl.DateTimeFormat("en-IN", options);
+  const istFormatted = formatter.format(currentDate);
+
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbyymexAAsJ54ful87lNqXU8ocYRIXZ_z1cdq78Cw-6hOkauVOW9Xrq8uwyjlcBCKz05xg/exec";
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim()
+    ) {
+      toast.error("Please fill all required fields");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const formPayload = new FormData();
+      formPayload.append("Name", formData.name);
+      formPayload.append("Email", formData.email);
+      formPayload.append("Phone", formData.phone);
+      formPayload.append("Subject", formData.subject);
+      formPayload.append("Message", formData.message);
+      formPayload.append("Timestamp", new Date().toLocaleString("en-IN"));
+
+      const res = await fetch(scriptURL, {
+        method: "POST",
+        body: formPayload,
+      });
+
+      if (!res.ok) throw new Error("Network response was not ok");
+
+      toast.success("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const testimonials = [
     {
@@ -234,11 +300,6 @@ export const ContactTestimonials1 = () => {
     }));
   };
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
   return (
     <section
       className="font-montserrat section-padding text-white mx-auto relative md:mb-15"
@@ -263,11 +324,11 @@ export const ContactTestimonials1 = () => {
               <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                 <input
                   type="text"
-                  name="fullName"
+                  name="name"
                   placeholder="Full Name"
-                  value={formData.fullName}
+                  value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent border-b outline-none py-2 border-[#ffffff]/60 focus:border-[#0C2448]"
+                  className="w-full bg-transparent border-b outline-none py-2 border-[#ffffff]/60 focus:border-[#ffffff]"
                 />
 
                 <input
@@ -309,7 +370,7 @@ export const ContactTestimonials1 = () => {
                   type="submit"
                   className="font-didot bg-linear-to-r from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
