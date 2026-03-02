@@ -197,6 +197,10 @@ Link: ${propertyLink}
       "_blank",
     );
   };
+
+  //---------------------phone---------------------------------------
+  const companyPhone = "+919876543210"; // MUST be E.164 format
+  const sanitizedPhone = companyPhone.replace(/[^\d+]/g, "");
   return (
     <main className="min-h-screen section-padding font-montserrat">
       <div className=" mx-auto md:px-6">
@@ -634,7 +638,7 @@ Link: ${propertyLink}
             - Becomes sticky (top-24) as you scroll down past it
             The `sticky top-24` class handles this natively in CSS.
           */}
-          <div className="relative max-w-sm">
+          <div className="relative md:ml-15 max-w-sm">
             <div className="sticky top-24 flex flex-col">
               <div className=" bg-[#0C2448] text-white p-6 rounded-2xl shadow-xl mb-6">
                 <div className="flex items-center gap-4 mb-6">
@@ -656,9 +660,25 @@ Link: ${propertyLink}
                     </p>
                   </div>
                 </div>
-                <a
+                {/* <a
                   href={`tel:`}
                   className="gap-2 justify-center items-center flex w-full font-didot bg-[#0572D7] text-center py-3 rounded-lg font-bold mb-3"
+                >
+                  <IconPhone />
+                  Call
+                </a> */}
+                <a
+                  href={`tel:${sanitizedPhone}`}
+                  aria-label={`Call ${sanitizedPhone}`}
+                  onClick={() => {
+                    if (
+                      typeof window !== "undefined" &&
+                      !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+                    ) {
+                      console.log("Desktop call attempt:", sanitizedPhone);
+                    }
+                  }}
+                  className="gap-2 justify-center items-center flex w-full font-didot bg-[#0572D7] text-white text-center py-3 rounded-lg font-bold mb-3 hover:bg-[#045bb0] transition-colors duration-200"
                 >
                   <IconPhone />
                   Call
