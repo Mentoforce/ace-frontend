@@ -17,6 +17,7 @@ import {
 import Image from "next/image";
 import { useParams, notFound } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function PropertyDetailPage() {
   const { slug, locale } = useParams<{ slug: string; locale: string }>();
@@ -31,6 +32,76 @@ export default function PropertyDetailPage() {
     null,
   );
   const [isFavorite, setIsFavorite] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    query: "",
+  });
+
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric", // Must be 'numeric' or '2-digit'
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+    timeZone: "Asia/Kolkata",
+  };
+
+  const currentDate = new Date();
+  const formatter = new Intl.DateTimeFormat("en-IN", options);
+  const istFormatted = formatter.format(currentDate);
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbzdKuiv0Bdw3i2achEGkDjh2nExOYgDdwrLZBux74a-8FQBVbg6nSBd0kB8nwgDYt4p/exec";
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim()
+    ) {
+      toast.error("Please fill all required fields");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const formPayload = new FormData();
+      formPayload.append("Name", formData.name);
+      formPayload.append("Email", formData.email);
+      formPayload.append("Phone", formData.phone);
+      formPayload.append("Query", formData.query);
+      formPayload.append("Property Name", content.title);
+      formPayload.append("Property ID", property._id);
+      formPayload.append("Property Link", window.location.href);
+      formPayload.append("Timestamp", new Date().toLocaleString("en-IN"));
+
+      const res = await fetch(scriptURL, {
+        method: "POST",
+        body: formPayload,
+      });
+
+      if (!res.ok) throw new Error("Network response was not ok");
+
+      toast.success("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        query: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     const stored = localStorage.getItem("likedProperties");
@@ -85,6 +156,14 @@ export default function PropertyDetailPage() {
       document.removeEventListener("keydown", handleEsc);
     };
   }, [selectedFloorPlan]);
+
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -468,6 +547,64 @@ export default function PropertyDetailPage() {
                   </div>
                 </div>
               ))}
+            </section>
+            <section className="mt-12 font-montserrat">
+              <h2 className="text-2xl font-bold font-didot text-[#212121] mb-6">
+                Enquire Now
+              </h2>
+              <div className="w-full bg-white shadow-xl rounded-2xl p-8 border border-gray-200">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* First Row */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A]"
+                    />
+
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A]"
+                    />
+
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A]"
+                    />
+                  </div>
+
+                  {/* Second Row */}
+                  <textarea
+                    rows={4}
+                    name="query"
+                    placeholder="Your Query"
+                    value={formData.query}
+                    onChange={handleInputChange}
+                    className="w-full border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-[#C28A2A] resize-none"
+                  />
+
+                  {/* Third Row - Center Button */}
+                  <div className="flex justify-center">
+                    <button
+                      type="submit"
+                      className=" font-didot bg-linear-to-r cursor-pointer from-[#FCE7A5] to-[#C28A2A] text-[#0c2448] font-extrabold px-4 py-2.5 rounded-lg"
+                    >
+                      {loading ? "Submitting" : "Submit"}
+                    </button>
+                  </div>
+                </form>
+              </div>
             </section>
           </div>
 
