@@ -349,6 +349,7 @@ export const featuredProperties: Property1[] = [
     status: "off_plan",
     // garden: "Community",
     // dldNumber: "123456",
+    developer_logo: "/developers/Binghatti-logo-dark.webp1.png",
     images: [
       "/featuredprop/p1.jpg",
       "/featuredprop/p2.jpg",
@@ -461,6 +462,7 @@ export const featuredProperties: Property1[] = [
     status: "off_plan",
     // garden: "Community",
     // dldNumber: "123456",
+    developer_logo: "/developers/Emar1.jpg",
     images: [
       "/featuredprop/p1.jpg",
       "/featuredprop/p2.jpg",

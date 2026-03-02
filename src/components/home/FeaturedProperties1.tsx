@@ -183,7 +183,7 @@ function PropertyCard({ property, content }: any) {
             </h3>
 
             <Image
-              src="/developers/azizi1.png"
+              src={property.developer_logo}
               alt="Developer"
               width={80}
               height={35}
