@@ -51,8 +51,8 @@ function PropertyCard({ property, content }: any) {
     const message = `
 Hello, I'm interested in this property:
 
-Name: ${property.title}
-Location: ${property.location}
+Name: ${content.title}
+Location: ${content.location}
 Link: ${propertyLink}
   `;
 
