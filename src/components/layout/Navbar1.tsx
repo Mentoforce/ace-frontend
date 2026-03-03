@@ -14,8 +14,8 @@ export default function Navbar1() {
   return (
     <nav
       className="fixed top-0 bg-linear-to-r
-      from-white/55 via-white/10 to-white/55 backdrop-blur-sm
-      z-50 font-didot font-medium backdrop-brightness-125 w-screen md:px-15 px-5"
+      from-white/75 via-white/10 to-white/75 backdrop-blur-sm
+      z-50 font-didot font-medium backdrop-brightness-125 w-full md:px-12 px-5"
     >
       {/* Top Bar */}
       <div className="flex items-center justify-between mx-auto">
