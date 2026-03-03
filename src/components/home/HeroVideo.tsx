@@ -38,7 +38,7 @@ export default function HeroVideo() {
           playsInline
           preload="metadata"
         >
-          <source src="/website 002.mp4" type="video/mp4" />
+          <source src="/website2.mp4" type="video/mp4" />
         </video>
 
         <h1 className="font-merriweather z-20 md:text-6xl/16 text-5xl text-center font-bold  text-white tracking-wider top-80 left-1/2 -translate-x-1/2 [text-shadow:0_0_30px_rgba(0,0,0,1)] absolute">

@@ -11,8 +11,10 @@ import {
   IconMapPin,
   IconChevronRight,
   IconChevronLeft,
+  IconShare,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 export default function FeaturedProperties1() {
   const { locale } = useParams();
@@ -47,9 +49,7 @@ function PropertyCard({ property, content }: any) {
     e.preventDefault();
     e.stopPropagation();
     const phoneNumber = "971563553279";
-
     const propertyLink = `${window.location.origin}/en-gb/property/${property.slug}`;
-
     const message = `
 Hello, I'm interested in this property:
 
@@ -57,14 +57,40 @@ Name: ${content.title}
 Location: ${content.location}
 Link: ${propertyLink}
   `;
-
     const encodedMessage = encodeURIComponent(message);
-
     window.open(
       `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
       "_blank",
     );
   };
+
+  const handleShareClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    if (typeof window === "undefined") return;
+    const propertyLink = `${window.location.origin}/en-gb/property/${property.slug}`;
+    const shareData = {
+      title: content.title,
+      text: `Check out this property:\n\n🏷 ${content.title}\n📍 ${content.location}`,
+      url: propertyLink,
+    };
+
+    try {
+      if (navigator.share) {
+        // Mobile native share
+        await navigator.share(shareData);
+      } else {
+        // Desktop fallback → Copy link
+        await navigator.clipboard.writeText(propertyLink);
+        toast.success("Link copied to clipboard!");
+      }
+    } catch (error) {
+      toast.error("Share failed");
+      console.error("Share failed:", error);
+    }
+  };
+
   useEffect(() => {
     const stored = localStorage.getItem("likedProperties");
     if (!stored) return;
@@ -101,7 +127,12 @@ Link: ${propertyLink}
             height={200}
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-
+          <button
+            onClick={handleShareClick}
+            className="absolute top-2 right-9 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
+          >
+            <IconShare size={13} />
+          </button>
           {/* Heart */}
           <button
             onClick={(e) => {
@@ -109,7 +140,7 @@ Link: ${propertyLink}
               e.preventDefault();
               toggleFavorite();
             }}
-            className="absolute top-3 right-4 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
+            className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center rounded-full bg-linear-to-t from-[#D4AF6126] to-[#D4AF610D] border-2 border-white/70 bg-white/50"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
