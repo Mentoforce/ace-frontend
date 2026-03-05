@@ -1,5 +1,6 @@
 "use client";
 
+import Breadcrumb from "@/components/common/Breadcrumb";
 import { featuredProperties } from "@/mock/properties";
 import {
   IconBrandWhatsapp,
@@ -230,6 +231,7 @@ Link: ${propertyLink}
   const companyPhone = "+971563553279"; // MUST be E.164 format
   return (
     <main className="min-h-screen section-padding font-montserrat mt-6">
+      <Breadcrumb />
       <div className=" mx-auto md:px-6">
         {/* ── TOP PHOTO GRID ─────────────────────────────────────────────── */}
         {/* Layout: main image left (2/3) + vertical thumbnail strip right (1/3) */}
