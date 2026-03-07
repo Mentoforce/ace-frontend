@@ -56,7 +56,12 @@ export default function NewsPage() {
           <div className="grid md:grid-cols-2 gap-10">
             {gridPosts.map((post, index) => {
               return (
-                <BlogCard post={post} index={index} locale={locale} />
+                <BlogCard
+                  key={post._id}
+                  post={post}
+                  index={index}
+                  locale={locale}
+                />
 
                 // <Link
                 //   key={post._id}
