@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useTranslations } from "@/lib/i18n/client";
 import { aboutSection } from "@/mock/about";
-import { IconEye, IconTarget } from "@tabler/icons-react";
 import { useParams } from "next/navigation";
 
 import {
@@ -11,7 +10,6 @@ import {
   IconWorld,
   IconUsers,
   IconBriefcase,
-  IconBuildingSkyscraper,
 } from "@tabler/icons-react";
 
 const services = [
@@ -338,79 +336,79 @@ export default function About() {
   );
 }
 
-function MissionVision5() {
-  const t = useTranslations();
-  const { locale } = useParams();
-  const translation =
-    aboutSection.translations[locale as string] ??
-    aboutSection.translations["en-gb"];
-  return (
-    <section className="max-w-6xl mx-auto relative overflow-hidden flex flex-col sm:flex-row rounded-none md:rounded-3xl">
-      {/* ─── LEFT PANEL — Our Vision (Dark Navy) ─── */}
-      <div
-        className="
-          relative z-10
-          w-full sm:w-1/2
-          flex flex-col
-          p-8 sm:p-10
-        "
-        style={{
-          background:
-            "linear-gradient(135deg, #061636 0%, #0C2448 55%, #163860 100%)",
-        }}
-      >
-        <h2 className="text-[#ffffff]/80 font-serif text-3xl uppercase md:text-5xl mb-6 font-bold leading-none">
-          {t("about.vision")}
-        </h2>
+// function MissionVision5() {
+//   const t = useTranslations();
+//   const { locale } = useParams();
+//   const translation =
+//     aboutSection.translations[locale as string] ??
+//     aboutSection.translations["en-gb"];
+//   return (
+//     <section className="max-w-6xl mx-auto relative overflow-hidden flex flex-col sm:flex-row rounded-none md:rounded-3xl">
+//       {/* ─── LEFT PANEL — Our Vision (Dark Navy) ─── */}
+//       <div
+//         className="
+//           relative z-10
+//           w-full sm:w-1/2
+//           flex flex-col
+//           p-8 sm:p-10
+//         "
+//         style={{
+//           background:
+//             "linear-gradient(135deg, #061636 0%, #0C2448 55%, #163860 100%)",
+//         }}
+//       >
+//         <h2 className="text-[#ffffff]/80 font-serif text-3xl uppercase md:text-5xl mb-6 font-bold leading-none">
+//           {t("about.vision")}
+//         </h2>
 
-        <p className="text-[#ffffff]/80 text-base leading-relaxed max-w-md mt-auto">
-          {translation.vision}
-        </p>
-      </div>
+//         <p className="text-[#ffffff]/80 text-base leading-relaxed max-w-md mt-auto">
+//           {translation.vision}
+//         </p>
+//       </div>
 
-      {/* ─── RIGHT PANEL — Our Mission (Gold) ─── */}
-      <div
-        className="
-          relative z-0
-          w-full sm:w-1/2
-          flex flex-col
-          p-8 sm:p-10
-          text-left sm:text-end
-          items-start sm:items-end
-        "
-        style={{
-          background:
-            "linear-gradient(135deg, #e8c44a66 0%, #D7AB2266 45%, #c49a1a66 100%)",
-        }}
-      >
-        <div className="max-w-md mt-0 sm:mt-auto">
-          <h2 className="font-serif text-3xl md:text-5xl font-bold uppercase leading-none text-[#0C2448] mb-6">
-            {t("about.mission")}
-          </h2>
+//       {/* ─── RIGHT PANEL — Our Mission (Gold) ─── */}
+//       <div
+//         className="
+//           relative z-0
+//           w-full sm:w-1/2
+//           flex flex-col
+//           p-8 sm:p-10
+//           text-left sm:text-end
+//           items-start sm:items-end
+//         "
+//         style={{
+//           background:
+//             "linear-gradient(135deg, #e8c44a66 0%, #D7AB2266 45%, #c49a1a66 100%)",
+//         }}
+//       >
+//         <div className="max-w-md mt-0 sm:mt-auto">
+//           <h2 className="font-serif text-3xl md:text-5xl font-bold uppercase leading-none text-[#0C2448] mb-6">
+//             {t("about.mission")}
+//           </h2>
 
-          <p className="text-[#0C2448] text-base leading-relaxed">
-            {translation.mission}
-          </p>
-        </div>
-      </div>
+//           <p className="text-[#0C2448] text-base leading-relaxed">
+//             {translation.mission}
+//           </p>
+//         </div>
+//       </div>
 
-      {/* ─── DIAGONAL OVERLAP BLADE (desktop only) ─── */}
-      <div className="hidden sm:flex absolute inset-0 justify-center pointer-events-none z-20">
-        <div
-          className="
-            h-full w-14 md:w-16
-            ltr:skew-x-[-8deg] rtl:skew-x-[8deg]
-            ltr:translate-x-2 rtl:translate-x-2
-          "
-          style={{
-            background: "white",
-            boxShadow: "6px 0 30px rgba(0,0,0,0.25)",
-          }}
-        />
-      </div>
-    </section>
-  );
-}
+//       {/* ─── DIAGONAL OVERLAP BLADE (desktop only) ─── */}
+//       <div className="hidden sm:flex absolute inset-0 justify-center pointer-events-none z-20">
+//         <div
+//           className="
+//             h-full w-14 md:w-16
+//             ltr:skew-x-[-8deg] rtl:skew-x-[8deg]
+//             ltr:translate-x-2 rtl:translate-x-2
+//           "
+//           style={{
+//             background: "white",
+//             boxShadow: "6px 0 30px rgba(0,0,0,0.25)",
+//           }}
+//         />
+//       </div>
+//     </section>
+//   );
+// }
 function MissionVision7() {
   const t = useTranslations();
   const { locale } = useParams();
@@ -542,94 +540,94 @@ function MissionVision7() {
 //   );
 // }
 
-function Image6() {
-  return (
-    <div className="relative m-2 w-full max-w-md mx-auto">
-      {/* Top-left accent square */}
-      <div
-        className="
-          absolute
-          md:-start-4 -top-4
-          start:0
-          w-28 h-28
-          sm:w-32 sm:h-32
-          md:w-40 md:h-40
-          bg-[#0C2448]
-          -z-20
-        "
-      />
+// function Image6() {
+//   return (
+//     <div className="relative m-2 w-full max-w-md mx-auto">
+//       {/* Top-left accent square */}
+//       <div
+//         className="
+//           absolute
+//           md:-start-4 -top-4
+//           start:0
+//           w-28 h-28
+//           sm:w-32 sm:h-32
+//           md:w-40 md:h-40
+//           bg-[#0C2448]
+//           -z-20
+//         "
+//       />
 
-      {/* Image (real size, rectangular) */}
-      <Image
-        src="/about.jpg"
-        alt="About ACE"
-        width={600}
-        height={420}
-        className="relative z-10 object-cover"
-      />
+//       {/* Image (real size, rectangular) */}
+//       <Image
+//         src="/about.jpg"
+//         alt="About ACE"
+//         width={600}
+//         height={420}
+//         className="relative z-10 object-cover"
+//       />
 
-      {/* Bottom-right accent square */}
-      <div
-        className="
-          absolute
-          md:-end-4 -bottom-4
-          end-0
-          w-28 h-28
-          sm:w-32 sm:h-32
-          md:w-40 md:h-40
-          bg-[#C29A1F]/40
-          -z-20
-        "
-      />
-    </div>
-  );
-}
+//       {/* Bottom-right accent square */}
+//       <div
+//         className="
+//           absolute
+//           md:-end-4 -bottom-4
+//           end-0
+//           w-28 h-28
+//           sm:w-32 sm:h-32
+//           md:w-40 md:h-40
+//           bg-[#C29A1F]/40
+//           -z-20
+//         "
+//       />
+//     </div>
+//   );
+// }
 
-export function About1() {
-  const t = useTranslations();
-  const { locale } = useParams();
-  const translation =
-    aboutSection.translations[locale as string] ??
-    aboutSection.translations["en-gb"];
+// export function About1() {
+//   const t = useTranslations();
+//   const { locale } = useParams();
+//   const translation =
+//     aboutSection.translations[locale as string] ??
+//     aboutSection.translations["en-gb"];
 
-  return (
-    <section className="font-didot max-w-7xl mx-auto md:py-30 py-20">
-      <div className="py-10 grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-2 items-center">
-        <div className="">
-          <h1 className="md:text-2xl text-center md:p-2 text-xl">
-            {t("about.about")}
-          </h1>
+//   return (
+//     <section className="font-didot max-w-7xl mx-auto md:py-30 py-20">
+//       <div className="py-10 grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-2 items-center">
+//         <div className="">
+//           <h1 className="md:text-2xl text-center md:p-2 text-xl">
+//             {t("about.about")}
+//           </h1>
 
-          <h1 className="md:text-6xl text-center p-1 text-4xl font-bold">
-            ACE Ventures
-          </h1>
-          <h1 className="md:text-4xl text-center text-xl pb-8">Real Estate</h1>
-          <p className="text-center text-xl italic">{translation.tagline}</p>
-        </div>
-        <Image6 />
-      </div>
-      <div className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl md:text-4xl font-semibold text-[#c29a1f] mb-8">
-          Who We Are
-        </h2>
+//           <h1 className="md:text-6xl text-center p-1 text-4xl font-bold">
+//             ACE Ventures
+//           </h1>
+//           <h1 className="md:text-4xl text-center text-xl pb-8">Real Estate</h1>
+//           <p className="text-center text-xl italic">{translation.tagline}</p>
+//         </div>
+//         <Image6 />
+//       </div>
+//       <div className="max-w-6xl mx-auto px-6 py-20">
+//         <h2 className="text-3xl md:text-4xl font-semibold text-[#c29a1f] mb-8">
+//           Who We Are
+//         </h2>
 
-        <p className="text-[#0c2448] text-lg leading-relaxed mb-2">
-          Ace Ventures Real Estate LLC is a Dubai-based real estate brokerage
-          firm specializing in property investment advisory, luxury residential
-          sales, commercial real estate, off-plan projects, and complete
-          relocation solutions across Dubai, UAE.
-        </p>
+//         <p className="text-[#0c2448] text-lg leading-relaxed mb-2">
+//           Ace Ventures Real Estate LLC is a Dubai-based real estate brokerage
+//           firm specializing in property investment advisory, luxury residential
+//           sales, commercial real estate, off-plan projects, and complete
+//           relocation solutions across Dubai, UAE.
+//         </p>
 
-        <p className="text-[#0c2448] text-lg leading-relaxed">
-          We provide structured, research-driven real estate strategies designed
-          for investors, homeowners, international buyers, and portfolio-focused
-          wealth builders seeking long-term financial growth.
-        </p>
-      </div>
+//         <p className="text-[#0c2448] text-lg leading-relaxed">
+//           We provide structured, research-driven real estate strategies designed
+//           for investors, homeowners, international buyers, and portfolio-focused
+//           wealth builders seeking long-term financial growth.
+//         </p>
+//       </div>
 
-      {/* <MissionVision4 /> */}
-      {/* <div className="h-40" /> */}
-      <MissionVision5 />
-    </section>
-  );
-}
+//       {/* <MissionVision4 /> */}
+//       {/* <div className="h-40" /> */}
+//       <MissionVision5 />
+//     </section>
+//   );
+// }
