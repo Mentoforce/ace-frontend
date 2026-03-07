@@ -15,6 +15,12 @@ import PopularDubaiAreas from "@/components/home/PopularDubaiAreas";
 import PopularDubaiAreas1 from "@/components/home/PopularDubaiAreas1";
 import StickyCTA from "@/components/home/StickyCTA";
 
+export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 export default function HomePage() {
   return (
     <>
