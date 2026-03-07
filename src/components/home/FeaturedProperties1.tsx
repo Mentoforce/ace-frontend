@@ -48,7 +48,7 @@ function PropertyCard({ property, content }: any) {
   const handleWhatsAppClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
-    const phoneNumber = "971563553279";
+    const phoneNumber = "971500001889";
     const propertyLink = `${window.location.origin}/en-gb/property/${property.slug}`;
     const message = `
 Hello, I'm interested in this property:
@@ -159,7 +159,7 @@ Link: ${propertyLink}
           </button>
 
           {property.status?.toLowerCase() === "off_plan" && (
-            <span className="absolute top-2 left-2 bg-[#0c2448] text-white text-xs px-3 py-1 rounded-full font-light shadow">
+            <span className="absolute top-2 left-2 bg-[#0c2448]/60 font-semibold text-white text-xs px-3 py-1 rounded-full shadow">
               Off-Plan
             </span>
           )}

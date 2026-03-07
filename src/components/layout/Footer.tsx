@@ -51,7 +51,7 @@ export default function Footer() {
             <a href="mailto:">
               <IconMail className="cursor-pointer hover:text-[#0C2448] transition" />
             </a>
-            <a href="https://wa.me/971563553279">
+            <a href="https://wa.me/971500001889">
               <IconBrandWhatsapp className="cursor-pointer hover:text-[#0C2448] transition" />
             </a>
           </div>
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
           <div className="flex gap-3 items-center">
             <IconPhone size={20} />
-            <p>+971563553279</p>
+            <p>+971500001889</p>
           </div>
         </div>
       </div>

@@ -179,7 +179,7 @@ export default function PropertyDetailPage() {
     return () => window.removeEventListener("keydown", handleKey);
   }, [activeIndex]);
   const handleWhatsAppClick = () => {
-    const phoneNumber = "971563553279"; // without + and spaces
+    const phoneNumber = "971500001889"; // without + and spaces
 
     const propertyLink = `${window.location.origin}/en-gb/property/${property.slug}`;
 
@@ -228,10 +228,10 @@ Link: ${propertyLink}
   };
 
   //---------------------phone---------------------------------------
-  const companyPhone = "+971563553279"; // MUST be E.164 format
+  const companyPhone = "+971500001889"; // MUST be E.164 format
   return (
     <main className="min-h-screen section-padding font-montserrat mt-6">
-      <Breadcrumb />
+      {/* <Breadcrumb /> */}
       <div className=" mx-auto md:px-6">
         {/* ── TOP PHOTO GRID ─────────────────────────────────────────────── */}
         {/* Layout: main image left (2/3) + vertical thumbnail strip right (1/3) */}
@@ -696,7 +696,7 @@ Link: ${propertyLink}
                   </div>
                 </div>
                 <a
-                  href={`tel:+971563553279`}
+                  href={`tel:+971500001889`}
                   className="gap-2 justify-center items-center flex w-full font-didot bg-[#0572D7] text-center py-3 rounded-lg font-bold mb-3"
                 >
                   <IconPhone />

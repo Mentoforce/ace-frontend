@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function StickyCTA() {
   return (
     <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 md:gap-3 md:flex md:flex-col hidden">
-      <a href="https://wa.me/971563553279">
+      <a href="https://wa.me/971500001889">
         <Image
           src="/CTA/whatsapp1.svg"
           alt="WhatsApp"
@@ -12,7 +12,7 @@ export default function StickyCTA() {
         />
       </a>
 
-      <a href="tel:+971563553279">
+      <a href="tel:+971500001889">
         <Image
           src="/CTA/call1.svg"
           alt="Call"
